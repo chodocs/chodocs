@@ -13,7 +13,7 @@ hero:
       link: /algorithm/guide
     - theme: alt
       text: 源码
-      link: https://github.com/Hacker-C/I-Dont-Know-JS
+      link: https://github.com/Chocolate1999/chodocs
 features:
   - icon: 📓
     title: 前端算法
