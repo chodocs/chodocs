@@ -4,12 +4,12 @@
 
 :root {
   --vp-c-accent: #35495e;
-  --vp-c-brand: #4a8dea;
+  --vp-c-brand: #06f;
   --vp-c-text-code: #5d6f5d;
   --vp-code-block-bg: rgba(125, 125, 125, 0.04);
   --vp-c-disabled-bg: rgba(125, 125, 125, 0.2);
   /* fix contrast on gray cards: used by --vp-c-text-2 */
-  --vp-c-brand-light: #06f;
+  --vp-c-brand-light: #4a8dea;
   --vp-c-text-light-2: rgba(56 56 56 / 70%);
 }
 
