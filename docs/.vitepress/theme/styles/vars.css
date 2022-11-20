@@ -5,6 +5,7 @@
 :root {
   --vp-c-accent: #35495e;
   --vp-c-brand: #06f;
+  --vp-c-brand-dark: #3385ff;
   --vp-c-text-code: #5d6f5d;
   /* --vp-code-block-bg: rgba(125, 125, 125, 0.04); */
   --vp-c-disabled-bg: rgba(125, 125, 125, 0.2);
