@@ -5,14 +5,14 @@ export default {
       collapsible: true,
       collapsed: false,
       items: [
-        { text: "导读", link: "fe/algorithm/ch0.md" },
+        { text: "导读", link: "/fe/algorithm/ch0" },
       ],
     },
     {
       text: "🌱 编程学习",
       collapsible: true,
       collapsed: false,
-      items: [{ text: "发布 npm 包", link: "fe/program/ch0.md" }],
+      items: [{ text: "发布 npm 包", link: "/fe/program/ch0" }],
     },
   ],
 };
