@@ -10,7 +10,7 @@ hero:
   actions:
     - theme: brand
       text: 开始阅读
-      link: /algorithm/guide
+      link: /fe/guide
     - theme: alt
       text: 源码
       link: https://github.com/Chocolate1999/chodocs
