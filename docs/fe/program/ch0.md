@@ -19,12 +19,14 @@ npx create-dumi
 第一，npm 源需要使用 npmjs
 
 ```typescript
-npm config set registry http://registry.npmjs.org
+npm config set registry https://registry.npmjs.org
 ```
 
 第二，需要执行 `npm login`，填写用户名，邮箱等。
 
 第三，package.json 里边 `name` 需要用小写，不能用大写
+
+第四，确保 package.json 里边的 `name` 和目前 [npmjs](https://www.npmjs.com/) 网站已发布的不冲突。
 
 ### 版本号规范
 
@@ -89,3 +91,21 @@ npm publish
 // 撤销发布某个版本
 npm unpublish [pkg]@[version]
 ```
+
+## 解决遇到的问题
+
+### 403 问题
+
+```js
+npm ERR! code E403
+npm ERR! 403 403 Forbidden — PUT https://registry.npmjs.org/xxx — You do not have permission to publish xxx. Are you logged in as the correct user?
+npm ERR! 403 In most cases, you or one of your dependencies are requesting
+npm ERR! 403 a package version that is forbidden by your security policy.
+```
+
+一般是两种情况：
+
+- 邮箱不对
+- package.json 里边的 `name` 和目前 [npmjs](https://www.npmjs.com/) 网站已发布的冲突了
+
+参考[Solve the error when npm publish for the first time.](https://medium.com/@su_bak/solve-the-error-when-npm-publish-for-the-first-time-a4cca150f379)
