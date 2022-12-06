@@ -39,6 +39,8 @@ git stash && git checkout release && git branch | grep -v "release" | xargs git 
 
 rebase 命令很强大，`git rebase -i HEAD~[num]` 和 `git pull --rebase` 等。
 
+> 推荐阅读 [彻底搞懂 Git-Rebase](http://jartto.wang/2018/12/11/git-rebase/)
+
 ## 查看完整信息
 
 谁用谁知道！
@@ -50,3 +52,42 @@ git reflog
 ## 借助工具
 
 vscode `GitLens` 插件挺好用的。
+
+## git commit 提交规范
+
+这里以 coding 工作台为例子，其它代码托管平台可能需要修改一下正则。
+
+![](https://img-blog.csdnimg.cn/7f8aa3f2487244efb7fa9177a7cb739e.png)
+
+```js
+^(feat|fix|docs|style|refactor|perf|test|build|revert|merge|chore)(\(.+\))?:\s+(.*)#[0-9]+\s+|^(Accept Merge Request)\s+#[0-9]+:\s+(\(.+\s+->\s+.+\))
+```
+
+### 书写工具辅助
+
+第一种：
+
+全局安装 `commitizen`，即可使用 `git cz` 命令取代 `git commit`，提供交互式选择界面，协助书写。
+
+```js
+npm install -g commitizen cz-conventional-changelog
+echo '{ "path": "cz-conventional-changelog" }' > ~/.czrc
+```
+
+> 参考阅读 [Commit Message](https://coding.net/help/docs/ci/practice/lint/git-commit.html#install)
+
+
+第二种：
+
+更花哨一点，使用 [git-cz](https://github.com/streamich/git-cz)
+
+![](https://img-blog.csdnimg.cn/68a9c68bfdb04852aab5263a0030e536.png)
+
+```js
+npx git-cz
+
+// or
+
+npm install -g commitizen
+npm install --save-dev git-cz
+```
