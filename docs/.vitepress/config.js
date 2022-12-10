@@ -19,7 +19,6 @@ export default {
     nav: [
       { text: "🔥 前端算法", link: "/algorithm/ch" },
       { text: "🔥 TS 学习", link: "/ts/ch" },
-      { text: "Github", link: "https://github.com/Chocolate1999" },
     ],
     editLink: {
       pattern: "https://github.com/Chocolate1999/chodocs/edit/main/docs/:path",
