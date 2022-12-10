@@ -3,17 +3,17 @@ layout: home
 hero:
   name: ChoDocs
   text: Front-end learning document collection
-  tagline: '座右铭: 学如逆水行舟，不进则退。'
+  tagline: "座右铭: 学如逆水行舟，不进则退。"
   image:
     src: /coding.svg
     alt: ChoDocs
   actions:
     - theme: brand
       text: 开始阅读
-      link: /fe/guide
+      link: /guide
     - theme: alt
-      text: 源码
-      link: https://github.com/Chocolate1999/chodocs
+      text: 关于我
+      link: https://github.com/Chocolate1999
 features:
   - icon: 📓
     title: 前端算法
