@@ -14,3 +14,14 @@ html.dark {
 .VPSidebarGroup .link {
   padding: 3px 0 !important;
 }
+
+.VPTeamPageTitle .title {
+  line-height: 32px;
+  font-size: 24px;
+  opacity: .5;
+}
+
+.VPTeamPageTitle .lead {
+  font-size: 14px;
+  opacity: .4;
+}
