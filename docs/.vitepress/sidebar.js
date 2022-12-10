@@ -1,6 +1,12 @@
 export default {
   "/fe/": [
     {
+      text: "开始阅读",
+      collapsible: true,
+      collapsed: false,
+      items: [{ text: "全文预览", link: "/fe/guide" }],
+    },
+    {
       text: "📓 前端算法 JS",
       collapsible: true,
       collapsed: false,
