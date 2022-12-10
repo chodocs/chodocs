@@ -5,7 +5,7 @@ hero:
   text: Front-end learning document collection
   tagline: "座右铭: 学如逆水行舟，不进则退。"
   image:
-    src: /coding.svg
+    src: /it.svg
     alt: ChoDocs
   actions:
     - theme: brand
