@@ -13,12 +13,6 @@ export default {
       items: [{ text: "导读", link: "/algorithm/ch" }],
     },
     {
-      text: "📗 编程学习",
-      collapsible: true,
-      collapsed: false,
-      items: [{ text: "发布 npm 包", link: "/program/ch0" }],
-    },
-    {
       text: "📘 TS 学习",
       collapsible: true,
       collapsed: false,
@@ -30,6 +24,12 @@ export default {
         { text: "函数系统", link: "/ts/ch3" },
         { text: "泛型", link: "/ts/ch4" },
       ],
+    },
+    {
+      text: "📗 编程学习",
+      collapsible: true,
+      collapsed: false,
+      items: [{ text: "发布 npm 包", link: "/program/ch0" }],
     },
     {
       text: "📝 备忘录",
