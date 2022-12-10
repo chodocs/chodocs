@@ -4,6 +4,7 @@ import socialLinks from "./link";
 export default {
   title: "ChoDocs",
   description: "Front-end learning document collection.",
+  lastUpdated: true,
   markdown: {
     theme: "material-palenight",
     lineNumbers: true,
