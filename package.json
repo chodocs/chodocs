@@ -10,6 +10,20 @@
     "docs:build": "vitepress build docs",
     "docs:serve": "vitepress serve docs"
   },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Chocolate1999/chodocs"
+  },
+  "keywords": [
+    "react",
+    "vue",
+    "TypeScript",
+    "Next.js",
+    "Chocolate"
+  ],
+  "bugs": {
+    "url": "https://github.com/Chocolate1999/chodocs/issues"
+  },
   "devDependencies": {
     "vitepress": "^1.0.0-alpha.29",
     "vue": "^3.2.45"
