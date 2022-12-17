@@ -1,5 +1,6 @@
 import sidebar from "./sidebar";
 import socialLinks from "./link";
+import algolia from "./algolia";
 
 export default {
   title: "ChoDocs",
@@ -24,6 +25,7 @@ export default {
     editLink: {
       pattern: "https://github.com/Chocolate1999/chodocs/edit/main/docs/:path",
     },
+    algolia,
     sidebar,
     socialLinks,
   },
