@@ -1,8 +1,8 @@
 <script setup lang="ts">
 import { useData } from 'vitepress';
 import DefaultTheme from 'vitepress/theme'
-const data = useData()
 const { Layout } = DefaultTheme
+const data = useData()
 const { theme } = data
 </script>
 
@@ -15,10 +15,9 @@ const { theme } = data
         <img :src="theme.recommend.mpwx" alt="小狮子前端">
       </div>
     </template>
-
-
   </Layout>
 </template>
+
 <style scoped>
 .recommend-container {
   padding: 16px;
