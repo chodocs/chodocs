@@ -47,13 +47,23 @@ export default {
   ],
   '/green/': [
     {
-      text: "🎈 ACM 经历",
+      text: "🎈ACM 经历",
       collapsible: true,
       collapsed: false,
       items: [
         { text: "阅读须知", link: "/green/ch" },
         { text: "第四届全国中医药院校大学生程序设计竞赛（上篇）", link: "/green/ch1" },
         { text: "第四届全国中医药院校大学生程序设计竞赛（下篇）", link: "/green/ch2" },
+      ],
+    },
+  ],
+  '/tool/': [
+    {
+      text: "🎒 常用",
+      collapsible: true,
+      collapsed: false,
+      items: [
+        { text: "emoji-list", link: "/tool/emoji-list" },
       ],
     },
   ]
