@@ -21,6 +21,7 @@ export default {
     nav: [
       { text: "🔥 前端算法", link: "/algorithm/ch" },
       { text: "🔥 TS 学习", link: "/ts/ch" },
+      { text: "🌱 青葱岁月", link: "/green/ch",activeMatch: '/green/' },
     ],
     editLink: {
       pattern: "https://github.com/Chocolate1999/chodocs/edit/main/docs/:path",
