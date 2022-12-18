@@ -12,7 +12,7 @@ jobs:
         id: algolia_config
         run: echo "::set-output name=config::$(cat crawlerConfig.json | jq -r tostring)"
       - name: Push indices to Algolia
-        uses: algolia/docsearch-scraper:latest
+        uses: algolia/docsearch-scraper-action@master
         env:
           APPLICATION_ID: ${{ secrets.APPLICATION_ID }}
           API_KEY: ${{ secrets.API_KEY }}
