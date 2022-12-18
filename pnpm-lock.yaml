@@ -1,7 +1,7 @@
 lockfileVersion: 5.4
 
 specifiers:
-  vitepress: ^1.0.0-alpha.29
+  vitepress: 1.0.0-alpha.32
   vue: ^3.2.45
 
 devDependencies:
