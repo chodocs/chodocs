@@ -54,6 +54,15 @@ const members = [
   },
     ]
   },
+  {
+    avatar: 'https://www.github.com/holazz.png',
+    name: 'holazz',
+    title: '@element-plus',
+    links: [
+      { icon: 'github', link: 'https://github.com/holazz' },
+      { icon: 'twitter', link: 'https://twitter.com/holazz1208' },
+    ]
+  },
 ]
 </script>
 
