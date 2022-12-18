@@ -12,6 +12,9 @@ hero:
       text: 开始阅读
       link: /guide
     - theme: alt
+      text: 程序人生
+      link: /green/ch
+    - theme: alt
       text: 关于我
       link: https://github.com/Chocolate1999
 features:
