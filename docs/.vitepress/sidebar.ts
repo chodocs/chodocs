@@ -32,7 +32,10 @@ export default {
       text: "📗 编程学习",
       collapsible: true,
       collapsed: false,
-      items: [{ text: "发布 npm 包", link: "/program/ch0" }],
+      items: [
+        { text: "发布 npm 包", link: "/program/ch0" },
+        { text: "给 VitePress 添加 algolia 搜索", link: "/program/ch1" }
+      ],
     },
     {
       text: "📝 备忘录",

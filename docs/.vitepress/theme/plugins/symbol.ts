@@ -86,10 +86,11 @@ export function replaceSymbol() {
       // 获取 DOM
       const sidebarLinks =
         document.querySelectorAll('.aside-container nav .outline-link') || []
+      const h1s = document.querySelectorAll('.content-container h1') || []
       const h2s = document.querySelectorAll('.content-container h2') || []
       const h3s = document.querySelectorAll('.content-container h3') || []
       const h4s = document.querySelectorAll('.content-container h4') || []
-      const doms = [...sidebarLinks, ...h2s, ...h3s, ...h4s]
+      const doms = [...sidebarLinks, ...h1s, ...h2s, ...h3s, ...h4s]
 
       // 替换标记成图标
       doms.forEach((item) => {
