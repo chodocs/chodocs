@@ -1,62 +1,565 @@
-# 【河南-郑州之旅】暨 FPX 夺冠&湖南中医药大学夺冠！（上篇）
+# 2019 年 第二届信息科学与工程学院院赛-正式赛(赛后补题)
+
 
 ::: tip
-文章编写于 2019 年 11 月 13 日 —— 记录美好的时光！
+文章编写于 2019 年 06 月 20 日 —— 发表完失败感想之后，想着还是要继续比赛，先补完题再说，跌倒了再爬起来。
 :::
 
-![](https://img-blog.csdnimg.cn/20191113175550908.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3dlaXhpbl80MjQyOTcxOA==,size_16,color_FFFFFF,t_70)
+## <a href="http://acm.hnucm.edu.cn/JudgeOnline/problem.php?id=1500">1500：XP 的矩阵</a>
 
-## 引言
+分析：
 
-对于这次全国大型比赛，已经过去三天了，想来想去，还是打算写一份心路历程，或许是年龄大了，“越重感情了”，对于一些愉快的事情，总想着用时光机存着，以后当我翻阅这篇文章，或许又是满满的喜悦呢~
+这道题注意只能向下或者向右移动，令 dp(i,j)表示 XP 学长走到位置为(x,y)时路径和的最小值，因此你可以得到状态转移方程 dp(i,j) = min(dp(i-1,j),dp(i,j-1)) +a(i,j)。
 
-## 第一天
+注意初始化的时候让其他地方变为最大值，保证在矩阵内行走，然后 dp[1][0]=dp[0][1]=0 是为了起点的初始化
 
-这次大赛呢，主体流程如下，从长沙南到郑州东，我们一行 9 个参赛选手，2 位老师一同坐高铁前往目的地，大约 3 个小时 40 分钟。基本上是队内坐在一块，比较有意思的是在等候高铁的时候，老师发现就我一个人带了行李箱，然后就被问到：杨超逸，你带这么大行李箱，难道是要给女朋友带特产回去么？ 后面就疯狂八卦我女朋友。。。然后还知道我不止一个。。。后面弄的学弟也知道了，也是疯狂八卦~ 好了，不多说了，这篇文章重点不在这！
+```c
+#include<bits/stdc++.h>
+#define mst(a) memset(a,0x3f,sizeof(a))
+using namespace std;
+const int maxn=1000+8;
+map<int,int> mp;
+map<int,int>::iterator it;
+int g[maxn][maxn];
+int dp[maxn][maxn];
+int n;
 
-![](https://img-blog.csdnimg.cn/2019111317161995.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3dlaXhpbl80MjQyOTcxOA==,size_16,color_FFFFFF,t_70)
+int main()
+{
+    int t;
+    cin>>t;
+    while(t--)
+    {
+        mst(dp);
+        int n,m;
+        cin>>n>>m;
+        for(int i=1;i<=n;i++)
+        {
+            for(int j=1;j<=m;j++)
+            {
+                cin>>g[i][j];
+            }
+        }
+        dp[1][0]=dp[0][1]=0;
+        for(int i=1;i<=n;i++)
+        {
+            for(int j=1;j<=m;j++)
+            {
+                dp[i][j]=min(dp[i-1][j],dp[i][j-1])+g[i][j];
+            }
+        }
+        int res=dp[n][m];
+        cout<<res<<endl;
+    }
+    return 0;
+}
 
-下面说我们这次比赛具体行程，我觉得酒店挺不错的（露出了白嫖的笑脸），居然还提供了自助早餐，像我这种白嫖党，发现了酸奶，直接拿着壶直接开怼。。。然后特别感谢这次河南中医药大学的优秀志愿者们，觉得特别贴心，一直带领我们，该去哪里，学校景点食堂特色等等都详细告诉我们，并且有什么重要事情都会给我们每一个人说的清清楚楚，这里表示感谢！总之，是一次不错的比赛（旅行）！
+```
 
-![](https://img-blog.csdnimg.cn/20191113175607986.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3dlaXhpbl80MjQyOTcxOA==,size_16,color_FFFFFF,t_70)
+## <a href="http://acm.hnucm.edu.cn/JudgeOnline/problem.php?id=1500">1504: XP 的二进制操作数列</a>
 
-## 第二天-白天
+分析:
 
-上午可以说是开了好久好久的会议，我差不多把手机里面下载的剧快看完了。。。然后就是在比赛前进行拍照了，下面就是我们湖南中医药大学的 3 个队伍，应该还不知道本人是谁 哈哈哈 后面还会有图片的 拍照的时候稍微溜达了一会，就感觉和我们学校相比，简直太大了，每条路我都看不到尽头。。。 开完会议后就是食堂吃饭了，不得不提一句真香，河南那边物价确实挺低的，一个蛋挞居然只卖一块钱，在我们学校 3.5 起步的那种。。。 然后食堂一餐饭 7-8 块就够你吃了，我反正是点了没办法吃其他的了，然后在我们湖南这边一顿饭 20 左右才够吃，如果要是陪女朋友出去吃，外面价格会更高一点！
+这道题挺有意思的，看懂了就是一个水题，为了使得数列中所有数字变为零，你需要使得它们先成为相同的某个数字，考虑 or 操作，那么你只需要 or 上一个二进制下位数全为 1 的数 y，即可让一个数 x 变成 y，之后你只需要再 xor 一次 y 即可得到全零的数列，另外题目的坑点在于可能初始时数列就是完全相同的。并且如果数列全为 0 的话要特别考虑 全 0 不需要操作，所以操作次数为 0
 
-![](https://img-blog.csdnimg.cn/20191113175617534.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3dlaXhpbl80MjQyOTcxOA==,size_16,color_FFFFFF,t_70)
+那么就很显然了，如果数列完全相同（除开全 0）操作次数为 1 （与自己异或就行了），不完全相同就 2 次 （先 or 一个 2 的 32 次方-1 的数 使自己变为全 1 然后再异或这个全 1 操作次数为 2）
 
-![](https://img-blog.csdnimg.cn/20191113175625469.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3dlaXhpbl80MjQyOTcxOA==,size_16,color_FFFFFF,t_70)
-然后再下午打了一场热身赛嘛，下面是封榜后的图，我们学校应该是做了 4 道题，然后我们含浦幼稚园队处在银牌区，然后这次比赛自我感觉的话是稳银了，热身赛嘛，放松心情找找感觉就是了，明天正式赛才是关键的！
+```c
+#include<bits/stdc++.h>
+using namespace std;
+const int maxn=100000+8;
+long long a[maxn];
+set<long long >st;
+int main()
+{
+    int t;
+    cin>>t;
+    while(t--)
+    {
+        st.clear();
+        int n;
+        cin>>n;
+        bool flag=false;
+        for(int i=0;i<n;i++)
+        {
+            long long x;
+            cin>>x;
+            if(x!=0)
+            {
+                flag=true;
+            }
+            st.insert(x);
+        }
+        if(flag)
+        {
+             int len=st.size();
+            if(len!=1)
+            {
+                cout<<2<<endl;
+            }
+            else
+            {
+                cout<<1<<endl;
+            }
+        }
+        else
+        {
+            cout<<0<<endl;
+        }
+    }
+    return 0;
+}
 
-![](https://img-blog.csdnimg.cn/20191113175634377.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3dlaXhpbl80MjQyOTcxOA==,size_16,color_FFFFFF,t_70)
+```
 
-## 第二天-晚上
+## <a href="http://acm.hnucm.edu.cn/JudgeOnline/problem.php?id=1500">1505: XP 的橘子洲</a>
 
-晚上，是比较爽的，因为比赛那天没有晚餐吃了，所以要把餐票尽快消费，每个人都有 80 的餐票，然后物价又比较低，可以吃好多好多东西了
+分析：
 
-![](https://img-blog.csdnimg.cn/20191113175640601.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3dlaXhpbl80MjQyOTcxOA==,size_16,color_FFFFFF,t_70)
+这个题原本学长是想考我们 xor 异或操作的，但是我用 map 做了，因为那个特别的烟花只有 1 个 所以对所有烟花，相同的就++ 然后如果 value 值为 1 就输出那个就行了
 
-这里也不知道怎么就被老师偷拍了，还配了文字（哭笑）
+```c
+#include<bits/stdc++.h>
+#define mst(a) memset(a,0,sizeof(a))
+using namespace std;
+const int maxn=1000000+8;
+int a[maxn];
+map<int,int> mp;
+map<int,int>::iterator it;
+int main()
+{
+    int n;
+    cin>>n;
+    for(int i=0;i<n;i++)
+    {
+        int x;
+        cin>>x;
+        mp[x]++;
+    }
+    for(it=mp.begin();it!=mp.end();it++)
+    {
+        if(it->second==1)
+        {
+            cout<<it->first<<endl;
+        }
+    }
+    return 0;
+}
 
-![](https://img-blog.csdnimg.cn/20191113173146366.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3dlaXhpbl80MjQyOTcxOA==,size_16,color_FFFFFF,t_70)
+```
+:::info
+经过暑假刷题后，明白了异或操作，特来补上简单异或操作！
+:::
 
-![](https://img-blog.csdnimg.cn/20191113173611361.jpg?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3dlaXhpbl80MjQyOTcxOA==,size_16,color_FFFFFF,t_70)
+位异或:
+一个数与 0 异或 等于它本身
+一个数与自己异或 等于 0
 
-## 第三天-正式比赛
+即对于一个任意一个数 n，它有几个特殊的性质：
 
-这也是最后 1 小时封榜图，我们学校 10 题，夺得第一次全国中医药冠军，然后我们含浦幼稚园也是比较幸运，后面有几个队和我们一样的题目，还 try 了几个题，最后没 ac，我们运气上拿到了最后一块金，不过我们队之后也太多的高兴，因为学长学姐可以是比我们多一倍的题啊，这次比赛是他们的退役战，我们与他们还是有很大差距的，这次只是运气好了一点点。
+1、0^n = n
 
-![](https://img-blog.csdnimg.cn/20191113175652693.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3dlaXhpbl80MjQyOTcxOA==,size_16,color_FFFFFF,t_70)
+2、n^n = 0
+所以可以通过每次异或运算，最后剩下的值就是出现奇数次的那个数字。
 
-## 荣誉情况
+==另外，附上位异或的一些运算法则==
 
-这后面也没啥好说的了，就是一些获奖荣誉了
+1、a^b = b^a
 
-![](https://img-blog.csdnimg.cn/20191113175702802.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3dlaXhpbl80MjQyOTcxOA==,size_16,color_FFFFFF,t_70)
+2、(a ^ b) ^ c = a ^ ( b ^ c )
 
-![](https://img-blog.csdnimg.cn/20191113175710314.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3dlaXhpbl80MjQyOTcxOA==,size_16,color_FFFFFF,t_70)
+3、a ^ b ^a = b
 
-![](https://img-blog.csdnimg.cn/20191113174816369.png)
+```c
+#include<iostream>
+using namespace std;
+const int maxn=1e6+8;
+int a[maxn];
+int main()
+{
+    int n;
+    cin>>n;
+    int res=0;
+    for(int i=1;i<=n;i++)
+    {
+        int x;
+        cin>>x;
+        res^=x;
+    }
+    cout<<res<<endl;
+    return 0;
+}
+```
 
-![](https://img-blog.csdnimg.cn/2019111317484251.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3dlaXhpbl80MjQyOTcxOA==,size_16,color_FFFFFF,t_70)
+## <a href="http://acm.hnucm.edu.cn/JudgeOnline/problem.php?id=1500">1507: XP 的买卖</a>
+
+分析
+
+树状数组的模板题，但是我们需要注意的是树状数组没有单点替换的操作 只有更新这种做法，所以我们就先把原来的那个值减去，然后再加上我们新输入的值。其他的就是模板了，然后注意这个题 long long 才能过 数据比较大
+
+```c
+#include<bits/stdc++.h>
+#define mst(a) memset(a,0,sizeof(a))
+using namespace std;
+const int maxn=100000+8;
+map<int,int> mp;
+map<int,int>::iterator it;
+int a[maxn];
+long long c[maxn];
+int n,m;
+void change(int pos,int v)
+{
+    for(int i=pos;i<=n;i+=i&(-i))
+        c[i]+=v;
+}
+long long sum(int x)
+{
+    long long ans=0;
+    while(x>0)
+    {
+        ans+=c[x];
+        x-=x&(-x);
+    }
+    return ans;
+}
+int main()
+{
+    int t;
+    scanf("%d",&t);
+    while(t--)
+    {
+        mst(c);
+        cin>>n>>m;
+        for(int i=1;i<=n;i++)
+        {
+            cin>>a[i];
+            change(i,a[i]);
+        }
+        while(m--)
+        {
+            int op,x,y;
+            cin>>op>>x>>y;
+            if(op==1)
+            {
+                //cout<<sum(y)<<"  "<<sum(x-1)<<endl;
+                cout<<sum(y)-sum(x-1)<<endl;
+            }
+            else
+            {
+                change(x,y-a[x]);
+                a[x]=y;
+            }
+        }
+    }
+    return 0;
+}
+
+```
+
+## <a href="http://acm.hnucm.edu.cn/JudgeOnline/problem.php?id=1500">1508: XP 的梅溪湖</a>
+
+分析：
+
+Dirac 定理:设一个无向图中有 N 个顶点，若所有顶点的度数大于等于 N/2,则哈密顿回路一定存在。 根据题意你只需要输出 YES 即可。
+
+```c
+#include<bits/stdc++.h>
+using namespace std;
+int main()
+{
+    int n,m;
+    cin>>n>>m;
+    for(int i=0;i<m;i++)
+    {
+        int x,y;
+        cin>>x>>y;
+    }
+    cout<<"Yes"<<endl;
+    return 0;
+}
+```
+
+## <a href="http://acm.hnucm.edu.cn/JudgeOnline/problem.php?id=1500">1513: XP 的数论</a>
+
+分析：
+
+这个题用埃式筛素数法或者用欧拉筛法来求，不会被卡时间，然而我这的解法并没有筛，要是 OJ 用了大数据，那么我这个代码应该过不了了，思路是如果一个数的素因子个数为奇数的话，那么结果减去这个数，如果为偶数的话，那么结果就加上这个数。关于埃式筛法与欧拉筛法，后面弄懂了就再补一下！
+
+```c
+#include<bits/stdc++.h>
+using namespace std;
+set<int> st;
+int f(int n)
+{
+    st.clear();
+    if(n==2)
+    {
+        st.insert(2);
+    }
+    else if(n<2)
+    {
+        st.clear();
+    }
+    else
+    {
+        for(int i=2;i<=sqrt(n);i++)
+        {
+            if(n%i==0)
+            {
+                n/=i;
+                st.insert(i);
+                i--;
+            }
+        }
+        st.insert(n);
+    }
+    int k=st.size();
+    return k;
+}
+int main()
+{
+    int t;
+    cin>>t;
+    while(t--)
+    {
+        int n;
+        cin>>n;
+        long long sum=0;
+        for(int i=1;i<=n;i++)
+        {
+            int k=f(i);
+            if(k%2==0)
+            {
+                sum+=i;
+            }
+            else
+            {
+                sum-=i;
+            }
+        }
+        cout<<sum<<endl;
+    }
+    return 0;
+}
+
+```
+
+## <a href="http://acm.hnucm.edu.cn/JudgeOnline/problem.php?id=1500">1515: XP 的校园漫步</a>
+
+分析：
+
+并查集的模板题，开始我的并查集写错了，请教别人好久才把这个题给 AC 了，解题思路就是看输入的两个端点是否有相同的父节点，如果有的话，那么就会形成一个环，就会出现题目所述现象。
+
+```c
+#include<bits/stdc++.h>
+#define mst(a) memset(a,0,sizeof(a))
+using namespace std;
+const int maxn=1000000+8;
+int pre[maxn];
+int find_pre(int x)
+{
+    if(x!=pre[x])
+    {
+        pre[x]=find_pre(pre[x]);
+    }
+    return pre[x];
+}
+void join(int x,int y)
+{
+    int a=find_pre(x);
+    int b=find_pre(y);
+    if(a!=b)
+    {
+        pre[a]=b;
+    }
+}
+int main()
+{
+    int t;
+    cin>>t;
+    while(t--)
+    {
+        int n,m;
+        cin>>n>>m;
+        for(int i=1;i<=n;i++)
+        {
+            pre[i]=i;
+        }
+        bool flag=false;
+        for(int i=0;i<m;i++)
+        {
+            int x,y;
+            cin>>x>>y;
+            if(find_pre(x)==find_pre(y))
+            {
+                flag=true;
+            }
+            else
+            {
+                join(x,y);
+            }
+        }
+        if(flag)
+        {
+            cout<<"YES"<<endl;
+        }
+        else
+        {
+            cout<<"NO"<<endl;
+        }
+    }
+    return 0;
+}
+
+```
+
+## <a href="http://acm.hnucm.edu.cn/JudgeOnline/problem.php?id=1500">1516: XP 的岳麓山</a>
+
+分析：
+
+一道模拟题，我感觉我的方法还是比较复杂！题解：你需要分别遍历 a，b 两次，每次记录 a 前缀的最大值，b 后缀的最大值即可判断
+
+```c
+#include<bits/stdc++.h>
+#define mst(a) memset(a,0,sizeof(a))
+using namespace std;
+const int maxn=1000000+8;
+map<int,int> mp;
+map<int,int>::iterator it;
+int a[maxn];
+int b[maxn];
+int res[maxn];
+int main()
+{
+    int n;
+    cin>>n;
+    mst(a);
+    mst(b);
+    for(int i=1;i<=n;i++)
+    {
+        cin>>a[i];
+    }
+    for(int i=1;i<=n;i++)
+    {
+        cin>>b[i];
+    }
+    int ans1=0;
+    for(int i=1;i<=n;i++)
+    {
+        if(a[i]>=ans1)
+        {
+            ans1=a[i];
+            mp[i]++;
+        }
+    }
+    int ans2=0;
+    for(int i=n;i>=1;i--)
+    {
+        if(b[i]>=ans2)
+        {
+            ans2=b[i];
+            mp[i]++;
+        }
+    }
+    int k=0;
+    for(it=mp.begin();it!=mp.end();it++)
+    {
+        if(it->second==2)
+        {
+            res[k++]=it->first;
+        }
+    }
+    if(k)
+    {
+        for(int i=0;i<k;i++)
+        {
+            if(i!=k-1)
+            {
+                cout<<res[i]<<" ";
+            }
+            else
+            {
+                cout<<res[i]<<endl;
+            }
+        }
+    }
+    else
+    {
+        cout<<"none"<<endl;
+    }
+
+
+    return 0;
+}
+
+```
+
+## <a href="http://acm.hnucm.edu.cn/JudgeOnline/problem.php?id=1500">1517: XP 的连续字符串</a>
+
+分析：
+
+遍历字符串，每次判断当前字符与前一个字符是否相同，如果相同即更新当前连续的长度，并判断是否需要更新答案，另外如果当前连续长度和当前记录的最长的长度相同，即判断字典序的大小即可。O(N)
+
+```c
+#include<bits/stdc++.h>
+#define mst(a) memset(a,0,sizeof(a))
+using namespace std;
+const int maxn=1000000+8;
+map<int,int> mp;
+map<int,int>::iterator it;
+int a[maxn];
+int b[maxn];
+int res[maxn];
+int main()
+{
+    int t;
+    cin>>t;
+    while(t--)
+    {
+        int n;
+        cin>>n;
+        string str;
+        cin>>str;
+        int curdd=0;
+        int dd=0;
+        int curcnt=1;
+        int cnt=1;
+        for(int i=1;i<n;i++)
+        {
+            if(str[i]==str[curdd])
+            {
+                curcnt++;
+            }
+            else
+            {
+                if(curcnt>cnt)
+                {
+                    cnt=curcnt;
+                    dd=curdd;
+                }
+                if(curcnt==cnt)
+                {
+                    if(str[dd]>str[curdd])
+                    {
+                        dd=curdd;
+                    }
+                }
+                curcnt=1;
+                curdd=i;
+            }
+
+        }
+        cout<<str[dd]<<endl;
+
+    }
+
+    return 0;
+}
+
+```
+
+>**未完待续。。。**
+
+```c
+学如逆水行舟，不进则退
+```
