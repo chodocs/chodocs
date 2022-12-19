@@ -6,9 +6,9 @@
   "author": "Chocolate<https://github.com/Chocolate1999>",
   "license": "MIT",
   "scripts": {
-    "docs:dev": "vitepress dev docs --port 8080 --max-old-space-size=50000",
-    "docs:build": "vitepress build docs",
-    "docs:serve": "vitepress serve docs"
+    "dev": "vitepress dev docs --port 8080 --max-old-space-size=50000",
+    "build": "vitepress build docs",
+    "serve": "vitepress serve docs"
   },
   "repository": {
     "type": "git",
