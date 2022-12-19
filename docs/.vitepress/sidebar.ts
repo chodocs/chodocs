@@ -53,6 +53,7 @@ export default {
       items: [
         { text: "阅读须知", link: "/green/ch" },
         { text: "2019年 第二届信息科学与工程学院院赛-正式赛(赛后感想)", link: "/green/ch1" },
+        { text: "2019年 第二届信息科学与工程学院院赛-正式赛(赛后补题)", link: "/green/ch4" },
         { text: "第四届全国中医药院校大学生程序设计竞赛（上篇）", link: "/green/ch2" },
         { text: "第四届全国中医药院校大学生程序设计竞赛（下篇）", link: "/green/ch3" },
       ],
