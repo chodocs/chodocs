@@ -25,10 +25,9 @@
     "url": "https://github.com/Chocolate1999/chodocs/issues"
   },
   "devDependencies": {
+    "sitemap": "^7.1.1",
     "vitepress": "1.0.0-alpha.32",
     "vue": "^3.2.45"
   },
-  "dependencies": {
-    "sitemap-ts": "^1.1.0"
-  }
+  "dependencies": {}
 }

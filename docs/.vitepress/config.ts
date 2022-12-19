@@ -1,7 +1,11 @@
-import { generateSitemap as sitemap } from 'sitemap-ts'
+import { createWriteStream } from 'node:fs'
+import { resolve } from 'node:path'
+import { SitemapStream } from 'sitemap'
 import sidebar from "./sidebar";
 import socialLinks from "./link";
 import algolia from "./algolia";
+
+const links = []
 
 export default {
   title: "ChoDocs",
@@ -23,7 +27,7 @@ export default {
       { text: "🔥 前端算法", link: "/algorithm/ch" },
       { text: "🔥 TS 学习", link: "/ts/ch" },
       { text: "🔧 编程工具", link: "/tool/" },
-      { text: "🌱 青葱岁月", link: "/green/ch"},
+      { text: "🌱 青葱岁月", link: "/green/ch" },
     ],
     editLink: {
       pattern: "https://github.com/Chocolate1999/chodocs/edit/main/docs/:path",
@@ -33,8 +37,16 @@ export default {
     socialLinks,
   },
   vite: {
-    buildEnd: () => {
-      sitemap()
+    buildEnd: async ({ outDir }) => {
+      const sitemap = new SitemapStream({
+        hostname: 'https://chodocs.cn/'
+      })
+      const writeStream = createWriteStream(resolve(outDir, 'sitemap.xml'))
+      sitemap.pipe(writeStream)
+      links.forEach((link) => sitemap.write(link))
+      sitemap.end()
+      console.log('links', links);
+      await new Promise((r) => writeStream.on('finish', r))
     },
   },
 };
