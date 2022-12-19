@@ -1,13 +1,11 @@
-import { createWriteStream } from 'node:fs'
-import { resolve } from 'node:path'
-import { SitemapStream } from 'sitemap'
+import { generateSitemap as sitemap } from 'sitemap-ts'
 import sidebar from "./sidebar";
 import socialLinks from "./link";
 import algolia from "./algolia";
 
-const links = []
 
 export default {
+  outDir: '../dist',
   title: "ChoDocs",
   description: "Front-end learning document collection.",
   lastUpdated: true,
@@ -36,17 +34,7 @@ export default {
     sidebar,
     socialLinks,
   },
-  vite: {
-    buildEnd: async ({ outDir }) => {
-      const sitemap = new SitemapStream({
-        hostname: 'https://chodocs.cn/'
-      })
-      const writeStream = createWriteStream(resolve(outDir, 'sitemap.xml'))
-      sitemap.pipe(writeStream)
-      links.forEach((link) => sitemap.write(link))
-      sitemap.end()
-      console.log('links', links);
-      await new Promise((r) => writeStream.on('finish', r))
-    },
-  },
-};
+  async buildEnd() {
+    await sitemap({ hostname: 'https://chodocs.cn/' });
+  }
+}
