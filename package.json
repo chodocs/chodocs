@@ -27,5 +27,8 @@
   "devDependencies": {
     "vitepress": "1.0.0-alpha.32",
     "vue": "^3.2.45"
+  },
+  "dependencies": {
+    "sitemap-ts": "^1.1.0"
   }
 }

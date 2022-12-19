@@ -1,3 +1,4 @@
+import { generateSitemap as sitemap } from 'sitemap-ts'
 import sidebar from "./sidebar";
 import socialLinks from "./link";
 import algolia from "./algolia";
@@ -30,5 +31,10 @@ export default {
     algolia,
     sidebar,
     socialLinks,
+  },
+  vite: {
+    buildEnd: () => {
+      sitemap()
+    },
   },
 };
