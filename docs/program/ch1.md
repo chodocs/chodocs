@@ -1,6 +1,6 @@
-# 给 VitePress 添加 algolia 搜索 ~new
+# 给 VitePress 添加 algolia 搜索
 
-## 背景 ~new
+## 背景
 
 最近在折腾 VitePress，搭建了一个文档项目：[ChoDocs](https://chodocs.cn/)，不过文档还不支持搜索功能，虽然目前内容不多，但待我同步完之后，搜索就很有必要了。
 
@@ -87,7 +87,7 @@ algolia: {
 }
 ```
 
-### 编写 CI 脚本
+### 编写 CI 脚本 ~new
 
 在项目根目录`.github/workflows` 文件夹下，创建 `algolia.yml` 文件（名称可更改，自定义），粘贴如下内容：
 
@@ -101,7 +101,7 @@ jobs:
   algolia:
     runs-on: ubuntu-latest
     steps:
-      - uses: actions/checkout@v2
+      - uses: actions/checkout@v3
       - name: Get the content of algolia.json as config
         id: algolia_config
         run: echo "config=$(cat crawlerConfig.json | jq -r tostring)" >> $GITHUB_OUTPUT

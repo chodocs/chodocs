@@ -14,6 +14,7 @@ export default {
     lineNumbers: true,
   },
   themeConfig: {
+    outline: 'deep',
     recommend: {
       mpwx: "https://img-blog.csdnimg.cn/img_convert/43c196751f4984c71011557d06e7e9b6.png",
     },
