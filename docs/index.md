@@ -48,7 +48,7 @@ import {
 const members = [
   {
     avatar: 'https://www.github.com/Chocolate1999.png',
-    name: 'Chocolate',
+    name: 'Choi Yang',
     title: '管理者',
     links: [
       { icon: 'github', link: 'https://github.com/Chocolate1999' },
