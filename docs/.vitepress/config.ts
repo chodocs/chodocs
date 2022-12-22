@@ -25,6 +25,7 @@ export default {
       { text: "🔥 前端算法", link: "/algorithm/ch" },
       { text: "🔥 TS 学习", link: "/ts/ch" },
       { text: "🔧 编程工具", link: "/tool/" },
+      { text: "✏️ 随笔", link: "/essay/" },
       { text: "🌱 青葱岁月", link: "/green/ch" },
     ],
     editLink: {

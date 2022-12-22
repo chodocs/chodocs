@@ -68,5 +68,12 @@ export default {
         { text: "emoji-list", link: "/tool/emoji-list" },
       ],
     },
+  ],
+  '/essay/': [
+    {
+      items: [
+        { text: "聊聊近况，差点账号被永久封禁...", link: "/essay/ch1" },
+      ],
+    },
   ]
 };
