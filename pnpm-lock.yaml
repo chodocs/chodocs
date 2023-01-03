@@ -2,12 +2,12 @@ lockfileVersion: 5.4
 
 specifiers:
   sitemap-ts: ^1.1.0
-  vitepress: 1.0.0-alpha.34
+  vitepress: 1.0.0-alpha.35
   vue: ^3.2.45
 
 devDependencies:
   sitemap-ts: 1.1.0
-  vitepress: 1.0.0-alpha.34
+  vitepress: 1.0.0-alpha.35
   vue: 3.2.45
 
 packages:
@@ -420,14 +420,14 @@ packages:
     resolution: {integrity: sha512-oh8q2Zc32S6gd/j50GowEjKLoOVOwHP/bWVjKJInBwQqdOYMdPrf1oVlelTlyfFK3CKxL1uahMDAr+vy8T7yMQ==}
     dev: true
 
-  /@vitejs/plugin-vue/4.0.0_vite@4.0.3+vue@3.2.45:
+  /@vitejs/plugin-vue/4.0.0_vite@4.0.4+vue@3.2.45:
     resolution: {integrity: sha512-e0X4jErIxAB5oLtDqbHvHpJe/uWNkdpYV83AOG2xo2tEVSzCzewgJMtREZM30wXnM5ls90hxiOtAuVU6H5JgbA==}
     engines: {node: ^14.18.0 || >=16.0.0}
     peerDependencies:
       vite: ^4.0.0
       vue: ^3.2.25
     dependencies:
-      vite: 4.0.3
+      vite: 4.0.4
       vue: 3.2.45
     dev: true
 
@@ -838,8 +838,8 @@ packages:
       is-number: 7.0.0
     dev: true
 
-  /vite/4.0.3:
-    resolution: {integrity: sha512-HvuNv1RdE7deIfQb8mPk51UKjqptO/4RXZ5yXSAvurd5xOckwS/gg8h9Tky3uSbnjYTgUm0hVCet1cyhKd73ZA==}
+  /vite/4.0.4:
+    resolution: {integrity: sha512-xevPU7M8FU0i/80DMR+YhgrzR5KS2ORy1B4xcX/cXLsvnUWvfHuqMmVU6N0YiJ4JWGRJJsLCgjEzKjG9/GKoSw==}
     engines: {node: ^14.18.0 || >=16.0.0}
     hasBin: true
     peerDependencies:
@@ -871,18 +871,18 @@ packages:
       fsevents: 2.3.2
     dev: true
 
-  /vitepress/1.0.0-alpha.34:
-    resolution: {integrity: sha512-ALJLEZYM0rgXDBV8n6P6VXdR8fMjJJIZpm7QqU6CqJwB6JKHW7RBmokx9RcEtPRg/JshYTXO8f6AKPI9BByxkw==}
+  /vitepress/1.0.0-alpha.35:
+    resolution: {integrity: sha512-tJQjJstq+Ryb4pKtlxV4tD8KhxId+DTbR1FRrtJBhA+Vv4nexFHra5M9EgK9jUmoMc3rkyNaw7P3Kkix0ArP1w==}
     hasBin: true
     dependencies:
       '@docsearch/css': 3.3.1
       '@docsearch/js': 3.3.1
-      '@vitejs/plugin-vue': 4.0.0_vite@4.0.3+vue@3.2.45
+      '@vitejs/plugin-vue': 4.0.0_vite@4.0.4+vue@3.2.45
       '@vue/devtools-api': 6.4.5
       '@vueuse/core': 9.9.0_vue@3.2.45
       body-scroll-lock: 4.0.0-beta.0
       shiki: 0.12.1
-      vite: 4.0.3
+      vite: 4.0.4
       vue: 3.2.45
     transitivePeerDependencies:
       - '@algolia/client-search'
