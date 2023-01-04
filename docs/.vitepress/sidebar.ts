@@ -17,6 +17,14 @@ export default {
       items: [{ text: "导读", link: "/algorithm/ch" }],
     },
     {
+      text: "📔 前端设计模式",
+      collapsible: true,
+      collapsed: false,
+      items: [
+        { text: "导读", link: "/patterns/ch" },
+        { text: "单例模式", link: "/patterns/ch1" }],
+    },
+    {
       text: "📘 TS 学习",
       collapsible: true,
       collapsed: false,
