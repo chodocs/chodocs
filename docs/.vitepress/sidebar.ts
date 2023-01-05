@@ -22,7 +22,9 @@ export default {
       collapsed: false,
       items: [
         { text: "导读", link: "/patterns/ch" },
-        { text: "单例模式", link: "/patterns/ch1" }],
+        { text: "单例模式", link: "/patterns/ch1" },
+        { text: "代理模式", link: "/patterns/ch2" }
+      ],
     },
     {
       text: "📘 TS 学习",
