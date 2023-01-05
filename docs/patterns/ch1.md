@@ -10,9 +10,68 @@
 
 现如今当我真正了解了单例模式之后，越发觉得当时知识点是多么的浅陋。
 
-
 ## 概念
 
 单例模式中的单例就是指实例化一次，就可以在全局访问了，也就是在整个应用程序中均可以共享。
+
+直接看下面这个例子：
+
+```js
+let counter = 0;
+
+class Counter {
+  getInstance() {
+    return this;
+  }
+
+  getCount() {
+    return counter;
+  }
+
+  increment() {
+    return ++counter;
+  }
+
+  decrement() {
+    return --counter;
+  }
+}
+```
+
+
+上述代码，还会有问题，单例模式只能实例化一次，如下所示，我们可以多次实例化。
+
+```js
+const counter1 = new Counter(); // [!code ++]
+const counter2 = new Counter(); // [!code ++]
+```
+
+<script setup>
+let counter = 0;
+
+class Counter {
+  getInstance() {
+    return this;
+  }
+
+  getCount() {
+    return counter;
+  }
+
+  increment() {
+    return ++counter;
+  }
+
+  decrement() {
+    return --counter;
+  }
+}
+const counter1 = new Counter();
+const counter2 = new Counter();
+</script>
+
+我们来比对一下结果：
+
+<span>`counter1.getInstance() === counter2.getInstance()` 的结果是：`{{counter1.getInstance() === counter2.getInstance()}}`</span>
 
 > 持续更新中...
