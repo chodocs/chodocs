@@ -30,7 +30,7 @@ features:
   - icon: 🚚
     title: 备忘录
     details: 将日常工作中遇到的问题做一份备忘录，方便查阅。
-  - icon: 🔧 
+  - icon: 🔧
     title: 编程工具
     details: 归纳一些编程相关工具与网站，提高效率。
   - icon: 🌱
@@ -61,6 +61,14 @@ const members = [
     },
     link: "https://space.bilibili.com/351534170",
   },
+    ]
+  },
+  {
+    avatar: 'https://www.github.com/HearLing.png',
+    name: 'HearLing',
+    title: 'Open Source Contributor',
+    links: [
+      { icon: 'github', link: 'https://github.com/HearLing' },
     ]
   },
   {
