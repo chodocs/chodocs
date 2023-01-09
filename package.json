@@ -7,7 +7,7 @@
   "license": "MIT",
   "scripts": {
     "dev": "vitepress dev docs --port 8080 --max-old-space-size=50000",
-    "build": "vitepress build docs",
+    "build": "nr update && vitepress build docs",
     "serve": "vitepress serve docs",
     "update": "esno scripts/updateMetaData.ts"
   },
@@ -26,6 +26,7 @@
     "url": "https://github.com/Chocolate1999/chodocs/issues"
   },
   "devDependencies": {
+    "@antfu/ni": "^0.18.8",
     "@types/fs-extra": "^11.0.0",
     "@types/md5": "^2.3.2",
     "esno": "^0.16.3",

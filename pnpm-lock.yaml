@@ -1,6 +1,7 @@
 lockfileVersion: 5.4
 
 specifiers:
+  '@antfu/ni': ^0.18.8
   '@types/fs-extra': ^11.0.0
   '@types/md5': ^2.3.2
   esno: ^0.16.3
@@ -15,6 +16,7 @@ specifiers:
   vue: ^3.2.45
 
 devDependencies:
+  '@antfu/ni': 0.18.8
   '@types/fs-extra': 11.0.0
   '@types/md5': 2.3.2
   esno: 0.16.3
@@ -138,6 +140,11 @@ packages:
       '@algolia/cache-common': 4.14.2
       '@algolia/logger-common': 4.14.2
       '@algolia/requester-common': 4.14.2
+    dev: true
+
+  /@antfu/ni/0.18.8:
+    resolution: {integrity: sha512-0m++AudwQq+wWAz/Ax7g+sh/wFW51HHQ6BtPLsuTAsFIzWB/bv/0COwZE7BRS+u0nqMb6Ks6nlk6cY1TpPDwHg==}
+    hasBin: true
     dev: true
 
   /@babel/helper-string-parser/7.19.4:
