@@ -21,9 +21,9 @@ export default {
       collapsible: true,
       collapsed: false,
       items: [
-        { text: "导读", link: "/patterns/ch" },
-        { text: "单例模式", link: "/patterns/ch1" },
-        { text: "代理模式", link: "/patterns/ch2" }
+        { text: "导读", link: "/patterns/guide/" },
+        { text: "单例模式", link: "/patterns/singletonPattern/" },
+        { text: "代理模式", link: "/patterns/proxyPattern/" }
       ],
     },
     {
