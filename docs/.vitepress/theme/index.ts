@@ -8,6 +8,7 @@ import Contributors from './components/Contributors.vue';
 import "./styles/main.css";
 import "./styles/utils.css";
 import "./styles/vars.css";
+import 'uno.css';
 
 const theme: Theme = {
   ...DefaultTheme,

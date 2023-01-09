@@ -1,4 +1,5 @@
 import { defineConfig } from 'vite';
+import UnoCSS from 'unocss/vite';
 import { resolve } from 'path';
 import { MarkdownTransform } from './.vitepress/plugins/markdownTransform';
 import { Contributors } from './.vitepress/plugins/contributors';
@@ -25,6 +26,8 @@ export default defineConfig(async () => {
     plugins: [
       MarkdownTransform(),
       Contributors(contributions),
+
+      UnoCSS(),
     ]
   }
 });
