@@ -1,6 +1,6 @@
 {
   "name": "chodocs",
-  "version": "1.0.0",
+  "version": "0.1.0",
   "description": "分享 Chocolate 前端成长记录、知识体系。",
   "private": true,
   "author": "Chocolate<https://github.com/Chocolate1999>",
@@ -8,7 +8,8 @@
   "scripts": {
     "dev": "vitepress dev docs --port 8080 --max-old-space-size=50000",
     "build": "vitepress build docs",
-    "serve": "vitepress serve docs"
+    "serve": "vitepress serve docs",
+    "update": "esno scripts/updateMetaData.ts"
   },
   "repository": {
     "type": "git",
@@ -25,7 +26,16 @@
     "url": "https://github.com/Chocolate1999/chodocs/issues"
   },
   "devDependencies": {
+    "@types/fs-extra": "^11.0.0",
+    "@types/md5": "^2.3.2",
+    "esno": "^0.16.3",
+    "fast-glob": "^3.2.12",
+    "fs-extra": "^11.1.0",
+    "gray-matter": "^4.0.3",
+    "md5": "^2.3.0",
+    "simple-git": "^3.15.1",
     "sitemap-ts": "^1.1.0",
+    "vite": "^4.0.4",
     "vitepress": "1.0.0-alpha.33",
     "vue": "^3.2.45"
   }
