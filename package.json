@@ -1,6 +1,6 @@
 {
   "name": "chodocs",
-  "version": "0.1.0",
+  "version": "0.1.1",
   "description": "分享 Chocolate 前端成长记录、知识体系。",
   "private": true,
   "author": "Chocolate<https://github.com/Chocolate1999>",
@@ -9,7 +9,8 @@
     "dev": "vitepress dev docs --port 8080 --max-old-space-size=50000",
     "build": "nr update && vitepress build docs",
     "serve": "vitepress serve docs",
-    "update": "esno scripts/updateMetaData.ts"
+    "update": "esno scripts/updateMetaData.ts",
+    "release": "esno scripts/release.ts"
   },
   "repository": {
     "type": "git",
@@ -29,6 +30,7 @@
     "@antfu/ni": "^0.18.8",
     "@types/fs-extra": "^11.0.0",
     "@types/md5": "^2.3.2",
+    "bumpp": "^8.2.1",
     "esno": "^0.16.3",
     "fast-glob": "^3.2.12",
     "fs-extra": "^11.1.0",
