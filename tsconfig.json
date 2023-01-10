@@ -14,5 +14,10 @@
     "jsx": "preserve",
     "lib": ["ESNext", "DOM"]
   },
+  "include": [
+    "docs",
+    "docs/.vitepress/components/*.vue",
+    "docs/.vitepress/*.ts"
+  ],
   "exclude": ["**/node_modules/**", "**/dist/**"]
 }

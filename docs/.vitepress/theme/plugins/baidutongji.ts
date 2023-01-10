@@ -5,6 +5,12 @@ import { inBrowser } from 'vitepress'
  */
 export const siteIds = 'eb1ef90b1e9476b8d3d43088d3ac9c49'
 
+declare global {
+  interface Window {
+    _hmt: any
+  }
+}
+
 /**
  * 注册统计
  */

@@ -39,6 +39,8 @@
     "simple-git": "^3.15.1",
     "sitemap-ts": "^1.1.0",
     "unocss": "^0.48.3",
+    "unplugin-icons": "^0.15.1",
+    "unplugin-vue-components": "^0.22.12",
     "vite": "^4.0.4",
     "vitepress": "1.0.0-alpha.33",
     "vue": "^3.2.45"
