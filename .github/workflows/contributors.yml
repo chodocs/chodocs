@@ -4,7 +4,7 @@ on:
     - cron: '0 14 * * 0' # At 01:00 on Sunday.
   push:
     branches:
-      - master
+      - main
 jobs:
   contributors:
     runs-on: ubuntu-latest

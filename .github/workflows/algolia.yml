@@ -1,4 +1,4 @@
-name: algolia
+name: Algolia
 on:
   push:
     branches:
