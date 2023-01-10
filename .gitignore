@@ -3,6 +3,7 @@ node_modules
 docs/.vitepress/cache
 dist
 .vscode
+components.d.ts
 
 # local env files
 .env.local
