@@ -1,7 +1,7 @@
-<h1 align="center">chodocs</h1>
+<h1 align="center">ChoDocs</h1>
 
 <p align="center">
-Chocolate + Docs = chodocs
+Chocolate + Docs = ChoDocs
 </p>
 
 <p align="center">
