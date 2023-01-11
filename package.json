@@ -6,7 +6,7 @@
   "author": "Chocolate<https://github.com/Chocolate1999>",
   "license": "MIT",
   "scripts": {
-    "dev": "vitepress dev docs --port 8080 --max-old-space-size=50000",
+    "dev": "nr update && vitepress dev docs --port 8080 --max-old-space-size=50000",
     "build": "nr update && vitepress build docs",
     "serve": "vitepress serve docs",
     "update": "esno scripts/updateMetaData.ts",
