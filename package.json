@@ -42,7 +42,7 @@
     "unplugin-icons": "^0.15.1",
     "unplugin-vue-components": "^0.22.12",
     "vite": "^4.0.4",
-    "vitepress": "1.0.0-alpha.33",
+    "vitepress": "1.0.0-alpha.36",
     "vue": "^3.2.45"
   }
 }
