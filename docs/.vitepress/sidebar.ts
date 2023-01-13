@@ -14,7 +14,7 @@ export default {
       text: "📓 前端算法 JS",
       collapsible: true,
       collapsed: false,
-      items: [{ text: "导读", link: "/algorithm/ch" }],
+      items: [{ text: "导读", link: "/algorithm/guide/" }],
     },
     {
       text: "📔 前端设计模式",

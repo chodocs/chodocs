@@ -16,3 +16,7 @@ export function replacer(code: string, value: string, key: string, insert: 'head
 
   return code.replace(regex, target)
 }
+
+export function uniq<T extends any[]>(a: T) {
+  return Array.from(new Set(a))
+}

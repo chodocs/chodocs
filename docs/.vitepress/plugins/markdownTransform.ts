@@ -42,7 +42,14 @@ export async function getDocsMarkdown(pkg: string, name: string) {
   const ContributorsSection = `## Contributors
   <Contributors doc="${name}" />`;
 
-  const footer = `${ContributorsSection}\n`;
+
+  const changelogSection = `
+  ## Changelog
+  
+  <Changelog doc="${name}" />
+  `
+
+  const footer = `${ContributorsSection}\n${changelogSection}\n`;
 
   return {
     footer,

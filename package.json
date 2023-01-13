@@ -28,6 +28,7 @@
   },
   "devDependencies": {
     "@antfu/ni": "^0.18.8",
+    "@iconify-json/octicon": "^1.1.27",
     "@types/fs-extra": "^11.0.0",
     "@types/md5": "^2.3.2",
     "bumpp": "^8.2.1",
