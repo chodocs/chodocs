@@ -8,7 +8,6 @@ export function MarkdownTransform(): Plugin {
     enforce: "pre",
     async transform(code, id) {
       if (!id.match(/\.md\b/)) return null;
-
       // linkify function names
       code = code.replace(
         new RegExp(`\`({${docNames.join("|")}})\`(.)`, "g"),

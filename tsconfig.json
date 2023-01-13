@@ -16,7 +16,7 @@
   },
   "include": [
     "docs",
-    "docs/.vitepress/components/*.vue",
+    "docs/.vitepress/theme/components/*.vue",
     "docs/.vitepress/*.ts"
   ],
   "exclude": ["**/node_modules/**", "**/dist/**"]
