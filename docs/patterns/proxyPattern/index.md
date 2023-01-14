@@ -87,3 +87,6 @@ const personProxy = new Proxy(person, {
 </script>
 
 <pre>{{personProxy.name}}</pre>
+
+
+aaa
