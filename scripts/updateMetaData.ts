@@ -3,7 +3,8 @@ import matter from "gray-matter";
 import fs from "fs-extra";
 import fg from "fast-glob";
 import Git from "simple-git";
-import type { ChoDocsPackage, ChoDocsTypes, PackageIndexes, PackageManifest } from "../types";
+import { packages } from '../meta/packages'
+import type { ChoDocsPackage, ChoDocsTypes, PackageIndexes } from "../types";
 
 export const DOCS_URL = "https://chodocs.cn";
 export const DIR_PACKAGE = resolve(__dirname, "..");
@@ -13,29 +14,6 @@ export const DIR_SRC = resolve(DIR_ROOT, "docs");
 export const git = Git(DIR_ROOT);
 
 
-export const DocsMetaDirs: PackageManifest[] = [
-  {
-    name: 'algorithm',
-  },
-  {
-    name: 'essay',
-  },
-  {
-    name: 'green',
-  },
-  {
-    name: 'memo',
-  },
-  {
-    name: 'patterns',
-  },
-  {
-    name: 'tool',
-  },
-  {
-    name: 'ts',
-  },
-];
 
 export async function listDocs(dir: string, ignore: string[] = []) {
   const files = await fg("*", {
@@ -54,7 +32,7 @@ export async function readMetadata() {
     docs: [],
   };
 
-  for (const info of DocsMetaDirs) {
+  for (const info of packages) {
     const dir = join(DIR_SRC, info.name);
     const docs = await listDocs(dir);
 

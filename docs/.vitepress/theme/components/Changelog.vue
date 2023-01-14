@@ -45,7 +45,7 @@ const commits = computed(() => {
           <octicon-rocket-16 m="auto" />
         </div>
         <div>
-          <a :href="`https://github.com/vueuse/vueuse/releases/tag/${commit.version}`" target="_blank">
+          <a :href="`https://github.com/Chocolate1999/chodocs/releases/tag/${commit.version}`" target="_blank">
             <code class="!text-primary font-bold">{{ commit.version }}</code>
           </a>
           <span class="opacity-50 text-xs"> on {{ new Date(commit.date).toLocaleDateString() }}</span>
@@ -54,7 +54,7 @@ const commits = computed(() => {
       <template v-else>
         <octicon-git-commit-16 class="m-auto transform rotate-90 opacity-30" />
         <div>
-          <a :href="`https://github.com/vueuse/vueuse/commit/${commit.hash}`" target="_blank">
+          <a :href="`https://github.com/Chocolate1999/chodocs/commit/${commit.hash}`" target="_blank">
             <code class="!text-xs !text-$vp-c-text-2 !hover:text-primary">{{ commit.hash.slice(0, 5) }}</code>
           </a>
           <span text="sm">

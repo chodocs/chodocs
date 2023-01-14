@@ -28,7 +28,7 @@ export async function getChangeLog(count = 200) {
     const files = raw.replace(/\\/g, '/').trim().split('\n')
     log.docs = uniq(
       files
-        .map(i => i.match(/^docs\/\w+\/(\w+)\/\w+?\.ts$/)?.[1])
+        .map(i => i.match(/^docs\/\w+\/(\w+)\/\w+?\.md$/)?.[1])
         .filter(Boolean),
     )
   }
