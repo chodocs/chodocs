@@ -1,5 +1,6 @@
-import { execSync } from 'child_process'
-import { readJSONSync } from 'fs-extra'
+import { execSync } from 'child_process';
+import { readJSONSync } from 'fs-extra';
+import { updateContributors } from './utils';
 
 const { version: oldVersion } = readJSONSync('package.json')
 
@@ -12,6 +13,7 @@ if (oldVersion === version) {
   process.exit()
 }
 
+updateContributors()
 
 execSync('npm run update', { stdio: 'inherit' })
 execSync('git add .', { stdio: 'inherit' })

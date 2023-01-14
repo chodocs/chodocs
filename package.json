@@ -37,6 +37,7 @@
     "fs-extra": "^11.1.0",
     "gray-matter": "^4.0.3",
     "md5": "^2.3.0",
+    "ohmyfetch": "^0.4.21",
     "simple-git": "^3.15.1",
     "sitemap-ts": "^1.1.0",
     "unocss": "^0.48.3",
