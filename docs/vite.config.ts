@@ -31,9 +31,9 @@ export default defineConfig(async () => {
     },
     plugins: [
       // custom
+      Contributors(contributions),
       MarkdownTransform(),
       ChangeLog(changeLog),
-      Contributors(contributions),
       // plugins
       Components({
         dirs: resolve(__dirname, '.vitepress/theme/components'),

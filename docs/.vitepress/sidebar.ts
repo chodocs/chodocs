@@ -98,7 +98,7 @@ export default {
       collapsible: true,
       collapsed: false,
       items: [
-        { text: "模拟面试", link: "/interview/React/react-summary" },
+        { text: "模拟面试", link: "/interview/react-summary/" },
       ],
     }
   ]

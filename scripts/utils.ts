@@ -1,3 +1,15 @@
+import { join, resolve } from 'path'
+import fs from 'fs-extra'
+import Git from 'simple-git'
+import { $fetch } from 'ohmyfetch'
+
+export const git = Git()
+
+export const DOCS_URL = 'https://chodocs.cn'
+
+export const DIR_ROOT = resolve(__dirname, '..')
+export const DIR_SRC = resolve(__dirname, '../docs')
+
 export function replacer(code: string, value: string, key: string, insert: 'head' | 'tail' | 'none' = 'none') {
   const START = `<!--${key}_STARTS-->`
   const END = `<!--${key}_ENDS-->`
@@ -19,4 +31,30 @@ export function replacer(code: string, value: string, key: string, insert: 'head
 
 export function uniq<T extends any[]>(a: T) {
   return Array.from(new Set(a))
+}
+
+async function fetchContributors(page = 1) {
+  const additional = ['egoist']
+
+  const collaborators: string[] = []
+  const data = await $fetch<{ login: string }[]>(`https://api.github.com/repos/Chocolate1999/chodocs/contributors?per_page=100&page=${page}`, {
+    method: 'get',
+    headers: {
+      'content-type': 'application/json',
+    },
+  }) || []
+  collaborators.push(...data.map(i => i.login))
+  if (data.length === 100)
+    collaborators.push(...(await fetchContributors(page + 1)))
+
+  return Array.from(new Set([
+    ...collaborators.filter(collaborator => !['renovate[bot]', 'dependabot[bot]', 'renovate-bot', 'github-actions[bot]'].includes(collaborator)),
+    ...additional,
+  ]))
+}
+
+
+export async function updateContributors() {
+  const collaborators = await fetchContributors()
+  await fs.writeFile(join(DIR_SRC, './contributors.json'), `${JSON.stringify(collaborators, null, 2)}\n`, 'utf8')
 }
