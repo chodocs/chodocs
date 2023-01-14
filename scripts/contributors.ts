@@ -12,6 +12,7 @@ export async function getContributorsAt(path: string) {
     const list = (await git.raw(['log', '--pretty=format:"%an|%ae"', '--', path]))
       .split('\n')
       .map(i => i.slice(1, -1).split('|') as [string, string])
+    console.log('list', list);
     const map: Record<string, ContributorInfo> = {}
     list
       .filter(i => i[1])
@@ -25,7 +26,8 @@ export async function getContributorsAt(path: string) {
         }
         map[i[1]].count++
       })
-
+    console.log('--------------------------------');
+    console.log('aaaa', list);
 
     return Object.values(map).sort((a, b) => b.count - a.count)
   }
