@@ -32,7 +32,7 @@ export default {
       { text: "📋 面试", link: "/interview/" },
     ],
     editLink: {
-      pattern: "https://github.com/Chocolate1999/chodocs/edit/main/docs/:path",
+      pattern: "https://github.com/chodocs/chodocs/edit/main/docs/:path",
     },
     algolia,
     sidebar,

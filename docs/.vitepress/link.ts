@@ -1,7 +1,7 @@
 const socialLinks = [
   {
     icon: "github",
-    link: "https://github.com/Chocolate1999/chodocs",
+    link: "https://github.com/chodocs/chodocs",
   },
   { icon: "twitter", link: "https://twitter.com/ycyChocolate" },
   {
