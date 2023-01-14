@@ -36,7 +36,7 @@
 
 在上一步我们获取了公开的 key，在这里我们就来配置一下，将上述的 `Search-Only API Key` 填到 apiKey 字段中，**私有的 key 不要填**！
 
-修改文件在 `docs/.vitepress/config` 文件中，具体可参考链接 [config.ts](https://github.com/Chocolate1999/chodocs/blob/main/docs/.vitepress/config.ts)。
+修改文件在 `docs/.vitepress/config` 文件中，具体可参考链接 [config.ts](https://github.com/chodocs/chodocs/blob/main/docs/.vitepress/config.ts)。
 
 ```js
 algolia: {

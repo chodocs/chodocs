@@ -37,7 +37,7 @@ async function fetchContributors(page = 1) {
   const additional = ['egoist']
 
   const collaborators: string[] = []
-  const data = await $fetch<{ login: string }[]>(`https://api.github.com/repos/Chocolate1999/chodocs/contributors?per_page=100&page=${page}`, {
+  const data = await $fetch<{ login: string }[]>(`https://api.github.com/repos/chodocs/chodocs/contributors?per_page=100&page=${page}`, {
     method: 'get',
     headers: {
       'content-type': 'application/json',

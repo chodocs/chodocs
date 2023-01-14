@@ -3,7 +3,7 @@
   "version": "0.1.3",
   "description": "分享 Chocolate 前端成长记录、知识体系。",
   "private": true,
-  "author": "Chocolate<https://github.com/Chocolate1999>",
+  "author": "Choi Yang<https://github.com/Chocolate1999>",
   "license": "MIT",
   "scripts": {
     "dev": "nr update && vitepress dev docs --port 8080 --max-old-space-size=50000",
@@ -14,7 +14,7 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/Chocolate1999/chodocs"
+    "url": "git+https://github.com/chodocs/chodocs"
   },
   "keywords": [
     "react",
@@ -24,7 +24,7 @@
     "Chocolate"
   ],
   "bugs": {
-    "url": "https://github.com/Chocolate1999/chodocs/issues"
+    "url": "https://github.com/chodocs/chodocs/issues"
   },
   "devDependencies": {
     "@antfu/ni": "^0.18.8",
