@@ -29,6 +29,7 @@ export default {
       { text: "🔧 编程工具", link: "/tool/" },
       { text: "✏️ 随笔", link: "/essay/" },
       { text: "🌱 青葱岁月", link: "/green/ch" },
+      { text: "📋 面试", link: "/interview/" },
     ],
     editLink: {
       pattern: "https://github.com/Chocolate1999/chodocs/edit/main/docs/:path",
