@@ -25,7 +25,7 @@ const isNotEmpty = (arr: ContributorInfo[]) => Array.isArray(arr) && arr.length;
       </a>
       {{ c.name }}
     </div>
-    <div v-else>
+    <div v-else class="flex gap-2 items-center">
       <a href="https://github.com/Chocolate1999" rel="noreferrer" target="_blank">
         <img src="https://github.com/Chocolate1999.png" class="w-8 h-8 rounded-full" />
       </a>
