@@ -48,7 +48,7 @@ async function fetchContributors(page = 1) {
     collaborators.push(...(await fetchContributors(page + 1)))
 
   return Array.from(new Set([
-    ...collaborators.filter(collaborator => !['renovate[bot]', 'dependabot[bot]', 'renovate-bot'].includes(collaborator)),
+    ...collaborators.filter(collaborator => !['renovate[bot]', 'dependabot[bot]', 'renovate-bot', 'github-actions[bot]'].includes(collaborator)),
     ...additional,
   ]))
 }
