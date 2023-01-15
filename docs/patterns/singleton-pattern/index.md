@@ -52,7 +52,7 @@ const counter2 = new Counter(); // [!code ++]
 
 ## Demo
 
-<DemoContainer pkg='patterns' path='demo1.vue'>
+<DemoContainer pkg='patterns/singleton-pattern' path='demo1.vue'>
     <Demo1/>
 </DemoContainer>
 
@@ -101,7 +101,7 @@ export default singletonCounter; // [!code hl]
 
 ## Demo
 
-<DemoContainer pkg='patterns' path='demo2.vue'>
+<DemoContainer pkg='patterns/singleton-pattern' path='demo2.vue'>
     <Demo2/>
 </DemoContainer>
 
