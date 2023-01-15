@@ -76,6 +76,7 @@ export default {
       collapsed: false,
       items: [
         { text: "emoji-list", link: "/tool/emoji-list" },
+        { text: "finalcut 剪辑快捷键", link: "/tool/finalcut/" },
       ],
     },
   ],
