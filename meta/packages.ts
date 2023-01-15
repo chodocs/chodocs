@@ -21,6 +21,9 @@ export const packages: PackageManifest[] = [
     name: 'patterns',
   },
   {
+    name: 'program',
+  },
+  {
     name: 'tool',
   },
   {
