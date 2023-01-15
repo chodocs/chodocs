@@ -5,6 +5,9 @@ import Demo1 from './demo1.vue';
 import Demo2 from './demo2.vue';
 </script>
 
+<VideoLink bvId="BV1FA411o7Vm">【编程】单例模式是啥，面试居然也会问？ | Singleton Pattern
+B 站视频传送门</VideoLink>
+
 ## 前言
 
 还记得当年校招的时候，我鼓起勇气吹了自己懂一点设计模式，本来以为会是面试利器，可以和面试官交流一波。

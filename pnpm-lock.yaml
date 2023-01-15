@@ -2,7 +2,7 @@ lockfileVersion: 5.4
 
 specifiers:
   '@antfu/ni': ^0.18.8
-  '@iconify-json/octicon': ^1.1.27
+  '@iconify/json': ^2.2.7
   '@types/fs-extra': ^11.0.0
   '@types/md5': ^2.3.2
   bumpp: ^8.2.1
@@ -25,7 +25,7 @@ specifiers:
 
 devDependencies:
   '@antfu/ni': 0.18.8
-  '@iconify-json/octicon': 1.1.27
+  '@iconify/json': 2.2.7
   '@types/fs-extra': 11.0.0
   '@types/md5': 2.3.2
   bumpp: 8.2.1
@@ -488,10 +488,11 @@ packages:
     dev: true
     optional: true
 
-  /@iconify-json/octicon/1.1.27:
-    resolution: {integrity: sha512-GLiRDTXqebudx21P4JFA+ohKWzWT5paO6r8g89CM1Ag3pA32L3m5AKKbKfUZ1E+7yn2RotgqzjPfAc6lOjWoEA==}
+  /@iconify/json/2.2.7:
+    resolution: {integrity: sha512-cWDwr+KE0KNSFmxrR0rvM5AmP4JmJWCZiyhFZ1bywwBJsrV/x+19bLbEAvmn4pmKKYWCAy4F9clpVWynYslzoQ==}
     dependencies:
       '@iconify/types': 2.0.0
+      pathe: 1.0.0
     dev: true
 
   /@iconify/types/2.0.0:
