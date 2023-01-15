@@ -1,5 +1,10 @@
 # 单例模式
 
+<script setup>
+import Demo1 from './demo1.vue';
+import Demo2 from './demo2.vue';
+</script>
+
 ## 前言
 
 还记得当年校招的时候，我鼓起勇气吹了自己懂一点设计模式，本来以为会是面试利器，可以和面试官交流一波。
@@ -45,33 +50,11 @@ const counter1 = new Counter(); // [!code ++]
 const counter2 = new Counter(); // [!code ++]
 ```
 
-<script setup>
-let counter = 0;
+## Demo
 
-class Counter {
-  getInstance() {
-    return this;
-  }
-
-  getCount() {
-    return counter;
-  }
-
-  increment() {
-    return ++counter;
-  }
-
-  decrement() {
-    return --counter;
-  }
-}
-const counter1 = new Counter();
-const counter2 = new Counter();
-</script>
-
-我们来比对一下结果：
-
-<span>`counter1.getInstance() === counter2.getInstance()` 的结果是：`{{counter1.getInstance() === counter2.getInstance()}}`</span>
+<DemoContainer pkg='patterns' path='demo1.vue'>
+    <Demo1/>
+</DemoContainer>
 
 ## 解决多次实例化以及可修改问题
 
@@ -116,6 +99,11 @@ export default singletonCounter; // [!code hl]
 
 基于以上代码，我们在不同文件引入，当我们调用增加或者减少的时候，会发现 count 值都会变化。
 
+## Demo
+
+<DemoContainer pkg='patterns' path='demo2.vue'>
+    <Demo2/>
+</DemoContainer>
 
 ## 优缺点
 
@@ -125,9 +113,7 @@ export default singletonCounter; // [!code hl]
 
 不过由于 JavaScript 特殊性，我们其实可以直接创建对象，根本不需要 new，其它面向对象的编程语言（比如 Java、C++），需要创建类 class，然后再 new 一个对象，也就是我们常常说的，没对象咋办，自己 new 一个呗~
 
-
 如下，我们不需要像上文那样利用 class 然后再 new 一个对象，而可以直接创建一个对象：
-
 
 ```js
 let count = 0;
@@ -138,7 +124,7 @@ const counter = {
   },
   decrement() {
     return --count;
-  }
+  },
 };
 
 Object.freeze(counter);
@@ -155,9 +141,7 @@ export { counter };
 
 单例模式共享很好，但是把一个变量放在全局多多少少会出现一些意外的问题。还有一种是组件之前相互依赖，那么对于数据流的理解也会变得复杂，在不同的组件调用来调用去，代码逻辑也会显得很混乱。
 
-
 ## React 当中的状态管理
-
 
 在 React 中，想必大家也比较熟悉了，常用的 Redux 以及相关的拓展工具，还有 React 的一个 Hook，React Context，以及我平常也会用的 [Recoil](https://recoiljs.org/zh-hans/)。
 
@@ -168,6 +152,5 @@ export { counter };
 在使用 Redux 时，我们不会直接去操作数据，而是在组件中通过 action 来 dispatch 一下，通知 reducer 帮我们更新数据。
 
 可能一开始会觉得这样做是不是多此一举了，但其实这样可以避免我们直接操作数据，对于全局共享的值我们又可以进行改变，数据更新就交给 reducer 去做就好了，在组件使用角度，我们依旧还是在读取数据。
-
 
 > 文章内容并不代表权威，如若有任何表述问题，欢迎大家提出以及共建文档。

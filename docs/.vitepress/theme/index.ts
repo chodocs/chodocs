@@ -5,6 +5,7 @@ import { setSymbolStyle, replaceSymbol } from './plugins/symbol'
 import { siteIds, registerAnalytics, trackPageview } from './plugins/baidutongji'
 import ChoLayout from "./components/ChoLayout.vue";
 import "./styles/main.css";
+import './styles/demo.css';
 import "./styles/utils.css";
 import "./styles/vars.css";
 import 'uno.css';
