@@ -1,4 +1,8 @@
 name: Contributors
+
+permissions:
+  contents: write
+
 on:
   schedule:
     - cron: '0 14 * * 0' # At 01:00 on Sunday.
