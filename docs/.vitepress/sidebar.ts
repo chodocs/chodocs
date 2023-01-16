@@ -57,7 +57,7 @@ export default {
   ],
   '/green/': [
     {
-      text: "🎈ACM 经历",
+      text: "🎈 ACM 经历",
       collapsible: true,
       collapsed: false,
       items: [
@@ -66,6 +66,13 @@ export default {
         { text: "2019年 第二届信息科学与工程学院院赛-正式赛(赛后补题)", link: "/green/ch2" },
         { text: "第四届全国中医药院校大学生程序设计竞赛（上篇）", link: "/green/ch3" },
         { text: "第四届全国中医药院校大学生程序设计竞赛（下篇）", link: "/green/ch4" },
+      ],
+    }, {
+      text: "💭 项目经历",
+      collapsible: true,
+      collapsed: false,
+      items: [
+        { text: "🏆 从大一到大三，我与服务外包大赛", link: "/green/hl-contest/" },
       ],
     },
   ],
@@ -100,6 +107,25 @@ export default {
       collapsed: false,
       items: [
         { text: "模拟面试", link: "/interview/react-summary/" },
+      ],
+    },
+    {
+      text: "Vue",
+      collapsible: true,
+      collapsed: false,
+      items: [
+        { text: "模拟面试", link: "/interview/vue/" },
+      ],
+    },
+    {
+      text: "网络/浏览器",
+      collapsible: true,
+      collapsed: false,
+      items: [
+        { text: "计算机网络-TCP", link: "/interview/net/tcp/" },
+        { text: "计算机网络-HTTP", link: "/interview/net/http/" },
+        { text: "输入URL到页面展示发生了什么", link: "/interview/browser/process/" },
+        { text: "浏览器安全", link: "/interview/browser/safety/" },
       ],
     }
   ]

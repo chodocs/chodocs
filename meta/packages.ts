@@ -29,4 +29,10 @@ export const packages: PackageManifest[] = [
   {
     name: 'ts',
   },
+  {
+    name: 'interview/net',
+  },
+  {
+    name: 'interview/browser',
+  },
 ];
