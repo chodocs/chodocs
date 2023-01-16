@@ -3,9 +3,9 @@
 
 hey, here’s an invite to Arc, the browser I was telling you about!
 
-分享链接：https://arc.net/gift/3a5cb483
+分享链接：https://arc.net/gift/2865064a
 
-> 最后更新时间：2023 年 1 月 9 日（周一）。
+> 最后更新时间：2023 年 1 月 16 日（周一）。
 
 :::info
 注：账号每周只能邀请 5 个朋友，先到先得，最好自己也申请一下。
