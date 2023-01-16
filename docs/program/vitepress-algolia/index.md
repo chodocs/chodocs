@@ -88,7 +88,7 @@ algolia: {
 }
 ```
 
-### 编写 CI 脚本 ~new
+### 编写 CI 脚本
 
 在项目根目录`.github/workflows` 文件夹下，创建 `algolia.yml` 文件（名称可更改，自定义），粘贴如下内容：
 
