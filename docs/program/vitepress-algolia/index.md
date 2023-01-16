@@ -1,5 +1,7 @@
 # 给 VitePress 添加 algolia 搜索
 
+<VideoLink bvId="BV1eG4y1g7Kj">【编程】在 VitePress 中添加 Algolia 搜索，手把手教学 B 站视频传送门</VideoLink>
+
 ## 背景
 
 最近在折腾 VitePress，搭建了一个文档项目：[ChoDocs](https://chodocs.cn/)，不过文档还不支持搜索功能，虽然目前内容不多，但待我同步完之后，搜索就很有必要了。
@@ -53,7 +55,6 @@ algolia: {
 将上述获取的 `Admin API Key` 添加到 Github Secrets 中，如下图所示，创建 `API_KEY` 和 `APPLICATION_ID` 两个字段，一会在 ci 中会使用到。
 
 ![](https://img-blog.csdnimg.cn/2176c7e486e3491986719149b8888e17.png)
-
 
 ### 创建 crawlerConfig.json
 
@@ -114,7 +115,6 @@ jobs:
 ```
 
 > 解释一下：这里 yml 就是使用 Github Actions 在 Docker 中执行的 AlgoliaDocSearch scraper action，当我们推送到 main 分支时就会立即执行这个任务，当然如果你是 master 分支只需要修改 branches 那里的值即可。
-
 
 ## 结尾
 

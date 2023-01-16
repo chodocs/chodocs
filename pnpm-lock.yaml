@@ -2,7 +2,7 @@ lockfileVersion: 5.4
 
 specifiers:
   '@antfu/ni': ^0.18.8
-  '@iconify-json/octicon': ^1.1.27
+  '@iconify/json': ^2.2.7
   '@types/fs-extra': ^11.0.0
   '@types/md5': ^2.3.2
   bumpp: ^8.2.1
@@ -12,6 +12,8 @@ specifiers:
   gray-matter: ^4.0.3
   md5: ^2.3.0
   ohmyfetch: ^0.4.21
+  postcss: ^8.4.21
+  postcss-nested: ^6.0.0
   simple-git: ^3.15.1
   sitemap-ts: ^1.1.0
   unocss: ^0.48.3
@@ -23,7 +25,7 @@ specifiers:
 
 devDependencies:
   '@antfu/ni': 0.18.8
-  '@iconify-json/octicon': 1.1.27
+  '@iconify/json': 2.2.7
   '@types/fs-extra': 11.0.0
   '@types/md5': 2.3.2
   bumpp: 8.2.1
@@ -33,6 +35,8 @@ devDependencies:
   gray-matter: 4.0.3
   md5: 2.3.0
   ohmyfetch: 0.4.21
+  postcss: 8.4.21
+  postcss-nested: 6.0.0_postcss@8.4.21
   simple-git: 3.15.1
   sitemap-ts: 1.1.0
   unocss: 0.48.3_vite@4.0.4
@@ -484,10 +488,11 @@ packages:
     dev: true
     optional: true
 
-  /@iconify-json/octicon/1.1.27:
-    resolution: {integrity: sha512-GLiRDTXqebudx21P4JFA+ohKWzWT5paO6r8g89CM1Ag3pA32L3m5AKKbKfUZ1E+7yn2RotgqzjPfAc6lOjWoEA==}
+  /@iconify/json/2.2.7:
+    resolution: {integrity: sha512-cWDwr+KE0KNSFmxrR0rvM5AmP4JmJWCZiyhFZ1bywwBJsrV/x+19bLbEAvmn4pmKKYWCAy4F9clpVWynYslzoQ==}
     dependencies:
       '@iconify/types': 2.0.0
+      pathe: 1.0.0
     dev: true
 
   /@iconify/types/2.0.0:
@@ -831,7 +836,7 @@ packages:
       '@vue/shared': 3.2.45
       estree-walker: 2.0.2
       magic-string: 0.25.9
-      postcss: 8.4.20
+      postcss: 8.4.21
       source-map: 0.6.1
     dev: true
 
@@ -1064,6 +1069,12 @@ packages:
     dependencies:
       mdn-data: 2.0.30
       source-map-js: 1.0.2
+    dev: true
+
+  /cssesc/3.0.0:
+    resolution: {integrity: sha512-/Tb/JcjK111nNScGob5MNtsntNM1aCNUDipB/TkwZFhyDrrE47SOx/18wF2bbjgc3ZzCSKW1T5nt5EbFoAz/Vg==}
+    engines: {node: '>=4'}
+    hasBin: true
     dev: true
 
   /csstype/2.6.21:
@@ -1732,8 +1743,26 @@ packages:
     engines: {node: '>=8.6'}
     dev: true
 
-  /postcss/8.4.20:
-    resolution: {integrity: sha512-6Q04AXR1212bXr5fh03u8aAwbLxAQNGQ/Q1LNa0VfOI06ZAlhPHtQvE4OIdpj4kLThXilalPnmDSOD65DcHt+g==}
+  /postcss-nested/6.0.0_postcss@8.4.21:
+    resolution: {integrity: sha512-0DkamqrPcmkBDsLn+vQDIrtkSbNkv5AD/M322ySo9kqFkCIYklym2xEmWkwo+Y3/qZo34tzEPNUw4y7yMCdv5w==}
+    engines: {node: '>=12.0'}
+    peerDependencies:
+      postcss: ^8.2.14
+    dependencies:
+      postcss: 8.4.21
+      postcss-selector-parser: 6.0.11
+    dev: true
+
+  /postcss-selector-parser/6.0.11:
+    resolution: {integrity: sha512-zbARubNdogI9j7WY4nQJBiNqQf3sLS3wCP4WfOidu+p28LofJqDH1tcXypGrcmMHhDk2t9wGhCsYe/+szLTy1g==}
+    engines: {node: '>=4'}
+    dependencies:
+      cssesc: 3.0.0
+      util-deprecate: 1.0.2
+    dev: true
+
+  /postcss/8.4.21:
+    resolution: {integrity: sha512-tP7u/Sn/dVxK2NnruI4H9BG+x+Wxz6oeZ1cJ8P6G/PZY0IKk4k/63TDsQf2kQq3+qoJeLm2kIBUNlZe3zgb4Zg==}
     engines: {node: ^10 || ^12 || >=14}
     dependencies:
       nanoid: 3.3.4
@@ -2081,6 +2110,10 @@ packages:
       webpack-virtual-modules: 0.5.0
     dev: true
 
+  /util-deprecate/1.0.2:
+    resolution: {integrity: sha512-EPD5q1uXyFxJpCrLnCc1nHnq3gOa6DZBocAIiI2TaSCA7VCJ1UJDMagCzIkXNsUYfD1daK//LTEQ8xiIbrHtcw==}
+    dev: true
+
   /vite/4.0.4:
     resolution: {integrity: sha512-xevPU7M8FU0i/80DMR+YhgrzR5KS2ORy1B4xcX/cXLsvnUWvfHuqMmVU6N0YiJ4JWGRJJsLCgjEzKjG9/GKoSw==}
     engines: {node: ^14.18.0 || >=16.0.0}
@@ -2107,7 +2140,7 @@ packages:
         optional: true
     dependencies:
       esbuild: 0.16.8
-      postcss: 8.4.20
+      postcss: 8.4.21
       resolve: 1.22.1
       rollup: 3.7.5
     optionalDependencies:

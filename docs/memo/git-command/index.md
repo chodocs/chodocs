@@ -1,5 +1,7 @@
 # 常用一些 Git 命令
 
+<VideoLink bvId="BV1ZP4y1Q76V">程序员进厂前必知必会 Git 技巧 | commit 提交规范 | rebase、amend 操作 B 站视频传送门</VideoLink>
+
 推荐 mac 用户安装 oh-my-zsh，在这备忘一些常用的命令，以及一些简写方式。
 
 > 以下参考自 [ohmyzsh git](https://github.com/ohmyzsh/ohmyzsh/tree/master/plugins/git)

@@ -22,8 +22,8 @@ export default {
       collapsed: false,
       items: [
         { text: "导读", link: "/patterns/guide/" },
-        { text: "单例模式", link: "/patterns/singletonPattern/" },
-        { text: "代理模式", link: "/patterns/proxyPattern/" }
+        { text: "单例模式", link: "/patterns/singleton-pattern/" },
+        { text: "代理模式", link: "/patterns/proxy-pattern/" }
       ],
     },
     {
@@ -44,15 +44,15 @@ export default {
       collapsible: true,
       collapsed: false,
       items: [
-        { text: "发布 npm 包", link: "/program/ch0" },
-        { text: "给 VitePress 添加 algolia 搜索", link: "/program/ch1" }
+        { text: "发布 npm 包", link: "/program/npm-package/" },
+        { text: "给 VitePress 添加 algolia 搜索", link: "/program/vitepress-algolia/" }
       ],
     },
     {
       text: "📝 备忘录",
       collapsible: true,
       collapsed: false,
-      items: [{ text: "Git 命令", link: "/memo/ch0" }],
+      items: [{ text: "Git 命令", link: "/memo/git-command/" }],
     },
   ],
   '/green/': [
@@ -76,6 +76,7 @@ export default {
       collapsed: false,
       items: [
         { text: "emoji-list", link: "/tool/emoji-list" },
+        { text: "finalcut 剪辑快捷键", link: "/tool/finalcut/" },
       ],
     },
   ],

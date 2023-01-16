@@ -1,9 +1,7 @@
 # 使用 dumi 发布个人的 npm 包
 
-::: info
-B 站视频：[【编程】基于 dumi 2.0 发布属于个人的 npm 包 | 造轮子必备技能 | 手把手 publish | 提供文档开箱即用](https://www.bilibili.com/video/BV1RK41197eA/?share_source=copy_web&vd_source=3c011055df411cd7eaf08a638498a0b2) 已发布，求个免费的点赞和关注。
-:::
 
+<VideoLink bvId="BV1RK41197eA">【编程】基于 dumi 2.0 发布属于个人的 npm 包 | 造轮子必备技能 | 手把手 publish | 提供文档开箱即用 B 站视频传送门</VideoLink>
 
 ## 前期准备
 
