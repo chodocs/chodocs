@@ -74,6 +74,13 @@
     --c-brand-active: #e94c4c;
   }
 
+  button.gray {
+    color: var(--vp-c-disabled-fg);
+    --vp-c-brand: var(--vp-c-disabled-bg);
+    --vp-c-brand-dark: var(--vp-c-disabled-bg);
+    --vp-c-brand-active: rgba(125,125,125,.2);
+  }
+
   button:hover {
     background-color: var(--vp-c-brand-dark);
   }
