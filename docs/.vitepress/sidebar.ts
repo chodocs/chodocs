@@ -102,6 +102,20 @@ export default {
       ],
     },
     {
+      text: "春招实习",
+      collapsible: true,
+      collapsed: false,
+      items: [
+        { text: "腾讯一面", link: "/interview/spring-internship/tencent-imweb/" },
+        { text: "字节一面准备", link: "/interview/spring-internship/bytedance-preparation/" },
+        { text: "字节一面", link: "/interview/spring-internship/bytedance1/" },
+        { text: "深信服-星耀实习", link: "/interview/spring-internship/sangfor/" },
+        { text: "恒生电子面试", link: "/interview/spring-internship/hundsun/" },
+        { text: "腾讯云 COS 一面", link: "/interview/spring-internship/tencent-cos/" },
+        { text: "春招知识整理", link: "/interview/spring-internship/summary/" },
+      ],
+    },
+    {
       text: "React",
       collapsible: true,
       collapsed: false,
