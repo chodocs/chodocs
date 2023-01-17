@@ -45,7 +45,7 @@ const reset = () => {
   <pre>{{ personObj }}</pre>
 
   <button @click="personProxy.nonExistentProperty;">
-    set nonExistentProperty
+    get nonExistentProperty
   </button>
 
   <button @click="personProxy.age = 44">
