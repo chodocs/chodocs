@@ -23,9 +23,9 @@ export default {
       copyright: "Copyright © 2022-PRESENT Chocolate and ChoDocs contributors",
     },
     nav: [
-      // { text: "🔥 前端算法", link: "/algorithm/ch" },
+      { text: "🔥 前端算法", link: "/algorithm/guide/" },
       { text: "🔥 设计模式", link: "/patterns/guide/" },
-      { text: "🔥 TS 学习", link: "/ts/ch" },
+      // { text: "🔥 TS 学习", link: "/ts/ch" },
       { text: "🔧 编程工具", link: "/tool/" },
       { text: "✏️ 随笔", link: "/essay/" },
       { text: "🌱 青葱岁月", link: "/green/ch" },
