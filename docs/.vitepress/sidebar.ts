@@ -250,6 +250,7 @@ export default {
       collapsible: true,
       collapsed: false,
       items: [
+        { text: "询问面试官的问题", link: "/interview/spring-internship/interviewer/" },
         { text: "腾讯一面", link: "/interview/spring-internship/tencent-imweb/" },
         { text: "字节一面准备", link: "/interview/spring-internship/bytedance-preparation/" },
         { text: "字节一面", link: "/interview/spring-internship/bytedance1/" },
