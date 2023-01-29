@@ -1,40 +1,34 @@
 <template>
   <div>
     <section>
-      <div class="container">
-        <div class="row">
-          <div class="col-md-4">
-            <!-- Start Content Box -->
-            <div class="content-box">
-              <div class="content-box-icon-wrapper">
-                <div class="content-box-circle">
-                  <div class="content-box-circle-bullet"></div>
-                </div>
-                <div class="content-box-circle">
-                  <div class="content-box-circle-bullet"></div>
-                </div>
-                <span class="content-box-icon">
-                  <img :src="imgSrc" alt="" />
-                </span>
-              </div>
-              <div class="content-box-content-wrapper">
-                <h3 class="content-box-title">{{ title }}</h3>
-                <div class="content-box-content">
-                  {{ content }}
-                </div>
-              </div>
-              <a v-if="!!link" class="content-box-button" href="#">View Details</a>
-            </div>
-            <!-- End Content Box -->
+      <!-- Start Content Box -->
+      <div class="content-box">
+        <div class="content-box-icon-wrapper">
+          <div class="content-box-circle">
+            <div class="content-box-circle-bullet"></div>
+          </div>
+          <div class="content-box-circle">
+            <div class="content-box-circle-bullet"></div>
+          </div>
+          <span class="content-box-icon">
+            <img :src="imgSrc" alt="" />
+          </span>
+        </div>
+        <div class="content-box-content-wrapper">
+          <h3 class="content-box-title">{{ title }}</h3>
+          <div class="content-box-content">
+            {{ content }}
           </div>
         </div>
+        <a v-if="!!link" class="content-box-button" :href="link">View Details</a>
       </div>
+      <!-- End Content Box -->
     </section>
   </div>
 </template>
 
 <script setup lang="ts">
-const props = defineProps<{ title: string, content: string, link: { type: string, value: '',required: false}, imgSrc: string }>()
+const props = defineProps<{ title: string, content: string, link: string, imgSrc: string }>()
 const { title, content, link, imgSrc } = props
 </script>
 
@@ -64,10 +58,10 @@ const { title, content, link, imgSrc } = props
   margin-left: auto;
   margin-right: auto;
   margin-bottom: 30px;
-  border: 1px solid #6a4bc4;
+  border: 1px solid var(--vp-c-brand);
   box-sizing: content-box;
   border-radius: 50%;
-  color: #6a4bc4;
+  color: var(--vp-c-brand);
 }
 
 .content-box-icon-wrapper::before {
@@ -78,14 +72,14 @@ const { title, content, link, imgSrc } = props
   top: 10%;
   width: 100%;
   height: 100%;
-  box-shadow: 0px 0px 25px 0px #6a4bc4, 0px 0px 25px 0px #6a4bc4 inset;
+  box-shadow: 0px 0px 25px 0px var(--vp-c-brand), 0px 0px 25px 0px var(--vp-c-brand) inset;
   border-radius: 50%;
   opacity: 0.2;
 }
 
 .content-box-circle {
   position: absolute;
-  z-index: -1;
+  z-index: 0;
   width: 84%;
   height: 84%;
   left: 8%;
@@ -112,7 +106,7 @@ const { title, content, link, imgSrc } = props
   width: 14px;
   height: 14px;
   border-radius: 50%;
-  background-color: #6a4bc4;
+  background-color: var(--vp-c-brand);
 }
 
 .content-box:hover .content-box-circle:nth-child(1),
@@ -147,7 +141,8 @@ const { title, content, link, imgSrc } = props
 
 img {
   vertical-align: middle;
-  width: 80px;
+  width: 110px;
+  border-radius: 50%;
 }
 
 .content-box-content-wrapper {
@@ -170,7 +165,7 @@ img {
   display: inline-block;
   margin-top: 26px;
   text-decoration: none;
-  color: #6a4bc4;
+  color: var(--vp-c-brand);
   font-size: 16px;
   font-weight: 600;
   transition: 0.3s;
