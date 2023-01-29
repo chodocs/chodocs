@@ -2,7 +2,6 @@ import { inBrowser } from 'vitepress'
 import type { Theme } from 'vitepress'
 import DefaultTheme from "vitepress/theme";
 import { siteIds, registerAnalytics, trackPageview } from './plugins/baidutongji'
-import ChoLayout from "./components/ChoLayout.vue";
 import "./styles/main.css";
 import './styles/demo.css';
 import "./styles/utils.css";
@@ -11,7 +10,6 @@ import 'uno.css';
 
 const theme: Theme = {
   ...DefaultTheme,
-  Layout: ChoLayout,
   enhanceApp({ router }) {
     if (inBrowser) {
       registerAnalytics(siteIds);
