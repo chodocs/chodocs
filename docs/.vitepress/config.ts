@@ -15,9 +15,6 @@ export default {
   },
   themeConfig: {
     outline: 'deep',
-    recommend: {
-      mpwx: "https://img-blog.csdnimg.cn/img_convert/43c196751f4984c71011557d06e7e9b6.png",
-    },
     footer: {
       message: "Released under the MIT License.",
       copyright: "Copyright © 2022-PRESENT Chocolate and ChoDocs contributors",
@@ -25,11 +22,16 @@ export default {
     nav: [
       { text: "🔥 前端算法", link: "/algorithm/guide/" },
       { text: "🔥 设计模式", link: "/patterns/guide/" },
-      // { text: "🔥 TS 学习", link: "/ts/ch" },
-      { text: "🔧 编程工具", link: "/tool/" },
-      { text: "✏️ 随笔", link: "/essay/" },
-      { text: "🌱 青葱岁月", link: "/green/ch" },
       { text: "📋 面试", link: "/interview/" },
+      {
+        text: "更多", items: [
+          { text: "🔧 编程工具", link: "/tool/" },
+          { text: "✏️ 随笔", link: "/essay/" },
+          { text: "🌱 青葱岁月", link: "/green/ch" },
+        ]
+      },
+      // { text: "🔥 TS 学习", link: "/ts/ch" },
+
     ],
     editLink: {
       pattern: "https://github.com/chodocs/chodocs/edit/main/docs/:path",
