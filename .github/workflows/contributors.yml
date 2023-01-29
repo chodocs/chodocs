@@ -1,17 +1,20 @@
 name: Contributors
 
-permissions:
-  contents: write
-
 on:
   schedule:
     - cron: '0 14 * * 0' # At 01:00 on Sunday.
   push:
     branches:
-      - master
+      - main
+
+permissions:
+  contents: write
+
 jobs:
   contributors:
     runs-on: ubuntu-latest
+    permissions:
+      contents: write
     steps:
       - uses: wow-actions/contributors-list@v1
         with:
