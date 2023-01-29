@@ -6,6 +6,8 @@ import Demo2 from './demo2.vue';
 import Demo3 from './demo3.vue';
 </script>
 
+<VideoLink bvId="BV1FM41187Rx">前端代理模式，介绍 Proxy 与 Reflect | Proxy Pattern B 站视频传送门</VideoLink>
+
 代理模式，就拿部门工作来说，如果我是总监，那委派需求的话，就找开发组的产品经理就好了，我不需要和开发对接，那么也就是我只需要和中间的代理对象交谈就行了。
 
 ## proxy 使用
