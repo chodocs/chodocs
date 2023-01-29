@@ -287,5 +287,21 @@ export default {
         { text: "浏览器安全", link: "/interview/browser/safety/" },
       ],
     }
-  ]
+  ],
+  '/plan/': [
+    {
+      items: [
+        { text: "2023 上半年计划", link: "/plan/" },
+      ],
+    },
+    {
+      text: "待办清单",
+      collapsible: true,
+      collapsed: false,
+      items: [
+        { text: "待处理", link: "/plan/list/todo" },
+        { text: "已完成", link: "/plan/list/done" },
+      ],
+    },
+  ],
 };

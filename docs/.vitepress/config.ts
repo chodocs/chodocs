@@ -23,6 +23,7 @@ export default {
       { text: "🔥 前端算法", link: "/algorithm/guide/" },
       { text: "🔥 设计模式", link: "/patterns/guide/" },
       { text: "📋 面试", link: "/interview/" },
+      { text: "✨ 计划", link: "/plan/" },
       {
         text: "更多", items: [
           { text: "🔧 编程工具", link: "/tool/" },
@@ -31,7 +32,6 @@ export default {
         ]
       },
       // { text: "🔥 TS 学习", link: "/ts/ch" },
-
     ],
     editLink: {
       pattern: "https://github.com/chodocs/chodocs/edit/main/docs/:path",
