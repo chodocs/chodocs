@@ -295,12 +295,21 @@ export default {
       ],
     },
     {
-      text: "待办清单",
+      text: "待办清单（HearLing）",
       collapsible: true,
       collapsed: false,
       items: [
-        { text: "待处理", link: "/plan/list/todo" },
-        { text: "已完成", link: "/plan/list/done" },
+        { text: "待处理", link: "/plan/list1/todo" },
+        { text: "已完成", link: "/plan/list1/done" },
+      ],
+    },
+    {
+      text: "待办清单（Chocolate）",
+      collapsible: true,
+      collapsed: false,
+      items: [
+        { text: "待处理", link: "/plan/list2/todo" },
+        { text: "已完成", link: "/plan/list2/done" },
       ],
     },
   ],
