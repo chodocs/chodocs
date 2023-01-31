@@ -293,6 +293,7 @@ export default {
     {
       items: [
         { text: "2023 上半年计划", link: "/plan/" },
+        { text: "2023 年星球计划", link: "/plan/planet" },
       ],
     },
     {
