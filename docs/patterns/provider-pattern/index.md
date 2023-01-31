@@ -77,7 +77,7 @@ const Text = ({ data }) => <h3>{data.text}</h3>;
 
 直接来看下面的例子吧：
 
-<iframe src="https://stackblitz.com/edit/provider-pattern-context-demo?embed=1&file=src/App.js&view=editor"></iframe>
+<iframe src="https://stackblitz.com/edit/provider-pattern-context-demo?ctl=1&embed=1&file=src/App.js&view=editor"></iframe>
 
 ::: details 示例源码
 
@@ -145,7 +145,7 @@ function Header() {
 
 我们刚刚的例子都只是比较简单的 data 数据，代理模式其实还能很方便的让我们共享全局数据。来看看下述例子：
 
-<iframe src='https://stackblitz.com/edit/provider-pattern-global-demo?embed=1&file=src/App.js&view=preview'></iframe>
+<iframe src='https://stackblitz.com/edit/provider-pattern-global-demo?ctl=1&embed=1&file=src/App.js&view=preview'></iframe>
 
 当然，这个例子还不是很完善，我们希望的是可以通过上方的切换按钮来进行 light 和 dark 模式的切换，比如当切换到黑夜模式的时候，我们希望将文本以及背景颜色进行相应的更改。
 
@@ -221,7 +221,7 @@ export default function TextBox() {
 
 以下就是我们最终达到的效果，大家可以体验一下，源码可在右下角切换到 `Editor` tab 来查看。
 
-<iframe src='https://stackblitz.com/edit/provider-pattern-global-demo2?embed=1&file=src/App.js&view=preview'></iframe>
+<iframe src='https://stackblitz.com/edit/provider-pattern-global-demo2?ctl=1&embed=1&file=src/App.js&view=preview'></iframe>
 
 ## 代码优化
 
@@ -294,7 +294,7 @@ export default function TextBox() {
 
 下面我们来看看优化之后的完整代码以及预览效果吧：
 
-<iframe src='https://stackblitz.com/edit/provider-pattern-global-demo3?embed=1&file=src/App.js&view=editor'></iframe>
+<iframe src='https://stackblitz.com/edit/provider-pattern-global-demo3?ctl=1&embed=1&file=src/App.js&view=editor'></iframe>
 
 ## 拓展学习
 
@@ -333,7 +333,7 @@ export default function App() {
 
 这样，我们就可以通过 `styled-components` 库来转换一下我们之前所实现的代码了，如下：
 
-<iframe src='https://stackblitz.com/edit/provider-pattern-styled-components-demo?embed=1&file=src/App.js&view=editor'></iframe>
+<iframe src='https://stackblitz.com/edit/provider-pattern-styled-components-demo?ctl=1&embed=1&file=src/App.js&view=editor'></iframe>
 
 ## 总结
 
@@ -357,7 +357,7 @@ export default function App() {
 
 > 一个比较简单的计数器 demo，点击 `Increment` 按钮，count 就会 +1，点击 `Reset` 按钮，计数将被充值。
 
-<iframe src='https://stackblitz.com/edit/provider-pattern-cons-demo?embed=1&file=src/App.js&view=editor'></iframe>
+<iframe src='https://stackblitz.com/edit/provider-pattern-cons-demo?ctl=1&embed=1&file=src/App.js&view=editor'></iframe>
 
 
 在这个例子当中，当我们点击 `Increment` 按钮时，会发现 `Reset` 组件也会触发一次渲染，因为它也消费使用了 `useCountContext`，也就是使用了 Provider 提供的数据。
