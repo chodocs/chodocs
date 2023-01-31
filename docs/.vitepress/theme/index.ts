@@ -3,6 +3,7 @@ import type { Theme } from 'vitepress'
 import DefaultTheme from "vitepress/theme";
 import { siteIds, registerAnalytics, trackPageview } from './plugins/baidutongji'
 import "./styles/main.css";
+import "./styles/global.css";
 import './styles/demo.css';
 import "./styles/utils.css";
 import "./styles/vars.css";
