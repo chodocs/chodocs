@@ -29,6 +29,14 @@
 git stash && git checkout master && git branch | grep -v "master" | xargs git branch -D
 ```
 
+- 增强命令（main）
+
+> 同上。
+
+```js
+git stash && git checkout main && git branch | grep -v "main" | xargs git branch -D
+```
+
 - 增强命令（release）
 
 > 同上。
