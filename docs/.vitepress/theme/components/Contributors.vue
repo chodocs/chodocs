@@ -7,11 +7,12 @@ import type { ContributorInfo } from '../../metadata'
 const props = defineProps<{ doc: string }>()
 
 const contributors = computed(
-  () => _contributors[props.doc] || ([] as ContributorInfo[]),
-)
+  () => _contributors[props.doc] || ([] as ContributorInfo[])
+);
 
-const getAvatarUrl = (name: string) => `https://github.com/${name}.png`
-const getGithubLink = (name: string) => `https://github.com/${name}`
+const getAvatarUrl = (name: string) => `https://github.com/${name}.png`;
+const getGithubLink = (name: string) => `https://github.com/${name}`;
+
 
 console.log('_contributors', _contributors);
 
