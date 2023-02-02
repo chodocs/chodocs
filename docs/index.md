@@ -44,7 +44,7 @@ import {
   VPTeamPageTitle,
   VPTeamMembers
 } from 'vitepress/theme';
-import { icons } from './public/socialIcons';
+import { icons } from './socialIcons';
 
 const members = [
   {
