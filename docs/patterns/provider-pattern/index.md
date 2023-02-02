@@ -17,37 +17,37 @@
 ::: code-group
 
 ```js [App.js]
-import React from "react";
-import "./style.css";
+import React from 'react'
+import './style.css'
 
 export default function App() {
   const data = {
-    listItem: "ChoDocs",
-    title: "https://chodocs.cn/",
-    text: "Hello Chocolate",
-  };
+    listItem: 'ChoDocs',
+    title: 'https://chodocs.cn/',
+    text: 'Hello Chocolate',
+  }
 
   return (
     <div>
       <SideBar data={data} />
       <Content data={data} />
     </div>
-  );
+  )
 }
 
-const SideBar = ({ data }) => <List data={data} />;
-const List = ({ data }) => <ListItem data={data} />;
-const ListItem = ({ data }) => <span>{data.listItem}</span>;
+const SideBar = ({ data }) => <List data={data} />
+const List = ({ data }) => <ListItem data={data} />
+const ListItem = ({ data }) => <span>{data.listItem}</span>
 
 const Content = ({ data }) => (
   <div className="my_content">
     <Header data={data} />
     <Block data={data} />
   </div>
-);
-const Header = ({ data }) => <div>{data.title}</div>;
-const Block = ({ data }) => <Text data={data} />;
-const Text = ({ data }) => <h3>{data.text}</h3>;
+)
+const Header = ({ data }) => <div>{data.title}</div>
+const Block = ({ data }) => <Text data={data} />
+const Text = ({ data }) => <h3>{data.text}</h3>
 ```
 
 ```css [style.css]
@@ -82,17 +82,17 @@ const Text = ({ data }) => <h3>{data.text}</h3>;
 ::: details 示例源码
 
 ```js {4,15,18,35,44,49}
-import React, { createContext, useContext } from "react";
-import "./style.css";
+import React, { createContext, useContext } from 'react'
+import './style.css'
 
-export const DataContext = createContext({});
+export const DataContext = createContext({})
 
 export default function App() {
   const data = {
-    listItem: "ChoDocs",
-    title: "https://chodocs.cn/",
-    text: "Hello Chocolate",
-  };
+    listItem: 'ChoDocs',
+    title: 'https://chodocs.cn/',
+    text: 'Hello Chocolate',
+  }
 
   return (
     <div>
@@ -101,37 +101,37 @@ export default function App() {
         <Content />
       </DataContext.Provider>
     </div>
-  );
+  )
 }
 
 const SideBar = () => {
-  return <List />;
-};
-const List = () => <ListItem />;
+  return <List />
+}
+const List = () => <ListItem />
 const Content = () => (
   <div>
     <Header />
     <Block />
   </div>
-);
+)
 
 function ListItem() {
-  const data = useContext(DataContext);
-  return <span>{data.listItem}</span>;
+  const data = useContext(DataContext)
+  return <span>{data.listItem}</span>
 }
 
 function Block() {
-  return <Text />;
+  return <Text />
 }
 
 function Text() {
-  const data = useContext(DataContext);
-  return <h1>{data.text}</h1>;
+  const data = useContext(DataContext)
+  return <h1>{data.text}</h1>
 }
 
 function Header() {
-  const data = useContext(DataContext);
-  return <div>{data.title}</div>;
+  const data = useContext(DataContext)
+  return <div>{data.title}</div>
 }
 ```
 
@@ -156,22 +156,22 @@ function Header() {
 ```js {12,23,28}
 export const themes = {
   light: {
-    background: "#fff",
-    color: "#000",
+    background: '#fff',
+    color: '#000',
   },
   dark: {
-    background: "#171717",
-    color: "#fff",
+    background: '#171717',
+    color: '#fff',
   },
-};
+}
 
-export const ThemeContext = React.createContext({});
+export const ThemeContext = React.createContext({})
 
 export default function App() {
-  const [theme, setTheme] = useState("dark");
+  const [theme, setTheme] = useState('dark')
 
   function toggleTheme() {
-    setTheme(theme === "light" ? "dark" : "light");
+    setTheme(theme === 'light' ? 'dark' : 'light')
   }
 
   return (
@@ -183,37 +183,37 @@ export default function App() {
         </>
       </ThemeContext.Provider>
     </div>
-  );
+  )
 }
 ```
 
 在 `Toggle` 子组件中，我们就可以通过 `useContext` hook 拿到 toggleTheme 方法，当点击事件触发的时候，就可以达到切换 `theme` 的效果。
 
 ```js {5}
-import React, { useContext } from "react";
-import { ThemeContext } from "./App";
+import React, { useContext } from 'react'
+import { ThemeContext } from './App'
 
 export default function Toggle() {
-  const theme = useContext(ThemeContext);
+  const theme = useContext(ThemeContext)
   return (
     <label className="switch">
       <input type="checkbox" onClick={theme.toggleTheme} />
       <span className="slider round" />
     </label>
-  );
+  )
 }
 ```
 
 在每一个 `list` 组件中，我们直接获取 `theme` 数据就好了，根据 `theme` 值的变化来使用不同的 css。
 
 ```js
-import React, { useContext } from "react";
-import { ThemeContext } from "./App";
+import React, { useContext } from 'react'
+import { ThemeContext } from './App'
 
 export default function TextBox() {
-  const theme = useContext(ThemeContext);
+  const theme = useContext(ThemeContext)
 
-  return <li style={theme.theme}>...</li>;
+  return <li style={theme.theme}>...</li>
 }
 ```
 
@@ -233,11 +233,11 @@ export default function TextBox() {
 
 ```js {4}
 function useThemeContext() {
-  const theme = useContext(ThemeContext);
-  if (!theme) {
-    throw new Error("useThemeContext must be used within ThemeProvider");
-  }
-  return theme;
+  const theme = useContext(ThemeContext)
+  if (!theme)
+    throw new Error('useThemeContext must be used within ThemeProvider')
+
+  return theme
 }
 ```
 
@@ -249,22 +249,22 @@ function useThemeContext() {
 
 ```js {23,26}
 function ThemeProvider({ children }) {
-  const [theme, setTheme] = useState("dark");
+  const [theme, setTheme] = useState('dark')
 
   function toggleTheme() {
-    setTheme(theme === "light" ? "dark" : "light");
+    setTheme(theme === 'light' ? 'dark' : 'light')
   }
 
   const providerValue = {
     theme: themes[theme],
     toggleTheme,
-  };
+  }
 
   return (
     <ThemeContext.Provider value={providerValue}>
       {children}
     </ThemeContext.Provider>
-  );
+  )
 }
 
 export default function App() {
@@ -275,7 +275,7 @@ export default function App() {
         <List />
       </ThemeProvider>
     </div>
-  );
+  )
 }
 ```
 
@@ -283,8 +283,8 @@ export default function App() {
 
 ```js {2}
 export default function TextBox() {
-  const theme = useThemeContext();
-  return <li style={theme.theme}>...</li>;
+  const theme = useThemeContext()
+  return <li style={theme.theme}>...</li>
 }
 ```
 
@@ -307,13 +307,13 @@ export default function TextBox() {
 `styled-components` 库为我们提供了一个 ThemeProvider，来看下方的例子：
 
 ```js {1,12,17}
-import { ThemeProvider } from "styled-components";
+import { ThemeProvider } from 'styled-components'
 
 export default function App() {
-  const [theme, setTheme] = useState("dark");
+  const [theme, setTheme] = useState('dark')
 
   function toggleTheme() {
-    setTheme(theme === "light" ? "dark" : "light");
+    setTheme(theme === 'light' ? 'dark' : 'light')
   }
 
   return (
@@ -325,7 +325,7 @@ export default function App() {
         </>
       </ThemeProvider>
     </div>
-  );
+  )
 }
 ```
 

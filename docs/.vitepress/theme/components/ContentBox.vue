@@ -1,3 +1,8 @@
+<script setup lang="ts">
+const props = defineProps<{ title: string; content: string; link: string; imgSrc: string }>()
+const { title, content, link, imgSrc } = props
+</script>
+
 <template>
   <div>
     <section>
@@ -5,17 +10,19 @@
       <div class="content-box">
         <div class="content-box-icon-wrapper">
           <div class="content-box-circle">
-            <div class="content-box-circle-bullet"></div>
+            <div class="content-box-circle-bullet" />
           </div>
           <div class="content-box-circle">
-            <div class="content-box-circle-bullet"></div>
+            <div class="content-box-circle-bullet" />
           </div>
           <span class="content-box-icon">
-            <img :src="imgSrc" alt="" />
+            <img :src="imgSrc" alt="">
           </span>
         </div>
         <div class="content-box-content-wrapper">
-          <h3 class="content-box-title">{{ title }}</h3>
+          <h3 class="content-box-title">
+            {{ title }}
+          </h3>
           <div class="content-box-content">
             {{ content }}
           </div>
@@ -26,11 +33,6 @@
     </section>
   </div>
 </template>
-
-<script setup lang="ts">
-const props = defineProps<{ title: string, content: string, link: string, imgSrc: string }>()
-const { title, content, link, imgSrc } = props
-</script>
 
 <style scoped>
 .content-box {

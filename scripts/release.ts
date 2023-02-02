@@ -1,6 +1,6 @@
-import { execSync } from 'child_process';
-import { readJSONSync } from 'fs-extra';
-import { updateContributors } from './utils';
+import { execSync } from 'child_process'
+import { readJSONSync } from 'fs-extra'
+import { updateContributors } from './utils'
 
 const { version: oldVersion } = readJSONSync('package.json')
 

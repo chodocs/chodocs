@@ -408,7 +408,7 @@ int main(){
 
 贴上代码：
 
-```js
+```cpp
 #include<bits/stdc++.h>
 #define endl '\n'
 using namespace std;

@@ -25,7 +25,7 @@
 
 > 可以删除除开 master 以外的分支，但类似 `mr/master/xxx` 这样的带有 master 的删除不了。
 
-```js
+```sh
 git stash && git checkout master && git branch | grep -v "master" | xargs git branch -D
 ```
 
@@ -33,7 +33,7 @@ git stash && git checkout master && git branch | grep -v "master" | xargs git br
 
 > 同上。
 
-```js
+```sh
 git stash && git checkout main && git branch | grep -v "main" | xargs git branch -D
 ```
 
@@ -41,7 +41,7 @@ git stash && git checkout main && git branch | grep -v "main" | xargs git branch
 
 > 同上。
 
-```js
+```sh
 git stash && git checkout release && git branch | grep -v "release" | xargs git branch -D
 ```
 
@@ -55,7 +55,7 @@ rebase 命令很强大，`git rebase -i HEAD~[num]` 和 `git pull --rebase` 等�
 
 谁用谁知道！
 
-```js
+```sh
 git reflog
 ```
 
@@ -69,7 +69,7 @@ vscode `GitLens` 插件挺好用的。
 
 ![](https://img-blog.csdnimg.cn/7f8aa3f2487244efb7fa9177a7cb739e.png)
 
-```js
+```sh
 ^(feat|fix|docs|style|refactor|perf|test|build|revert|merge|chore)(\(.+\))?:\s+(.*)#[0-9]+\s+|^(Accept Merge Request)\s+#[0-9]+:\s+(\(.+\s+->\s+.+\))
 ```
 
@@ -79,7 +79,7 @@ vscode `GitLens` 插件挺好用的。
 
 全局安装 `commitizen`，即可使用 `git cz` 命令取代 `git commit`，提供交互式选择界面，协助书写。
 
-```js
+```sh
 npm install -g commitizen cz-conventional-changelog
 echo '{ "path": "cz-conventional-changelog" }' > ~/.czrc
 ```
@@ -93,7 +93,7 @@ echo '{ "path": "cz-conventional-changelog" }' > ~/.czrc
 
 ![](https://img-blog.csdnimg.cn/68a9c68bfdb04852aab5263a0030e536.png)
 
-```js
+```sh
 npx git-cz
 
 // or

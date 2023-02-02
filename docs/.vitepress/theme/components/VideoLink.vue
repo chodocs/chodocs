@@ -2,7 +2,7 @@
 const props = defineProps<{
   bvId: string
 }>()
-const link = `https://www.bilibili.com/video/${props.bvId}/`;
+const link = `https://www.bilibili.com/video/${props.bvId}/`
 </script>
 
 <template>

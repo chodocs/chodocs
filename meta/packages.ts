@@ -1,5 +1,4 @@
-import type { PackageManifest } from "../types";
-
+import type { PackageManifest } from '../types'
 
 export const packages: PackageManifest[] = [
   {
@@ -35,4 +34,4 @@ export const packages: PackageManifest[] = [
   {
     name: 'interview/browser',
   },
-];
+]

@@ -457,13 +457,13 @@ React 是对设计模式的能力很有要求的，这里只列举和 React 强�
 ```js
 // HOC模式例子
 function withStyles(Component) {
-  return props => {
+  return (props) => {
     const style = { padding: '0.2rem', margin: '1rem' }
     return <Component style={style} {...props} />
   }
 }
 
-const Button = () = <button>Click me!</button>
+const Button = () => <button>Click me!</button>
 const Text = () => <p>Hello World!</p>
 
 const StyledButton = withStyles(Button)
@@ -482,7 +482,7 @@ const StyledText = withStyles(Text)
 
 ```js
 // Render Props模式例子
-<DataProvider render={(data) => <h1>Hello {data.target}</h1>} />
+<DataProvider render={data => <h1>Hello {data.target}</h1>} />
 ```
 
 </details>

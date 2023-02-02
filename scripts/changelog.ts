@@ -1,5 +1,5 @@
 import Git from 'simple-git'
-import type { CommitInfo } from '../docs/.vitepress/metadata';
+import type { CommitInfo } from '../docs/.vitepress/metadata'
 import { uniq } from './utils'
 
 const git = Git({

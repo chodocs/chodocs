@@ -1,36 +1,36 @@
 <script setup lang="ts">
-import { ref } from 'vue';
+import { ref } from 'vue'
 
-const initAge = 23;
+const initAge = 23
 
 const person = {
-  name: "Chocolate",
+  name: 'Chocolate',
   age: initAge,
-  nationality: "China",
-};
+  nationality: 'China',
+}
 
-const log = ref('');
-const name = ref('');
-const age = ref(0);
+const log = ref('')
+const name = ref('')
+const age = ref(0)
 
-const personObj = ref(person);
+const personObj = ref(person)
 
 const personProxy = new Proxy(person, {
   get: (obj: Record<string, string | number>, prop: string) => {
-    log.value = `The value of ${prop} is ${obj[prop]}`;
+    log.value = `The value of ${prop} is ${obj[prop]}`
   },
   set: (obj: Record<string, string | number>, prop: string, value) => {
-    log.value = `Changed ${prop} from ${obj[prop]} to ${value}`;
-    obj[prop] = value;
-    return true;
+    log.value = `Changed ${prop} from ${obj[prop]} to ${value}`
+    obj[prop] = value
+    return true
   },
-});
+})
 
 const reset = () => {
-  log.value = '';
-  name.value = '';
-  age.value = 0;
-  person.age = initAge;
+  log.value = ''
+  name.value = ''
+  age.value = 0
+  person.age = initAge
 }
 </script>
 
@@ -43,8 +43,10 @@ const reset = () => {
   <button @click="(age = (personProxy.age = 18))">
     set age
   </button>
-  <button @click="reset" class="gray">
+  <button class="gray" @click="reset">
     reset
   </button>
-  <p v-if="log">log message: {{ log }}</p>
+  <p v-if="log">
+    log message: {{ log }}
+  </p>
 </template>

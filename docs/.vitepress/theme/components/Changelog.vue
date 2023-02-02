@@ -3,8 +3,8 @@
 import changelog from '/virtual-changelog'
 import { computed } from 'vue'
 import type { CommitInfo } from '../../metadata'
-import { renderCommitMessage } from '../utils';
-import { docs } from "../../../../types";
+import { renderCommitMessage } from '../utils'
+import { docs } from '../../../../types'
 
 const props = defineProps<{ doc: string }>()
 const info = computed(() => docs.find(i => i.name === props.doc))
