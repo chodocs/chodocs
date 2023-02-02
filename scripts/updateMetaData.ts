@@ -45,14 +45,16 @@ export async function readMetadata() {
 
     await Promise.all(
       docs?.map(async (docName) => {
-        const mdPath = join(dir, docName, 'index.md')
-        // const tsPath = join(dir, docName, "index.ts");
+        const mdPath = join(dir, docName, "index.md");
 
         const doc: ChoDocsTypes = {
           name: docName,
-          package: pkg.name,
-          // lastUpdated:
-          //   +(await git.raw(["log", "-1", "--format=%at", tsPath])) * 1000,
+          package: pkg.name
+        };
+
+        if (!fs.existsSync(mdPath)) {
+          doc.internal = true;
+          return;
         }
 
         if (fs.existsSync(join(dir, docName, 'component.ts')))
@@ -92,24 +94,7 @@ export async function readMetadata() {
             .filter(Boolean)
         }
 
-        let description
-          = (md
-            .replace(/\r\n/g, '\n')
-            .match(/# \w+[\s\n]+(.+?)(?:, |\. |\n|\.\n)/m) || [])[1] || ''
-
-        description = description.trim()
-        description = description.charAt(0).toLowerCase() + description.slice(1)
-
-        doc.category = ['core', 'shared'].includes(pkg.name)
-          ? category
-          : `@${pkg.display}`
-        doc.description = description
-
-        if (description.includes('DEPRECATED') || frontmatter.deprecated)
-          doc.deprecated = true
-
-        if (alias?.length)
-          doc.alias = alias
+        if (alias?.length) doc.alias = alias;
 
         if (related?.length)
           doc.related = related
@@ -129,18 +114,14 @@ export async function readMetadata() {
       return
 
     doc.related.forEach((name) => {
-      const target = indexes.docs.find(f => f.name === name)
-      if (!target)
-        throw new Error(`Unknown related function: ${name}`)
-      if (!target.related)
-        target.related = []
-      if (!target.related.includes(doc.name))
-        target.related.push(doc.name)
-    })
-  })
-  indexes.docs.forEach(doc => doc.related?.sort())
-
-  return indexes
+      const target = indexes.docs.find((f) => f.name === name);
+      if (!target) throw new Error(`Unknown related function: ${name}`);
+      if (!target.related) target.related = [];
+      if (!target.related.includes(doc.name)) target.related.push(doc.name);
+    });
+  });
+  indexes.docs.forEach((doc) => doc.related?.sort());
+  return indexes;
 }
 
 async function run() {
