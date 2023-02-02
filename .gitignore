@@ -3,6 +3,8 @@ node_modules
 docs/.vitepress/cache
 dist
 .vscode
+cache
+.eslintcache
 components.d.ts
 
 # local env files
