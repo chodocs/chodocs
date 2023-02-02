@@ -1,30 +1,31 @@
-let instance: any;
-let counter = 0;
+let instance: any
+let counter = 0
 
 class Counter {
   constructor() {
-    if (instance) {
-      throw new Error("You can only create one instance!");
-    }
-    instance = this;
+    if (instance)
+      throw new Error('You can only create one instance!')
+
+    instance = this
   }
 
   getInstance() {
-    return this;
+    return this
   }
 
   getCount() {
-    return counter;
+    return counter
   }
 
   increment() {
-    return ++counter;
+    return ++counter
   }
 
   decrement() {
-    return --counter;
+    return --counter
   }
 }
 
-const singletonCounter = Object.freeze(new Counter());
-export default singletonCounter; 
+const singletonCounter = Object.freeze(new Counter())
+const singletonCounter2 = Object.freeze(instance)
+export { singletonCounter, singletonCounter2 }

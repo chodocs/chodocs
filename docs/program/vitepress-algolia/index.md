@@ -40,13 +40,18 @@
 
 修改文件在 `docs/.vitepress/config` 文件中，具体可参考链接 [config.ts](https://github.com/chodocs/chodocs/blob/main/docs/.vitepress/config.ts)。
 
-```js
-algolia: {
-  appId: 'RDDxxx', // 需要替换
-  apiKey: '9302dbxxx', // 需要替换
-  indexName: 'chodocs', // 需要替换
-  placeholder: '请输入关键词',
-  buttonText: '搜索',
+```json
+{
+  "xxx": {
+    // ...
+  },
+  "algolia": {
+    "appId": "RDDxxx", // 需要替换
+    "apiKey": "9302dbxxx", // 需要替换
+    "indexName": "chodocs", // 需要替换
+    "placeholder": "请输入关键词",
+    "buttonText": "搜索"
+  }
 }
 ```
 

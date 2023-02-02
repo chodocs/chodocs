@@ -15,8 +15,10 @@ declare global {
  * 注册统计
  */
 export function registerAnalytics(siteId: string) {
-  if (!inBrowser) return
-  if (document.querySelector(`#analytics-plugin-${siteId}`)) return
+  if (!inBrowser)
+    return
+  if (document.querySelector(`#analytics-plugin-${siteId}`))
+    return
   window._hmt = window._hmt ? window._hmt : []
   const script = document.createElement('script')
   script.id = `analytics-${siteId}`
@@ -31,10 +33,10 @@ export function registerAnalytics(siteId: string) {
  * @param pageUrl - 页面 URL
  */
 export function trackPageview(siteId: string, pageUrl: string) {
-  if (!inBrowser) return
-  if (!pageUrl || typeof pageUrl !== 'string') {
+  if (!inBrowser)
+    return
+  if (!pageUrl || typeof pageUrl !== 'string')
     pageUrl = '/'
-  }
 
   if (pageUrl.startsWith('http')) {
     const urlFragment = pageUrl.split('/')

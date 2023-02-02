@@ -25,23 +25,23 @@ B 站视频传送门</VideoLink>
 直接看下面这个例子：
 
 ```js
-let counter = 0;
+let counter = 0
 
 class Counter {
   getInstance() {
-    return this;
+    return this
   }
 
   getCount() {
-    return counter;
+    return counter
   }
 
   increment() {
-    return ++counter;
+    return ++counter
   }
 
   decrement() {
-    return --counter;
+    return --counter
   }
 }
 ```
@@ -49,8 +49,8 @@ class Counter {
 上述代码，还会有问题，单例模式只能实例化一次，如下所示，我们可以多次实例化，实例化出来的对象也是可以修改的。
 
 ```js
-const counter1 = new Counter(); // [!code ++]
-const counter2 = new Counter(); // [!code ++]
+const counter1 = new Counter() // [!code ++]
+const counter2 = new Counter() // [!code ++]
 ```
 
 ## Demo
@@ -68,36 +68,36 @@ const counter2 = new Counter(); // [!code ++]
 > 一个被冻结的对象再也不能被修改；冻结了一个对象则不能向这个对象添加新的属性，不能删除已有属性，不能修改该对象已有属性的可枚举性、可配置性、可写性，以及不能修改已有属性的值。此外，冻结一个对象后该对象的原型也不能被修改。freeze() 返回和传入的参数相同的对象。
 
 ```js
-let instance;
-let counter = 0;
+let instance
+let counter = 0
 
 class Counter {
   constructor() {
-    if (instance) {
-      throw new Error("You can only create one instance!"); // [!code hl]
-    }
-    instance = this; // [!code hl]
+    if (instance)
+      throw new Error('You can only create one instance!') // [!code hl]
+
+    instance = this // [!code hl]
   }
 
   getInstance() {
-    return this;
+    return this
   }
 
   getCount() {
-    return counter;
+    return counter
   }
 
   increment() {
-    return ++counter;
+    return ++counter
   }
 
   decrement() {
-    return --counter;
+    return --counter
   }
 }
 
-const singletonCounter = Object.freeze(new Counter()); // [!code hl]
-export default singletonCounter; // [!code hl]
+const singletonCounter = Object.freeze(new Counter()) // [!code hl]
+export default singletonCounter // [!code hl]
 ```
 
 基于以上代码，我们在不同文件引入，当我们调用增加或者减少的时候，会发现 count 值都会变化。
@@ -119,19 +119,19 @@ export default singletonCounter; // [!code hl]
 如下，我们不需要像上文那样利用 class 然后再 new 一个对象，而可以直接创建一个对象：
 
 ```js
-let count = 0;
+let count = 0
 
 const counter = {
   increment() {
-    return ++count;
+    return ++count
   },
   decrement() {
-    return --count;
+    return --count
   },
-};
+}
 
-Object.freeze(counter);
-export { counter };
+Object.freeze(counter)
+export { counter }
 ```
 
 ### 不足

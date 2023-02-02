@@ -1,33 +1,32 @@
 <script setup lang="ts">
-let counter = 0;
+let counter = 0
 
 class Counter {
   getInstance() {
-    return this;
+    return this
   }
 
   getCount() {
-    return counter;
+    return counter
   }
 
   increment() {
-    return ++counter;
+    return ++counter
   }
 
   decrement() {
-    return --counter;
+    return --counter
   }
 }
-const counter1 = new Counter();
-const counter2 = new Counter();
+const counter1 = new Counter()
+const counter2 = new Counter()
 </script>
 
 <template>
-
-  我们来比对一下结果：<br/>
+  我们来比对一下结果：<br>
 
   counter1.getInstance() === counter2.getInstance() 的结果是：{{
-  counter1.getInstance() ===
-    counter2.getInstance()
+    counter1.getInstance()
+      === counter2.getInstance()
   }}
 </template>

@@ -1,18 +1,16 @@
-import { defineConfig } from 'vite';
-import UnoCSS from 'unocss/vite';
-import { resolve } from 'path';
-import Icons from 'unplugin-icons/vite';
-import IconsResolver from 'unplugin-icons/resolver';
-import Components from 'unplugin-vue-components/vite';
-import { MarkdownTransform } from './.vitepress/plugins/markdownTransform';
-import { ChangeLog } from './.vitepress/plugins/changelog';
-import { Contributors } from './.vitepress/plugins/contributors';
-import { getDocsContributors } from '../scripts/contributors';
-import { getChangeLog } from '../scripts/changelog';
-
+import { resolve } from 'path'
+import { defineConfig } from 'vite'
+import UnoCSS from 'unocss/vite'
+import Icons from 'unplugin-icons/vite'
+import IconsResolver from 'unplugin-icons/resolver'
+import Components from 'unplugin-vue-components/vite'
+import { getDocsContributors } from '../scripts/contributors'
+import { getChangeLog } from '../scripts/changelog'
+import { MarkdownTransform } from './.vitepress/plugins/markdownTransform'
+import { ChangeLog } from './.vitepress/plugins/changelog'
+import { Contributors } from './.vitepress/plugins/contributors'
 
 export default defineConfig(async () => {
-
   const [changeLog, contributions] = await Promise.all([
     getChangeLog(process.env.CI ? 1000 : 100),
     getDocsContributors(),
@@ -52,6 +50,6 @@ export default defineConfig(async () => {
         defaultStyle: 'display: inline-block',
       }),
       UnoCSS(),
-    ]
+    ],
   }
-});
+})

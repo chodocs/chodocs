@@ -13,7 +13,7 @@
 ## 使用 dumi
 通过脚手架安装，根据提示选择对应的模版，由于我们要发布 npm 包，所以选择 `React Library`。
 
-```js
+```sh
 npx create-dumi
 ```
 
@@ -21,7 +21,7 @@ npx create-dumi
 
 第一，npm 源需要使用 npmjs
 
-```typescript
+```sh
 npm config set registry https://registry.npmjs.org
 ```
 
@@ -45,7 +45,7 @@ npm 包的版本通常遵循 [semver 语义化版本](https://semver.org/lang/zh
 
 先行版本号的格式是在修订版本号后面加上一个连接号（-），再加上一连串以点（.）分割的标识符，标识符可以由英文、数字和连接号（[0-9A-Za-z-]）组成。举个例子：
 
-```typescript
+```sh
 1.0​​.0-alpha
 1.0.0-alpha.1
 1.0.0-0.2.5
@@ -78,7 +78,7 @@ npm 包的版本通常遵循 [semver 语义化版本](https://semver.org/lang/zh
 
 ## 补充相关命令
 
-```typescript
+```sh
 // 登录自己的 npm 账号
 npm login
 
@@ -99,7 +99,7 @@ npm unpublish [pkg]@[version]
 
 ### 403 问题
 
-```js
+```sh
 npm ERR! code E403
 npm ERR! 403 403 Forbidden — PUT https://registry.npmjs.org/xxx — You do not have permission to publish xxx. Are you logged in as the correct user?
 npm ERR! 403 In most cases, you or one of your dependencies are requesting

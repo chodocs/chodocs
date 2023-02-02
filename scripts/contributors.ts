@@ -1,7 +1,7 @@
 import md5 from 'md5'
-import Git from 'simple-git';
-import type { ContributorInfo } from '../docs/.vitepress/metadata';
-import { docs } from './../meta.json';
+import Git from 'simple-git'
+import type { ContributorInfo } from '../docs/.vitepress/metadata'
+import { docs } from './../meta.json'
 
 const git = Git({
   maxConcurrentProcesses: 200,

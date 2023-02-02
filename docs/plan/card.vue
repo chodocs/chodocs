@@ -1,24 +1,23 @@
+<script setup lang="ts">
+import ContentBox from '../.vitepress/theme/components/ContentBox.vue'
+</script>
+
 <template>
   <div>
     <section>
       <div class="container">
         <div class="row">
           <div class="col-md-4">
-            <ContentBox link="#详情" imgSrc='https://github.com/Chocolate1999.png' title='Chocolate 总积分' content='0' />
+            <ContentBox link="#详情" img-src="https://github.com/Chocolate1999.png" title="Chocolate 总积分" content="0" />
           </div>
           <div class="col-md-4">
-            <ContentBox link="#详情" imgSrc='https://github.com/HearLing.png' title='HearLing 总积分' content='0' />
+            <ContentBox link="#详情" img-src="https://github.com/HearLing.png" title="HearLing 总积分" content="0" />
           </div>
         </div>
       </div>
     </section>
   </div>
 </template>
-
-<script setup lang="ts">
-import ContentBox from '../.vitepress/theme/components/ContentBox.vue'
-
-</script>
 
 <style scoped>
 .container {

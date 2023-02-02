@@ -53,7 +53,6 @@ async function fetchContributors(page = 1) {
   ]))
 }
 
-
 export async function updateContributors() {
   const collaborators = await fetchContributors()
   await fs.writeFile(join(DIR_SRC, './contributors.json'), `${JSON.stringify(collaborators, null, 2)}\n`, 'utf8')

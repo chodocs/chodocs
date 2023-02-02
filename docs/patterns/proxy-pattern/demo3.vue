@@ -1,32 +1,32 @@
 <script setup lang="ts">
-import { ref } from 'vue';
+import { ref } from 'vue'
 
-const initAge = 42;
-const initName = "John Doe";
+const initAge = 42
+const initName = 'John Doe'
 
 const person = {
   name: initName,
   age: initAge,
-  nationality: "American",
-};
+  nationality: 'American',
+}
 
-const log = ref('');
-const personObj = ref(person);
+const log = ref('')
+const personObj = ref(person)
 
 const personProxy = new Proxy(person, {
   get: (obj: Record<string, string | number>, prop: string) => {
-    log.value = `The value of ${prop} is ${Reflect.get(obj, prop)}`;
+    log.value = `The value of ${prop} is ${Reflect.get(obj, prop)}`
   },
   set: (obj: Record<string, string | number>, prop: string, value) => {
-    log.value = `Changed ${prop} from ${obj[prop]} to ${value}`;
-    return Reflect.set(obj, prop, value);
+    log.value = `Changed ${prop} from ${obj[prop]} to ${value}`
+    return Reflect.set(obj, prop, value)
   },
-});
+})
 
 const reset = () => {
-  log.value = '';
-  person.name = initName;
-  person.age = initAge;
+  log.value = ''
+  person.name = initName
+  person.age = initAge
 }
 </script>
 
@@ -45,9 +45,11 @@ const reset = () => {
     set name = 'Chocolate'
   </button>
 
-  <button @click="reset" class="gray">
+  <button class="gray" @click="reset">
     reset
   </button>
 
-  <p v-if="log">log message: {{ log }}</p>
+  <p v-if="log">
+    log message: {{ log }}
+  </p>
 </template>
