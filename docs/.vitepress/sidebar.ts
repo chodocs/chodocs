@@ -15,11 +15,11 @@ export default {
       collapsible: true,
       collapsed: false,
       items: [
-        { text: "导读", link: "/patterns/guide/" },
-        { text: "单例模式", link: "/patterns/singleton-pattern/" },
-        { text: "代理模式", link: "/patterns/proxy-pattern/" },
-        { text: "提供者模式", link: "/patterns/provider-pattern/" },
-        { text: "原型模式", link: "/patterns/prototype-pattern/" }
+        { text: '导读', link: '/patterns/guide/' },
+        { text: '单例模式', link: '/patterns/singleton-pattern/' },
+        { text: '代理模式', link: '/patterns/proxy-pattern/' },
+        { text: '提供者模式', link: '/patterns/provider-pattern/' },
+        { text: '原型模式', link: '/patterns/prototype-pattern/' },
       ],
     },
     {
@@ -285,8 +285,9 @@ export default {
       items: [
         { text: '计算机网络-TCP', link: '/interview/net/tcp/' },
         { text: '计算机网络-HTTP', link: '/interview/net/http/' },
-        { text: '输入URL到页面展示发生了什么', link: '/interview/browser/process/' },
         { text: '浏览器安全', link: '/interview/browser/safety/' },
+        { text: 'Session/Cookie/  Token', link: '/interview/browser/cookie' },
+        { text: '输入URL到页面展示发生了什么', link: '/interview/browser/process/' },
       ],
     },
   ],

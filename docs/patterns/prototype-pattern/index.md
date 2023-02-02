@@ -19,30 +19,35 @@
 ```js {3}
 class Dog {
   constructor(name) {
-    this.name = name;
+    this.name = name
   }
 
   bark() {
-    return `Woof!`;
+    return 'Woof!'
   }
 }
 
-const dog1 = new Dog("ChoDog");
-const dog2 = new Dog("DocsDog");
-const dog3 = new Dog("Chocolate");
+const dog1 = new Dog('ChoDog')
+const dog2 = new Dog('DocsDog')
+const dog3 = new Dog('Chocolate')
 ```
 
 放在浏览器上打印一下数据，我们可以得到这样的结果：
 
-```js
-console.log(Dog.prototype);
+```js {4}
+console.log(Dog.prototype)
 // constructor: ƒ Dog(name, breed) bark: ƒ bark()
 
-console.log(dog1.__proto__);
+// console.log(dog1.__proto__) 替换为下一行代码
+console.log(Object.getPrototypeOf(dog1))
 // constructor: ƒ Dog(name, breed) bark: ƒ bark()
 ```
 
 上述代码中，我们打印了构造函数上的原型 `prototype` 属性以及实例上的 `__proto__` 属性。
+
+> `__proto__` property has been deprecated as of ECMAScript 3.1 and shouldn’t be used in the code. Use Object.getPrototypeOf and Object.setPrototypeOf instead.
+
+虽然 `__proto__` 被弃用，但还是可以使用，所以上述代码，我们用 `Object.getPrototypeOf` 来获取（因为 eslint 语法不让我通过，我又不想关闭，逃...）
 
 在构造函数的任何实例上，`__proto__` 的值都是对构造函数原型的直接引用！
 
@@ -73,21 +78,21 @@ console.log(dog1.__proto__);
 ```js {15}
 class Dog {
   constructor(name) {
-    this.name = name;
+    this.name = name
   }
 
   bark() {
-    return `Woof!`;
+    return 'Woof!'
   }
 }
 
-const dog1 = new Dog("ChoDog");
-const dog2 = new Dog("DocsDog");
-const dog3 = new Dog("Chocolate");
+const dog1 = new Dog('ChoDog')
+const dog2 = new Dog('DocsDog')
+const dog3 = new Dog('Chocolate')
 
-Dog.prototype.play = () => console.log("ChoDog is playing now!");
+Dog.prototype.play = () => console.log('ChoDog is playing now!')
 
-dog1.play();
+dog1.play()
 ```
 
 :::
@@ -101,11 +106,11 @@ dog1.play();
 ```js {1,6}
 class SuperDog extends Dog {
   constructor(name) {
-    super(name);
+    super(name)
   }
 
   fly() {
-    return "Flying!";
+    return 'Flying!'
   }
 }
 ```
@@ -115,7 +120,6 @@ class SuperDog extends Dog {
 点开下方的 demo，我们会发现 superdog 可以访问 bark 方法，SuperDog 的原型对象的 `__proto__` 是指向的 `Dog.prototype`。
 
 <iframe src='https://stackblitz.com/edit/prototype-pattern-dog-fly?ctl=1&devToolsHeight=33&embed=1&file=index.js'></iframe>
-
 
 ### 图示
 
@@ -127,9 +131,7 @@ class SuperDog extends Dog {
 
 `Object.create` 方法能够让我们创建一个新的对象，然后它并没有任何属性，但是它可以访问原型链上的属性，来看看下方的示例：
 
-
 ### Demo
-
 
 <iframe src='https://stackblitz.com/edit/prototype-pattern-object-create?ctl=1&devToolsHeight=33&embed=1&file=index.js'></iframe>
 
