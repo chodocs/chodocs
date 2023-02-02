@@ -16,7 +16,7 @@
 
 ::: code-group
 
-```js [App.js]
+```jsx [App.js]
 import React from 'react'
 import './style.css'
 
