@@ -12,6 +12,9 @@ const contributors = computed(
 
 const getAvatarUrl = (name: string) => `https://github.com/${name}.png`
 const getGithubLink = (name: string) => `https://github.com/${name}`
+
+console.log('_contributors', _contributors);
+
 </script>
 
 <template>
