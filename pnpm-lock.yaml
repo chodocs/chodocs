@@ -14,6 +14,7 @@ specifiers:
   gray-matter: ^4.0.3
   lint-staged: ^13.1.0
   md5: ^2.3.0
+  moment: ^2.29.4
   ohmyfetch: ^0.4.21
   postcss: ^8.4.21
   postcss-nested: ^6.0.0
@@ -42,6 +43,7 @@ devDependencies:
   gray-matter: 4.0.3
   lint-staged: 13.1.0
   md5: 2.3.0
+  moment: 2.29.4
   ohmyfetch: 0.4.21
   postcss: 8.4.21
   postcss-nested: 6.0.0_postcss@8.4.21
@@ -3359,6 +3361,10 @@ packages:
 
   /minimist/1.2.7:
     resolution: {integrity: sha512-bzfL1YUZsP41gmu/qjrEk0Q6i2ix/cVeAhbCbqH9u3zYutS1cLg00qhrD0M2MVdCcx4Sc0UpP2eBWo9rotpq6g==}
+    dev: true
+
+  /moment/2.29.4:
+    resolution: {integrity: sha512-5LC9SOxjSc2HF6vO2CyuTDNivEdoz2IvyJJGj6X8DJ0eFyfszE0QiEd+iXmBvUP3WHxSjFH/vIsA0EN00cgr8w==}
     dev: true
 
   /mrmime/1.0.1:
