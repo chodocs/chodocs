@@ -5,7 +5,6 @@ import moment from 'moment'
 const input_time = ref('')
 const start_time = ref('')
 const end_time = ref('')
-const how_long_off = ref({ hour: 0, minute: 0 })
 const leftTime = ref({ hour: 0, min: 0, sec: 0 })
 
 const countDown = (seconds: number) => {
@@ -48,6 +47,5 @@ const cal = () => {
   </div>
   <pre v-if="start_time">上班时间：{{ start_time }}</pre>
   <pre v-if="end_time">下班时间：{{ end_time }}</pre>
-  <pre v-if="how_long_off.hour">距离下班还有 {{ how_long_off.hour }} 时 {{ how_long_off.minute }} 分</pre>
   <pre v-if="leftTime.hour">距离下班还有 {{ leftTime.hour }} 时 {{ leftTime.min }} 分 {{ leftTime.sec }} 秒</pre>
 </template>
