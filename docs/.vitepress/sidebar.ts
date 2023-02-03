@@ -230,6 +230,7 @@ export default {
       items: [
         { text: 'emoji-list', link: '/tool/emoji-list' },
         { text: 'finalcut 剪辑快捷键', link: '/tool/finalcut/' },
+        { text: '什么时候下班？', link: '/tool/off-time/' },
       ],
     },
   ],

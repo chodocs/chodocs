@@ -43,6 +43,7 @@
     "gray-matter": "^4.0.3",
     "lint-staged": "^13.1.0",
     "md5": "^2.3.0",
+    "moment": "^2.29.4",
     "ohmyfetch": "^0.4.21",
     "postcss": "^8.4.21",
     "postcss-nested": "^6.0.0",
