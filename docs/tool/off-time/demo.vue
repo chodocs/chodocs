@@ -47,5 +47,6 @@ const cal = () => {
   </div>
   <pre v-if="start_time">上班时间：{{ start_time }}</pre>
   <pre v-if="end_time">下班时间：{{ end_time }}</pre>
-  <pre v-if="leftTime.hour">距离下班还有 {{ leftTime.hour }} 时 {{ leftTime.min }} 分 {{ leftTime.sec }} 秒</pre>
+  <pre
+    v-if="leftTime.hour || leftTime.min || leftTime.sec">距离下班还有 {{ leftTime.hour }} 时 {{ leftTime.min }} 分 {{ leftTime.sec }} 秒</pre>
 </template>
