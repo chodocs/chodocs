@@ -20,11 +20,17 @@ Chocolate + Docs = ChoDocs
 
 > 学如逆水行舟，不进则退。
 
-
 ## 🪴 Project Activity
 
 ![Alt](https://repobeats.axiom.co/api/embed/384181d12f85b1c3d215e902ae265dc14eeea75b.svg "Repobeats analytics image")
 
+## 🧑‍💻 Contributors
+
+Thank you to all the people who already contributed to my project!
+
+<a href="https://github.com/chodocs/chodocs/graphs/contributors">
+  <img src="https://contrib.rocks/image?repo=chodocs/chodocs" />
+</a>
 
 ## 📄 License
 
