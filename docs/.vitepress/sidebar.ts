@@ -285,9 +285,11 @@ export default {
       items: [
         { text: '计算机网络-TCP', link: '/interview/net/tcp/' },
         { text: '计算机网络-HTTP', link: '/interview/net/http/' },
+        { text: 'Websocket', link: '/interview/net/websocket/' },
+        { text: 'Session/Cookie/Token', link: '/interview/browser/cookie' },
         { text: '浏览器安全', link: '/interview/browser/safety/' },
-        { text: 'Session/Cookie/  Token', link: '/interview/browser/cookie' },
         { text: '输入URL到页面展示发生了什么', link: '/interview/browser/process/' },
+        // { text: '操作系统', link: '/interview/system/' },
       ],
     },
   ],
