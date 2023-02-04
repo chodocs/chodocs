@@ -13,7 +13,6 @@ export default {
     },
     {
       text: '📔 前端设计模式',
-      collapsible: true,
       collapsed: false,
       items: [
         { text: '导读', link: '/patterns/guide/' },
@@ -26,7 +25,6 @@ export default {
     },
     {
       text: '📘 TS 学习',
-      collapsible: true,
       collapsed: false,
       items: [
         { text: '导读', link: '/ts/ch' },
@@ -39,7 +37,6 @@ export default {
     },
     {
       text: '📗 编程学习',
-      collapsible: true,
       collapsed: false,
       items: [
         { text: '发布 npm 包', link: '/program/npm-package/' },
@@ -49,7 +46,6 @@ export default {
     },
     {
       text: '📝 备忘录',
-      collapsible: true,
       collapsed: false,
       items: [{ text: 'Git 命令', link: '/memo/git-command/' }],
     },
@@ -62,7 +58,6 @@ export default {
     },
     {
       text: 'Hash Table 哈希表',
-      collapsible: true,
       collapsed: false,
       items: [
         { text: '介绍', link: '/algorithm/hash-table/' },
@@ -75,7 +70,6 @@ export default {
     },
     {
       text: 'Stack 栈',
-      collapsible: true,
       collapsed: false,
       items: [
         { text: '20. 有效的括号', link: '/algorithm/stack/20.有效的括号' },
@@ -90,7 +84,6 @@ export default {
     },
     {
       text: 'Queue 队列',
-      collapsible: true,
       collapsed: false,
       items: [
         { text: '933. 最近的请求次数', link: '/algorithm/queue/933.最近的请求次数' },
@@ -98,7 +91,6 @@ export default {
     },
     {
       text: 'Backtracking 递归与回溯',
-      collapsible: true,
       collapsed: false,
       items: [
         { text: '08.08. 有重复字符串的排列组合', link: '/algorithm/recursion-backtracking/08.08.有重复字符串的排列组合' },
@@ -131,7 +123,6 @@ export default {
     },
     {
       text: 'Tree 二叉树',
-      collapsible: true,
       collapsed: false,
       items: [
         { text: '100. 相同的树', link: '/algorithm/binary-tree/100.相同的树' },
@@ -158,7 +149,6 @@ export default {
     },
     {
       text: 'Linked List 链表',
-      collapsible: true,
       collapsed: false,
       items: [
         { text: '2. 两数相加', link: '/algorithm/linked-list/2.两数相加' },
@@ -173,7 +163,6 @@ export default {
     },
     {
       text: 'Dynamic Programming 动态规划',
-      collapsible: true,
       collapsed: false,
       items: [
         { text: '62. 不同路径', link: '/algorithm/dp/62.不同路径' },
@@ -189,7 +178,6 @@ export default {
     },
     {
       text: 'Two Pointers 双指针',
-      collapsible: true,
       collapsed: false,
       items: [
         { text: '11. 盛最多水的容器', link: '/algorithm/double-pointer/11.盛最多水的容器' },
@@ -207,7 +195,6 @@ export default {
   '/green/': [
     {
       text: '🎈 ACM 经历',
-      collapsible: true,
       collapsed: false,
       items: [
         { text: '阅读须知', link: '/green/ch' },
@@ -218,7 +205,6 @@ export default {
       ],
     }, {
       text: '💭 项目经历',
-      collapsible: true,
       collapsed: false,
       items: [
         { text: '🏆 从大一到大三，我与服务外包大赛', link: '/green/hl-contest/' },
@@ -228,7 +214,6 @@ export default {
   '/tool/': [
     {
       text: '🎒 常用',
-      collapsible: true,
       collapsed: false,
       items: [
         { text: 'emoji-list', link: '/tool/emoji-list' },
@@ -253,7 +238,6 @@ export default {
     },
     {
       text: '春招实习',
-      collapsible: true,
       collapsed: false,
       items: [
         { text: '询问面试官的问题', link: '/interview/spring-internship/interviewer/' },
@@ -268,7 +252,6 @@ export default {
     },
     {
       text: 'React',
-      collapsible: true,
       collapsed: false,
       items: [
         { text: '模拟面试', link: '/interview/react-summary/' },
@@ -276,7 +259,6 @@ export default {
     },
     {
       text: 'Vue',
-      collapsible: true,
       collapsed: false,
       items: [
         { text: '模拟面试', link: '/interview/vue/' },
@@ -320,7 +302,6 @@ export default {
     },
     {
       text: '待办清单（HearLing）',
-      collapsible: true,
       collapsed: false,
       items: [
         { text: '待处理', link: '/plan/list1/todo' },
@@ -329,7 +310,6 @@ export default {
     },
     {
       text: '待办清单（Chocolate）',
-      collapsible: true,
       collapsed: false,
       items: [
         { text: '待处理', link: '/plan/list2/todo' },

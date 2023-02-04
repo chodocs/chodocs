@@ -9,7 +9,6 @@ export default {
   description: 'Front-end learning document collection.',
   lastUpdated: true,
   markdown: {
-    theme: 'material-palenight',
     lineNumbers: true,
   },
   themeConfig: {
