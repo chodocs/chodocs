@@ -290,7 +290,7 @@ export default {
         { text: 'Session/Cookie/Token', link: '/interview/browser/cookie' },
         { text: '浏览器安全', link: '/interview/browser/safety/' },
         { text: '输入URL到页面展示发生了什么', link: '/interview/browser/process/' },
-        // { text: '操作系统', link: '/interview/system/' },
+        { text: '操作系统', link: '/interview/system/' },
       ],
     },
   ],
