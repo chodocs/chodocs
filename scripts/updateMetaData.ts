@@ -1,5 +1,4 @@
 import { join, relative, resolve } from 'path'
-import matter from 'gray-matter'
 import fs from 'fs-extra'
 import fg from 'fast-glob'
 import Git from 'simple-git'
@@ -26,7 +25,6 @@ export async function listDocs(dir: string, ignore: string[] = []) {
 export async function readMetadata() {
   const indexes: PackageIndexes = {
     packages: {},
-    categories: [],
     docs: [],
   }
 
@@ -45,101 +43,37 @@ export async function readMetadata() {
 
     await Promise.all(
       docs?.map(async (docName) => {
-        const mdPath = join(dir, docName, 'index.md')
-        // const tsPath = join(dir, docName, "index.ts");
-
         const doc: ChoDocsTypes = {
           name: docName,
           package: pkg.name,
-          // lastUpdated:
-          //   +(await git.raw(["log", "-1", "--format=%at", tsPath])) * 1000,
         }
 
-        if (fs.existsSync(join(dir, docName, 'component.ts')))
-          doc.component = true
-        if (fs.existsSync(join(dir, docName, 'directive.ts')))
-          doc.directive = true
+        const subFolder = await listDocs(join(dir, docName))
+        if (subFolder.length) {
+          subFolder?.forEach((subName) => {
+            const doc: ChoDocsTypes = {
+              name: docName,
+              package: pkg.name,
+            }
+
+            const subMdPath = join(dir, docName, subName, 'index.md')
+            if (!fs.existsSync(subMdPath))
+              return
+
+            doc.name = `${doc.name}/${subName}`
+            indexes.docs.push(doc)
+          })
+        }
+        const mdPath = join(dir, docName, 'index.md')
         if (!fs.existsSync(mdPath)) {
           doc.internal = true
-          indexes.docs.push(doc)
           return
         }
-
-        doc.docs = `${DOCS_URL}/${pkg.name}/${docName}/`
-
-        const mdRaw = await fs.readFile(mdPath, 'utf-8')
-
-        const { content: md, data: frontmatter } = matter(mdRaw)
-        const category = frontmatter.category
-
-        let alias = frontmatter.alias
-        if (typeof alias === 'string') {
-          alias = alias
-            .split(',')
-            .map(s => s.trim())
-            .filter(Boolean)
-        }
-        let related = frontmatter.related
-        if (typeof related === 'string') {
-          related = related
-            .split(',')
-            .map(s => s.trim())
-            .filter(Boolean)
-        }
-        else if (Array.isArray(related)) {
-          related = related
-            .map(s => s.trim())
-            .filter(Boolean)
-        }
-
-        let description
-          = (md
-            .replace(/\r\n/g, '\n')
-            .match(/# \w+[\s\n]+(.+?)(?:, |\. |\n|\.\n)/m) || [])[1] || ''
-
-        description = description.trim()
-        description = description.charAt(0).toLowerCase() + description.slice(1)
-
-        doc.category = ['core', 'shared'].includes(pkg.name)
-          ? category
-          : `@${pkg.display}`
-        doc.description = description
-
-        if (description.includes('DEPRECATED') || frontmatter.deprecated)
-          doc.deprecated = true
-
-        if (alias?.length)
-          doc.alias = alias
-
-        if (related?.length)
-          doc.related = related
-
-        if (pkg.submodules)
-          doc.importPath = `${pkg.name}/${doc.name}`
-
         indexes.docs.push(doc)
       }))
   }
 
   indexes.docs.sort((a, b) => a.name.localeCompare(b.name))
-
-  // interop related
-  indexes.docs.forEach((doc) => {
-    if (!doc.related)
-      return
-
-    doc.related.forEach((name) => {
-      const target = indexes.docs.find(f => f.name === name)
-      if (!target)
-        throw new Error(`Unknown related function: ${name}`)
-      if (!target.related)
-        target.related = []
-      if (!target.related.includes(doc.name))
-        target.related.push(doc.name)
-    })
-  })
-  indexes.docs.forEach(doc => doc.related?.sort())
-
   return indexes
 }
 

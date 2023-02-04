@@ -20,6 +20,9 @@ export const packages: PackageManifest[] = [
     name: 'patterns',
   },
   {
+    name: 'plan',
+  },
+  {
     name: 'program',
   },
   {
@@ -27,11 +30,5 @@ export const packages: PackageManifest[] = [
   },
   {
     name: 'ts',
-  },
-  {
-    name: 'interview/net',
-  },
-  {
-    name: 'interview/browser',
   },
 ]

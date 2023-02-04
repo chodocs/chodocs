@@ -10,8 +10,10 @@ const contributors = computed(
   () => _contributors[props.doc] || ([] as ContributorInfo[]),
 )
 
-const getAvatarUrl = (name: string) => `https://github.com/${name}.png`
-const getGithubLink = (name: string) => `https://github.com/${name}`
+const reName = (name: string) => name === 'Choi Yang' ? 'Chocolate1999' : name
+
+const getAvatarUrl = (name: string) => `https://github.com/${reName(name)}.png`
+const getGithubLink = (name: string) => `https://github.com/${reName(name)}`
 </script>
 
 <template>
