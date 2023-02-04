@@ -22,18 +22,17 @@ export function MarkdownTransform(): Plugin {
         },
       )
       // convert links to relative
-      code = code.replace(/https?:\/\/vueuse\.org\//g, '/')
+      code = code.replace(/https?:\/\/chodocs\.cn\//g, '/')
 
       const [pkg, _name, i] = id.split('/').slice(-3)
+      const pkg_Name = `${pkg}/${_name}`
 
       const name
-        = docNames.find(n => n.toLowerCase() === _name.toLowerCase()) || _name
-
+        = docNames.find(n => n.toLowerCase() === pkg_Name.toLowerCase() || n.toLowerCase() === _name.toLowerCase()) || _name
       if (docNames.includes(name) && i === 'index.md') {
         const { footer } = await getDocsMarkdown(pkg, name)
         code = replacer(code, footer, 'FOOTER', 'tail')
       }
-
       return code
     },
   }
