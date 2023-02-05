@@ -8,10 +8,16 @@ import ContentBox from '../.vitepress/theme/components/ContentBox.vue'
       <div class="container">
         <div class="row">
           <div class="col-md-4">
-            <ContentBox link="#详情" img-src="https://github.com/Chocolate1999.png" title="Chocolate 总积分" content="0" />
+            <ContentBox
+              link="/plan/list2/done.html" img-src="https://github.com/Chocolate1999.png"
+              title="Chocolate 总积分" content="0"
+            />
           </div>
           <div class="col-md-4">
-            <ContentBox link="#详情" img-src="https://github.com/HearLing.png" title="HearLing 总积分" content="0" />
+            <ContentBox
+              link="/plan/list1/done.html" img-src="https://github.com/HearLing.png" title="HearLing 总积分"
+              content="65"
+            />
           </div>
         </div>
       </div>
