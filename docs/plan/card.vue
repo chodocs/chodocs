@@ -10,7 +10,7 @@ import ContentBox from '../.vitepress/theme/components/ContentBox.vue'
           <div class="col-md-4">
             <ContentBox
               link="/plan/list2/done.html" img-src="https://github.com/Chocolate1999.png"
-              title="Chocolate 总积分" content="0"
+              title="Chocolate 总积分" content="80"
             />
           </div>
           <div class="col-md-4">
