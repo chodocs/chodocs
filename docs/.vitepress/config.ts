@@ -21,6 +21,7 @@ export default {
     nav: [
       { text: '🔥 前端算法', link: '/algorithm/guide/' },
       { text: '🔥 设计模式', link: '/patterns/guide/' },
+      { text: '💭 学习圈子', link: '/zsxq' },
       { text: '📋 面试', link: '/interview/' },
       { text: '✨ 计划', link: '/plan/' },
       {
