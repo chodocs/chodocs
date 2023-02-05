@@ -6,6 +6,7 @@ export default {
       collapsed: false,
       items: [
         { text: '阅读须知', link: '/guide' },
+        { text: '学习圈子', link: '/zsxq' },
         { text: 'Arc 激活码获取', link: '/arc' },
         { text: '2022 年终总结', link: '/2022' },
       ],

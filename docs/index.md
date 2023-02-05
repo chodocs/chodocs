@@ -12,15 +12,15 @@ hero:
       text: 开始阅读
       link: /guide
     - theme: alt
-      text: 程序人生
-      link: /green/ch
+      text: 学习圈子
+      link: /zsxq
     - theme: alt
       text: 关于我
       link: https://github.com/Chocolate1999
 features:
   - icon: 📓
     title: 前端算法
-    details: 预计 2023 年正式启动刷题...
+    details: 不再畏惧面试算法，提供刷题路线。
   - icon: 💬
     title: 编程学习
     details: 同步 B 站视频，文档用于巩固知识。
