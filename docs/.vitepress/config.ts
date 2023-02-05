@@ -23,13 +23,14 @@ export default {
       { text: '🔥 设计模式', link: '/patterns/guide/' },
       { text: '💭 学习圈子', link: '/zsxq' },
       { text: '📋 面试', link: '/interview/' },
-      { text: '✨ 计划', link: '/plan/' },
       {
         text: '更多',
         items: [
+          { text: '✨ 计划', link: '/plan/' },
           { text: '🔧 编程工具', link: '/tool/' },
           { text: '✏️ 随笔', link: '/essay/' },
           { text: '🌱 青葱岁月', link: '/green/ch' },
+          { text: 'Changelog', link: 'https://github.com/chodocs/chodocs/releases' },
         ],
       },
       // { text: "🔥 TS 学习", link: "/ts/ch" },
