@@ -3,7 +3,7 @@ layout: home
 hero:
   name: ChoDocs
   text: Front-end learning document collection
-  tagline: "座右铭: 学如逆水行舟，不进则退。"
+  tagline: "新一代前端内容网站，包括学习路线、知识体系"
   image:
     src: /it.svg
     alt: ChoDocs
