@@ -59,10 +59,6 @@ rebase 命令很强大，`git rebase -i HEAD~[num]` 和 `git pull --rebase` 等�
 git reflog
 ```
 
-## 借助工具
-
-vscode `GitLens` 插件挺好用的。
-
 ## git commit 提交规范
 
 这里以 coding 工作台为例子，其它代码托管平台可能需要修改一下正则。
@@ -86,7 +82,6 @@ echo '{ "path": "cz-conventional-changelog" }' > ~/.czrc
 
 > 参考阅读 [Commit Message](https://coding.net/help/docs/ci/practice/lint/git-commit.html#install)
 
-
 第二种：
 
 更花哨一点，使用 [git-cz](https://github.com/streamich/git-cz)
@@ -101,3 +96,27 @@ npx git-cz
 npm install -g commitizen
 npm install --save-dev git-cz
 ```
+
+## git stash
+
+平常需要切换分支，但有时候又不想要立即 commit 上去，于是可以通过 `git stash` 备份一下，主要的一些命令如下：
+
+备份当前改动
+
+```sh
+git stash
+```
+
+查看备份列表
+
+```sh
+git stash list
+```
+
+恢复备份的改动
+
+```sh
+git stash pop
+```
+
+> 更多内容可参考 [git-stash 用法小结](https://www.cnblogs.com/tocy/p/git-stash-reference.html)
