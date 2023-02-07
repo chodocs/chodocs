@@ -297,6 +297,15 @@ export default {
         { text: '操作系统', link: '/interview/system/' },
       ],
     },
+    {
+      text: '三件套：js/html/css',
+      collapsible: true,
+      collapsed: false,
+      items: [
+        { text: 'js面试大全', link: '/interview/js/' },
+        { text: 'css面试', link: '/interview/js/css' },
+      ],
+    },
   ],
   '/plan/': [
     {
