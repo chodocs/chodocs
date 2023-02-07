@@ -34,10 +34,10 @@ export default {
           { text: 'Changelog', link: 'https://github.com/chodocs/chodocs/releases' },
         ],
       },
-      // { text: "🔥 TS 学习", link: "/ts/ch" },
     ],
     editLink: {
-      pattern: 'https://github.com/chodocs/chodocs/edit/main/docs/:path',
+      pattern: 'https://github.com/chodocs/chodocs/tree/main/docs/:path',
+      text: 'Suggest changes to this page',
     },
     algolia,
     sidebar,

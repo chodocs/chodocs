@@ -1,3 +1,7 @@
+---
+author: "Choi Yang"
+contributors: ["HearLing"]
+---
 # 小狮子前端星球介绍 🍫
 
 > by 一百个 Chocolate，做专业的前端星球，打造一个前端技术氛围的社群。

@@ -21,12 +21,11 @@
     "Chocolate"
   ],
   "scripts": {
-    "dev": "nr update && vitepress dev docs --port 8080 --max-old-space-size=50000",
-    "build": "nr update && vitepress build docs",
+    "dev": "vitepress dev docs --port 8080 --max-old-space-size=50000",
+    "build": "vitepress build docs",
     "serve": "vitepress serve docs",
     "lint": "eslint --cache .",
     "lint:fix": "nr lint --fix",
-    "update": "esno scripts/updateMetaData.ts",
     "release": "esno scripts/release.ts"
   },
   "devDependencies": {

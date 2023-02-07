@@ -1,3 +1,8 @@
+---
+author: "Choi Yang"
+contributors: ["HearLing"]
+---
+
 # 介绍
 
 在这个专栏，我们会一起学习前端设计模式，设计模式是软件开发的一个基本部分，因为它们为软件设计中经常出现的问题提供了典型的解决方案。
@@ -8,11 +13,9 @@
 
 然而，设计模式可以说是一种思想，它并没有提供特定的软件片段，可以说是一些概念，但就是这些思想，能够帮助我们解决很多问题并且优化改善我们的 web app。
 
-
 专栏内容主要学习自 [Patterns.dev](https://www.patterns.dev/)。
 
 > a free book on design patterns and component patterns for building powerful web apps with vanilla JavaScript and React.
-
 
 :::warning
 内容并非完全翻译，会穿插一些内容，如若内容存在错误与不足点，可提 PR 共建内容，在文档主页会显示参与者头像。当然，更推荐阅读英文原文，感谢各位参与，我们马上进入设计模式的世界。

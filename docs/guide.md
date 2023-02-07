@@ -1,3 +1,7 @@
+---
+contributors: ["Choi Yang", "HearLing"]
+---
+
 ::: tip
 由于文档内容还在不断更新以及建设中，因此会存在文章路径更改的情况，所以如果常逛的小伙伴，建议收藏一下我的网站：[chodocs.cn](https://chodocs.cn/)，不迷路。
 :::

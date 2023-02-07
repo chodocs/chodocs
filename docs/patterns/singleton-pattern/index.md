@@ -1,3 +1,8 @@
+---
+author: "Choi Yang"
+contributors: ["HearLing"]
+---
+
 # 单例模式
 
 <script setup>
