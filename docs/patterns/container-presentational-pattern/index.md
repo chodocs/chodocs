@@ -79,3 +79,41 @@ export default function DogImages({ dogs }) {
 而对于这个数据，我们只需要接受就行了，无需修改，都是处理好的数据结构。
 
 通常，演示组件通常是无状态的，除非是改这个 ui 而需要添加状态，而从 `props` 中拿到的数据也不会去修改。
+
+## Hooks
+
+在许多情况下，我们可以通过 React Hooks 方式来代替容器/演示模式，通过 Hooks 我们无需容器来提供 `state`。
+
+这样，我们就可以直接去掉 `DogImagesContainer.js` 这个组件了，而是通过 hooks 方式来编写数据获取的逻辑，如下代码所示：
+
+```jsx
+export default function useDogImages() {
+  const [dogs, setDogs] = useState([]);
+
+  useEffect(() => {
+    fetch("https://dog.ceo/api/breed/labrador/images/random/6")
+      .then((res) => res.json())
+      .then(({ message }) => setDogs(message));
+  }, []);
+
+  return dogs;
+}
+```
+
+通过以上代码，我们就可以简化之前的 demo 中的代码，我们直接在演示组件中使用 hook 试试，如下示例：
+
+<iframe src='https://stackblitz.com/edit/container-presentational-pattern-hooks?ctl=1&embed=1&file=src/useDogImages.js'></iframe>
+
+上述示例中，我们使用了 `useDogImages` hook，也做到了逻辑和视图上的分离，显然，这节省了设计模式所需的容器组件。
+
+## 总结
+
+优点：
+
+- 使用容器/演示模式可以做到视图和逻辑上的分离，视图组件只需要负责 UI 的渲染，而容器组件则负责应用程序的状态和数据，各司其职。
+- 因为演示组件不会修改数据并且一般是无状态的，我们可以很好的进行复用，例如，基于数据的不同，我们可以实现应用程序换肤效果等。
+- 测试演示组件也很容易，毕竟它们是纯函数，我们无需模拟数据的存储，并且知道它们是根据我们传递的数据不同而呈现不同的内容。
+
+不足：
+
+虽然容器/演示模式能够让逻辑和视图关注点分离，但是上文中我们使用 Hooks 也达到了同样的效果，那么其实我们没必要再多写一个容器组件，组件的嵌套多了看起来不够简洁。
