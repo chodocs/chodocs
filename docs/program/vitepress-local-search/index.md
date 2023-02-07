@@ -1,8 +1,12 @@
-# VitePress添加本地搜索功能
+---
+author: "fxzer"
+---
+
+# VitePress 添加本地搜索功能
 
 ::: warning 踩坑历程
 
-折腾了三遍Algolia都没能添加上搜索功能，最后在找到了这个[issus](https://github.com/vuejs/vitepress/issues/670)里大佬提供的解决方案，成功添加上了本地搜索功能。
+折腾了三遍 Algolia 都没能添加上搜索功能，最后在找到了这个[issus](https://github.com/vuejs/vitepress/issues/670)里大佬提供的解决方案，成功添加上了本地搜索功能。
 
 :::
 
@@ -15,6 +19,7 @@ npm i vitepress-plugin-search markdown-it flexsearch -D
 ### 添加和配置插件
 
 ::: warning 坑点
+
 1.[README](https://github.com/emersonbottero/vitepress-plugin-search#readme) 没写在哪个目录下存放`vite.config.ts`，依据经验放在根目录下不管用，放在`.vitepress`也不生效，最后挨个试才发现需要放在`docs`
 
 2.示例没有引入`flexSearchIndexOptions`，需要手动从`flexsearch`中引入
@@ -23,22 +28,17 @@ npm i vitepress-plugin-search markdown-it flexsearch -D
 
 :::
 
-
-
 ![image-20230205233032922](https://zerdocs.oss-cn-shanghai.aliyuncs.com/202302052330956.png)
 
-
-
 ```typescript
-
 //vite.config.ts
 import { SearchPlugin } from "vitepress-plugin-search";
 import { defineConfig } from "vite";
-import flexSearchIndexOptions   from "flexsearch";
+import flexSearchIndexOptions from "flexsearch";
 //default options
 var options = {
   ...flexSearchIndexOptions,
-  previewLength: 100,//搜索结果预览长度
+  previewLength: 100, //搜索结果预览长度
   buttonLabel: "搜索",
   placeholder: "情输入关键词",
 };
@@ -47,8 +47,6 @@ export default defineConfig({
   plugins: [SearchPlugin(options)],
 });
 ```
-
-
 
 ### 样式覆盖
 
@@ -80,7 +78,7 @@ export default defineConfig({
   .DocSearch-Button-Keys {
     display: none;
   }
-  .VPNavBarHamburger{
+  .VPNavBarHamburger {
     height: 32px !important;
     width: 32px !important;
     border-radius: 4px;
@@ -89,6 +87,4 @@ export default defineConfig({
 .DocSearch-Button:hover {
   background-color: #f5f5f6;
 }
-
 ```
-
