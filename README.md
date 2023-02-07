@@ -34,4 +34,4 @@ Thank you to all the people who already contributed to my project!
 
 ## 📄 License
 
-[MIT License](https://github.com/chodocs/chodocs/blob/main/LICENSE) © 2022-PRESENT [Chocolate](https://github.com/Chocolate1999)
+[MIT License](https://github.com/chodocs/chodocs/blob/main/LICENSE) © 2022-PRESENT [Choi Yang](https://github.com/Chocolate1999)
