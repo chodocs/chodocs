@@ -1,3 +1,6 @@
+---
+author: "HearLing"
+---
 # 2022 年总结-内耗和放弃内耗的一年
 
 <VideoLink bvId="BV1Wx4y1375J">小程序员内耗与放弃内耗的一年，2022 年终总结 B 站视频传送门</VideoLink>

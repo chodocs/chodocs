@@ -1,28 +1,34 @@
 <script setup lang="ts">
-// @ts-expect-error missing types
-import _contributors from '/virtual-contributors'
-import { computed } from 'vue'
-import type { ContributorInfo } from '../../metadata'
+import { ref } from 'vue'
+import { useData } from 'vitepress'
 
-const props = defineProps<{ doc: string }>()
+const defaultAuthor = 'Chocolate1999'
+const { frontmatter } = useData()
 
-const contributors = computed(
-  () => _contributors[props.doc] || ([] as ContributorInfo[]),
-)
+const contributorsArr = [frontmatter.value?.author, ...frontmatter.value.contributors || []].filter(x => x)
+const contributors = ref(contributorsArr)
 
 const reName = (name: string) => name === 'Choi Yang' ? 'Chocolate1999' : name
 
 const getAvatarUrl = (name: string) => `https://github.com/${reName(name)}.png`
 const getGithubLink = (name: string) => `https://github.com/${reName(name)}`
+
+const isNotEmpty = (arr: string | string[]) => Array.isArray(arr) && arr.length
 </script>
 
 <template>
-  <div class="flex flex-wrap gap-4 pt-2">
-    <div v-for="c of contributors" :key="c.hash" class="flex gap-2 items-center">
-      <a :href="getGithubLink(c.name)" rel="noreferrer" target="_blank">
-        <img :src="getAvatarUrl(c.name)" class="w-8 h-8 rounded-full">
+  <div v-if="isNotEmpty(contributors)" class="flex flex-wrap gap-4">
+    <div v-for="contributor of contributors" :key="contributor" class="flex gap-2 items-center">
+      <a :href="getGithubLink(contributor)" rel="noreferrer" target="_blank">
+        <img :src="getAvatarUrl(contributor)" class="w-8 h-8 rounded-full">
       </a>
-      {{ c.name }}
+      {{ contributor }}
     </div>
+  </div>
+  <div v-else class="flex gap-2 items-center">
+    <a :href="getGithubLink(defaultAuthor)" rel="noreferrer" target="_blank">
+      <img :src="getAvatarUrl(defaultAuthor)" class="w-8 h-8 rounded-full">
+    </a>
+    {{ 'Choi Yang' }}
   </div>
 </template>
