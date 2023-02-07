@@ -13,6 +13,7 @@ export default {
     lineNumbers: true,
   },
   themeConfig: {
+    logo: './chodocs-logo.svg',
     outline: 'deep',
     footer: {
       message: 'Released under the MIT License.',
