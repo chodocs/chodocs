@@ -12,6 +12,7 @@ export async function getContributorsAt(path: string) {
     const list = (await git.raw(['log', '--pretty=format:"%an|%ae"', '--', path]))
       .split('\n')
       .map(i => i.slice(1, -1).split('|') as [string, string])
+      .filter(i => i[0] !== 'renovate[bot]')
     const map: Record<string, ContributorInfo> = {}
     list
       .filter(i => i[1])
