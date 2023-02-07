@@ -31,7 +31,7 @@ export default {
           { text: '🔧 编程工具', link: '/tool/' },
           { text: '✏️ 随笔', link: '/essay/' },
           { text: '🌱 青葱岁月', link: '/green/ch' },
-          { text: 'Changelog', link: 'https://github.com/chodocs/chodocs/releases' },
+          { text: '🎉 更新日志', link: 'https://github.com/chodocs/chodocs/releases' },
         ],
       },
     ],

@@ -21,6 +21,7 @@ export default {
         { text: '代理模式', link: '/patterns/proxy-pattern/' },
         { text: '提供者模式', link: '/patterns/provider-pattern/' },
         { text: '原型模式', link: '/patterns/prototype-pattern/' },
+        { text: '容器/演示模式', link: '/patterns/container-presentational-pattern/' },
       ],
     },
     {
