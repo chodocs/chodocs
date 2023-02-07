@@ -79,6 +79,17 @@ const members = [
       { icon: 'twitter', link: 'https://twitter.com/holazz1208' },
     ]
   },
+  {
+    avatar: 'https://www.github.com/fxzer.png',
+    name: 'fxzer',
+    title: 'Open Source Contributor',
+    links: [
+      { icon: 'github', link: 'https://github.com/fxzer' },
+      {
+       icon: { svg: icons.bilibili } ,link: "https://space.bilibili.com/228134791",
+      },
+    ]
+  },
 ]
 </script>
 
