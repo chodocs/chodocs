@@ -1,3 +1,6 @@
+---
+author: "HearLing"
+---
 # WebSocket 常见面试题
 
 WebSocket 是一种在单个 TCP 连接上进行**全双工通信**的**应用层**网络传输协议。

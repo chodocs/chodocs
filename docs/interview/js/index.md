@@ -1,3 +1,7 @@
+---
+author: "HearLing"
+---
+
 # JS 相关面试题第一版
 
 总结了关于 js 常见的面试题，由于涉及到的问题太多了，有个别的问题例如事件循环，如果是完全没基础的话，需要看网络专栏里的[事件循环](/interview/browser/principle/eventLoop.html)。
@@ -29,14 +33,14 @@
 - 引用数据类型（Object）：除了函数都会显示 object
 
 ```javascript
-console.log(typeof 2) // number
-console.log(typeof true) // boolean
-console.log(typeof 'str') // string
-console.log(typeof []) // object     []数组的数据类型在 typeof 中被解释为 object
-console.log(typeof function () {}) // function
-console.log(typeof {}) // object
-console.log(typeof undefined) // undefined
-console.log(typeof null) // object     null 的数据类型被 typeof 解释为 object
+console.log(typeof 2); // number
+console.log(typeof true); // boolean
+console.log(typeof "str"); // string
+console.log(typeof []); // object     []数组的数据类型在 typeof 中被解释为 object
+console.log(typeof function () {}); // function
+console.log(typeof {}); // object
+console.log(typeof undefined); // undefined
+console.log(typeof null); // object     null 的数据类型被 typeof 解释为 object
 ```
 
 #### instanceof
@@ -45,12 +49,12 @@ console.log(typeof null) // object     null 的数据类型被 typeof 解释为 
 - 原理：通过判断对象的原型链中是不是能找到类型的 prototype
 
 ```javascript
-console.log(2 instanceof Number) // false
-console.log(true instanceof Boolean) // false
-console.log('str' instanceof String) // false
-console.log(Array.isArray([])) // true
-console.log(function () {} instanceof Function) // true
-console.log({} instanceof Object) // true
+console.log(2 instanceof Number); // false
+console.log(true instanceof Boolean); // false
+console.log("str" instanceof String); // false
+console.log(Array.isArray([])); // true
+console.log(function () {} instanceof Function); // true
+console.log({} instanceof Object); // true
 ```
 
 #### constructor
@@ -59,21 +63,21 @@ console.log({} instanceof Object) // true
 - 不可靠在于，创建对象更改了原型
 
 ```javascript
-console.log((2).constructor === Number) // true
-console.log(true.constructor === Boolean) // true
-console.log('str'.constructor === String) // true
-console.log([].constructor === Array) // true
-console.log(function () {}.constructor === Function) // true
-console.log({}.constructor === Object) // true
+console.log((2).constructor === Number); // true
+console.log(true.constructor === Boolean); // true
+console.log("str".constructor === String); // true
+console.log([].constructor === Array); // true
+console.log(function () {}.constructor === Function); // true
+console.log({}.constructor === Object); // true
 
 function Fn() {}
 
-Fn.prototype = []
+Fn.prototype = [];
 
-const f = new Fn()
+const f = new Fn();
 
-console.log(f.constructor === Fn) // false
-console.log(f.constructor === Array) // true
+console.log(f.constructor === Fn); // false
+console.log(f.constructor === Array); // true
 ```
 
 #### Object.prototype.toString.call()
@@ -82,16 +86,16 @@ console.log(f.constructor === Array) // true
 - 使用 Object 对象的原型方法 toString ，使用 call 进行狸猫换太子，借用 Object 的 toString 方法
 
 ```javascript
-const a = Object.prototype.toString
+const a = Object.prototype.toString;
 
-console.log(a.call(2)) // [object Number]
-console.log(a.call(true)) // [object Boolean]
-console.log(a.call('str')) // [object String]
-console.log(a.call([])) // [object Array]
-console.log(a.call(() => {})) // [object Function]
-console.log(a.call({})) // [object Object]
-console.log(a.call(undefined)) // [object Undefined]
-console.log(a.call(null)) // [object Null]
+console.log(a.call(2)); // [object Number]
+console.log(a.call(true)); // [object Boolean]
+console.log(a.call("str")); // [object String]
+console.log(a.call([])); // [object Array]
+console.log(a.call(() => {})); // [object Function]
+console.log(a.call({})); // [object Object]
+console.log(a.call(undefined)); // [object Undefined]
+console.log(a.call(null)); // [object Null]
 ```
 
 ### 精度问题 0.1+0.2!==0.3
@@ -139,25 +143,25 @@ console.log(a.call(null)) // [object Null]
 
 ```javascript
 // 这是我们正常写的代码：
-showName()
-console.log(myName)
-var myName = 'HearLing'
+showName();
+console.log(myName);
+var myName = "HearLing";
 function showName() {
-  console.log('showName')
+  console.log("showName");
 }
 ```
 
 模拟变量提升后的效果：
 
 ```javascript
-const name = undefined
+const name = undefined;
 function showName() {
-  console.log('showName')
+  console.log("showName");
 }
 
-showName()
-console.log(myName)
-myName = 'HearLing'
+showName();
+console.log(myName);
+myName = "HearLing";
 ```
 
 函数和变量在执行前都提升到代码开头。而对于出现了同名的变量或者函数，最终生效的是最后一个（覆盖）。
@@ -178,20 +182,20 @@ ES6 引入了 **let** 和 **const** 关键字，从而使 JavaScript 拥有了�
 
 ```javascript
 function foo() {
-  const a = 1
-  const b = 2
+  const a = 1;
+  const b = 2;
   {
-    const b = 3
-    var c = 4
-    const d = 5
-    console.log(a)
-    console.log(b)
+    const b = 3;
+    var c = 4;
+    const d = 5;
+    console.log(a);
+    console.log(b);
   }
-  console.log(b)
-  console.log(c)
-  console.log(d)
+  console.log(b);
+  console.log(c);
+  console.log(d);
 }
-foo()
+foo();
 ```
 
 分析一下：
@@ -215,24 +219,24 @@ foo()
 
 ```javascript
 function foo() {
-  let myName = 'HearLing'
-  const test1 = 1
-  const test2 = 2
+  let myName = "HearLing";
+  const test1 = 1;
+  const test2 = 2;
   const innerBar = {
     getName() {
-      console.log(test1)
-      return myName
+      console.log(test1);
+      return myName;
     },
     setName(newName) {
-      myName = newName
+      myName = newName;
     },
-  }
-  return innerBar
+  };
+  return innerBar;
 }
-const bar = foo()
-bar.setName('hl')
-bar.getName()
-console.log(bar.getName())
+const bar = foo();
+bar.setName("hl");
+bar.getName();
+console.log(bar.getName());
 ```
 
 根据词法作用域的规则，内部函数 getName 和 setName 总是可以访问它们的外部函数 foo 中的变量，所以当 innerBar 对象返回给全局变量 bar 时，虽然 foo 函数已经执行结束，但是 getName 和 setName 函数依然可以使用 foo 函数中的变量 myName 和 test1。
@@ -290,56 +294,56 @@ new>隐式>默认
 ### 8 例题
 
 ```javascript
-const name = 'window'
+const name = "window";
 
 const person1 = {
-  name: 'person1',
+  name: "person1",
   show1() {
-    console.log(this.name)
+    console.log(this.name);
   },
   show2: () => console.log(this.name),
   show3() {
     return function () {
-      console.log(this.name)
-    }
+      console.log(this.name);
+    };
   },
   show4() {
-    return () => console.log(this.name)
+    return () => console.log(this.name);
   },
-}
-const person2 = { name: 'person2' }
+};
+const person2 = { name: "person2" };
 
-person1.show1()
-person1.show1.call(person2)
+person1.show1();
+person1.show1.call(person2);
 
-person1.show2()
-person1.show2.call(person2)
+person1.show2();
+person1.show2.call(person2);
 
-person1.show3()()
-person1.show3().call(person2)
-person1.show3.call(person2)()
+person1.show3()();
+person1.show3().call(person2);
+person1.show3.call(person2)();
 
-person1.show4()()
-person1.show4().call(person2)
-person1.show4.call(person2)()
+person1.show4()();
+person1.show4().call(person2);
+person1.show4.call(person2)();
 
 // 正确答案如下：
 
-person1.show1() // person1，隐式绑定，this指向调用者 person1
-person1.show1.call(person2) // person2，显式绑定，this指向 person2
+person1.show1(); // person1，隐式绑定，this指向调用者 person1
+person1.show1.call(person2); // person2，显式绑定，this指向 person2
 
-person1.show2() // window，箭头函数绑定，this指向外层作用域，即全局作用域
-person1.show2.call(person2) // window，箭头函数绑定，this指向外层作用域，即全局作用域
+person1.show2(); // window，箭头函数绑定，this指向外层作用域，即全局作用域
+person1.show2.call(person2); // window，箭头函数绑定，this指向外层作用域，即全局作用域
 
-person1.show3()() // window，默认绑定，这是一个高阶函数，调用者是window
+person1.show3()(); // window，默认绑定，这是一个高阶函数，调用者是window
 // 类似于`var func = person1.show3()` 执行`func()`
-person1.show3().call(person2) // person2，显式绑定，this指向 person2
-person1.show3.call(person2)() // window，默认绑定，调用者是window
+person1.show3().call(person2); // person2，显式绑定，this指向 person2
+person1.show3.call(person2)(); // window，默认绑定，调用者是window
 
-person1.show4()() // person1，箭头函数绑定，this指向外层作用域，即person1函数作用域
-person1.show4().call(person2) // person1，箭头函数绑定，
+person1.show4()(); // person1，箭头函数绑定，this指向外层作用域，即person1函数作用域
+person1.show4().call(person2); // person1，箭头函数绑定，
 // this指向外层作用域，即person1函数作用域
-person1.show4.call(person2)() // person2
+person1.show4.call(person2)(); // person2
 ```
 
 ## 原型与原型链
@@ -351,39 +355,39 @@ person1.show4.call(person2)() // person2
 
 ```javascript
 function Fn() {
-  this.x = 100
-  this.y = 200
+  this.x = 100;
+  this.y = 200;
   this.getX = function () {
-    console.log(this.x)
-  }
+    console.log(this.x);
+  };
 }
 Fn.prototype = {
   y: 400,
   getX() {
-    console.log(this.x)
+    console.log(this.x);
   },
   getY() {
-    console.log(this.y)
+    console.log(this.y);
   },
   sum() {
-    console.log(this.x + this.y)
+    console.log(this.x + this.y);
   },
-}
-const f1 = new Fn()
-const f2 = new Fn()
-console.log(f1.getX === f2.getX) // false
-console.log(f1.getY === f2.getY) // true
-console.log(f1.__proto__.getY === Fn.prototype.getY) // true
-console.log(f1.__proto__.getX === f2.getX) // false
-console.log(f1.getX === Fn.prototype.getx)
-console.log(f1.constructor) // [Function:Object]
-console.log(Fn.prototype.__proto__.constructor) // [Function:Object]
-f1.getX() // 100
-f1.__proto__.getX() // undefined
-f2.getY() // 200
-f2.__proto__.getY() // 400
-f1.sum() // 300
-Fn.prototype.sum() // undedined+400=NAN
+};
+const f1 = new Fn();
+const f2 = new Fn();
+console.log(f1.getX === f2.getX); // false
+console.log(f1.getY === f2.getY); // true
+console.log(f1.__proto__.getY === Fn.prototype.getY); // true
+console.log(f1.__proto__.getX === f2.getX); // false
+console.log(f1.getX === Fn.prototype.getx);
+console.log(f1.constructor); // [Function:Object]
+console.log(Fn.prototype.__proto__.constructor); // [Function:Object]
+f1.getX(); // 100
+f1.__proto__.getX(); // undefined
+f2.getY(); // 200
+f2.__proto__.getY(); // 400
+f1.sum(); // 300
+Fn.prototype.sum(); // undedined+400=NAN
 ```
 
 ## 实现继承的几种方式
@@ -404,13 +408,13 @@ Fn.prototype.sum() // undedined+400=NAN
 
 ```javascript
 const person = {
-  stu: ['x', 'y', 'z'],
-}
+  stu: ["x", "y", "z"],
+};
 
-const p1 = Object.create(person)
-p1.stu.push('A')
+const p1 = Object.create(person);
+p1.stu.push("A");
 
-console.log(person.stu) // ['x','y','z','A']
+console.log(person.stu); // ['x','y','z','A']
 ```
 
 ### 组合式继承
@@ -425,35 +429,35 @@ console.log(person.stu) // ['x','y','z','A']
 
 ```javascript
 function Father(name) {
-  this.name = name
-  this.type = ['x', 'y', 'z']
+  this.name = name;
+  this.type = ["x", "y", "z"];
 }
 
 Father.prototype.sayName = function () {
-  console.log(this.name)
-}
+  console.log(this.name);
+};
 
 function Son(name, age) {
-  Father.call(this, name)
-  this.age = age
+  Father.call(this, name);
+  this.age = age;
 }
 
-Son.prototype = new Father()
-Son.prototype.constructor = Son
+Son.prototype = new Father();
+Son.prototype.constructor = Son;
 
 // 优点一：可传参
-const son1 = new Son('aaa', 11)
-const son2 = new Son('bbb', 12)
+const son1 = new Son("aaa", 11);
+const son2 = new Son("bbb", 12);
 
 // 优点二：共享父类方法
-son1.sayName()
-son2.sayName()
+son1.sayName();
+son2.sayName();
 
 // 优点三：不共享父类引用类型
-son1.type.push('Q')
+son1.type.push("Q");
 
-console.log(son1.type)
-console.log(son2.type)
+console.log(son1.type);
+console.log(son2.type);
 ```
 
 ### 寄生组合继承
@@ -462,26 +466,26 @@ console.log(son2.type)
 
 ```javascript
 function Father(name) {
-  this.name = name
-  this.type = ['x', 'y', 'z']
+  this.name = name;
+  this.type = ["x", "y", "z"];
 }
 Father.prototype.sayName = function () {
-  console.log(this.name)
-}
+  console.log(this.name);
+};
 
 function Son(name, age) {
-  Father.call(this, name)
-  this.age = age
+  Father.call(this, name);
+  this.age = age;
 }
 
-Son.prototype = Object.create(Father.prototype)
-Son.prototype.constructor = Son
+Son.prototype = Object.create(Father.prototype);
+Son.prototype.constructor = Son;
 
-const son1 = new Son('kk', 18)
+const son1 = new Son("kk", 18);
 
-son1.sayName()
-son1.type.push('Q')
-console.log(son1.type)
+son1.sayName();
+son1.type.push("Q");
+console.log(son1.type);
 ```
 
 ### js 用几种方式实现继承（构造函数继承、原型链继承、组合方式继承）
@@ -530,7 +534,6 @@ async/await 是以更舒适的方式使用 promise 的一种特殊语法，同�
 ## 经典手写题
 
 以下是 js 考察中经常会被面试到的一些面试题及答案的总结，供参考：
-
 
 ### call
 
@@ -843,22 +846,21 @@ function unique(arr) {
 // 语法 array.reduce(function(prev, currentValue, currentIndex, arr), initialValue)
 Array.prototype.MyReduce = function (fn, initialValue) {
   // 浅拷贝数组
-  const arr = Array.prototype.slice.call(this)
+  const arr = Array.prototype.slice.call(this);
   // 注意: reduce() 对于空数组是不会执行回调函数的。
-  if (!arr.length)
-    return
+  if (!arr.length) return;
 
-  let res // res(是上面的prev)
+  let res; // res(是上面的prev)
   // 默认初始值
-  res = initialValue || arr[0]
+  res = initialValue || arr[0];
   // 遍历数组的每一个值
   for (let i = initialValue ? 0 : 1; i < arr.length; i++) {
     // 每一个值都会在该方法中被（加工处理），
-    res = fn.call(null, res, arr[i], i, this)
+    res = fn.call(null, res, arr[i], i, this);
   }
   // 最后的返回值
-  return res
-}
+  return res;
+};
 ```
 
 ### 带并发的异步调度器
@@ -877,13 +879,13 @@ Array.prototype.MyReduce = function (fn, initialValue) {
 
 ```javascript
 // 设计并发调度器， 最多允许两个任务运行
-const scheduler = new Scheduler(2)
+const scheduler = new Scheduler(2);
 // 这里的timer有的会写1有的会直接写1000，需要灵活解题
-scheduler.addTask(5, '1')
-scheduler.addTask(3, '2')
-scheduler.addTask(1, '3')
-scheduler.addTask(2, '4')
-scheduler.start()
+scheduler.addTask(5, "1");
+scheduler.addTask(3, "2");
+scheduler.addTask(1, "3");
+scheduler.addTask(2, "4");
+scheduler.start();
 // 输出:2314
 ```
 
@@ -896,27 +898,26 @@ scheduler.start()
 ```javascript
 class Scheduler {
   constructor(maxNum) {
-    this.maxNum = maxNum
-    this.count = 0
-    this.taskList = []
+    this.maxNum = maxNum;
+    this.count = 0;
+    this.taskList = [];
   }
 
   addTask(time, val) {
-    this.taskList.push([time, val])
+    this.taskList.push([time, val]);
   }
 
   start() {
-    if (!this.taskList.length)
-      return
+    if (!this.taskList.length) return;
     if (this.count < this.maxNum) {
-      const [time, val] = this.taskList.shift()
-      this.count++
+      const [time, val] = this.taskList.shift();
+      this.count++;
       setTimeout(() => {
-        console.log(val)
-        this.count--
-        this.start()
-      }, time * 1000)
-      this.start()
+        console.log(val);
+        this.count--;
+        this.start();
+      }, time * 1000);
+      this.start();
     }
   }
 }
@@ -927,21 +928,21 @@ class Scheduler {
 用 `promise` 写的话，实例代码就应该是下面这样：
 
 ```javascript
-const timeout = time =>
+const timeout = (time) =>
   new Promise((resolve) => {
-    setTimeout(resolve, time)
-  })
+    setTimeout(resolve, time);
+  });
 
-const scheduler = new Scheduler()
+const scheduler = new Scheduler();
 
 const addTask = (time, order) => {
-  scheduler.add(() => timeout(time).then(() => console.log(order)))
-}
+  scheduler.add(() => timeout(time).then(() => console.log(order)));
+};
 
-addTask(5000, '1')
-addTask(3000, '2')
-addTask(1000, '3')
-addTask(2000, '4')
+addTask(5000, "1");
+addTask(3000, "2");
+addTask(1000, "3");
+addTask(2000, "4");
 ```
 
 需要注意的是使用 `promise` 实现的话也是离不开循环 `.then` 的，所以我们抽出一个函数来实现 `then` 的链式调用。
@@ -957,27 +958,26 @@ addTask(2000, '4')
 ```javascript
 class Scheduler {
   constructor() {
-    this.taskList = []
-    this.maxNum = 2
-    this.count = 0
+    this.taskList = [];
+    this.maxNum = 2;
+    this.count = 0;
   }
 
   add(promiseCreator) {
-    this.taskList.push(promiseCreator)
-    this.run()
+    this.taskList.push(promiseCreator);
+    this.run();
   }
 
   run() {
-    if (this.count >= this.maxNum || this.taskList.length == 0)
-      return
+    if (this.count >= this.maxNum || this.taskList.length == 0) return;
 
-    this.count++
+    this.count++;
     this.taskList
       .shift()()
       .then(() => {
-        this.count--
-        this.run()
-      })
+        this.count--;
+        this.run();
+      });
   }
 }
 ```
@@ -993,23 +993,22 @@ class Scheduler {
 
 ```javascript
 function scheduler(maxNum) {
-  const taskList = []
-  let count = 0
+  const taskList = [];
+  let count = 0;
 
   return async function add(promiseCreator) {
     if (count >= maxNum) {
       await new Promise((resolve, reject) => {
-        taskList.push(resolve)
-      })
+        taskList.push(resolve);
+      });
     }
-    count++
-    const res = await promiseCreator()
-    count--
-    if (taskList.length > 0)
-      taskList.shift()()
+    count++;
+    const res = await promiseCreator();
+    count--;
+    if (taskList.length > 0) taskList.shift()();
 
-    return res
-  }
+    return res;
+  };
 }
 ```
 
@@ -1026,7 +1025,7 @@ function scheduler(maxNum) {
 class EventEmitter {
   constructor() {
     // 维护事件及监听者
-    this.listeners = {}
+    this.listeners = {};
   }
 
   /**
@@ -1035,10 +1034,9 @@ class EventEmitter {
    * @param {Function} cb 回调函数
    */
   on(type, cb) {
-    if (!this.listeners[type])
-      this.listeners[type] = []
+    if (!this.listeners[type]) this.listeners[type] = [];
 
-    this.listeners[type].push(cb)
+    this.listeners[type].push(cb);
   }
 
   /**
@@ -1049,8 +1047,8 @@ class EventEmitter {
   emit(type, ...args) {
     if (this.listeners[type]) {
       this.listeners[type].forEach((cb) => {
-        cb(...args)
-      })
+        cb(...args);
+      });
     }
   }
 
@@ -1061,32 +1059,29 @@ class EventEmitter {
    */
   off(type, cb) {
     if (this.listeners[type]) {
-      const targetIndex = this.listeners[type].findIndex(item => item === cb)
-      if (targetIndex !== -1)
-        this.listeners[type].splice(targetIndex, 1)
+      const targetIndex = this.listeners[type].findIndex((item) => item === cb);
+      if (targetIndex !== -1) this.listeners[type].splice(targetIndex, 1);
 
-      if (this.listeners[type].length === 0)
-        delete this.listeners[type]
-
+      if (this.listeners[type].length === 0) delete this.listeners[type];
     }
   }
 }
 // 创建事件管理器实例
-const ee = new EventEmitter()
+const ee = new EventEmitter();
 // 注册事件监听者
 ee.on(
-  '设计模式',
+  "设计模式",
   (fn1 = function (price) {
-    console.log(`HearLing订阅设计模式这本书的价格是:${price}`)
+    console.log(`HearLing订阅设计模式这本书的价格是:${price}`);
   })
-)
-ee.on('你不知道JavaScript', (price) => {
-  console.log(`HearLing订阅你不知道JavaScript这本书的价格是:${price}`)
-})
-ee.emit('设计模式', 100) // 输出HearLing订阅设计模式这本书的价格是:100
+);
+ee.on("你不知道JavaScript", (price) => {
+  console.log(`HearLing订阅你不知道JavaScript这本书的价格是:${price}`);
+});
+ee.emit("设计模式", 100); // 输出HearLing订阅设计模式这本书的价格是:100
 
-ee.off('设计模式', fn1)
-ee.emit('设计模式') // 此时事件监听已经被移除，没有console.log
+ee.off("设计模式", fn1);
+ee.emit("设计模式"); // 此时事件监听已经被移除，没有console.log
 ```
 
 ### EventMitter 增强版
@@ -1129,13 +1124,12 @@ offAll(type) {
 
 ```javascript
 function quickSort(arr) {
-  if (arr.length < 2)
-    return arr
+  if (arr.length < 2) return arr;
 
-  const cur = arr[arr.length - 1]
-  const left = arr.filter((v, i) => v <= cur && i !== arr.length - 1)
-  const right = arr.filter(v => v > cur)
-  return [...quickSort(left), cur, ...quickSort(right)]
+  const cur = arr[arr.length - 1];
+  const left = arr.filter((v, i) => v <= cur && i !== arr.length - 1);
+  const right = arr.filter((v) => v > cur);
+  return [...quickSort(left), cur, ...quickSort(right)];
 }
 // console.log(quickSort([3, 6, 2, 4, 1]));
 ```
@@ -1145,23 +1139,22 @@ function quickSort(arr) {
 ```javascript
 function add(a, b) {
   // 取两个数字的最大长度
-  const maxLength = Math.max(a.length, b.length)
+  const maxLength = Math.max(a.length, b.length);
   // 用0去补齐长度
-  a = a.padStart(maxLength, 0) // "0009007199254740991"
-  b = b.padStart(maxLength, 0) // "1234567899999999999"
+  a = a.padStart(maxLength, 0); // "0009007199254740991"
+  b = b.padStart(maxLength, 0); // "1234567899999999999"
   // 定义加法过程中需要用到的变量
-  let t = 0
-  let f = 0 // "进位"
-  let sum = ''
+  let t = 0;
+  let f = 0; // "进位"
+  let sum = "";
   for (let i = maxLength - 1; i >= 0; i--) {
-    t = parseInt(a[i]) + parseInt(b[i]) + f
-    f = Math.floor(t / 10)
-    sum = (t % 10) + sum
+    t = parseInt(a[i]) + parseInt(b[i]) + f;
+    f = Math.floor(t / 10);
+    sum = (t % 10) + sum;
   }
-  if (f !== 0)
-    sum = `${f}${sum}`
+  if (f !== 0) sum = `${f}${sum}`;
 
-  return sum
+  return sum;
 }
 ```
 
