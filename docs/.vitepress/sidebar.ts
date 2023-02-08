@@ -302,8 +302,10 @@ export default {
       collapsible: true,
       collapsed: false,
       items: [
-        { text: 'js面试大全', link: '/interview/js/' },
-        { text: 'css面试', link: '/interview/js/css' },
+        { text: 'JS 面试大全', link: '/interview/js/' },
+        { text: 'CSS 面试', link: '/interview/js/css' },
+        { text: 'HTML 面试', link: '/interview/js/html' },
+        { text: 'TS 面试', link: '/interview/js/ts' },
       ],
     },
   ],
