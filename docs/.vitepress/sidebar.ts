@@ -266,7 +266,6 @@ export default {
     },
     {
       text: '操作系统/网络/浏览器',
-      collapsible: true,
       collapsed: false,
       items: [
         { text: '操作系统', link: '/interview/system/' },
@@ -283,7 +282,6 @@ export default {
     },
     {
       text: '前端基础：js/html/css/ts',
-      collapsible: true,
       collapsed: false,
       items: [
         { text: 'JS 面试大全', link: '/interview/js/' },
