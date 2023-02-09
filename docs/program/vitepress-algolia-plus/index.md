@@ -4,7 +4,9 @@ author: "Choi Yang"
 
 # 给 VitePress 添加 algolia 搜索（补充）
 
-最近 vitepress 更新了好几个版本，而 chodocs 仓库因为依赖更新的机器人之前因为转换组织原因没启用，所以一直没有同步版本。直到最近还是有挺多粉丝来询问为什么我按照[「给 VitePress 添加 algolia 搜索」](/program/vitepress-algolia/) 这篇文章做法而不生效，如下图所示：
+<VideoLink bvId="BV1DY411v7Lt">【编程】最新版本的 VitePress 中添加 Algolia 搜索，无坑版本 B 站视频传送门</VideoLink>
+
+最近 vitepress 更新了好几个版本，而 chodocs 仓库依赖更新的机器人之前因为转换组织原因没启用，所以一直没有同步版本。直到最近还是有挺多粉丝来询问为什么我按照[「给 VitePress 添加 algolia 搜索」](/program/vitepress-algolia/) 这篇文章做法而不生效，如下图所示：
 
 ![](/program/algolia-comment.jpg)
 
