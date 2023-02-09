@@ -41,6 +41,7 @@ export default {
       items: [
         { text: '发布 npm 包', link: '/program/npm-package/' },
         { text: '给 VitePress 添加 algolia 搜索', link: '/program/vitepress-algolia/' },
+        { text: '接上 algolia 搜索（补充）', link: '/program/vitepress-algolia-plus/' },
         { text: '给 VitePress 添加本地搜索功能', link: '/program/vitepress-local-search/' },
       ],
     },
