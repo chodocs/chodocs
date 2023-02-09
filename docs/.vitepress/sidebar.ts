@@ -295,8 +295,9 @@ export default {
         { text: '浏览器-Session/Cookie/Token', link: '/interview/browser/cookie' },
         { text: '浏览器-事件循环', link: '/interview/browser/principle/eventLoop' },
         { text: '浏览器-输入URL到页面展示发生了什么', link: '/interview/browser/process/' },
-        { text: '浏览器安全', link: '/interview/browser/safety/' },
-
+        { text: '浏览器-缓存', link: '/interview/browser/cache' },
+        { text: '浏览器-开发者工具', link: '/interview/browser/performance' },
+        { text: '浏览器-安全', link: '/interview/browser/safety/' },
       ],
     },
     {
