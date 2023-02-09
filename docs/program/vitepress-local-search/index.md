@@ -18,15 +18,13 @@ npm i vitepress-plugin-search markdown-it flexsearch -D
 
 ### 添加和配置插件
 
-::: warning 坑点
+坑点
 
 1.[README](https://github.com/emersonbottero/vitepress-plugin-search#readme) 没写在哪个目录下存放`vite.config.ts`，依据经验放在根目录下不管用，放在`.vitepress`也不生效，最后挨个试才发现需要放在`docs`
 
 2.示例没有引入`flexSearchIndexOptions`，需要手动从`flexsearch`中引入
 
 3.引入后发现之前搜索框样式没了，需要在`.vitepress/theme/styles/index.css`下重新覆盖样式
-
-:::
 
 ![image-20230205233032922](https://zerdocs.oss-cn-shanghai.aliyuncs.com/202302052330956.png)
 

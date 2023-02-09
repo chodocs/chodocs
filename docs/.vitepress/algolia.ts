@@ -1,7 +1,7 @@
 export default {
-  appId: 'RDDXUZAIF1',
-  apiKey: '9302db06c2d4f1d7b7d243e7e8d877d7',
-  indexName: 'chodocs',
+  appId: 'RHX6KGJ4PT',
+  apiKey: '9ccfcfff5b8b2ca6318229be055a524b',
+  indexName: 'chocn',
   placeholder: '请输入关键词',
   buttonText: '搜索',
 }
