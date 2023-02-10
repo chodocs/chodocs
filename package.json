@@ -3,7 +3,7 @@
   "version": "0.1.9",
   "private": true,
   "packageManager": "pnpm@7.27.0",
-  "description": "新一代前端内容网站，包括学习路线、知识体系（用专栏形式更新）。",
+  "description": "一站式前端内容网站，包括学习路线、知识体系（用专栏形式更新）。",
   "author": "Choi Yang<https://github.com/Chocolate1999>",
   "license": "MIT",
   "repository": {
