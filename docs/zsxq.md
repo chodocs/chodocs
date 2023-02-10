@@ -15,8 +15,8 @@ contributors: ["HearLing"]
 
 ## 主创成员介绍
 
-- Chocolate：CSDN 博客专家，掘金 Lv5，B 站 UP 主一百个 Chocolate，大厂前端开发。21 届本科毕业，有过 ACM 比赛经历。
-- Hearing：B 站程序员 UP 主 HearLing，在中小型公司都工作过，项目&知识总结爱好者，在前端面试这块算是小有研究，大学阶段有过大型项目比赛经历，拿过国家级一等奖。
+- Chocolate：[CSDN 博客专家](https://chocolate.blog.csdn.net/)，[掘金](https://juejin.cn/user/2981531267112520) Lv5，[B 站](https://space.bilibili.com/351534170) UP 主一百个 Chocolate，大厂前端开发。21 届本科毕业，有过 [ACM](/green/ch) 比赛经历。
+- Hearing：[B 站](https://space.bilibili.com/201738571)程序员 UP 主 HearLing，在中小型公司都工作过，项目&知识总结爱好者，在前端面试这块算是小有研究，大学阶段有过大型项目比赛经历，拿过国家级一等奖。
 
 > 虽然星球还没有邀请嘉宾入驻，但我们也很欢迎各位大佬们的加入，一起共建社区！
 
