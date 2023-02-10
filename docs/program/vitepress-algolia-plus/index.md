@@ -22,6 +22,8 @@ author: "Choi Yang"
 
 [docsearch 申请地址](https://docsearch.algolia.com/apply/)
 
+> 如果表单提交不成功，需要使用科学上网。
+
 这里有几点需要注意：
 
 - 您必须是该网站的所有者，或至少有更新其内容的权限
