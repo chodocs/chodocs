@@ -1,11 +1,17 @@
-<h1 align="center">ChoDocs</h1>
+<p align="center">
+<img  alt="chodocs" src="https://chodocs.cn/chodocs-logo.svg"/>
+</p>
+
+<h1 align="center">
+ChoDocs
+</h1>
 
 <p align="center">
-Chocolate + Docs = ChoDocs
+Front-end learning document collection
 </p>
 
 <p align="center">
-🔥 分享 Chocolate 前端成长记录、知识体系。
+🔥 一站式前端内容网站，包括学习路线、知识体系
 </p>
 
 <p align="center">
@@ -16,7 +22,15 @@ Chocolate + Docs = ChoDocs
 
 ## 📓 内容
 
-目前在更新 TS 中，下一章节前端算法，内容持续更新中，敬请期待。
+- 📋 面试专栏: 海量前端面试问题解答，一站式阅读体验。
+- 💬 编程学习: 同步 B 站视频，文档用于巩固知识。
+- 📓 前端算法: 不再畏惧面试算法，提供刷题路线。
+- 🚚 备忘录: 将日常工作中遇到的问题做一份备忘录，方便查阅。
+- 💭 学习圈子: 打造专业的前端技术氛围社群，低调务实。
+- 🔧 编程工具: 归纳一些编程相关工具与网站，提高效率。
+- 🌱 青葱岁月: 程序人生时光机，记录所有美好的时光。
+- 🎉 技术视野: 跟随前沿技术，深度和广度学习。
+- 🚩 拥抱开源: 文档开源，版权 ChoDocs 所有，禁商业行为。
 
 > 学如逆水行舟，不进则退。
 
