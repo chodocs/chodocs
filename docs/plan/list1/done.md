@@ -1,6 +1,7 @@
 ---
 author: "HearLing"
 ---
+
 # 已完成
 
 > 每周更新
@@ -15,3 +16,14 @@ author: "HearLing"
 | 文章 | [WebSocket](/interview/net/websocket/) | 2023/2/3 | HearLing | 5 |
 | 文章 | [Session/Cookie/Token](/interview/browser/cookie.html) | 2023/2/2 | HearLing | 5 |
 | 文章 | [操作系统](/interview/system/) | 2023/2/4 | HearLing | 5 |
+| 文章 | [浏览器-事件循环](/interview/browser/principle/eventLoop.html) | 2023/2/7 | HearLing | 5 |
+| 文章 | [JavaScript 面试](/interview/js/) | 2023/2/7 | HearLing | 5 |
+| 文章 | [CSS 面试](/interview/js/css.html) | 2023/2/7 | HearLing | 5 |
+| 文章 | [HTML 面试](/interview/js/css.html) | 2023/2/8 | HearLing | 5 |
+| 文章 | [TypeScript 面试](/interview/js/ts.html) | 2023/2/8 | HearLing | 5 |
+| 文章 | [浏览器-跨域问题](/interview/net/cors/) | 2023/2/8 | HearLing | 5 |
+| 文章 | [浏览器-开发者工具](/interview/js/css.html) | 2023/2/9 | HearLing | 5 |
+| 文章 | [浏览器-缓存](/interview/browser/cache.html) | 2023/2/10 | HearLing | 5 |
+| 健身 | 二月第二周，2 次 | 2/6 ~ 2/10 | HearLing | 10 |
+| 直播 | 二月第二周，5 次，额外加 35 分 | 2/6 ~ 2/10 | HearLing | 85 |
+| 星球 | 二月第二周，精选 2 次 | 2/6 ~ 2/10 | HearLing | 10 |
