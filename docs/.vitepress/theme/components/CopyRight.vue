@@ -52,14 +52,3 @@ const getGithubLink = (name: string) => `https://github.com/${reName(name)}`
     </section>
   </div>
 </template>
-
-<style>
-.post-copyright:before {
-  position: absolute;
-  top: 0.1rem;
-  right: 0.6rem;
-  color: #49b1f5;
-  content: '\f1f9';
-  font-size: 1rem;
-}
-</style>
