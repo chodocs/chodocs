@@ -27,7 +27,10 @@ export async function getDocsMarkdown() {
   const ContributorsSection = `## Contributors
   <Contributors/>`
 
-  const footer = `${ContributorsSection}\n`
+  const CopyRightSection = `
+  <CopyRight/>`
+
+  const footer = `${ContributorsSection}\n${CopyRightSection}\n`
 
   return {
     footer,
