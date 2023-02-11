@@ -16,7 +16,7 @@ import ContentBox from '../.vitepress/theme/components/ContentBox.vue'
           <div class="col-md-4">
             <ContentBox
               link="/plan/list1/done.html" img-src="https://github.com/HearLing.png" title="HearLing 总积分"
-              content="65"
+              content="210"
             />
           </div>
         </div>
