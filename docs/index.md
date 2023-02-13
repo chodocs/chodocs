@@ -15,6 +15,9 @@ hero:
       text: 学习圈子
       link: /zsxq
     - theme: alt
+      text: 模拟面试
+      link: /interview/interviewer/
+    - theme: alt
       text: 关于我
       link: https://github.com/Chocolate1999
 features:
