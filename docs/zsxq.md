@@ -44,7 +44,7 @@ contributors: ["HearLing"]
 
 > 如果移动端思维导图打不开，建议 pc 端打开，目前本站图片还未启动 CDN，已进入十万火急群，会尽快更新。
 
-![](/img/2023planetPlan.png)
+![星球规划](https://img-blog.csdnimg.cn/3e31c82ce864441d9532ea193c24daff.png)
 
 > 因为免费体验个数有限，并且需要添加本人微信才能邀请，因此建议大家关注下方微信公众号「[小狮子前端](https://img-blog.csdnimg.cn/img_convert/43c196751f4984c71011557d06e7e9b6.png)」，在底部菜单栏可以添加微信，并且还有**星球优惠券**，这样也可以享有最大优惠加入。
 
