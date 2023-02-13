@@ -1,3 +1,8 @@
+---
+author: "HearLing"
+contributors: ["Choi Yang"]
+---
+
 ## 模拟面试介绍
 
 网站&星球开启模拟面试活动，一图胜千言：
