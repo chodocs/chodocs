@@ -3,7 +3,6 @@ const socialLinks = [
     icon: 'github',
     link: 'https://github.com/chodocs/chodocs',
   },
-  { icon: 'twitter', link: 'https://twitter.com/ycyChocolate' },
   {
     icon: {
       svg: `<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" aria-hidden="true" role="img" width="20" height="20"  viewBox="0 0 512 512" >
