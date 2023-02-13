@@ -239,6 +239,13 @@ export default {
       ],
     },
     {
+      text: '模拟面试',
+      collapsed: false,
+      items: [
+        { text: '介绍', link: '/interview/interviewer/' },
+      ],
+    },
+    {
       text: '春招实习',
       collapsed: false,
       items: [
