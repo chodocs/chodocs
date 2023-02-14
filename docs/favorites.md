@@ -24,23 +24,20 @@
 
 <NavCard :navData=toolNav />
 
-
 ## 运营网站
 
 <NavCard :navData=operateNav />
-
 
 ## 正则可视化
 
 <NavCard :navData=regexNav />
 
-
 ## 装的一些 Mac 软件
 
 > 一些自己必备的软件就不例举了，比如微信，QQ，网盘等等。
 
-
 ::: details Mac 软件列表
+
 - Figma
 - Arc
 - PPDuck
@@ -52,11 +49,12 @@
 - Chrome
 - Firefox
 - ...
-:::
+  :::
 
 ## 谷歌拓展插件
 
 ::: details 谷歌插件列表
+
 - Ajax Interceptor
 - Apifox Browser Extension
 - CF-Predictor
@@ -74,8 +72,7 @@
 - 标签分组扩展
 - 沙拉查词-聚合词典划词翻译
 - ...
-:::
-
+  :::
 
 ## 有趣又有用
 
@@ -85,11 +82,12 @@
 
 <NavCard :navData=materialNav />
 
-
 ## VsCode 插件
+
 > 以下插件是个人一直启用的，部分安装了但是未启用的就没列出来了。因为一些编码内容需要，也可能杂七杂八装了很多，以下插件建议使用者可再阅读一下相关 `ReadMe` 再选择安装。
 
-::: details VSCode插件列表
+::: details VSCode 插件列表
+
 - Ascii Tree Generator
 - Auto Close Tag
 - Auto Rename Tag
@@ -167,8 +165,7 @@
 - Where Am I?
 - XML
 - XML Tools
-:::
-
+  :::
 
 ## 实用教程网站
 
