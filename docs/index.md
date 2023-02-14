@@ -65,7 +65,6 @@ const members = [
     title: 'open source developer, creator of ChoDocs.',
     links: [
       { icon: 'github', link: 'https://github.com/Chocolate1999' },
-      { icon: 'twitter', link: 'https://twitter.com/ycyChocolate' },
       {
        icon: { svg: icons.bilibili } ,link: "https://space.bilibili.com/351534170",
       },
