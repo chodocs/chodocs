@@ -7,6 +7,7 @@ export default {
       items: [
         { text: '阅读须知', link: '/guide' },
         { text: '学习圈子', link: '/zsxq' },
+        { text: '资源导航', link: '/favorites' },
         { text: 'Arc 激活码获取', link: '/arc' },
         { text: '2022 年终总结', link: '/2022' },
         { text: '关于 ChoDocs', link: '/chodocs' },

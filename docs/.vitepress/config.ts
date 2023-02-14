@@ -22,6 +22,7 @@ export default {
       { text: '🔥 前端算法', link: '/algorithm/guide/' },
       { text: '🔥 设计模式', link: '/patterns/guide/' },
       { text: '💭 学习圈子', link: '/zsxq' },
+      { text: '⭐ 资源导航', link: '/favorites' },
       { text: '📋 面试', link: '/interview/' },
       {
         text: '更多',
