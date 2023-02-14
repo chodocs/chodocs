@@ -12,6 +12,7 @@
   import toyNav from './favorites/toy.ts'
   import materialNav from './favorites/material.ts'
   import tutorialNav from './favorites/tutorial.ts'
+  import interviewNav from './favorites/interview.ts'
 </script>
 
 ## CSS
@@ -170,3 +171,40 @@
 ## 实用教程网站
 
 <NavCard :navData=tutorialNav />
+
+## 面试类
+
+<NavCard :navData=interviewNav />
+
+## ACM
+
+::: details ACM 刷题计划
+
+> acm 选手应该 dddd
+
+- [kuangbin 专题题目一览](https://vjudge.net/article/371)
+- [【两个月刷题计划】专题一 简单搜索](https://vjudge.net/contest/355775#panel-problems)
+- [【两个月刷题计划】专题二 搜索进阶](https://vjudge.net/contest/355780#overview)
+- [【两个月刷题计划】专题三 Dancing Links 舞蹈链](https://vjudge.net/contest/355997)
+- [【两个月刷题计划】专题四 最短路练习](https://vjudge.net/contest/355998)
+- [【两个月刷题计划】专题五 并查集](https://vjudge.net/contest/356000#overview)
+- [【两个月刷题计划】专题六 最小生成树](https://vjudge.net/contest/356001)
+- [【两个月刷题计划】专题七 线段树](https://vjudge.net/contest/356002)
+- [【两个月刷题计划】专题八 生成树](https://vjudge.net/contest/356003)
+- [【两个月刷题计划】 专题九 连通图](https://vjudge.net/contest/356004)
+- [【两个月刷题计划】专题十 匹配问题](https://vjudge.net/contest/356005)
+- [【两个月刷题计划】专题十一 网络流](https://vjudge.net/contest/356006)
+- [【两个月刷题计划】专题十二 基础 DP1](https://vjudge.net/contest/356007)
+- [【两个月刷题计划】专题十三 基础计算几何](https://vjudge.net/contest/356009)
+- [【两个月刷题计划】专题十四 数论基础](https://vjudge.net/contest/356011)
+- [【两个月刷题计划】专题十五 数位 DP](https://vjudge.net/contest/356012)
+- [【两个月刷题计划】 专题十六 KMP & 扩展 KMP & Manacher](https://vjudge.net/contest/356014)
+- [【两个月刷题计划】专题十七 AC 自动机](https://vjudge.net/contest/356015)
+- [【两个月刷题计划】专题十八 后缀数组](https://vjudge.net/contest/356017)
+- [【两个月刷题计划】专题十九 矩阵](https://vjudge.net/contest/356019)
+- [【两个月刷题计划】专题二十 斜率 DP](https://vjudge.net/contest/356020)
+- [【两个月刷题计划】专题二十一 概率&期望](https://vjudge.net/contest/356024)
+- [【两个月刷题计划】专题二十二 区间 DP](https://vjudge.net/contest/356025)
+- [【两个月刷题计划】专题二十三 计算几何之半平面交](https://vjudge.net/contest/356026)
+
+:::
