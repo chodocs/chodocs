@@ -2,6 +2,8 @@
 
 在此分享前端所收藏的一些好用、实用网站。
 
+> 如果你也有觉得不错的网站以及工具，欢迎来[优质资源推荐](https://github.com/chodocs/chodocs/discussions/138)这里讨论，审核过后我们会回复你，也非常欢迎各位的 PR！
+
 <script setup>
   import cssNav from './favorites/css.ts'
   import toolNav from './favorites/tool.ts'
