@@ -26,7 +26,7 @@ specifiers:
   unplugin-icons: ^0.15.1
   unplugin-vue-components: ^0.22.12
   vite: ^4.0.4
-  vitepress: 1.0.0-alpha.45
+  vitepress: 1.0.0-alpha.46
   vue: ^3.2.45
 
 devDependencies:
@@ -55,7 +55,7 @@ devDependencies:
   unplugin-icons: 0.15.1
   unplugin-vue-components: 0.22.12_vue@3.2.45
   vite: 4.0.4
-  vitepress: 1.0.0-alpha.45
+  vitepress: 1.0.0-alpha.46
   vue: 3.2.45
 
 packages:
@@ -4395,8 +4395,8 @@ packages:
       fsevents: 2.3.2
     dev: true
 
-  /vitepress/1.0.0-alpha.45:
-    resolution: {integrity: sha512-8AVWdymQqBUPmXmAbpapDDg18iDmkNJ47l5eOklBlAjj3n8P3zDAsBhOWSQ6+Nvm6+/GaZATyAvsrg47JD5Idw==}
+  /vitepress/1.0.0-alpha.46:
+    resolution: {integrity: sha512-HiKiHzC0iTPsRsKs8XcsMeMzCpcCt5LWcX9mpDr288Ju+nQf1G8A2+Wm44ZkBsVv4EHxFK4ChmWyZrL1OJUXpg==}
     hasBin: true
     dependencies:
       '@docsearch/css': 3.3.2
