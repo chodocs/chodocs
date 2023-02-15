@@ -2,6 +2,7 @@ import { inBrowser } from 'vitepress'
 import type { Theme } from 'vitepress'
 import DefaultTheme from 'vitepress/theme'
 import { registerAnalytics, siteIds, trackPageview } from './plugins/baidutongji'
+import googleAnalytics from './plugins/google-analytics'
 import './styles/main.css'
 import './styles/global.css'
 import './styles/demo.css'
@@ -13,6 +14,9 @@ const theme: Theme = {
   ...DefaultTheme,
   enhanceApp({ router }) {
     if (inBrowser) {
+      googleAnalytics({
+        id: 'G-GFQHX3GMC7',
+      })
       registerAnalytics(siteIds)
 
       window.addEventListener('hashchange', () => {
