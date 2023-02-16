@@ -55,5 +55,11 @@ module.exports = {
         'no-restricted-imports': 'off',
       },
     },
+    {
+      files: ['docs/.vitepress/theme/plugins/**/*.*'],
+      rules: {
+        'prefer-rest-params': 'off',
+      },
+    },
   ],
 }

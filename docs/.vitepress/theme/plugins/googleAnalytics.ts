@@ -16,8 +16,8 @@ const mountGoogleAnalytics = (id: string) => {
   gtagScript.async = true
   document.head.appendChild(gtagScript)
   window.dataLayer = window.dataLayer || []
-  window.gtag = function (...args) {
-    dataLayer.push(args)
+  window.gtag = function () {
+    dataLayer.push(arguments)
   }
   gtag('js', new Date())
   gtag('config', id)
