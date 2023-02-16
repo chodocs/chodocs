@@ -1,4 +1,4 @@
-import autoSidebar from './theme/plugins/auto-sidebar'
+import autoSidebar from './theme/plugins/autoSidebarBeta'
 
 export default {
   '/': [
