@@ -1,8 +1,9 @@
+import autoSidebar from './theme/plugins/auto-sidebar'
+
 export default {
   '/': [
     {
       text: '开始阅读',
-      collapsible: false,
       collapsed: false,
       items: [
         { text: '阅读须知', link: '/guide' },
@@ -225,14 +226,7 @@ export default {
       ],
     },
   ],
-  '/essay/': [
-    {
-      items: [
-        { text: '聊聊近况，差点账号被永久封禁...', link: '/essay/ch1' },
-        { text: '2022年总结-内耗和放弃内耗的一年', link: '/essay/hl1' },
-      ],
-    },
-  ],
+  '/essay/': autoSidebar({ base: 'essay' }),
   '/interview/': [
     {
       items: [
