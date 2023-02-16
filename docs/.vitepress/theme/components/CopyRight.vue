@@ -22,7 +22,7 @@ const getGithubLink = (name: string) => `https://github.com/${reName(name)}`
     class="px-[1.2rem] relative py-[1rem] border-1 border-[var(--vp-c-border)]/[.55] w-full min-h-[32px] border-solid mt-[32px] leading-[24px] rounded-[4px]"
   >
     <fa6-solid:copyright class="absolute top-[1rem] right-[1.2rem] " />
-    <section class="flex flex-col gap-y-[8px]">
+    <section class="flex flex-col gap-y-[8px] overflow-hidden">
       <div>
         <span class="font-bold">文章作者：</span>
         <span>
