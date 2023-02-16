@@ -89,9 +89,9 @@ const getSidebar = (dir: string, title: string | undefined) => {
         const mdRaw = fs.readFileSync(mdPath, 'utf-8')
         const { content: md } = matter(mdRaw)
         const mdLine = md.split('\n').slice(0, 6)
-        const mdTitle = mdLine.filter(e => e.match(/^#\s*/))[0].replace('#', '').trim()
+        const mdTitle = mdLine.filter(e => e.match(/^#\s*/))[0]?.replace('#', '').trim()
         const item = {
-          text: mdTitle,
+          text: mdTitle || file.slice(0, -3),
           link: prePath,
         }
         sidebar.items.push(item)
