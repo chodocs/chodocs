@@ -3,7 +3,7 @@ layout: home
 hero:
   name: ChoDocs
   text: Front-end learning document collection
-  tagline: "一站式前端内容网站，包括学习路线、知识体系"
+  tagline: '一站式前端内容网站，包括学习路线、知识体系'
   image:
     src: /it.svg
     alt: ChoDocs
@@ -99,6 +99,18 @@ const members = [
       {
        icon: { svg: icons.bilibili } ,link: "https://space.bilibili.com/228134791",
       },
+    ]
+  },
+  {
+    avatar: 'https://www.github.com/Richard-Zhang1019.png',
+    name: 'Richard Zhang',
+    title: 'Open Source Contributor',
+    links: [
+      { icon: 'github', link: 'https://www.github.com/Richard-Zhang1019' },
+      {
+       icon: { svg: icons.bilibili } ,link: "https://space.bilibili.com/311837225",
+      },
+      { icon: 'twitter', link: 'https://twitter.com/zhngxuy4' }
     ]
   },
 ]
