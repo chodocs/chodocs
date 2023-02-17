@@ -3,6 +3,7 @@ import type { Theme } from 'vitepress'
 import DefaultTheme from 'vitepress/theme'
 import { registerAnalytics, siteIds, trackPageview } from './plugins/baidutongji'
 import googleAnalytics from './plugins/googleAnalytics'
+import busuanzi from './plugins/busuanzi'
 import './styles/main.css'
 import './styles/global.css'
 import './styles/demo.css'
@@ -16,6 +17,7 @@ const theme: Theme = {
     googleAnalytics({
       id: 'G-0F3DLK5BSG',
     })
+    busuanzi()
     if (inBrowser) {
       registerAnalytics(siteIds)
 
