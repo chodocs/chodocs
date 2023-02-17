@@ -38,6 +38,10 @@ Front-end learning document collection
 
 ![Alt](https://repobeats.axiom.co/api/embed/384181d12f85b1c3d215e902ae265dc14eeea75b.svg "Repobeats analytics image")
 
+## 🧱 Contribute
+
+See the [**Contributing Guide**](https://chodocs.cn/contributing)
+
 ## 🧑‍💻 Contributors
 
 Thank you to all the people who already contributed to my project!

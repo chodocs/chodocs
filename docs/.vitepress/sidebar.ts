@@ -12,6 +12,7 @@ export default {
         { text: 'Arc 激活码获取', link: '/arc' },
         { text: '2022 年终总结', link: '/2022' },
         { text: '关于 ChoDocs', link: '/chodocs' },
+        { text: '参与贡献指南', link: '/contributing' },
       ],
     },
     {
