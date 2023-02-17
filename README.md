@@ -40,7 +40,7 @@ Front-end learning document collection
 
 ## 🧱 Contribute
 
-See the [**Contributing Guide**](https://chodocs.cn/contributing)
+See the [**Contributing Guide**](https://chodocs.cn/contributing.html).
 
 ## 🧑‍💻 Contributors
 
