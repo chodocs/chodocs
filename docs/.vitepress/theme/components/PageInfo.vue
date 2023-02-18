@@ -35,7 +35,7 @@ if (frontmatter.value?.author)
       </div>
       <div class="flex gap-[4px] items-center">
         <ph:eye-fill />
-        阅读量:<span id="busuanzi_value_page_pv" />
+        <span id="busuanzi_container_page_pv">阅读量:<span id="busuanzi_value_page_pv" /></span>
       </div>
     </section>
   </div>
