@@ -233,13 +233,7 @@ export default {
     {
       items: [
         { text: '介绍', link: '/interview/' },
-      ],
-    },
-    {
-      text: '模拟面试',
-      collapsed: false,
-      items: [
-        { text: '介绍', link: '/interview/interviewer/' },
+        { text: '模拟面试介绍', link: '/interview/interviewer/' },
       ],
     },
     {
@@ -271,6 +265,19 @@ export default {
       ],
     },
     {
+      text: '前端基础：js/html/css/ts',
+      collapsed: false,
+      items: [
+        { text: 'JS 面试大全', link: '/interview/js/' },
+        { text: 'JS 自测清单（一）', link: '/interview/js/test/1.md' },
+        { text: 'JS 自测清单（二）', link: '/interview/js/test/2.md' },
+        { text: 'JS 自测清单（三）', link: '/interview/js/test/3.md' },
+        { text: 'CSS 面试', link: '/interview/js/css' },
+        { text: 'HTML 面试', link: '/interview/js/html' },
+        { text: 'TS 面试', link: '/interview/js/ts' },
+      ],
+    },
+    {
       text: '操作系统/网络/浏览器',
       collapsed: false,
       items: [
@@ -285,16 +292,6 @@ export default {
         { text: '浏览器-缓存', link: '/interview/browser/cache' },
         { text: '浏览器-开发者工具', link: '/interview/browser/performance' },
         { text: '浏览器-安全', link: '/interview/browser/safety/' },
-      ],
-    },
-    {
-      text: '前端基础：js/html/css/ts',
-      collapsed: false,
-      items: [
-        { text: 'JS 面试大全', link: '/interview/js/' },
-        { text: 'CSS 面试', link: '/interview/js/css' },
-        { text: 'HTML 面试', link: '/interview/js/html' },
-        { text: 'TS 面试', link: '/interview/js/ts' },
       ],
     },
   ],
