@@ -7,6 +7,7 @@ specifiers:
   '@types/fs-extra': ^11.0.0
   '@types/md5': ^2.3.2
   bumpp: ^8.2.1
+  busuanzi.pure.js: ^1.0.3
   eslint: ^8.33.0
   esno: ^0.16.3
   fast-glob: ^3.2.12
@@ -36,6 +37,7 @@ devDependencies:
   '@types/fs-extra': 11.0.0
   '@types/md5': 2.3.2
   bumpp: 8.2.1
+  busuanzi.pure.js: 1.0.3
   eslint: 8.33.0
   esno: 0.16.3
   fast-glob: 3.2.12
@@ -1724,6 +1726,10 @@ packages:
     engines: {node: '>=10.16.0'}
     dependencies:
       streamsearch: 1.1.0
+    dev: true
+
+  /busuanzi.pure.js/1.0.3:
+    resolution: {integrity: sha512-tPULdyx+8NNb9geZYDpktKmHAYx9f2LEOBaHyWCaM7iPEMIa/43KgYAUluuU7YG9UFSOFpj4dO7Nj2Vlu3V9Rg==}
     dev: true
 
   /c12/1.1.0:
