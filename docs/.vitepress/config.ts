@@ -11,6 +11,12 @@ export default {
   markdown: {
     lineNumbers: true,
   },
+  head: [
+    [
+      'meta',
+      { name: 'referrer', content: 'no-referrer-when-downgrade' },
+    ],
+  ],
   themeConfig: {
     logo: './chodocs-logo.svg',
     outline: 'deep',
