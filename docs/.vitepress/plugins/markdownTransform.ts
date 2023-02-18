@@ -1,5 +1,6 @@
 import type { Plugin } from 'vite'
 import { replacer } from '../../../scripts/utils'
+import { getReadingTime } from './../theme/utils'
 
 export function MarkdownTransform(): Plugin {
   return {
@@ -18,6 +19,10 @@ export function MarkdownTransform(): Plugin {
 
       const { footer } = await getDocsMarkdown()
       code = replacer(code, footer, 'FOOTER', 'tail')
+      const { readTime, words } = getReadingTime(code)
+      code = code
+        .replace(/(#\s.+?\n)/, `$1\n\n<PageInfo readTime="${readTime}" words="${words}"/>\n`)
+
       return code
     },
   }
