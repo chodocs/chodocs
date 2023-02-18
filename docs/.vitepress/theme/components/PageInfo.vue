@@ -17,7 +17,7 @@ if (frontmatter.value?.author)
 <template>
   <div>
     <section
-      class="border-b-1 border-[var(--vp-c-divider)] w-full border-b-solid mt-[24px] pb-[12px] flex gap-[12px] mb-[12px]"
+      class="border-b-1 border-[var(--vp-c-divider)] w-full border-b-solid mt-[24px] pb-[12px] flex gap-[12px] mb-[12px] flex-wrap"
     >
       <div class="flex gap-[4px] items-center">
         <octicon:feed-person-16 />
