@@ -1,4 +1,3 @@
-
 # Arc 激活码
 
 hey, here’s an invite to Arc, the browser I was telling you about!
