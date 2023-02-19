@@ -1,10 +1,10 @@
 # 如何正常访问 GitHub？
 
-本文教你如何优雅地访问 GitHub，不需要任何费用，参考地址如下：
+本文教你如何优雅地访问 GitHub，不需要任何费用，钱老板也可以给作者提供一定的赞助，参考地址如下：
 
 > https://github.com/521xueweihan/GitHub520
 
-钱老板也可以给作者提供一定的赞助。
+不过个人在使用过程中还是会出现卡的情况，不是特别稳定，只做备用方案。
 
 ## 安装工具
 
@@ -22,6 +22,8 @@
 https://github.com/oldj/SwitchHosts/releases/download/v4.1.2/SwitchHosts_windows_installer_x64_4.1.2.6086.exe
 https://github.com/oldj/SwitchHosts/releases/download/v4.1.2/SwitchHosts_mac_arm64_4.1.2.6086.dmg
 ```
+
+> 最好是以上述 releases 页面最新版本为主。
 
 ## 配置
 
