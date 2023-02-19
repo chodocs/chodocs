@@ -12,9 +12,10 @@ export interface Options {
 export const DIR_ROOT = resolve(__dirname, '../../../../')
 export const DIR_SRC = resolve(DIR_ROOT, 'docs')
 
-export function getDir(dir: string, ignore: string[] = []) {
+export function fastGlobSync(type: string, dir: string, ignore: string[] = []) {
   const files = fg.sync('*', {
-    onlyDirectories: true,
+    onlyDirectories: type === 'dir',
+    onlyFiles: type === 'file',
     cwd: dir,
     ignore: [
       '_*',
@@ -27,32 +28,17 @@ export function getDir(dir: string, ignore: string[] = []) {
   return files
 }
 
-export function getFiles(dir: string, ignore: string[] = []) {
-  const files = fg.sync('*', {
-    onlyFiles: true,
-    cwd: dir,
-    ignore: [
-      '_*',
-      'dist',
-      'node_modules',
-      ...ignore,
-    ],
-  })
-  files.sort()
-  return files
-}
-
-export const dirs = getDir(DIR_SRC)
+export const dirs = fastGlobSync('dir', DIR_SRC)
 
 const getSidebar = (dir: string, title: string | undefined) => {
   const curDir = resolve(DIR_SRC, dir)
-  const dirs = getDir(curDir)
+  const dirs = fastGlobSync('dir', curDir)
   const res = []
   if (dirs.length) {
     // TODO 多级目录
     dirs.forEach((e) => {
       const childDir = resolve(curDir, e)
-      const mdFiles = getFiles(childDir)
+      const mdFiles = fastGlobSync('file', childDir)
       const sidebar = {
         text: (e.charAt(0).toUpperCase() + e.slice(1)).replaceAll('-', ' '),
         collapsed: false,
@@ -75,7 +61,7 @@ const getSidebar = (dir: string, title: string | undefined) => {
     })
   }
   else {
-    const mdFiles = getFiles(curDir)
+    const mdFiles = fastGlobSync('file', curDir)
     const sidebar = {
       text: title,
       collapsed: false,
