@@ -25,6 +25,7 @@ export default {
         { text: '提供者模式', link: '/patterns/provider-pattern/' },
         { text: '原型模式', link: '/patterns/prototype-pattern/' },
         { text: '容器/演示模式', link: '/patterns/container-presentational-pattern/' },
+        { text: '观察者模式', link: '/patterns/observer-pattern/' },
       ],
     },
     {
