@@ -2,6 +2,9 @@
 
 在此分享前端所收藏的一些好用、实用网站。
 
+<VideoLink bvId="BV1ky4y1Z7rG">从大学学编程到前端工作，我积累的一些好用的网站，整合在了资源导航页面！
+ B 站视频传送门</VideoLink>
+
 > 如果你也有觉得不错的网站以及工具，欢迎来[优质资源推荐](https://github.com/chodocs/chodocs/discussions/138)这里讨论，审核过后我们会回复你，也非常欢迎各位的 PR！
 
 <script setup>
