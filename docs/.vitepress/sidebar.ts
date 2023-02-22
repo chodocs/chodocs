@@ -27,6 +27,7 @@ export default {
         { text: '容器/演示模式', link: '/patterns/container-presentational-pattern/' },
         { text: '观察者模式', link: '/patterns/observer-pattern/' },
         { text: '模块模式', link: '/patterns/module-pattern/' },
+        { text: '混合模式', link: '/patterns/mixin-pattern/' },
       ],
     },
     {
