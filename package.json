@@ -34,7 +34,7 @@
     "@iconify/json": "^2.2.7",
     "@types/fs-extra": "^11.0.0",
     "@types/md5": "^2.3.2",
-    "bumpp": "^8.2.1",
+    "bumpp": "^9.0.0",
     "busuanzi.pure.js": "^1.0.3",
     "eslint": "^8.33.0",
     "esno": "^0.16.3",
