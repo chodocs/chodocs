@@ -8,6 +8,7 @@ specifiers:
   '@types/md5': ^2.3.2
   bumpp: ^9.0.0
   busuanzi.pure.js: ^1.0.3
+  dayjs: ^1.11.7
   eslint: ^8.33.0
   esno: ^0.16.3
   fast-glob: ^3.2.12
@@ -38,6 +39,7 @@ devDependencies:
   '@types/md5': 2.3.2
   bumpp: 9.0.0
   busuanzi.pure.js: 1.0.3
+  dayjs: 1.11.7
   eslint: 8.33.0
   esno: 0.16.3
   fast-glob: 3.2.12
@@ -2237,6 +2239,10 @@ packages:
 
   /csstype/2.6.21:
     resolution: {integrity: sha512-Z1PhmomIfypOpoMjRQB70jfvy/wxT50qW08YXO5lMIJkrdq4yOTR+AW7FqutScmB9NkLwxo+jU+kZLbofZZq/w==}
+    dev: true
+
+  /dayjs/1.11.7:
+    resolution: {integrity: sha512-+Yw9U6YO5TQohxLcIkrXBeY73WP3ejHWVvx8XCk3gxvQDCTEmS48ZrSZCKciI7Bhl/uCMyxYtE9UqRILmFphkQ==}
     dev: true
 
   /debug/3.2.7:

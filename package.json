@@ -36,6 +36,7 @@
     "@types/md5": "^2.3.2",
     "bumpp": "^9.0.0",
     "busuanzi.pure.js": "^1.0.3",
+    "dayjs": "^1.11.7",
     "eslint": "^8.33.0",
     "esno": "^0.16.3",
     "fast-glob": "^3.2.12",
