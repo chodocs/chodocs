@@ -1,5 +1,6 @@
 ---
 author: "Choi Yang"
+date: 2023-02-20
 ---
 
 # 观察者模式
