@@ -33,7 +33,6 @@ export default {
       {
         text: '更多',
         items: [
-          { text: '✨ 计划', link: '/plan/' },
           { text: '🔧 编程工具', link: '/tool/' },
           { text: '✏️ 随笔', link: '/essay/' },
           { text: '🌱 青葱岁月', link: '/green/ch' },

@@ -299,28 +299,4 @@ export default {
       ],
     },
   ],
-  '/plan/': [
-    {
-      items: [
-        { text: '2023 上半年计划', link: '/plan/' },
-        { text: '2023 年星球计划', link: '/plan/planet' },
-      ],
-    },
-    {
-      text: '待办清单（HearLing）',
-      collapsed: false,
-      items: [
-        { text: '待处理', link: '/plan/list1/todo' },
-        { text: '已完成', link: '/plan/list1/done' },
-      ],
-    },
-    {
-      text: '待办清单（Chocolate）',
-      collapsed: false,
-      items: [
-        { text: '待处理', link: '/plan/list2/todo' },
-        { text: '已完成', link: '/plan/list2/done' },
-      ],
-    },
-  ],
 }
