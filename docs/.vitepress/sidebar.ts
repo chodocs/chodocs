@@ -237,7 +237,15 @@ export default {
     {
       items: [
         { text: '介绍', link: '/interview/' },
-        { text: '模拟面试介绍', link: '/interview/interviewer/' },
+      ],
+    },
+    {
+      text: '模拟面试',
+      collapsed: false,
+      items: [
+        { text: '介绍', link: '/interview/interviewer/' },
+        { text: '模拟面试 01', link: '/interview/interviewer/01' },
+        { text: '模拟面试 02', link: '/interview/interviewer/02' },
       ],
     },
     {
