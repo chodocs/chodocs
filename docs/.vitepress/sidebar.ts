@@ -246,6 +246,7 @@ export default {
         { text: '介绍', link: '/interview/interviewer/' },
         { text: '模拟面试 01', link: '/interview/interviewer/01' },
         { text: '模拟面试 02', link: '/interview/interviewer/02' },
+        { text: '模拟面试 03', link: '/interview/interviewer/03' },
       ],
     },
     {
