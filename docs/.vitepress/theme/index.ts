@@ -1,7 +1,9 @@
-import { inBrowser } from 'vitepress'
-import type { Theme } from 'vitepress'
+import { inBrowser, useRoute } from 'vitepress'
+import type { EnhanceAppContext, Theme } from 'vitepress'
 import DefaultTheme from 'vitepress/theme'
+import { nextTick, onMounted, watch } from 'vue'
 import busuanzi from 'busuanzi.pure.js'
+import mediumZoom from 'medium-zoom'
 import { registerAnalytics, siteIds, trackPageview } from './plugins/baidutongji'
 import googleAnalytics from './plugins/googleAnalytics'
 import './styles/main.css'
@@ -13,7 +15,7 @@ import 'uno.css'
 
 const theme: Theme = {
   ...DefaultTheme,
-  enhanceApp({ router }) {
+  enhanceApp({ router }: EnhanceAppContext) {
     googleAnalytics({
       id: 'G-0F3DLK5BSG',
     })
@@ -30,6 +32,19 @@ const theme: Theme = {
         busuanzi.fetch()
       }
     }
+  },
+  setup() {
+    const route = useRoute()
+    const initZoom = () => {
+      mediumZoom('.main img', { background: 'var(--vp-c-bg)' }) // Should there be a new?
+    }
+    onMounted(() => {
+      initZoom()
+    })
+    watch(
+      () => route.path,
+      () => nextTick(() => initZoom()),
+    )
   },
 }
 

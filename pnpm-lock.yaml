@@ -16,6 +16,7 @@ specifiers:
   gray-matter: ^4.0.3
   lint-staged: ^13.1.0
   md5: ^2.3.0
+  medium-zoom: ^1.0.8
   moment: ^2.29.4
   ohmyfetch: ^0.4.21
   postcss: ^8.4.21
@@ -47,6 +48,7 @@ devDependencies:
   gray-matter: 4.0.3
   lint-staged: 13.1.0
   md5: 2.3.0
+  medium-zoom: 1.0.8
   moment: 2.29.4
   ohmyfetch: 0.4.21
   postcss: 8.4.21
@@ -4082,6 +4084,10 @@ packages:
 
   /mdn-data/2.0.30:
     resolution: {integrity: sha512-GaqWWShW4kv/G9IEucWScBx9G1/vsFZZJUO+tD26M8J8z3Kw5RDQjaoZe03YAClgeS/SWPOcb4nkFBTEi5DUEA==}
+    dev: true
+
+  /medium-zoom/1.0.8:
+    resolution: {integrity: sha512-CjFVuFq/IfrdqesAXfg+hzlDKu6A2n80ZIq0Kl9kWjoHh9j1N9Uvk5X0/MmN0hOfm5F9YBswlClhcwnmtwz7gA==}
     dev: true
 
   /memory-fs/0.5.0:
