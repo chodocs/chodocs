@@ -1,9 +1,14 @@
 ---
 layout: home
+
+title: ChoDocs
+titleTemplate: 一站式前端内容网站，包括学习路线、知识体系
+
 hero:
   name: ChoDocs
-  text: Front-end learning document collection
-  tagline: "一站式前端内容网站，包括学习路线、知识体系"
+  text: "Front-end learning document collection"
+  tagline: |
+    一站式前端内容网站，包括学习路线、知识体系
   image:
     src: /it.svg
     alt: ChoDocs
