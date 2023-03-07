@@ -9,7 +9,6 @@ export default {
   title: name,
   description,
   lastUpdated: true,
-  cleanUrls: true,
   useWebFonts: false,
   markdown: {
     lineNumbers: true,
