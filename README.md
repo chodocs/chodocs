@@ -34,6 +34,10 @@ Front-end learning document collection
 
 > 学如逆水行舟，不进则退。
 
+## 🔋 备用站点
+
+如果因网络或其它因素访问不了主站，可以访问 [https://chodocs.netlify.app/](https://chodocs.netlify.app/)，内容是同步的。
+
 ## 🪴 Project Activity
 
 ![Alt](https://repobeats.axiom.co/api/embed/384181d12f85b1c3d215e902ae265dc14eeea75b.svg "Repobeats analytics image")

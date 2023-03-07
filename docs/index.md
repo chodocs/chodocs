@@ -23,8 +23,8 @@ hero:
       text: 模拟面试
       link: /interview/interviewer/
     - theme: alt
-      text: 关于我
-      link: https://github.com/Chocolate1999
+      text: 备用站点
+      link: https://chodocs.netlify.app/
 features:
   - icon: 📋
     title: 面试专栏
