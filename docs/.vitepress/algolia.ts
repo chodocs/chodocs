@@ -3,5 +3,9 @@ export default {
   apiKey: '9ccfcfff5b8b2ca6318229be055a524b',
   indexName: 'chocn',
   placeholder: '请输入关键词',
-  buttonText: '搜索',
+  translations: {
+    button: {
+      buttonText: '搜索文档',
+    },
+  },
 }
