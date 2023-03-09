@@ -10,7 +10,7 @@
 
 ## React
 
-![](https://img-blog.csdnimg.cn/7b5e37ba6e5448369ebefaf8b2f7a484.png)
+![](/essay/react-summary.png)
 
 说实在，基本上当你使用 React 到一定时间后，你一定会从某些地方听到 Dan 神（上图最右）
 
