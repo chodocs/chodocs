@@ -108,6 +108,7 @@ Vuex 主要是为了解决多组件之间状态共享问题，它强调的是集
 ### Vuex 的流程？Vuex 的核心？
 
 ![](https://img-blog.csdnimg.cn/20200606235904478.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3dlaXhpbl80MjQyOTcxOA==,size_16,color_FFFFFF,t_70)
+
 （1）将需要共享的状态挂载到 state 上：this.$store.state 来调用
 
 创建 store，将状态挂载到 state 上，在根实例里面配置 store，之后我们在组件中就可以通过 this.$store.state 来使用 state 中管理的数据，但是这样使用时，当 state 的数据更改的时候，vue 组件并不会重新渲染，所以我们要通过计算属性 computed 来使用，但是当我们使用多个数据的时候这种写法比较麻烦，vuex 提供了**mapState 辅助函数**，帮助我们在组件中获取并使用 vuex 的 store 中保存的状态。

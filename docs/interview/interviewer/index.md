@@ -7,7 +7,7 @@ contributors: ["Choi Yang"]
 
 网站&星球开启模拟面试活动，一图胜千言：
 
-![模拟面试介绍](https://img-blog.csdnimg.cn/989807f48f724704af9219d7d84c9837.png)
+![模拟面试介绍](/interview/guide.png)
 
 下面会逐一仔细介绍：
 
@@ -53,7 +53,7 @@ contributors: ["Choi Yang"]
 
 ::: details 可扫码关注小狮子前端
 
-![](https://img-blog.csdnimg.cn/img_convert/43c196751f4984c71011557d06e7e9b6.png)
+![](/img/wx.jpeg)
 
 :::
 
