@@ -182,14 +182,14 @@ square(3)
 上文我们在 `index.js` 文件顶部导入都是直接导入的，也有导入所有的模块，但实际情况我们有时候并不需要立即要这个模块，而是希望它在特定的条件下才导入模块，这时候，我们就可以通过 `Dynamic import` 来按需加载导入的模块。
 
 ```js
-import('module').then((module) => {
+import('node:module').then((module) => {
   module.default()
   module.namedExport()
 });
 
 // Or with async/await
 (async () => {
-  const module = await import('module')
+  const module = await import('node:module')
   module.default()
   module.namedExport()
 })()
