@@ -104,38 +104,6 @@ const members = [
       },
     ]
   },
-  {
-    avatar: 'https://www.github.com/holazz.png',
-    name: 'holazz',
-    title: '@element-plus',
-    links: [
-      { icon: 'github', link: 'https://github.com/holazz' },
-      { icon: 'twitter', link: 'https://twitter.com/holazz1208' },
-    ]
-  },
-  {
-    avatar: 'https://www.github.com/fxzer.png',
-    name: 'fxzer',
-    title: 'Open Source Contributor',
-    links: [
-      { icon: 'github', link: 'https://github.com/fxzer' },
-      {
-       icon: { svg: icons.bilibili } ,link: "https://space.bilibili.com/228134791",
-      },
-    ]
-  },
-  {
-    avatar: 'https://www.github.com/Richard-Zhang1019.png',
-    name: 'Richard Zhang',
-    title: 'Open Source Contributor',
-    links: [
-      { icon: 'github', link: 'https://www.github.com/Richard-Zhang1019' },
-      {
-       icon: { svg: icons.bilibili } ,link: "https://space.bilibili.com/311837225",
-      },
-      { icon: 'twitter', link: 'https://twitter.com/zhngxuy4' }
-    ]
-  },
 ]
 </script>
 
@@ -144,13 +112,12 @@ const members = [
 <VPTeamPage>
   <VPTeamPageTitle>
     <template #title>
-      感谢以下所有人的贡献与参与
-    </template>
-    <template #lead>
-      以下排名不分先后（参与或主动提 PR 申请加入）
+      核心成员介绍
     </template>
   </VPTeamPageTitle>
   <VPTeamMembers
     :members="members"
   />
 </VPTeamPage>
+
+<HomeContributors/>
