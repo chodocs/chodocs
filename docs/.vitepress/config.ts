@@ -90,6 +90,9 @@ export default withPwa(defineConfig({
     ['link', { rel: 'icon', type: 'image/x-icon', href: '/favicon.ico' }],
     ['link', { rel: 'mask-icon', href: '/chodocs-logo.svg', color: '#06f' }],
     ['meta', { name: 'theme-color', content: '#06f' }],
+
+    ['link', { rel: 'apple-touch-icon', sizes: '120x120', href: '/images/icons/apple-touch-icon.png' }],
+
     // webfont
     ['link', { rel: 'dns-prefetch', href: 'https://fonts.googleapis.com' }],
     ['link', { rel: 'dns-prefetch', href: 'https://fonts.gstatic.com' }],
