@@ -34,7 +34,7 @@ export function uniq<T extends any[]>(a: T) {
 }
 
 async function fetchContributors(page = 1) {
-  const additional = ['egoist']
+  const additional = ['duoluodexiaoxiaoyuan', 'mengqiuleo', 'isolcat', 'YYHCOPPOLO', 'fyjbts']
 
   const collaborators: string[] = []
   const data = await $fetch<{ login: string }[]>(`https://api.github.com/repos/chodocs/chodocs/contributors?per_page=100&page=${page}`, {

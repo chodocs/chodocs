@@ -1,10 +1,14 @@
+import { defineConfig } from 'vitepress'
+import { withPwa } from '@vite-pwa/vitepress'
 import { generateSitemap as sitemap } from 'sitemap-ts'
 import { description, docsVersion, github, keywords, name, site } from './meta'
+import { pwa } from './plugins/pwa'
 import sidebar from './sidebar'
 import socialLinks from './link'
 import algolia from './algolia'
 
-export default {
+export default withPwa(defineConfig({
+  pwa,
   outDir: '../dist',
   title: name,
   description,
@@ -99,4 +103,4 @@ export default {
   async buildEnd() {
     await sitemap({ hostname: 'https://chodocs.cn/' })
   },
-}
+}))
