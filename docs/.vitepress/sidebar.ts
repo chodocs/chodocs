@@ -86,6 +86,7 @@ function sidebarPartterns() {
       { text: '模块模式', link: '/patterns/module-pattern/' },
       { text: '混合模式', link: '/patterns/mixin-pattern/' },
       { text: '中介/中间件模式', link: '/patterns/middleware-pattern/' },
+      { text: '高阶组件模式', link: '/patterns/hoc-pattern/' },
     ],
   }]
 }
