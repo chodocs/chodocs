@@ -30,12 +30,24 @@ pnpm dev
 
 - 如果你是修正某篇文章，请在 `contributors` 字段增加自己的 GitHub 账号名，也会有贡献者头像，并不会修改原作者信息。
 
+
+> 最好添加一下文字发布日期，即下方示例的 `date` 字段，会在文档开头自动生成发布日期和更新日期。
+
 ```bash
 ---
 author: Choi Yang
 contributors: [HearLing]
+date: 2023-01-01
 ---
 ```
+
+## 可以贡献哪些
+
+比如你的面试经验，可参考这个来提交：[「isolcat 三月面试合集」](/interview/isolcat/)
+
+也可以是文章勘误，因为本站内容难免会有一些笔误的存在，欢迎提交 PR！
+
+来吧，在这里添加一个你的头像~
 
 ## 代码格式
 
@@ -49,7 +61,7 @@ pnpm run lint:fix
 
 ## 贡献者列表
 
-推荐大家自行填写相关信息，只需要在 `docs/index.md` 文件内添加自己的相关信息即可，无需修改 `contributors.json` 文件，该文件会自动生成。
+采用自动生成形式，各位无需修改 `contributors.json` 文件，方便你我。
 
 ## 文字排版
 
