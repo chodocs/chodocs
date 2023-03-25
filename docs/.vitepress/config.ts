@@ -41,13 +41,13 @@ export default withPwa(defineConfig({
       copyright: `<a target="_blank" href="${github}/blob/main/LICENSE">MIT License</a> | 版权所有 © 2022-${new Date().getFullYear()} <a target="_blank" href="${github}">Chocolate and ChoDocs contributors</a>`,
     },
     nav: [
-      { text: '学习圈子', link: '/zsxq' },
+      { text: '💭 学习圈子', link: '/zsxq' },
       {
-        text: '专栏',
+        text: '🔥 专栏',
         items: [
           { text: '🔥 前端算法', link: '/algorithm/guide/' },
           { text: '🔥 设计模式', link: '/patterns/guide/' },
-          { text: '📋 面试', link: '/interview/' },
+          { text: '📋 面试大全', link: '/interview/' },
         ],
       },
       {
