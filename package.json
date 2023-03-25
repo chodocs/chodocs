@@ -1,6 +1,6 @@
 {
   "name": "chodocs",
-  "version": "0.2.1",
+  "version": "0.2.2",
   "private": true,
   "packageManager": "pnpm@7.30.0",
   "description": "一站式前端内容网站，包括学习路线、知识体系（用专栏形式更新）。",
