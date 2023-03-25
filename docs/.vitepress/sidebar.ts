@@ -152,6 +152,13 @@ function sidebarInterview() {
       ],
     },
     {
+      text: '面试合集',
+      collapsed: false,
+      items: [
+        { text: 'isolcat三月面试合集', link: '/interview/isolcat' },
+      ],
+    },
+    {
       text: 'React',
       collapsed: false,
       items: [
