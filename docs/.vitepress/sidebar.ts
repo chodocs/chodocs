@@ -17,7 +17,11 @@ export default {
             },
             {
               text: '3 月',
-              link: '/weekly/20230301',
+              link: '/weekly/202303',
+            },
+            {
+              text: '4 月',
+              link: '/weekly/202304',
             },
           ],
         },
