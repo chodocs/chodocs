@@ -33,6 +33,13 @@ export default {
       ],
     },
     {
+      text: '🍎 Next.js 实战',
+      collapsed: false,
+      items: [
+        { text: '添加 sitemap', link: '/nextjs/sitemap/' },
+      ],
+    },
+    {
       text: '📘 TS 学习',
       collapsed: false,
       items: [
