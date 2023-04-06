@@ -13,6 +13,7 @@ specifiers:
   eslint: ^8.33.0
   esno: ^0.16.3
   fast-glob: ^3.2.12
+  feed: ^4.2.2
   fs-extra: ^11.1.0
   gray-matter: ^4.0.3
   lint-staged: ^13.1.0
@@ -47,6 +48,7 @@ devDependencies:
   eslint: 8.33.0
   esno: 0.16.3
   fast-glob: 3.2.12
+  feed: 4.2.2
   fs-extra: 11.1.0
   gray-matter: 4.0.3
   lint-staged: 13.1.0
@@ -4493,6 +4495,13 @@ packages:
       reusify: 1.0.4
     dev: true
 
+  /feed/4.2.2:
+    resolution: {integrity: sha512-u5/sxGfiMfZNtJ3OvQpXcvotFpYkL0n9u9mM2vkui2nGo8b4wvDkJ8gAkYqbA8QpGyFCv3RK0Z+Iv+9veCS9bQ==}
+    engines: {node: '>=0.4.0'}
+    dependencies:
+      xml-js: 1.6.11
+    dev: true
+
   /file-entry-cache/6.0.1:
     resolution: {integrity: sha512-7Gps/XWymbLk2QLYK4NzpMOrYjMhdIxXuIvy2QBsLE6ljuodKvdkWs/cpyJJ3CVIVpH0Oi1Hvg1ovbMzLdFBBg==}
     engines: {node: ^10.12.0 || >=12.0.0}
@@ -7320,6 +7329,13 @@ packages:
     engines: {node: '>= 10'}
     dependencies:
       xml-parser-xo: 3.2.0
+    dev: true
+
+  /xml-js/1.6.11:
+    resolution: {integrity: sha512-7rVi2KMfwfWFl+GpPg6m80IVMWXLRjO+PxTq7V2CDhoGak0wzYzFgUY2m4XJ47OGdXd8eLE8EmwfAmdjw7lC1g==}
+    hasBin: true
+    dependencies:
+      sax: 1.2.4
     dev: true
 
   /xml-name-validator/4.0.0:
