@@ -2,6 +2,7 @@ import { defineConfig } from 'vitepress'
 import { withPwa } from '@vite-pwa/vitepress'
 import { generateSitemap as sitemap } from 'sitemap-ts'
 import { description, docsVersion, github, keywords, name, site } from './meta'
+import { genFeed } from './plugins/genFeed'
 import { pwa } from './plugins/pwa'
 import sidebar from './sidebar'
 import socialLinks from './link'
@@ -103,7 +104,8 @@ export default withPwa(defineConfig({
     ['meta', { property: 'og:url', content: site }],
     ['meta', { property: 'og:locale', content: 'zh_CN' }],
   ],
-  async buildEnd() {
+  async buildEnd(siteConfig) {
     await sitemap({ hostname: 'https://chodocs.cn/' })
+    await genFeed(siteConfig)
   },
 }))
