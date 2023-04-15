@@ -40,6 +40,13 @@ export default {
       ],
     },
     {
+      text: '🍏 Vue.js 实战',
+      collapsed: false,
+      items: [
+        { text: '基于 Vue3 后台管理系统', link: '/vuejs/vue3-management-system/' },
+      ],
+    },
+    {
       text: '📘 TS 学习',
       collapsed: false,
       items: [
