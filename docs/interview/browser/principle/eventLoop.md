@@ -8,7 +8,7 @@ author: "HearLing"
 
 如下是我整理的思维导图，星球里有源文件获取。
 
-![](/img/事件循环by小狮子前端.png)
+![](https://chodocs-1301295644.cos.accelerate.myqcloud.com/img/202304161854479.png?imageMogr2/format/webp)
 
 ## 相关推荐
 
