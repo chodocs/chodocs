@@ -151,6 +151,7 @@ npm install node-fetch@2
  * @see https://github.com/iamvishnusankar/next-sitemap#readme
  */
 const fetch = require('node-fetch')
+
 module.exports = {
   siteUrl: 'https://blog.yangchaoyi.vip',
   generateRobotsTxt: true,

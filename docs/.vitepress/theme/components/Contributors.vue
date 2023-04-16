@@ -8,12 +8,20 @@ const { frontmatter } = useData()
 const contributorsArr = [frontmatter.value?.author, ...frontmatter.value.contributors || []].filter(x => x)
 const contributors = ref(contributorsArr)
 
-const reName = (name: string) => name === 'Choi Yang' ? 'Chocolate1999' : name
+function reName(name: string) {
+  return name === 'Choi Yang' ? 'Chocolate1999' : name
+}
 
-const getAvatarUrl = (name: string) => `https://github.com/${reName(name)}.png`
-const getGithubLink = (name: string) => `https://github.com/${reName(name)}`
+function getAvatarUrl(name: string) {
+  return `https://github.com/${reName(name)}.png`
+}
+function getGithubLink(name: string) {
+  return `https://github.com/${reName(name)}`
+}
 
-const isNotEmpty = (arr: string | string[]) => Array.isArray(arr) && arr.length
+function isNotEmpty(arr: string | string[]) {
+  return Array.isArray(arr) && arr.length
+}
 </script>
 
 <template>

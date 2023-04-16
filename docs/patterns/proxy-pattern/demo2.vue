@@ -34,7 +34,7 @@ const personProxy = new Proxy(person, {
   },
 })
 
-const reset = () => {
+function reset() {
   log.value = ''
   person.age = initAge
 }

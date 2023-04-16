@@ -7,7 +7,7 @@ declare global {
   }
 }
 
-const mountGoogleAnalytics = (id: string) => {
+function mountGoogleAnalytics(id: string) {
   if (window.dataLayer && window.gtag)
     return
 

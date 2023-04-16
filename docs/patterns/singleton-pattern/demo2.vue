@@ -1,6 +1,7 @@
 <script setup lang="ts">
 import { ref } from 'vue'
 import { singletonCounter, singletonCounter2 } from './utils'
+
 const count = ref(0)
 </script>
 
