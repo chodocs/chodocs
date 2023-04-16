@@ -30,7 +30,7 @@ export function fastGlobSync(type: string, dir: string, ignore: string[] = []) {
 
 export const dirs = fastGlobSync('dir', DIR_SRC)
 
-const getSidebar = (dir: string, title: string | undefined) => {
+function getSidebar(dir: string, title: string | undefined) {
   const curDir = resolve(DIR_SRC, dir)
   const dirs = fastGlobSync('dir', curDir)
   const res = []

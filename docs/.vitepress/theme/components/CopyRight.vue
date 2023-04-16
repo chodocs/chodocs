@@ -10,11 +10,15 @@ const author = ref(defaultAuthor)
 if (frontmatter.value?.author)
   author.value = frontmatter.value?.author
 
-const reName = (name: string) => name === 'Choi Yang' ? 'Chocolate1999' : name
+function reName(name: string) {
+  return name === 'Choi Yang' ? 'Chocolate1999' : name
+}
 
 const pageHref = location.href
 
-const getGithubLink = (name: string) => `https://github.com/${reName(name)}`
+function getGithubLink(name: string) {
+  return `https://github.com/${reName(name)}`
+}
 </script>
 
 <template>

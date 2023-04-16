@@ -104,16 +104,18 @@ export default function App() {
   )
 }
 
-const SideBar = () => {
+function SideBar() {
   return <List />
 }
-const List = () => <ListItem />
-const Content = () => (
-  <div>
+function List() {
+  return <ListItem />
+}
+function Content() {
+  return <div>
     <Header />
     <Block />
   </div>
-)
+}
 
 function ListItem() {
   const data = useContext(DataContext)

@@ -1,5 +1,6 @@
 <script setup lang="ts">
 import type { navItem } from '../../../favorites/types'
+
 defineProps<{
   navData: navItem[]
 }>()

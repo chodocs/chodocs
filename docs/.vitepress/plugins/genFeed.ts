@@ -4,9 +4,13 @@ import { Feed } from 'feed'
 import { type SiteConfig, createContentLoader } from 'vitepress'
 import { site as baseUrl, description, name } from '../meta'
 
-const reName = (name: string) => name === 'Choi Yang' ? 'Chocolate1999' : name
+function reName(name: string) {
+  return name === 'Choi Yang' ? 'Chocolate1999' : name
+}
 
-const getGithubLink = (name: string) => `https://github.com/${reName(name)}`
+function getGithubLink(name: string) {
+  return `https://github.com/${reName(name)}`
+}
 
 export async function genFeed(config: SiteConfig) {
   const feed = new Feed({

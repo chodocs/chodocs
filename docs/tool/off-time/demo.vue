@@ -7,7 +7,7 @@ const start_time = ref('')
 const end_time = ref('')
 const leftTime = ref({ hour: 0, min: 0, sec: 0 })
 
-const countDown = (seconds: number) => {
+function countDown(seconds: number) {
   const hour = Math.floor(seconds / 60 / 60 % 24)
   const min = Math.floor(seconds / 60 % 60)
   const sec = Math.floor(seconds % 60)
@@ -16,7 +16,7 @@ const countDown = (seconds: number) => {
   leftTime.value.sec = sec
 }
 
-const cal = () => {
+function cal() {
   const start_hour = input_time.value.split(':')[0]
   const start_minute = input_time.value.split(':')[1]
   const getHour_Minute_Second = moment().hour(Number(start_hour)).minute(Number(start_minute)).second(0)
