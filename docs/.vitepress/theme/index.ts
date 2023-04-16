@@ -13,6 +13,9 @@ import './styles/utils.css'
 import './styles/vars.css'
 import 'uno.css'
 
+if (inBrowser)
+  import('./plugins/pwa')
+
 const theme: Theme = {
   ...DefaultTheme,
   enhanceApp({ router }: EnhanceAppContext) {
