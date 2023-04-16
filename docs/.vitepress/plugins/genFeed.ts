@@ -25,7 +25,7 @@ export async function genFeed(config: SiteConfig) {
       'Copyright (c) 2022-present, Chocolate and ChoDocs contributors',
   })
 
-  const posts = await createContentLoader('*.md', {
+  const posts = await createContentLoader('**/*.md', {
     excerpt: true,
     render: true,
   }).load()
@@ -39,8 +39,8 @@ export async function genFeed(config: SiteConfig) {
   for (const { url, excerpt, frontmatter, html } of posts) {
     feed.addItem({
       title: frontmatter.title,
-      id: `${baseUrl}${url}`,
-      link: `${baseUrl}${url}`,
+      id: `${baseUrl}${url.slice(1)}`,
+      link: `${baseUrl}${url.slice(1)}`,
       description: excerpt,
       content: html,
       author: [
