@@ -83,8 +83,8 @@ devDependencies:
     specifier: ^0.51.0
     version: 0.51.0(postcss@8.4.21)(rollup@2.79.1)(vite@4.0.4)
   unplugin-icons:
-    specifier: ^0.15.1
-    version: 0.15.1
+    specifier: ^0.16.0
+    version: 0.16.0
   unplugin-vue-components:
     specifier: ^0.24.0
     version: 0.24.0(rollup@2.79.1)(vue@3.2.45)
@@ -2123,19 +2123,6 @@ packages:
     resolution: {integrity: sha512-+wluvCrRhXrhyOmRDJ3q8mux9JkKy5SJ/v8ol2tu4FVjyYvtEzkc/3pK15ET6RKg4b4w4BmTk1+gsCUhf21Ykg==}
     dev: true
 
-  /@iconify/utils@2.0.11:
-    resolution: {integrity: sha512-oEBZkHpkgySHcMZi80ycoJ+ZdLoJhmbN0+gUK8qNPY79ndus8fBHKPyjjwz5kIvr5U9yiym+xBTTnZOB3m5/Pw==}
-    dependencies:
-      '@antfu/install-pkg': 0.1.1
-      '@antfu/utils': 0.7.2
-      '@iconify/types': 2.0.0
-      debug: 4.3.4
-      kolorist: 1.6.0
-      local-pkg: 0.4.3
-    transitivePeerDependencies:
-      - supports-color
-    dev: true
-
   /@iconify/utils@2.1.5:
     resolution: {integrity: sha512-6MvDI+I6QMvXn5rK9KQGdpEE4mmLTcuQdLZEiX5N+uZB+vc4Yw9K1OtnOgkl8mp4d9X0UrILREyZgF1NUwUt+Q==}
     dependencies:
@@ -3011,12 +2998,6 @@ packages:
       acorn: ^6.0.0 || ^7.0.0 || ^8.0.0
     dependencies:
       acorn: 8.8.2
-    dev: true
-
-  /acorn@8.8.1:
-    resolution: {integrity: sha512-7zFpHzhnqYKrkYdUjF1HI1bzd0VygEGX8lFk4k5zVMqHEoES+P+7TKI+EvLO9WVMJ8eekdO0aDEK044xTXwPPA==}
-    engines: {node: '>=0.4.0'}
-    hasBin: true
     dev: true
 
   /acorn@8.8.2:
@@ -5303,10 +5284,6 @@ packages:
     resolution: {integrity: sha512-dWl0Dbjm6Xm+kDxhPQJsCBTxrJzuGl0aP9rhr+TG8D3l+GL90N8O8lYUi7dTSAN2uuDqCtNgb6aEuQH5wsiV8Q==}
     dev: true
 
-  /kolorist@1.6.0:
-    resolution: {integrity: sha512-dLkz37Ab97HWMx9KTes3Tbi3D1ln9fCAy2zr2YVExJasDRPGRaKcoE4fycWNtnCAJfjFqe0cnY+f8KT2JePEXQ==}
-    dev: true
-
   /kolorist@1.7.0:
     resolution: {integrity: sha512-ymToLHqL02udwVdbkowNpzjFd6UzozMtshPQKVi5k1EjKRqKqBrOnE9QbLEb0/pV76SAiIT13hdL8R6suc+f3g==}
     dev: true
@@ -5373,11 +5350,6 @@ packages:
       rxjs: 7.8.0
       through: 2.3.8
       wrap-ansi: 7.0.0
-    dev: true
-
-  /local-pkg@0.4.2:
-    resolution: {integrity: sha512-mlERgSPrbxU3BP4qBqAvvwlgW4MTg78iwJdGGnv7kibKjWcJksrG3t6LB5lXI93wXRDvG4NpUgJFmTG4T6rdrg==}
-    engines: {node: '>=14'}
     dev: true
 
   /local-pkg@0.4.3:
@@ -6778,7 +6750,7 @@ packages:
       acorn: 8.8.2
       estree-walker: 3.0.3
       magic-string: 0.27.0
-      unplugin: 1.1.0
+      unplugin: 1.3.1
     dev: true
 
   /undici@5.14.0:
@@ -6824,7 +6796,7 @@ packages:
       pkg-types: 1.0.1
       scule: 1.0.0
       strip-literal: 1.0.1
-      unplugin: 1.1.0
+      unplugin: 1.3.1
     transitivePeerDependencies:
       - rollup
     dev: true
@@ -6883,10 +6855,10 @@ packages:
       - vite
     dev: true
 
-  /unplugin-icons@0.15.1:
-    resolution: {integrity: sha512-d4Gc8A4qIJYIXKueltTwoHfR3Cxsdfnmz8lSN5dsITEyai5tdb0uWpbQkn3j9HUlLDSB1ybdQIf5CItxJT3UDw==}
+  /unplugin-icons@0.16.0:
+    resolution: {integrity: sha512-1YDsaMmJDVj9JDffpDrngWvrVtZZeZDHvyDqKEx4O9aQNiS4jRlGC7B14IKy91aHtBZ8/Q3RiF2YrjsyFgGO/A==}
     peerDependencies:
-      '@svgr/core': '>=5.5.0'
+      '@svgr/core': '>=7.0.0'
       '@vue/compiler-sfc': ^3.0.2 || ^2.7.0
       vue-template-compiler: ^2.6.12
       vue-template-es2015-compiler: ^1.9.0
@@ -6902,11 +6874,11 @@ packages:
     dependencies:
       '@antfu/install-pkg': 0.1.1
       '@antfu/utils': 0.7.2
-      '@iconify/utils': 2.0.11
+      '@iconify/utils': 2.1.5
       debug: 4.3.4
-      kolorist: 1.6.0
-      local-pkg: 0.4.2
-      unplugin: 1.0.1
+      kolorist: 1.7.0
+      local-pkg: 0.4.3
+      unplugin: 1.3.1
     transitivePeerDependencies:
       - supports-color
     dev: true
@@ -6938,17 +6910,17 @@ packages:
       - supports-color
     dev: true
 
-  /unplugin@1.0.1:
-    resolution: {integrity: sha512-aqrHaVBWW1JVKBHmGo33T5TxeL0qWzfvjWokObHA9bYmN7eNDkwOxmLjhioHl9878qDFMAaT51XNroRyuz7WxA==}
+  /unplugin@1.1.0:
+    resolution: {integrity: sha512-I8obQ8Rs/hnkxokRV6g8JKOQFgYNnTd9DL58vcSt5IJ9AkK8wbrtsnzD5hi4BJlvcY536JzfEXj9L6h7j559/A==}
     dependencies:
-      acorn: 8.8.1
+      acorn: 8.8.2
       chokidar: 3.5.3
       webpack-sources: 3.2.3
       webpack-virtual-modules: 0.5.0
     dev: true
 
-  /unplugin@1.1.0:
-    resolution: {integrity: sha512-I8obQ8Rs/hnkxokRV6g8JKOQFgYNnTd9DL58vcSt5IJ9AkK8wbrtsnzD5hi4BJlvcY536JzfEXj9L6h7j559/A==}
+  /unplugin@1.3.1:
+    resolution: {integrity: sha512-h4uUTIvFBQRxUKS2Wjys6ivoeofGhxzTe2sRWlooyjHXVttcVfV/JiavNd3d4+jty0SVV0dxGw9AkY9MwiaCEw==}
     dependencies:
       acorn: 8.8.2
       chokidar: 3.5.3
