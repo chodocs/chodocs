@@ -14,11 +14,16 @@
     "url": "https://github.com/chodocs/chodocs/issues"
   },
   "keywords": [
-    "react",
-    "vue",
-    "TypeScript",
-    "Next.js",
-    "Chocolate"
+    "react 专栏",
+    "vue 专栏",
+    "TypeScript 系列",
+    "Next.js 实战",
+    "Chocolate",
+    "前端基础",
+    "前端学习路线",
+    "前端思维导图",
+    "知识星球",
+    "小狮子前端"
   ],
   "scripts": {
     "dev": "vitepress dev docs --port 8080 --max-old-space-size=50000",

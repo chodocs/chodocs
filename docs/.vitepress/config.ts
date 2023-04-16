@@ -103,6 +103,8 @@ export default withPwa(defineConfig({
     ['meta', { property: 'og:description', content: description }],
     ['meta', { property: 'og:url', content: site }],
     ['meta', { property: 'og:locale', content: 'zh_CN' }],
+    // analytics
+    ['script', { 'async': '', 'defer': '', 'data-website-id': `${process.env.UMAMI_WEBSITE_ID || ''}`, 'src': `${process.env.UMAMI_ENDPOINT || ''}` }],
   ],
   async buildEnd(siteConfig) {
     await sitemap({ hostname: 'https://chodocs.cn/' })
