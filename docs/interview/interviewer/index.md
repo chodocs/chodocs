@@ -7,7 +7,7 @@ contributors: ["Choi Yang"]
 
 网站&星球开启模拟面试活动，一图胜千言：
 
-![模拟面试介绍](/interview/guide.png)
+![模拟面试介绍](https://chodocs-1301295644.cos.accelerate.myqcloud.com/img/202304161906655.png?imageMogr2/format/webp)
 
 下面会逐一仔细介绍：
 
