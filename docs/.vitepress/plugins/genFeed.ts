@@ -5,6 +5,8 @@ import { type SiteConfig, createContentLoader } from 'vitepress'
 import { site as baseUrl, description, name } from '../meta'
 
 function reName(name: string) {
+  if (!name)
+    name = 'Choi Yang'
   return name === 'Choi Yang' ? 'Chocolate1999' : name
 }
 
@@ -32,13 +34,15 @@ export async function genFeed(config: SiteConfig) {
 
   posts.sort(
     (a, b) =>
-      +new Date(b.frontmatter.date as string)
-      - +new Date(a.frontmatter.date as string),
+      +new Date(b.frontmatter?.date as string)
+      - +new Date(a.frontmatter?.date as string),
   )
 
   for (const { url, frontmatter, html } of posts) {
+    let postTitle = '无题'
+    postTitle = html?.match(/<h1 id=(.*)>(.*?)<a .*?>/)?.[2] || postTitle
     feed.addItem({
-      title: frontmatter.title,
+      title: frontmatter?.title || postTitle,
       id: `${baseUrl}${url.slice(1)}`,
       link: `${baseUrl}${url.slice(1)}`,
       guid: `${baseUrl}${url.slice(1)}`,
@@ -46,9 +50,9 @@ export async function genFeed(config: SiteConfig) {
       content: html,
       author: [
         {
-          name: frontmatter.author,
-          link: frontmatter.author
-            ? getGithubLink(frontmatter.author)
+          name: frontmatter?.author || 'Choi Yang',
+          link: frontmatter?.author
+            ? getGithubLink(frontmatter?.author)
             : undefined,
         },
       ],
