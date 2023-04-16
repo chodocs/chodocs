@@ -5,8 +5,8 @@ devDependencies:
     specifier: ^0.37.0
     version: 0.37.0(eslint@8.33.0)(typescript@5.0.2)
   '@antfu/ni':
-    specifier: ^0.20.0
-    version: 0.20.0
+    specifier: ^0.21.0
+    version: 0.21.0
   '@iconify/json':
     specifier: ^2.2.7
     version: 2.2.7
@@ -325,8 +325,8 @@ packages:
       find-up: 5.0.0
     dev: true
 
-  /@antfu/ni@0.20.0:
-    resolution: {integrity: sha512-mBgAuq2b0daSA/14LMyjEjaInD7/Zd7KVXZge7bQPKmtQJFqy9/pWBml6DMkMreeHQEomMtIbbeqReNJ/74kjA==}
+  /@antfu/ni@0.21.0:
+    resolution: {integrity: sha512-phPNXsOEQKbv8LbKTVIzT6Oczl1gG6GNwb62IFZqKxHZdVmKnafUZhaZms6AdpDej5BsFZWj2xFVISw9gjW2cQ==}
     hasBin: true
     dev: true
 
