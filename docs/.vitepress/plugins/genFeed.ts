@@ -52,7 +52,7 @@ export async function genFeed(config: SiteConfig) {
             : undefined,
         },
       ],
-      date: frontmatter.date,
+      date: frontmatter?.date || new Date('2021-07-01'),
     })
   }
 
