@@ -31,7 +31,7 @@
   },
   "devDependencies": {
     "@antfu/eslint-config": "^0.37.0",
-    "@antfu/ni": "^0.20.0",
+    "@antfu/ni": "^0.21.0",
     "@iconify/json": "^2.2.7",
     "@types/fs-extra": "^11.0.0",
     "@types/md5": "^2.3.2",
