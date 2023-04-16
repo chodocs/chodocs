@@ -36,12 +36,13 @@ export async function genFeed(config: SiteConfig) {
       - +new Date(a.frontmatter.date as string),
   )
 
-  for (const { url, excerpt, frontmatter, html } of posts) {
+  for (const { url, frontmatter, html } of posts) {
     feed.addItem({
       title: frontmatter.title,
       id: `${baseUrl}${url.slice(1)}`,
       link: `${baseUrl}${url.slice(1)}`,
-      description: excerpt,
+      guid: `${baseUrl}${url.slice(1)}`,
+      description: html,
       content: html,
       author: [
         {
