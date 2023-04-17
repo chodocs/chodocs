@@ -1,3 +1,8 @@
+---
+author: "Choi Yang"
+date: 2022-12-18
+---
+
 # 给 VitePress 添加 algolia 搜索
 
 <VideoLink bvId="BV1eG4y1g7Kj">【编程】在 VitePress 中添加 Algolia 搜索，手把手教学 B 站视频传送门</VideoLink>

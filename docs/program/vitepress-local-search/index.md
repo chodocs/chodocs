@@ -1,5 +1,6 @@
 ---
 author: "fxzer"
+date: 2023-02-19
 ---
 
 # VitePress 添加本地搜索功能

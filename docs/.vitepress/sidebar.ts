@@ -26,6 +26,7 @@ export default {
           ],
         },
         { text: '资源导航', link: '/favorites' },
+        { text: '编程学习', link: '/program/' },
         { text: 'Arc 激活码获取', link: '/arc' },
         { text: '2022 年终总结', link: '/2022' },
         { text: '关于 ChoDocs', link: '/chodocs' },
@@ -146,25 +147,41 @@ function sidebarPartterns() {
 function sidebarProgram() {
   return [
     {
-      text: '📗 编程学习',
-      collapsed: false,
+      text: '💻 编程学习',
       items: [
-        { text: '发布 npm 包', link: '/program/npm-package/' },
+        { text: '介绍', link: '/program/' },
         {
-          text: '给 VitePress 添加 algolia 搜索',
-          link: '/program/vitepress-algolia/',
+          text: '编程实战',
+          items: [
+            { text: '发布 npm 包', link: '/program/npm-package/' },
+          ],
         },
         {
-          text: '接上 algolia 搜索（补充）',
-          link: '/program/vitepress-algolia-plus/',
+          text: 'VitePress 搜索',
+          items: [
+            {
+              text: '给 VitePress 添加 algolia 搜索',
+              link: '/program/vitepress-algolia/',
+            },
+            {
+              text: '接上 algolia 搜索（补充）',
+              link: '/program/vitepress-algolia-plus/',
+            },
+            {
+              text: '接上 algolia 搜索（解决）',
+              link: '/program/vitepress-algolia-solved/',
+            },
+            {
+              text: '给 VitePress 添加本地搜索功能',
+              link: '/program/vitepress-local-search/',
+            },
+          ],
         },
         {
-          text: '接上 algolia 搜索（解决）',
-          link: '/program/vitepress-algolia-solved/',
-        },
-        {
-          text: '给 VitePress 添加本地搜索功能',
-          link: '/program/vitepress-local-search/',
+          text: 'VitePress 插件（待补充）',
+          items: [
+
+          ],
         },
       ],
     },

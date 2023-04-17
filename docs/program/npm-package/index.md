@@ -1,3 +1,8 @@
+---
+author: "Choi Yang"
+date: 2022-11-26
+---
+
 # 使用 dumi 发布个人的 npm 包
 
 
