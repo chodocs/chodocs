@@ -95,8 +95,8 @@ devDependencies:
     specifier: ^0.14.4
     version: 0.14.4(vite@4.0.4)(workbox-build@6.5.4)(workbox-window@6.5.4)
   vitepress:
-    specifier: 1.0.0-alpha.69
-    version: 1.0.0-alpha.69(@algolia/client-search@4.14.2)
+    specifier: 1.0.0-alpha.71
+    version: 1.0.0-alpha.71(@algolia/client-search@4.14.2)
   vue:
     specifier: ^3.2.45
     version: 3.2.45
@@ -675,22 +675,6 @@ packages:
       '@babel/helper-validator-identifier': 7.19.1
       chalk: 2.4.2
       js-tokens: 4.0.0
-    dev: true
-
-  /@babel/parser@7.20.15:
-    resolution: {integrity: sha512-DI4a1oZuf8wC+oAJA9RW6ga3Zbe8RZFt7kD9i4qAspz3I/yHet1VvC3DiSy/fsUvv5pvJuNPh0LPOdCcqinDPg==}
-    engines: {node: '>=6.0.0'}
-    hasBin: true
-    dependencies:
-      '@babel/types': 7.20.7
-    dev: true
-
-  /@babel/parser@7.20.5:
-    resolution: {integrity: sha512-r27t/cy/m9uKLXQNWWebeCUHgnAZq0CpG1OwKRxzJMP1vpSU4bSIK2hq+/cp0bQxetkXx38n09rNu8jVkcK/zA==}
-    engines: {node: '>=6.0.0'}
-    hasBin: true
-    dependencies:
-      '@babel/types': 7.21.3
     dev: true
 
   /@babel/parser@7.21.3:
@@ -1565,15 +1549,6 @@ packages:
       globals: 11.12.0
     transitivePeerDependencies:
       - supports-color
-    dev: true
-
-  /@babel/types@7.20.7:
-    resolution: {integrity: sha512-69OnhBxSSgK0OzTJai4kyPDiKTIe3j+ctaHdIGVbRahTLAT7L3R9oeXHC2aVSuGYt3cVnoAMDmOCgJ2yaiLMvg==}
-    engines: {node: '>=6.9.0'}
-    dependencies:
-      '@babel/helper-string-parser': 7.19.4
-      '@babel/helper-validator-identifier': 7.19.1
-      to-fast-properties: 2.0.0
     dev: true
 
   /@babel/types@7.21.3:
@@ -2798,7 +2773,7 @@ packages:
   /@vue/compiler-core@3.2.45:
     resolution: {integrity: sha512-rcMj7H+PYe5wBV3iYeUgbCglC+pbpN8hBLTJvRiK2eKQiWqu+fG9F+8sW99JdL4LQi7Re178UOxn09puSXvn4A==}
     dependencies:
-      '@babel/parser': 7.20.15
+      '@babel/parser': 7.21.3
       '@vue/shared': 3.2.45
       estree-walker: 2.0.2
       source-map: 0.6.1
@@ -2830,7 +2805,7 @@ packages:
   /@vue/compiler-sfc@3.2.45:
     resolution: {integrity: sha512-1jXDuWah1ggsnSAOGsec8cFjT/K6TMZ0sPL3o3d84Ft2AYZi2jWJgRMjw4iaK0rBfA89L5gw427H4n1RZQBu6Q==}
     dependencies:
-      '@babel/parser': 7.20.5
+      '@babel/parser': 7.21.3
       '@vue/compiler-core': 3.2.45
       '@vue/compiler-dom': 3.2.45
       '@vue/compiler-ssr': 3.2.45
@@ -5456,6 +5431,10 @@ packages:
       '@jridgewell/sourcemap-codec': 1.4.14
     dev: true
 
+  /mark.js@8.11.1:
+    resolution: {integrity: sha512-1I+1qpDt4idfgLQG+BNWmrqku+7/2bi5nLf4YwF8y8zXvmfiTBY3PV3ZibfrjBueCByROpuBjLLFCajqkgYoLQ==}
+    dev: true
+
   /md5@2.3.0:
     resolution: {integrity: sha512-T1GITYmFaKuO91vxyoQMFETst+O71VUPEU3ze5GNzDm0OWdP8v1ziTaAEPUr/3kLsY3Sftgz242A1SetQiDL7g==}
     dependencies:
@@ -7063,8 +7042,8 @@ packages:
       fsevents: 2.3.2
     dev: true
 
-  /vitepress@1.0.0-alpha.69(@algolia/client-search@4.14.2):
-    resolution: {integrity: sha512-d7Vz+S/1i/7szVUSOHJf12APtoGlHXIJXzDvXLChhlE000TVzWoYX6rUAchjJzfxdFjng3Eo96ZkPs7OJxDjMg==}
+  /vitepress@1.0.0-alpha.71(@algolia/client-search@4.14.2):
+    resolution: {integrity: sha512-UkmDuNO+paGq0ba5WVhwasR1BCQ0owlPStnjtCRd/cfzXB+VBAiZFK9pglVQaf/tDBFQOuHZkrkfgp5ka69hIg==}
     hasBin: true
     dependencies:
       '@docsearch/css': 3.3.3
@@ -7073,6 +7052,7 @@ packages:
       '@vue/devtools-api': 6.5.0
       '@vueuse/core': 10.0.2(vue@3.2.47)
       body-scroll-lock: 4.0.0-beta.0
+      mark.js: 8.11.1
       minisearch: 6.0.1
       shiki: 0.14.1
       vite: 4.2.1
