@@ -1,5 +1,6 @@
 ---
 author: "Choi Yang"
+date: 2023-02-09
 ---
 
 # 给 VitePress 添加 algolia 搜索（补充）

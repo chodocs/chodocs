@@ -1,6 +1,7 @@
 ---
 author: "Richard-Zhang1019"
 contributors: ["Choi Yang"]
+date: 2023-02-17
 ---
 
 # 给 VitePress 添加 algolia 搜索解决方案（高版本 alpha.37 以后）

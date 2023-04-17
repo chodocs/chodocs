@@ -20,8 +20,8 @@ hero:
       text: 学习圈子
       link: /zsxq
     - theme: alt
-      text: 模拟面试
-      link: /interview/interviewer/
+      text: 面试大全
+      link: /interview/
     - theme: alt
       text: 备用站点
       link: https://chodocs.netlify.app/
@@ -85,18 +85,19 @@ const members = [
   {
     avatar: 'https://www.github.com/Chocolate1999.png',
     name: 'Choi Yang',
-    title: 'open source developer, creator of ChoDocs.',
+    title: '逆水行舟，不进则退',
     links: [
       { icon: 'github', link: 'https://github.com/Chocolate1999' },
       {
        icon: { svg: icons.bilibili } ,link: "https://space.bilibili.com/351534170",
       },
+      { icon: 'twitter', link: 'https://twitter.com/ycyChocolate' },
     ]
   },
   {
     avatar: 'https://www.github.com/HearLing.png',
     name: 'HearLing',
-    title: 'Open Source Contributor',
+    title: '热爱学习，不秃头',
     links: [
       { icon: 'github', link: 'https://github.com/HearLing' },
       {
