@@ -157,7 +157,7 @@ function sidebarProgram() {
           ],
         },
         {
-          text: 'VitePress 搜索',
+          text: 'VitePress 配置',
           items: [
             {
               text: '给 VitePress 添加 algolia 搜索',
@@ -175,12 +175,10 @@ function sidebarProgram() {
               text: '给 VitePress 添加本地搜索功能',
               link: '/program/vitepress-local-search/',
             },
-          ],
-        },
-        {
-          text: 'VitePress 插件（待补充）',
-          items: [
-
+            {
+              text: 'VitePress 插件合集（beta）',
+              link: '/program/vitepress-plugin/',
+            },
           ],
         },
       ],
