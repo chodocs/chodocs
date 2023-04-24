@@ -290,29 +290,32 @@ function sidebarInterview() {
 function sidebarAlgorithm() {
   return [
     {
-      items: [{ text: '📓 导读', link: '/algorithm/guide/' }],
+      items: [
+        { text: '📓 导读', link: '/algorithm/guide/' },
+        { text: '数据结构', link: '/algorithm/guide/classic1' },
+      ],
     },
     {
       text: 'Hash Table 哈希表',
       collapsed: false,
       items: [
         { text: '介绍', link: '/algorithm/hash-table/' },
-        { text: '1. 两数之和', link: '/algorithm/hash-table/1.两数之和' },
+        { text: '1. 两数之和', link: '/algorithm/hash-table/1' },
         {
           text: '3. 无重复字符的最长子串',
-          link: '/algorithm/hash-table/3.无重复字符的最长子串',
+          link: '/algorithm/hash-table/3',
         },
         {
           text: '136. 只出现一次的数字',
-          link: '/algorithm/hash-table/136.只出现一次的数字',
+          link: '/algorithm/hash-table/136',
         },
         {
           text: '349. 两个数组的交集',
-          link: '/algorithm/hash-table/349.两个数组的交集',
+          link: '/algorithm/hash-table/349',
         },
         {
           text: '560. 和为 K 的子数组',
-          link: '/algorithm/hash-table/560.和为 K 的子数组',
+          link: '/algorithm/hash-table/560',
         },
       ],
     },
