@@ -323,28 +323,28 @@ function sidebarAlgorithm() {
       text: 'Stack 栈',
       collapsed: false,
       items: [
-        { text: '20. 有效的括号', link: '/algorithm/stack/20.有效的括号' },
-        { text: '739. 每日温度', link: '/algorithm/stack/739.每日温度' },
+        { text: '20. 有效的括号', link: '/algorithm/stack/20' },
+        { text: '739. 每日温度', link: '/algorithm/stack/739' },
         {
           text: '901. 股票价格跨度',
-          link: '/algorithm/stack/901.股票价格跨度',
+          link: '/algorithm/stack/901',
         },
         {
           text: '907. 子数组的最小值之和',
-          link: '/algorithm/stack/907.子数组的最小值之和',
+          link: '/algorithm/stack/907',
         },
         {
           text: '921. 使括号有效的最少添加',
-          link: '/algorithm/stack/921.使括号有效的最少添加',
+          link: '/algorithm/stack/921',
         },
-        { text: '946. 验证栈序列', link: '/algorithm/stack/946.验证栈序列' },
+        { text: '946. 验证栈序列', link: '/algorithm/stack/946' },
         {
           text: '1190. 反转每对括号间的子串',
-          link: '/algorithm/stack/1190.反转每对括号间的子串',
+          link: '/algorithm/stack/1190',
         },
         {
           text: '1249. 移除无效的括号',
-          link: '/algorithm/stack/1249.移除无效的括号',
+          link: '/algorithm/stack/1249',
         },
       ],
     },
