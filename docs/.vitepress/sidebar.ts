@@ -354,7 +354,7 @@ function sidebarAlgorithm() {
       items: [
         {
           text: '933. 最近的请求次数',
-          link: '/algorithm/queue/933.最近的请求次数',
+          link: '/algorithm/queue/933',
         },
       ],
     },
@@ -364,31 +364,31 @@ function sidebarAlgorithm() {
       items: [
         {
           text: '08.08. 有重复字符串的排列组合',
-          link: '/algorithm/recursion-backtracking/08.08.有重复字符串的排列组合',
+          link: '/algorithm/recursion-backtracking/08.08',
         },
         {
           text: '16.11. 跳水板',
-          link: '/algorithm/recursion-backtracking/16.11.跳水板',
+          link: '/algorithm/recursion-backtracking/16.11',
         },
         {
           text: '17. 电话号码的字母组合',
-          link: '/algorithm/recursion-backtracking/17.电话号码的字母组合',
+          link: '/algorithm/recursion-backtracking/17',
         },
         {
           text: '22. 括号生成',
-          link: '/algorithm/recursion-backtracking/22.括号生成',
+          link: '/algorithm/recursion-backtracking/22',
         },
         {
           text: '37. 解数独',
-          link: '/algorithm/recursion-backtracking/37.解数独',
+          link: '/algorithm/recursion-backtracking/37',
         },
         {
           text: '39. 组合总和',
-          link: '/algorithm/recursion-backtracking/39.组合总和',
+          link: '/algorithm/recursion-backtracking/39',
         },
         {
           text: '40. 组合总和 II',
-          link: '/algorithm/recursion-backtracking/40.组合总和 II',
+          link: '/algorithm/recursion-backtracking/40',
         },
         {
           text: '46. 全排列',
