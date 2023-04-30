@@ -86,6 +86,7 @@ const members = [
     avatar: 'https://www.github.com/Chocolate1999.png',
     name: 'Choi Yang',
     title: '逆水行舟，不进则退',
+    desc: 'FE Developer<br/>Creator @ ChoDocs',
     links: [
       { icon: 'github', link: 'https://github.com/Chocolate1999' },
       {
@@ -98,6 +99,7 @@ const members = [
     avatar: 'https://www.github.com/HearLing.png',
     name: 'HearLing',
     title: '热爱学习，不秃头',
+    desc: 'FE Developer',
     links: [
       { icon: 'github', link: 'https://github.com/HearLing' },
       {
