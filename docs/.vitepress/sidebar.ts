@@ -396,73 +396,73 @@ function sidebarAlgorithm() {
         },
         {
           text: '46. 全排列',
-          link: '/algorithm/recursion-backtracking/46.全排列',
+          link: '/algorithm/recursion-backtracking/46',
         },
         {
           text: '47. 全排列 II',
-          link: '/algorithm/recursion-backtracking/47.全排列 II',
+          link: '/algorithm/recursion-backtracking/47',
         },
         {
           text: '51. N 皇后',
-          link: '/algorithm/recursion-backtracking/51.N 皇后',
+          link: '/algorithm/recursion-backtracking/51',
         },
         {
           text: '54. 螺旋矩阵',
-          link: '/algorithm/recursion-backtracking/54.螺旋矩阵',
+          link: '/algorithm/recursion-backtracking/54',
         },
         {
           text: '59. 螺旋矩阵 II',
-          link: '/algorithm/recursion-backtracking/59.螺旋矩阵 II',
+          link: '/algorithm/recursion-backtracking/59',
         },
         {
           text: '73. 矩阵置零',
-          link: '/algorithm/recursion-backtracking/73.矩阵置零',
+          link: '/algorithm/recursion-backtracking/73',
         },
-        { text: '77. 组合', link: '/algorithm/recursion-backtracking/77.组合' },
-        { text: '78. 子集', link: '/algorithm/recursion-backtracking/78.子集' },
+        { text: '77. 组合', link: '/algorithm/recursion-backtracking/77' },
+        { text: '78. 子集', link: '/algorithm/recursion-backtracking/78' },
         {
           text: '79. 单词搜索',
-          link: '/algorithm/recursion-backtracking/79.单词搜索',
+          link: '/algorithm/recursion-backtracking/79',
         },
         {
           text: '90. 子集 II',
-          link: '/algorithm/recursion-backtracking/90.子集 II',
+          link: '/algorithm/recursion-backtracking/90',
         },
         {
           text: '93. 复原IP地址',
-          link: '/algorithm/recursion-backtracking/93.复原IP地址',
+          link: '/algorithm/recursion-backtracking/93',
         },
         {
           text: '131. 分割回文串',
-          link: '/algorithm/recursion-backtracking/131.分割回文串',
+          link: '/algorithm/recursion-backtracking/131',
         },
         {
           text: '212. 单词搜索',
-          link: '/algorithm/recursion-backtracking/212.单词搜索',
+          link: '/algorithm/recursion-backtracking/212',
         },
         {
           text: '216. 组合总和 III',
-          link: '/algorithm/recursion-backtracking/216.组合总和 III',
+          link: '/algorithm/recursion-backtracking/216',
         },
         {
           text: '401. 二进制手表',
-          link: '/algorithm/recursion-backtracking/401.二进制手表',
+          link: '/algorithm/recursion-backtracking/401',
         },
         {
           text: '784. 字母大小写全排列',
-          link: '/algorithm/recursion-backtracking/784.字母大小写全排列',
+          link: '/algorithm/recursion-backtracking/784',
         },
         {
           text: '980. 不同路径 III',
-          link: '/algorithm/recursion-backtracking/980.不同路径 III',
+          link: '/algorithm/recursion-backtracking/980',
         },
         {
           text: '1219. 黄金矿工',
-          link: '/algorithm/recursion-backtracking/1219.黄金矿工',
+          link: '/algorithm/recursion-backtracking/1219',
         },
         {
           text: '1291. 顺次数',
-          link: '/algorithm/recursion-backtracking/1291.顺次数',
+          link: '/algorithm/recursion-backtracking/1291',
         },
       ],
     },
