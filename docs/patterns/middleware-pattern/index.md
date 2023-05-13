@@ -13,11 +13,11 @@ date: 2023-03-07
 
 那么同样在 `JS` 中，如果有大量的组件，没有一个领头的，相互之间通信也会非常混乱，对于开发者而言也很痛苦，不知道这个数据到底怎么传，如下图所示：
 
-![](https://img-blog.csdnimg.cn/bec12dbc3f4744adaa6660fc5182ab0d.png)
+<CloudinaryImg publicId='patterns/middleware-pattern-1_uynu2e' alt='middleware-pattern-1'/>
 
 那么，使用了中间件模式之后，不需要让组件之间去通信了，而是直接从多对多的关系变为了多对一的关系，如下图所示。
 
-![](https://img-blog.csdnimg.cn/921010f1712245d6aaea7c0eca7e713d.png)
+<CloudinaryImg publicId='patterns/middleware-pattern_ebrees' alt='middleware-pattern'/>
 
 ## 简单的聊天室
 
@@ -40,7 +40,7 @@ app.use('/', (req, res, next) => {
 
 注意第 5 行代码，有个 next 方法执行，代表我们会执行下一个回调，那么通过这样，在请求和响应之间就可以创建中间件函数链，如下图所示：
 
-![](https://img-blog.csdnimg.cn/be684d45965842eeaf0d8ae1aa764408.png)
+<CloudinaryImg publicId='patterns/middleware-express_lgniew' alt='middleware-express'/>
 
 我们再把上述代码完善一下，看看下方的 demo，展示一个中间件链的使用：
 

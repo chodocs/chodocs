@@ -14,7 +14,8 @@
 
 大家可以根据自己电脑的机型来选择安装即可。
 
-![](https://img-blog.csdnimg.cn/5bdb4a616cb741809f415c8fb3296797.png)
+<CloudinaryImg publicId='tool/switchhost-download_ilseh0' alt='switchhost-download'/>
+
 
 在这里贴两个地址吧：
 
@@ -36,6 +37,6 @@ URL: https://raw.hellogithub.com/hosts
 自动刷新: 最好选 1 hour
 ```
 
-![](https://img-blog.csdnimg.cn/fdf80e88ca2e409b8d4484a6d3cf0d6a.png)
+<CloudinaryImg publicId='tool/switchhost-config_qjhkuk' alt='switchhost-config'/>
 
 至此，我们就可以正常访问 GitHub 了，开启你的开源之旅吧。

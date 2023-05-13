@@ -9,6 +9,7 @@
 还是源自于学校里发了一个恒生招聘的 pdf 文件，首先看文件，就明确了会招前端，为什么说是会招呢？请看下图吧。
 
 ![](https://img-blog.csdnimg.cn/20200621212312692.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3dlaXhpbl80MjQyOTcxOA==,size_16,color_FFFFFF,t_70)
+
 本次预计就招 380 人，而对于前端来说，只招 20 个，你没看错，就 20 名，这比例我刚开始看的时候就感觉有点离谱。可想这次招聘的难度了...
 
 ## 投递后

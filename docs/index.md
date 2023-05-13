@@ -22,9 +22,6 @@ hero:
     - theme: alt
       text: 面试大全
       link: /interview/
-    - theme: alt
-      text: 备用站点
-      link: https://chodocs.netlify.app/
 features:
   - icon: 📋
     title: 面试专栏
@@ -86,7 +83,7 @@ const members = [
     avatar: 'https://www.github.com/Chocolate1999.png',
     name: 'Choi Yang',
     title: '逆水行舟，不进则退',
-    desc: 'FE Developer<br/>Creator @ ChoDocs',
+    desc: 'FE Developer<br/>Creator @ <a href="https://github.com/chodocs/chodocs" target="_blank">ChoDocs</a>',
     links: [
       { icon: 'github', link: 'https://github.com/Chocolate1999' },
       {

@@ -19,32 +19,32 @@ author: "Choi Yang"
 ::: code-group
 
 ```jsx [DogImagesContainer.js]
-import React, { useState, useEffect } from "react";
-import DogImages from "./DogImages";
+import React, { useEffect, useState } from 'react'
+import DogImages from './DogImages'
 
-const DogImagesContainer = () => {
-  const [dogs, setDogs] = useState([]);
+function DogImagesContainer() {
+  const [dogs, setDogs] = useState([])
 
   useEffect(() => {
     const fetchFn = () => {
-      fetch("https://dog.ceo/api/breed/labrador/images/random/6")
-        .then((res) => res.json())
-        .then(({ message }) => setDogs(message));
-    };
-    fetchFn();
-  }, []);
+      fetch('https://dog.ceo/api/breed/labrador/images/random/6')
+        .then(res => res.json())
+        .then(({ message }) => setDogs(message))
+    }
+    fetchFn()
+  }, [])
 
-  return <DogImages dogs={dogs} />;
-};
+  return <DogImages dogs={dogs} />
+}
 
-export default DogImagesContainer;
+export default DogImagesContainer
 ```
 
 ```jsx [DogImages.js]
-import React from "react";
+import React from 'react'
 
 export default function DogImages({ dogs }) {
-  return dogs?.map((dog, i) => <img src={dog} key={i} alt="Dog" />);
+  return dogs?.map((dog, i) => <img src={dog} key={i} alt="Dog" />)
 }
 ```
 
@@ -88,15 +88,15 @@ export default function DogImages({ dogs }) {
 
 ```jsx
 export default function useDogImages() {
-  const [dogs, setDogs] = useState([]);
+  const [dogs, setDogs] = useState([])
 
   useEffect(() => {
-    fetch("https://dog.ceo/api/breed/labrador/images/random/6")
-      .then((res) => res.json())
-      .then(({ message }) => setDogs(message));
-  }, []);
+    fetch('https://dog.ceo/api/breed/labrador/images/random/6')
+      .then(res => res.json())
+      .then(({ message }) => setDogs(message))
+  }, [])
 
-  return dogs;
+  return dogs
 }
 ```
 
