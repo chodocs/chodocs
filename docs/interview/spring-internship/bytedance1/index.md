@@ -8,7 +8,7 @@
 
 春招过去了，面了两次腾讯，两次一面直接 gg，但这两份经历对我是有很大帮助的，体会到了一定差距。但在 6 月份，看了牛客网讨论区，又发现了字节跳动一直在招人，从未停止过，而且正好某天瞧见了内推码，于是乎，我又想尝试一下了，赶紧迭代一下简历，投！投！投！
 
-![](https://img-blog.csdnimg.cn/20200608220737688.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3dlaXhpbl80MjQyOTcxOA==,size_16,color_FFFFFF,t_70)
+<CloudinaryImg publicId='interview/bytedance-1_d0dz6v' alt='bytedance'/>
 
 ### 要求
 
@@ -63,7 +63,8 @@
 - 根据渲染树计算每一个节点的信息
 - 根据计算好的信息绘制页面
 
-![](https://img-blog.csdnimg.cn/20200611195126904.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3dlaXhpbl80MjQyOTcxOA==,size_16,color_FFFFFF,t_70)
+<CloudinaryImg publicId='interview/bytedance-2_loollr' alt='bytedance'/>
+
 <a href="https://segmentfault.com/a/1190000017184701">推荐阅读：从 URL 输入到页面展现到底发生什么？</a>
 
 </details>
@@ -178,7 +179,7 @@
 
 查看结果，高度为 50px
 
-![](https://img-blog.csdnimg.cn/20200608232207780.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3dlaXhpbl80MjQyOTcxOA==,size_16,color_FFFFFF,t_70)
+<CloudinaryImg publicId='interview/bytedance-3_pbtha9' alt='bytedance'/>
 
 面试官然后又添加了浮动，再问父级元素高度
 
@@ -200,7 +201,7 @@
 
 查看结果，高度为 0px，此时就出现了一个高度塌陷问题。
 
-![](https://img-blog.csdnimg.cn/20200610213703597.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3dlaXhpbl80MjQyOTcxOA==,size_16,color_FFFFFF,t_70)
+<CloudinaryImg publicId='interview/bytedance-4_v3wwjc' alt='bytedance'/>
 
 因为子元素设置了浮动，导致父级元素高度没有算进去。通过以下方式即可清楚浮动，形成一个 BFC，就会加上子集元素的高度。
 
@@ -213,7 +214,7 @@
 
 重新打开开发者工具（F12），可以看到父级元素有了高度。
 
-![](https://img-blog.csdnimg.cn/20200610214802572.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3dlaXhpbl80MjQyOTcxOA==,size_16,color_FFFFFF,t_70)
+<CloudinaryImg publicId='interview/bytedance-5_ikkgr1' alt='bytedance'/>
 
 </details>
 
@@ -243,7 +244,7 @@ console.log(a);
 
 此时会报错，因为 a 未定义。
 
-![](https://img-blog.csdnimg.cn/20200611101610780.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3dlaXhpbl80MjQyOTcxOA==,size_16,color_FFFFFF,t_70)
+<CloudinaryImg publicId='interview/bytedance-6_lqisot' alt='bytedance-6_lqisot'/>
 
 ##### 第二步
 
@@ -254,7 +255,7 @@ var a = 1;
 
 会输出 `undefined`。
 
-![](https://img-blog.csdnimg.cn/2020061110442013.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3dlaXhpbl80MjQyOTcxOA==,size_16,color_FFFFFF,t_70)
+<CloudinaryImg publicId='interview/bytedance-7_dtm4s6' alt='bytedance-7'/>
 
 上述代码中，变量 `a` 用 `var ` 命令声明，会发生变量提升，即脚本开始运行时，变量 `a` 已经存在了，但是没有值，所以会输出 `undefined` 。
 
@@ -268,7 +269,7 @@ function a() {}
 
 上述代码会输出一个函数 `a`。
 
-![](https://img-blog.csdnimg.cn/20200611114402620.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3dlaXhpbl80MjQyOTcxOA==,size_16,color_FFFFFF,t_70)
+<CloudinaryImg publicId='interview/bytedance-8_vtmkp9' alt='bytedance'/>
 
 考察知识点：当有多个同名变量声明的时候，函数声明会覆盖其他的声明。如果有多个函数声明，则是由最后的一个函数声明覆盖之前所有的声明。
 
@@ -298,7 +299,7 @@ a();
 
 输出结果：
 
-![](https://img-blog.csdnimg.cn/20200611115346130.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3dlaXhpbl80MjQyOTcxOA==,size_16,color_FFFFFF,t_70)
+<CloudinaryImg publicId='interview/bytedance-9_uxoib5' alt='bytedance'/>
 
 上述代码，首先进行函数声明提升，然后再进行变量提升，此时 `a`已经是一个变量了，不再是一个函数了，所以就会 `throw error` 。
 
@@ -446,7 +447,8 @@ int main(){
 ```
 
 用两种数据，进行测试，得到如下结果：
-![](https://img-blog.csdnimg.cn/20200611194734180.png)
+
+<CloudinaryImg publicId='interview/bytedance-10_dwaxjr' alt='bytedance-10'/>
 
 </details>
 

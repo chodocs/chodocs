@@ -36,7 +36,7 @@ for (let key of arr) {
 
 <details><summary><b>参考答案</b></summary>
 
-![](https://img-blog.csdnimg.cn/20200616183821466.png)
+<CloudinaryImg publicId='interview/sangfor-2_qx6acx' alt='sangfor'/>
 
 `for in` 遍历的是数组的索引（即键名），而 `for of` 遍历的是数组元素值。 所以 `for in` 更适合遍历对象，不要使用 `for in` 遍历数组。
 
@@ -78,7 +78,8 @@ for (let key of arr) {
 
 <details><summary><b>参考答案</b></summary>
 
-![](https://img-blog.csdnimg.cn/20200616191336995.png)
+<CloudinaryImg publicId='interview/sangfor-3_nml8et' alt='sangfor'/>
+
 本题考察：
 
 `setTimeout(func, delay, param1, param2, ...) `第三个参数及以后的参数都可以作为 func 函数的参数，比如下面这个例题：
@@ -115,7 +116,8 @@ fn();
 
 <details><summary><b>参考答案</b></summary>
 
-![](https://img-blog.csdnimg.cn/20200616215620478.png)
+<CloudinaryImg publicId='interview/sangfor-4_ywkyiv' alt='sangfor'/>
+
 `await` 会一直等待着 `Promise` 对象执行完，然后调用 `.then` 方法，那里 `throw`回调到 `.catch`，因此输出 `error`
 
 </details>
@@ -131,7 +133,7 @@ console.log(+"1.20");
 console.log(Number("1.20"));
 ```
 
-![](https://img-blog.csdnimg.cn/20200616215752530.png)
+<CloudinaryImg publicId='interview/sangfor-5_j4e811' alt='sangfor'/>
 
 </details>
 
@@ -291,7 +293,7 @@ Promise.all = function (promises) {
 ```
 
 > 没想到深信服居然捞了我，感动到哭了，呜呜呜~
-> ![](https://img-blog.csdnimg.cn/20200620172958392.png)
+> <CloudinaryImg publicId='interview/sangfor-6_w18ka2' alt='sangfor'/>
 > 赶快写一个面经吧！
 
 ## 一面
@@ -460,7 +462,7 @@ Promise.all = function (promises) {
 </html>
 ```
 
-![](https://img-blog.csdnimg.cn/20200620165930147.png)
+<CloudinaryImg publicId='interview/sangfor-1_hraou8' alt='sangfor-1'/>
 
 </details>
 
@@ -488,7 +490,7 @@ for (let key of arr) {
 
 <details><summary><b>参考答案</b></summary>
 
-![](https://img-blog.csdnimg.cn/20200616183821466.png)
+<CloudinaryImg publicId='interview/sangfor-7_pwdcxk' alt='sangfor'/>
 
 `for in` 遍历的是数组的索引（即键名），而 `for of` 遍历的是数组元素值。 所以 `for in` 更适合遍历对象，不要使用 `for in` 遍历数组。
 
@@ -596,14 +598,17 @@ int main(){
 总体来说，是体验比较好的一次面试了，题目都比较简单（~~都是常见的基础题~~ ），然后是小姐姐面试，感觉还是不错的，自我介绍完后我就很有底气，毕竟最近我准备了很久，关于网络方面的问题还有 `Vue` 源码我准备了和面试官扯 40 分钟的知识点。但本次一面是电话面的话，我知道一般就 20-30 分钟，所以我就保留了一些知识点，说不定来二面了呢是吧。
 
 后面询问了面试官相关技术栈，也是 `Vue`。我连忙回答：可以！起初春招那时候我就看到前端需要熟悉 `ext.js`，我那时候就百度了下，原来这都比较老了...所以我有一段时间都没有想法考虑深信服了，因为觉得可能技术栈和我不太符合，因此一轮笔试我就没参加，具体本文开头就提及了。后面面试官是说因为有一些老的项目需要维护，现在都是主流用`Vue`了。
-![](https://img-blog.csdnimg.cn/20200620172310265.png)
+
+<CloudinaryImg publicId='interview/sangfor-8_qu5kbi' alt='sangfor'/>
 
 > 好了，本次一面到此分享结束，后续有二面的话，再进行补充了。
 
 ## 结尾：努力不一定成功
 
 今天刚做完笔试题，然后 6 月 21 日晚 10 点 27 收到了来自深信服的邮件，我原本很期待选择下一次面试时间的，看到邮件标题 `很遗憾` 三个字，一下子就沉浸了下来。
-![](https://img-blog.csdnimg.cn/20200621225124417.png)
+
+<CloudinaryImg publicId='interview/sangfor-9_dsqjkw' alt='sangfor'/>
+
 **努力不一定成功**，是我看完邮件后立即想到的句子。对于一面我其实是比较有信心的，但最后还是被刷了，我立即想了想为什么我会被刷？有这几个原因在：
 
 - 笔试做的太差了，我甚至后面编程题几乎白卷，首先从态度上就已经做的不是很好了
@@ -614,6 +619,6 @@ int main(){
 
 ok，总结完毕，也不是一次受打击了，现在也逐渐习惯了，老一面了。后续还有恒生电子的面试，继续保持干劲吧！
 
-![](https://imgconvert.csdnimg.cn/aHR0cHM6Ly9jZG4uanNkZWxpdnIubmV0L2doL2Nob2NvbGF0ZTE5OTkvY2RuL2ltZy8yMDIwMDYyMTIzMDgzNy5qcGc?x-oss-process=image/format,png)
+<CloudinaryImg publicId='interview/sangfor-0_ezwfgk' alt='sangfor'/>
 
 > 2020 年 6 月 21 日晚，深信服实习笔试&面试分享结束

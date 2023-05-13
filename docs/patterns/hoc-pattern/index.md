@@ -17,13 +17,13 @@ HOC 包含我们希望应用于作为参数传递的组件的特定逻辑。应�
 
 ```jsx
 function withStyles(Component) {
-  return props => {
+  return (props) => {
     const style = { padding: '0.2rem', margin: '1rem' }
     return <Component style={style} {...props} />
   }
 }
 
-const Button = () = <button>Click me!</button>
+const Button = () => <button>Click me!</button>
 const Text = () => <p>Hello World!</p>
 
 const StyledButton = withStyles(Button)
@@ -46,7 +46,7 @@ const StyledText = withStyles(Text)
 
 ```jsx
 function withLoader(Element, url) {
-  return (props) => {};
+  return (props) => {}
 }
 ```
 
@@ -67,7 +67,7 @@ function withLoader(Element, url) {
 在 `DogImages.js` 文件中，我们不再只想导出普通的 DogImages 组件。相反，我们想要在 DogImages 组件周围导出包裹了一层 `withLoader` HOC 的组件，如下代码所示。
 
 ```jsx
-export default withLoader(DogImages);
+export default withLoader(DogImages)
 ```
 
 `withLoader` 高阶组件接受两个参数，第一个参数是我们想要包裹的组件，第二个参数是我们想要从中获取数据的 url。
@@ -75,26 +75,26 @@ export default withLoader(DogImages);
 ```jsx
 export default withLoader(
   DogImages,
-  "https://dog.ceo/api/breed/labrador/images/random/6"
-);
+  'https://dog.ceo/api/breed/labrador/images/random/6'
+)
 ```
 
 由于我们已经将 `withLoader` HOC 应用于 `DogImages` 组件，我们现在可以在 `DogImages` 组件中通过传递过来的 `props` 来使用 `data`。
 
 ```jsx
-import React from "react";
-import withLoader from "./withLoader";
+import React from 'react'
+import withLoader from './withLoader'
 
 function DogImages(props) {
   return props.data.message.map((dog, index) => (
     <img src={dog} alt="Dog" key={index} />
-  ));
+  ))
 }
 
 export default withLoader(
   DogImages,
-  "https://dog.ceo/api/breed/labrador/images/random/6"
-);
+  'https://dog.ceo/api/breed/labrador/images/random/6'
+)
 ```
 
 这时候再来看看上述的演示代码，如下所示：
@@ -118,11 +118,11 @@ export default withLoader(
 ::: code-group
 
 ```jsx [withHover.js]
-import React, { useState } from "react";
+import React, { useState } from 'react'
 
 export default function withHover(Element) {
   return (props) => {
-    const [hovering, setHover] = useState(false);
+    const [hovering, setHover] = useState(false)
 
     return (
       <Element
@@ -131,15 +131,15 @@ export default function withHover(Element) {
         onMouseEnter={() => setHover(true)}
         onMouseLeave={() => setHover(false)}
       />
-    );
-  };
+    )
+  }
 }
 ```
 
 ```jsx [DogImages.js]
-import React from "react";
-import withLoader from "./withLoader";
-import withHover from "./withHover";
+import React from 'react'
+import withLoader from './withLoader'
+import withHover from './withHover'
 
 function DogImages(props) {
   return (
@@ -151,12 +151,12 @@ function DogImages(props) {
         ))}
       </div>
     </div>
-  );
+  )
 }
 
 export default withHover(
-  withLoader(DogImages, "https://dog.ceo/api/breed/labrador/images/random/6")
-);
+  withLoader(DogImages, 'https://dog.ceo/api/breed/labrador/images/random/6')
+)
 ```
 
 你会发现，我们在 `DogImages` 组件中使用了两个 HOC，`withHover` 和 `withLoader`。这两个 HOC 都接收一个组件作为参数，并返回一个新组件。我们可以将多个 HOC 组合在一起，以便在组件中使用多个 HOC。
@@ -174,39 +174,39 @@ export default withHover(
 ::: code-group
 
 ```jsx [useHover.js]
-import { useState, useRef, useEffect } from "react";
+import { useEffect, useRef, useState } from 'react'
 
 export default function useHover() {
-  const [hovering, setHover] = useState(false);
-  const ref = useRef(null);
+  const [hovering, setHover] = useState(false)
+  const ref = useRef(null)
 
-  const handleMouseOver = () => setHover(true);
-  const handleMouseOut = () => setHover(false);
+  const handleMouseOver = () => setHover(true)
+  const handleMouseOut = () => setHover(false)
 
   useEffect(() => {
-    const node = ref.current;
+    const node = ref.current
     if (node) {
-      node.addEventListener("mouseover", handleMouseOver);
-      node.addEventListener("mouseout", handleMouseOut);
+      node.addEventListener('mouseover', handleMouseOver)
+      node.addEventListener('mouseout', handleMouseOut)
 
       return () => {
-        node.removeEventListener("mouseover", handleMouseOver);
-        node.removeEventListener("mouseout", handleMouseOut);
-      };
+        node.removeEventListener('mouseover', handleMouseOver)
+        node.removeEventListener('mouseout', handleMouseOut)
+      }
     }
-  }, [ref.current]);
+  }, [ref.current])
 
-  return [ref, hovering];
+  return [ref, hovering]
 }
 ```
 
 ```jsx [DogImages.js]
-import React from "react";
-import withLoader from "./withLoader";
-import useHover from "./useHover";
+import React from 'react'
+import withLoader from './withLoader'
+import useHover from './useHover'
 
 function DogImages(props) {
-  const [hoverRef, hovering] = useHover();
+  const [hoverRef, hovering] = useHover()
 
   return (
     <div ref={hoverRef} {...props}>
@@ -217,13 +217,13 @@ function DogImages(props) {
         ))}
       </div>
     </div>
-  );
+  )
 }
 
 export default withLoader(
   DogImages,
-  "https://dog.ceo/api/breed/labrador/images/random/6"
-);
+  'https://dog.ceo/api/breed/labrador/images/random/6'
+)
 ```
 
 :::
@@ -262,13 +262,13 @@ HOC 可以传递被包裹的组件时，可能会导致命名冲突，来看下�
 
 ```jsx
 function withStyles(Component) {
-  return props => {
+  return (props) => {
     const style = { padding: '0.2rem', margin: '1rem' }
     return <Component style={style} {...props} />
   }
 }
 
-const Button = () = <button style={{ color: 'red' }}>Click me!</button>
+const Button = () => <button style={{ color: 'red' }}>Click me!</button>
 const StyledButton = withStyles(Button)
 ```
 
@@ -280,7 +280,7 @@ const StyledButton = withStyles(Button)
 
 ```jsx
 function withStyles(Component) {
-  return props => {
+  return (props) => {
     const style = {
       padding: '0.2rem',
       margin: '1rem',
@@ -291,7 +291,7 @@ function withStyles(Component) {
   }
 }
 
-const Button = () = <button style={{ color: 'red' }}>Click me!</button>
+const Button = () => <button style={{ color: 'red' }}>Click me!</button>
 const StyledButton = withStyles(Button)
 ```
 

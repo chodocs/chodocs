@@ -9,7 +9,7 @@ date: 2023-02-09
 
 最近 vitepress 更新了好几个版本，而 chodocs 仓库依赖更新的机器人之前因为转换组织原因没启用，所以一直没有同步版本。直到最近还是有挺多粉丝来询问为什么我按照[「给 VitePress 添加 algolia 搜索」](/program/vitepress-algolia/) 这篇文章做法而不生效，如下图所示：
 
-![](/program/algolia-comment.jpg)
+<CloudinaryImg publicId='program/algolia-comment_e34jfq' alt='algolia-comment'/>
 
 于是就有了今天的内容，还是想着补充一下，不给各位留坑。
 
@@ -36,7 +36,7 @@ date: 2023-02-09
 
 其实一般是 GitHub 上的开源项目都会申请通过的，我是大概等了 2 天样子，会收到如下类似的邮件回复，根据 key 和 id 来替换过去旧的即可。
 
-![](/program/algolia-email.png)
+<CloudinaryImg publicId='program/algolia-email_rv2mu6' alt='algolia-email'/>
 
 ## 社区方案
 

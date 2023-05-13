@@ -63,7 +63,7 @@ git reflog
 
 这里以 coding 工作台为例子，其它代码托管平台可能需要修改一下正则。
 
-![](https://img-blog.csdnimg.cn/7f8aa3f2487244efb7fa9177a7cb739e.png)
+<CloudinaryImg publicId='memo/git-regex_klbyot' alt='git-regex'/>
 
 ```sh
 ^(feat|fix|docs|style|refactor|perf|test|build|revert|merge|chore)(\(.+\))?:\s+(.*)#[0-9]+\s+|^(Accept Merge Request)\s+#[0-9]+:\s+(\(.+\s+->\s+.+\))
@@ -86,7 +86,7 @@ echo '{ "path": "cz-conventional-changelog" }' > ~/.czrc
 
 更花哨一点，使用 [git-cz](https://github.com/streamich/git-cz)
 
-![](https://img-blog.csdnimg.cn/68a9c68bfdb04852aab5263a0030e536.png)
+<CloudinaryImg publicId='memo/git-cz_nuarae' alt='git-cz'/>
 
 ```sh
 npx git-cz

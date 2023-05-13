@@ -52,7 +52,7 @@ export default function App() {
       <Button>Click me!</Button>
       <FormControlLabel control={<Switch />} />
     </div>
-  );
+  )
 }
 ```
 
