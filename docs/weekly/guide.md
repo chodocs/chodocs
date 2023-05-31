@@ -22,3 +22,11 @@ date: 2023-03-25
 ::: warning 💬 重要提示
 学习动态的内容仅供参考学习，并非是代表前端的学习路线，毕竟每个人感兴趣的点可能不一样，我可能会面向全栈以及程序员本身职业全面发展来。
 :::
+
+<CustomLink href='https://www.bilibili.com/video/BV1Uh411V7jC/' title='【编程】一起看看 Vercel 新发布动态，他们五一期间发布了啥？| 前端开发体验 DX'/>
+
+<CustomLink href='https://www.youtube.com/watch?v=5T3GY8PSiSI' title='watch this if you feel like a failure'/>
+
+<CustomLink href='https://t.zsxq.com/0dLRjBSIz' title='知识星球问答1'/>
+
+<CustomLink href='https://github.com/vite-pwa/vitepress' title='vitepress 官网'/>
