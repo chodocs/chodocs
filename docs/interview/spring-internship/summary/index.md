@@ -43,7 +43,7 @@
 
 > 本篇博客只做推荐，多为本人学习过程中发现的优质博客，觉得不错，就进行了整理，方便后续自己回顾。但本文部分文字或多或少引用了 dalao 们的总结，感谢本文所有 dalao 们的优质博客！文章内容均属于原作者。如若链接少了作者名或着失效，可以在评论区联系博客，谢谢合作~
 
-![](https://imgconvert.csdnimg.cn/aHR0cHM6Ly9jZG4uanNkZWxpdnIubmV0L2doL2Nob2NvbGF0ZTE5OTkvY2RuL2ltZy8yMDIwMDYyOTE3MTMyNC5qcGc?x-oss-process=image/format,png)
+<CloudinaryImg publicId='interview/spring-xmind_lsa1ap' alt='spring-xmind'/>
 
 ## CSS 篇
 

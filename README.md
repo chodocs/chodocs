@@ -15,7 +15,6 @@ Front-end learning document collection
 </p>
 
 <p align="center">
-<a href="https://app.netlify.com/sites/chodocs/deploys"target="__blank" ><img alt="Netlify Status" src="https://api.netlify.com/api/v1/badges/3b1c6bab-4f16-43d1-814b-b095bac4d648/deploy-status"></a>
 <a href="https://space.bilibili.com/351534170"><img src="https://img.shields.io/badge/dynamic/json?labelColor=FE7398&logo=bilibili&logoColor=white&label=bilibili%20fans&color=00aeec&query=%24.data.totalSubs&url=https%3A%2F%2Fapi.spencerwoo.com%2Fsubstats%2F%3Fsource%3Dbilibili%26queryKey%3D351534170" /></a>
 <a href="https://github.com/chodocs/chodocs" target="__blank"><img alt="GitHub stars" src="https://img.shields.io/github/stars/chodocs/chodocs?style=social"></a>
 <a href="https://github.com/chodocs/chodocs/network"><img alt="GitHub forks" src="https://img.shields.io/github/forks/chodocs/chodocs?style=social"></a>
@@ -34,7 +33,6 @@ Front-end learning document collection
 - 🚩 拥抱开源: 文档开源，版权 ChoDocs 所有，禁商业行为。
 
 > 学如逆水行舟，不进则退。
-
 
 ## 🏠  站点
 
@@ -112,10 +110,6 @@ Front-end learning document collection
 
 - [常用一些 Git 命令](https://chodocs.cn/memo/git-command/)
 - [前端资源导航](https://chodocs.cn/favorites.html)
-
-## 🔋 备用站点
-
-如果因网络或其它因素访问不了主站，可以访问 [https://chodocs.netlify.app/](https://chodocs.netlify.app/)，内容是同步的。
 
 ## ⭐ Star History
 

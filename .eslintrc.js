@@ -39,6 +39,7 @@ module.exports = {
         'no-restricted-imports': 'off',
         '@typescript-eslint/no-unused-vars': 'off',
         '@typescript-eslint/no-redeclare': 'off',
+        '@typescript-eslint/no-invalid-this': 'off',
         'unused-imports/no-unused-vars': 'off',
         '@typescript-eslint/no-this-alias': [
           'error',
@@ -46,7 +47,6 @@ module.exports = {
             allowedNames: ['self', 'instance'],
           },
         ],
-
       },
     },
     {
