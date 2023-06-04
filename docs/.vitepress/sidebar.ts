@@ -163,6 +163,7 @@ function sidebarProgram() {
           text: '编程实战',
           items: [
             { text: '发布 npm 包', link: '/program/npm-package/' },
+            { text: 'tRPC 基础篇', link: '/program/trpc/' },
           ],
         },
         {
