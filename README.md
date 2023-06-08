@@ -20,6 +20,16 @@ Front-end learning document collection
 <a href="https://github.com/chodocs/chodocs/network"><img alt="GitHub forks" src="https://img.shields.io/github/forks/chodocs/chodocs?style=social"></a>
 <a href="https://github.com/chodocs/chodocs" target="__blank"><img alt="MIT" src="https://img.shields.io/github/license/chodocs/chodocs"></a>
 
+## 📡 RSS 订阅
+
+如果你觉得内容不错，可以通过 RSS 订阅更新，订阅地址：
+
+[https://chodocs.cn/feed.xml](https://chodocs.cn/feed.xml)
+
+或者你也可以在我的 GitHub 主页这里来查看最新的 6 条内容更新：
+
+[Article recently updated](https://github.com/Chocolate1999#thought_balloon-%E6%96%87%E7%AB%A0%E6%9C%80%E8%BF%91%E6%9B%B4%E6%96%B0)
+
 ## 📓 内容
 
 - 📋 面试专栏: 海量前端面试问题解答，一站式阅读体验。
@@ -34,7 +44,7 @@ Front-end learning document collection
 
 > 学如逆水行舟，不进则退。
 
-## 🏠  站点
+## 🏠 站点
 
 - 🚀 基于 VitePress 搭建，快速响应
 - ⚡ 拓展 Vite 生态，集成了 Vite PWA
@@ -95,7 +105,6 @@ Front-end learning document collection
 - [中介/中间件模式](https://chodocs.cn/patterns/middleware-pattern/)
 - [高阶组件模式](https://chodocs.cn/patterns/hoc-pattern/)
 - ...
-
 
 ### 专题
 
