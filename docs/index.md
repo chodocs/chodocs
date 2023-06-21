@@ -89,6 +89,7 @@ const members = [
       {
        icon: { svg: icons.bilibili } ,link: "https://space.bilibili.com/351534170",
       },
+      { icon: 'youtube', link: 'https://www.youtube.com/@chocolate1999'},
       { icon: 'twitter', link: 'https://twitter.com/ycyChocolate' },
     ]
   },
