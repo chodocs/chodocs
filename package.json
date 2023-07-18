@@ -46,7 +46,7 @@
     "cloudinary-build-url": "^0.2.4",
     "dayjs": "^1.11.7",
     "eslint": "8.33.0",
-    "esno": "^0.16.3",
+    "esno": "^0.17.0",
     "fast-glob": "^3.2.12",
     "feed": "^4.2.2",
     "fs-extra": "^11.1.1",
