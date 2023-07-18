@@ -47,7 +47,7 @@ const component = computed(() => {
 
 <template>
   <component :is="component" v-if="isExternal" :href="href ? normalizeLink(href) : undefined" :target="target || (isExternal ? '_blank' : undefined)" :rel="rel || (isExternal ? 'noreferrer' : undefined)" class="custom-link">
-    <section class="flex group flex-col border-1 border-neutral-400 border-solid rounded-md p-4 gap-3 transition dark:border-neutral-600 duration-500 cursor-pointer my-4" >
+    <section class="flex group flex-col border-1 border-neutral-400 border-solid rounded-md p-4 gap-3 transition dark:border-neutral-600 duration-500 cursor-pointer my-4">
       <span class="text-ellipsis w-[90%] whitespace-nowrap overflow-hidden dark:opacity-90 font-600 group-hover:text-[#06f]">{{ title }}</span>
       <div v-if="desc" class="opacity-75 font-500 text-sm">
         {{ desc
@@ -69,7 +69,8 @@ const component = computed(() => {
         </div>
         <div class="items-center gap-1 hidden sm:flex">
           <span
-            class="text-ellipsis w-full whitespace-nowrap overflow-hidden text-sm font-500 opacity-50">chodocs.cn</span>
+            class="text-ellipsis w-full whitespace-nowrap overflow-hidden text-sm font-500 opacity-50"
+          >chodocs.cn</span>
         </div>
       </div>
     </section>

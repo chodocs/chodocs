@@ -18,8 +18,6 @@ export function MarkdownTransform(): Plugin {
       let imgMatches = imgRegex.exec(code)
       while (imgMatches) {
         const [text, link] = imgMatches.slice(1)
-        console.log('link: ', link)
-        console.log('text: ', text)
         code = code.replace(imgMatches[0], `<img src="${link}" alt="${text || 'img'}" />`)
         imgMatches = imgRegex.exec(code)
       }
