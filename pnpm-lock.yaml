@@ -17,8 +17,8 @@ devDependencies:
     specifier: ^2.3.2
     version: 2.3.2
   '@vite-pwa/vitepress':
-    specifier: ^0.0.5
-    version: 0.0.5(vite-plugin-pwa@0.14.7)
+    specifier: ^0.2.0
+    version: 0.2.0(vite-plugin-pwa@0.14.7)
   bumpp:
     specifier: ^9.1.0
     version: 9.1.0
@@ -2441,10 +2441,10 @@ packages:
       - rollup
     dev: true
 
-  /@vite-pwa/vitepress@0.0.5(vite-plugin-pwa@0.14.7):
-    resolution: {integrity: sha512-B6xy9wxi9fen+/AnRkY2+XCrbhqh2b/TsVTka6qFQ3zJ8zHSoEUHUucYT3KHMcY5I124G0ZmPKNW+UF9Jx1k4w==}
+  /@vite-pwa/vitepress@0.2.0(vite-plugin-pwa@0.14.7):
+    resolution: {integrity: sha512-dVQVaP6NB9woCFe4UASUqRp7uwBQJOVXlJlqK4krqXcbb3NuXIXIWOnU7HLpJnHqZj5U/81gKtLN6gs5gJBwiQ==}
     peerDependencies:
-      vite-plugin-pwa: ^0.14.0
+      vite-plugin-pwa: '>=0.16.3 <1'
     dependencies:
       vite-plugin-pwa: 0.14.7(vite@4.3.5)(workbox-build@6.5.4)(workbox-window@6.5.4)
     dev: true
