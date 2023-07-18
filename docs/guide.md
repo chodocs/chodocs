@@ -12,20 +12,18 @@ contributors: ["Choi Yang", "HearLing"]
 
 ChoDocs 的内容是免费开源的，但也希望各位遵循开源精神，不进行商业行为。
 
-::: info 我们的备用站点
-如果因网络或其它因素访问不了主站，可以访问 [https://chodocs.netlify.app/](https://chodocs.netlify.app/)，内容是同步的。
-:::
-
 如果你觉得内容不错的话，不妨给我们 **star** 支持一下，让更多的人看到这个优质内容网站。
 
-> [https://github.com/chodocs/chodocs](https://github.com/chodocs/chodocs) Give a ⭐️ if this project helped you!
+> Give a ⭐️ if this project helped you!
+
+[https://github.com/chodocs/chodocs](https://github.com/chodocs/chodocs) 
 
 ::: info 附：
 
 - [关于 ChoDocs](/chodocs)
 
 - [学习圈子](/zsxq)
-  :::
+:::
 
 ## 📓 内容
 

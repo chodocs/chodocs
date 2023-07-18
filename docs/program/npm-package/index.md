@@ -10,10 +10,13 @@ date: 2022-11-26
 
 ## 前期准备
 
-- 一个 npm 账号，如果没有的话需要自行[注册](https://www.npmjs.com/signup)。
+- 一个 npm 账号，如果没有的话需要自行注册。
 
-- dumi 基础，可以观看 [bilibili 视频](https://www.bilibili.com/video/BV1KG4y1Z7ZX/) 快速学习文档。
+[npm 注册地址](https://www.npmjs.com/signup)
 
+- dumi 基础，可以观看如下视频快速学习文档。
+
+[【编程】dumi 2.0 发布，上手使用 | 文档介绍 | 居然发现 bug？](https://www.bilibili.com/video/BV1KG4y1Z7ZX/)
 
 ## 使用 dumi
 通过脚手架安装，根据提示选择对应的模版，由于我们要发布 npm 包，所以选择 `React Library`。

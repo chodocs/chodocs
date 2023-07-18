@@ -22,7 +22,9 @@ date: 2023-04-18
 
 ## 配置 Vite
 
-核心文件源代码在[这里](https://github.com/chodocs/chodocs/blob/main/docs/vite.config.ts)
+核心文件源代码在这里:
+
+[vite.config.ts 源码](https://github.com/chodocs/chodocs/blob/main/docs/vite.config.ts)
 
 ### 示例代码
 
@@ -81,13 +83,19 @@ export default defineConfig(async () => {
 
 本文档几乎 95% 以上的样式都是使用 UnoCSS，在上述配置文件中已经配置好了，如果你有特殊样式配置，可以参考项目根目录下的 `unocss.config.ts`，可进行相关修改。
 
-目前 UnoCSS 官网上线了，地址在 [https://unocss.dev/](https://unocss.dev/)，可查阅官方文档使用。
+目前 UnoCSS 官网上线了，地址在：
+
+[UnoCSS 官网地址](https://unocss.dev/)
+
+可查阅官方文档使用。
 
 ## 文档显示页面信息和底部贡献者
 
 上述 Vite 配置文件中，我们看到了有一个 `MarkdownTransform` 函数，这个函数是用来处理 markdown 文件的，主要是为了在每个文档页面的底部显示贡献者信息和版权信息，以及在每个文档页面的顶部显示阅读时间和字数。
 
-核心文件源代码在[这里](https://github.com/chodocs/chodocs/blob/main/docs/.vitepress/plugins/markdownTransform.ts)，可以点击查看。
+核心文件源代码在这里，可以点击查看:
+
+[markdownTransform.ts](https://github.com/chodocs/chodocs/blob/main/docs/.vitepress/plugins/markdownTransform.ts)
 
 ### 示例代码
 
@@ -157,15 +165,21 @@ import Components from 'unplugin-vue-components/vite'
 
 ### Contributors 组件
 
-这个组件是用来显示贡献者信息的，核心文件源代码在[这里](https://github.com/chodocs/chodocs/blob/main/docs/.vitepress/theme/components/Contributors.vue)，可以点击查看。
+这个组件是用来显示贡献者信息的，核心文件源代码在这里：
+
+[Contributors.vue](https://github.com/chodocs/chodocs/blob/main/docs/.vitepress/theme/components/Contributors.vue)
 
 ### CopyRight 组件
 
-这个组件是用来显示版权信息的，核心文件源代码在[这里](https://github.com/chodocs/chodocs/blob/main/docs/.vitepress/theme/components/CopyRight.vue)，可以点击查看。
+这个组件是用来显示版权信息的，核心文件源代码在这里：
+
+[CopyRight.vue](https://github.com/chodocs/chodocs/blob/main/docs/.vitepress/theme/components/CopyRight.vue)
 
 ## 文档页面的顶部信息组件
 
-这个组件用来显示阅读时间和字数等，核心文件源代码在[这里](https://github.com/chodocs/chodocs/blob/main/docs/.vitepress/theme/components/PageInfo.vue)，可以点击查看。
+这个组件用来显示阅读时间和字数等，核心文件源代码在这里：
+
+[PageInfo.vue](https://github.com/chodocs/chodocs/blob/main/docs/.vitepress/theme/components/PageInfo.vue)
 
 ## 文章阅读数统计
 
@@ -239,7 +253,9 @@ export default theme
 
 ## 文档支持 pwa
 
-pwa 使用的是 `vite-plugin-pwa`，具体引入方式可见[这里](https://github.com/chodocs/chodocs/blob/main/docs/.vitepress/theme/plugins/pwa.ts)，以下是示例代码：
+pwa 使用的是 `vite-plugin-pwa`，具体引入方式可见这里:
+
+[plugins/pwa.ts](https://github.com/chodocs/chodocs/blob/main/docs/.vitepress/theme/plugins/pwa.ts)
 
 ```ts
 import fg from 'fast-glob'
@@ -362,7 +378,11 @@ export const pwa: Partial<VitePWAOptions> = {
 
 这个是前不久做好的功能，核心是使用的 `feed` 库生成的，具体效果可见 `https://chodocs.cn/feed.xml`。
 
-核心代码可见[这里](https://github.com/chodocs/chodocs/blob/main/docs/.vitepress/plugins/genFeed.ts)，以下是示例代码：
+核心代码可见这里:
+
+[genFeed.ts](https://github.com/chodocs/chodocs/blob/main/docs/.vitepress/plugins/genFeed.ts)
+
+以下是示例代码：
 
 ```ts
 import path from 'node:path'

@@ -15,7 +15,9 @@ tRPC 的目标是让前后端的开发者可以像调用本地函数一样调用
 
 <CloudinaryImg publicId='program/iShot_2023-06-04_20.54.29_jhvnxf' alt='trpc'/>
 
-相关特点从 [tRPC 官网](https://trpc.io/)可以直接看到，这里就不搬运官网内容了。
+相关特点可以从 [tRPC 官网](https://trpc.io/)
+
+直接看到，这里就不搬运官网内容了。
 
 ## 本文内容
 
@@ -23,7 +25,7 @@ tRPC 的目标是让前后端的开发者可以像调用本地函数一样调用
 
 > 相关源码如下：
 
-<CustomLink title='examples-minimal 项目源码' href='https://github.com/chonext/trpc-practice/tree/main/examples-minimal'/>
+[examples-minimal 项目源码](https://github.com/chonext/trpc-practice/tree/main/examples-minimal)
 
 tRPC 分为几个包，所以你可以只安装你需要的，确保在代码库的适当部分安装所需的包。
 
@@ -208,6 +210,6 @@ npm install esno
 
 ## 文章参考
 
-<CustomLink title='tRPC 官方文档' href='https://trpc.io/docs/'/>
+[tRPC 官方文档](https://trpc.io/docs/)
 
-<CustomLink title='Learn tRPC In 45 Minutes' href='https://www.youtube.com/watch?v=UfUbBWIFdJs' />
+[Learn tRPC In 45 Minutes](https://www.youtube.com/watch?v=UfUbBWIFdJs)

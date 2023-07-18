@@ -46,30 +46,15 @@ const component = computed(() => {
 </script>
 
 <template>
-  <component
-    :is="component" :href="href ? normalizeLink(href) : undefined"
-    :target="target || (isExternal ? '_blank' : undefined)" :rel="rel || (isExternal ? 'noreferrer' : undefined)"
-    class="custom-link"
-  >
-    <section
-      class="flex group flex-col border-1 border-neutral-400 border-solid rounded-md p-4 gap-3 transition dark:border-neutral-600 duration-500 cursor-pointer my-4" :class="{
-        'hover:bg-zinc-300 dark:hover:bg-zinc-400': hrefSource === 'default',
-        'hover:bg-blue-300 dark:hover:bg-blue-400': hrefSource === 'bilibili' || hrefSource === 'juejin' || hrefSource === 'weread',
-        'hover:bg-rose-300 dark:hover:bg-red-400': hrefSource === 'youtube',
-        'hover:bg-slate-300 dark:hover:bg-slate-400': hrefSource === 'github' || hrefSource === 'vercel' || hrefSource === 'nextjs',
-        'hover:bg-emerald-300 dark:hover:bg-emerald-400': hrefSource === 'zsxq' || hrefSource === 'mpwx',
-      }"
-    >
-      <span
-        class="text-ellipsis w-[90%] whitespace-nowrap overflow-hidden dark:opacity-90 font-600 group-hover:text-[#06f]"
-      >{{
-        title }}</span>
+  <component :is="component" v-if="isExternal" :href="href ? normalizeLink(href) : undefined" :target="target || (isExternal ? '_blank' : undefined)" :rel="rel || (isExternal ? 'noreferrer' : undefined)" class="custom-link">
+    <section class="flex group flex-col border-1 border-neutral-400 border-solid rounded-md p-4 gap-3 transition dark:border-neutral-600 duration-500 cursor-pointer my-4" >
+      <span class="text-ellipsis w-[90%] whitespace-nowrap overflow-hidden dark:opacity-90 font-600 group-hover:text-[#06f]">{{ title }}</span>
       <div v-if="desc" class="opacity-75 font-500 text-sm">
         {{ desc
         }}
       </div>
       <div class="flex item-center justify-between">
-        <div class="flex items-center gap-1 w-full">
+        <div class="flex items-center gap-1 w-full max-w-[75%]">
           <tabler:brand-bilibili v-if="hrefSource === 'bilibili'" class="text-blue-600 w-8 h-8 " />
           <uiw:weixin v-if="hrefSource === 'weread'" class="text-blue-600 w-8 h-8 " />
           <fe:youtube v-if="hrefSource === 'youtube'" class="text-red-600 w-8 h-8" />
@@ -84,11 +69,13 @@ const component = computed(() => {
         </div>
         <div class="items-center gap-1 hidden sm:flex">
           <span
-            class="text-ellipsis w-full whitespace-nowrap overflow-hidden text-sm font-500 opacity-50"
-          >chodocs.cn</span>
+            class="text-ellipsis w-full whitespace-nowrap overflow-hidden text-sm font-500 opacity-50">chodocs.cn</span>
         </div>
       </div>
     </section>
+  </component>
+  <component :is="component" v-else :to="href ? normalizeLink(href) : undefined" class="internal-link">
+    {{ title }}
   </component>
 </template>
 
@@ -101,5 +88,14 @@ const component = computed(() => {
 
 .custom-link:hover {
   text-decoration: none;
+}
+
+.internal-link {
+  color: var(--vp-c-brand);
+  font-weight: normal;
+}
+
+.internal-link:hover {
+  cursor: pointer;
 }
 </style>

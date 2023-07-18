@@ -7,9 +7,10 @@ date: 2023-02-19
 
 ::: warning 踩坑历程
 
-折腾了三遍 Algolia 都没能添加上搜索功能，最后在找到了这个[issus](https://github.com/vuejs/vitepress/issues/670)里大佬提供的解决方案，成功添加上了本地搜索功能。
+折腾了三遍 Algolia 都没能添加上搜索功能，最后在找到了这个 issus 里大佬提供的解决方案，成功添加上了本地搜索功能。
 
 :::
+[Offline search functionality #670](https://github.com/vuejs/vitepress/issues/670)
 
 ### 安装插件
 
@@ -21,7 +22,9 @@ npm i vitepress-plugin-search markdown-it flexsearch -D
 
 坑点
 
-1.[README](https://github.com/emersonbottero/vitepress-plugin-search#readme) 没写在哪个目录下存放`vite.config.ts`，依据经验放在根目录下不管用，放在`.vitepress`也不生效，最后挨个试才发现需要放在`docs`
+1.`README` 没写在哪个目录下存放`vite.config.ts`，依据经验放在根目录下不管用，放在`.vitepress`也不生效，最后挨个试才发现需要放在`docs`
+
+[README](https://github.com/emersonbottero/vitepress-plugin-search#readme)
 
 2.示例没有引入`flexSearchIndexOptions`，需要手动从`flexsearch`中引入
 

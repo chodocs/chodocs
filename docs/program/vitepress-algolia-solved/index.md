@@ -54,4 +54,6 @@ date: 2023-02-17
 }
 ```
 
-这里是我自己的网站使用的搜索，大家可以去试一下 [lucky-design](https://lucky-design.vercel.app/)。
+这里是我自己的网站使用的搜索，大家可以去试一下。
+
+[lucky-design](https://lucky-design.vercel.app/)
