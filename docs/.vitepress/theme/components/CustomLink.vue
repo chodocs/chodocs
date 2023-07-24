@@ -75,7 +75,7 @@ const component = computed(() => {
       </div>
     </section>
   </component>
-  <component :is="component" v-else :to="href ? normalizeLink(href) : undefined" class="internal-link">
+  <component :is="component" v-else :href="href ? normalizeLink(href) : undefined" class="internal-link">
     {{ title }}
   </component>
 </template>
