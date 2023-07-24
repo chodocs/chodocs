@@ -40,7 +40,7 @@
     "@iconify/json": "^2.2.64",
     "@types/fs-extra": "^11.0.1",
     "@types/md5": "^2.3.2",
-    "@vite-pwa/vitepress": "^0.0.5",
+    "@vite-pwa/vitepress": "^0.2.0",
     "bumpp": "^9.1.0",
     "busuanzi.pure.js": "^1.0.3",
     "cloudinary-build-url": "^0.2.4",
