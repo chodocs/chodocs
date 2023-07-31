@@ -28,11 +28,19 @@ const hrefSource = computed(() => {
     return 'github'
   else if (/zsxq\.com/.test(href))
     return 'zsxq'
-  else if (/vercel\.com/.test(href))
+  else if (/vercel/.test(href))
     return 'vercel'
   else if (/next[-]?js/.test(href))
     return 'nextjs'
-  else return 'default'
+  else if (/typescript/.test(href))
+    return 'typescript'
+  else if (/react[-]?query/.test(href))
+    return 'react-query'
+  else if (/react/.test(href))
+    return 'react'
+  else if (/stackoverflow/.test(href))
+    return 'stackoverflow'
+  else return 'web'
 })
 
 const isExternal = computed(() => href && EXTERNAL_URL_RE.test(href))
@@ -64,6 +72,11 @@ const component = computed(() => {
           <skill-icons:vercel-dark v-if="hrefSource === 'vercel'" class="text-zinc-800 w-7 h-7" />
           <teenyicons:nextjs-solid v-if="hrefSource === 'nextjs'" class="text-zinc-800 w-7 h-7" />
           <tabler:brand-juejin v-if="hrefSource === 'juejin'" class="text-blue-600 w-7 h-7" />
+          <skill-icons:typescript v-if="hrefSource === 'typescript'" class="w-7 h-7" />
+          <logos:react-query-icon v-if="hrefSource === 'react-query'" class="w-7 h-7" />
+          <skill-icons:react-dark v-if="hrefSource === 'react'" class="w-7 h-7" />
+          <skill-icons:stackoverflow-dark v-if="hrefSource === 'stackoverflow'" class="w-7 h-7" />
+          <icon-park:add-web v-if="hrefSource === 'web'" class="w-7 h-7" />
           <span class="text-ellipsis w-full whitespace-nowrap overflow-hidden text-sm opacity-75 font-500">{{ href
           }}</span>
         </div>
