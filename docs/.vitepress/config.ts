@@ -13,6 +13,7 @@ export default withPwa(defineConfig({
   outDir: '../dist',
   title: name,
   description,
+  appearance: 'dark',
   lastUpdated: true,
   useWebFonts: false,
   markdown: {
