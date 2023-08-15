@@ -26,7 +26,7 @@
     "小狮子前端"
   ],
   "scripts": {
-    "dev": "vitepress dev docs --port 8080 --max-old-space-size=50000",
+    "dev": "vitepress dev docs --port 9900 --max-old-space-size=50000",
     "build": "vitepress build docs",
     "serve": "vitepress serve docs",
     "lint": "eslint --cache .",
@@ -35,7 +35,7 @@
     "update": "esno scripts/update.ts"
   },
   "devDependencies": {
-    "@antfu/eslint-config": "^0.39.0",
+    "@antfu/eslint-config": "^0.40.2",
     "@antfu/ni": "^0.21.3",
     "@iconify/json": "^2.2.64",
     "@types/fs-extra": "^11.0.1",
@@ -45,7 +45,7 @@
     "busuanzi.pure.js": "^1.0.3",
     "cloudinary-build-url": "^0.2.4",
     "dayjs": "^1.11.7",
-    "eslint": "8.39.0",
+    "eslint": "8.46.0",
     "esno": "^0.17.0",
     "fast-glob": "^3.2.12",
     "feed": "^4.2.2",
