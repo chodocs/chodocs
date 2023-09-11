@@ -39,6 +39,10 @@ export default {
               text: '8 月',
               link: '/weekly/202308',
             },
+            {
+              text: '9 月',
+              link: '/weekly/202309',
+            },
           ],
         },
         { text: '资源导航', link: '/favorites' },

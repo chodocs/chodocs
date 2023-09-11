@@ -40,6 +40,8 @@ const hrefSource = computed(() => {
     return 'react'
   else if (/stackoverflow/.test(href))
     return 'stackoverflow'
+  else if (/bun.sh/.test(href))
+    return 'bun'
   else return 'web'
 })
 
@@ -85,6 +87,7 @@ const component = computed(() => {
               <logos:react-query-icon v-if="hrefSource === 'react-query'" class="w-7 h-7" />
               <skill-icons:react-dark v-if="hrefSource === 'react'" class="w-7 h-7" />
               <skill-icons:stackoverflow-dark v-if="hrefSource === 'stackoverflow'" class="w-7 h-7" />
+              <vscode-icons:file-type-bun v-if="hrefSource === 'bun'" class="w-7 h-7" />
               <icon-park:add-web v-if="hrefSource === 'web'" class="w-7 h-7" />
               <span class="text-ellipsis w-full whitespace-nowrap overflow-hidden text-sm opacity-75 font-500">{{ href
               }}</span>
