@@ -13,16 +13,21 @@ jobs:
   lint:
     runs-on: ubuntu-latest
 
+    strategy:
+      matrix:
+        node: [16.x, 18.x, 20.x]
+      fail-fast: false
+
     steps:
       - uses: actions/checkout@v3
 
       - name: Install pnpm
         uses: pnpm/action-setup@v2
 
-      - name: Set node
+      - name: Set node version to ${{ matrix.node }}
         uses: actions/setup-node@v3
         with:
-          node-version: 18.x
+          node-version: ${{ matrix.node }}
           cache: pnpm
 
       - name: Setup
