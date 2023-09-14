@@ -112,6 +112,7 @@ const component = computed(() => {
   color: unset;
   font-weight: normal;
   text-decoration-style: none;
+  text-decoration: none;
 }
 
 .dark .custom-link {
