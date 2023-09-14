@@ -1,6 +1,6 @@
 <script setup lang="ts">
 import { computed } from 'vue'
-import { EXTERNAL_URL_RE, normalizeLink } from '../utils/md'
+import { EXTERNAL_URL_RE } from '../utils/md'
 
 interface ILink {
   href: string
@@ -57,7 +57,7 @@ const component = computed(() => {
 
 <template>
   <component
-    :is="component" v-if="isExternal" :href="href ? normalizeLink(href) : undefined"
+    :is="component" v-if="isExternal" :href="href"
     :target="target || (isExternal ? '_blank' : undefined)" :rel="rel || (isExternal ? 'noreferrer' : undefined)"
     class="custom-link"
   >
@@ -102,7 +102,7 @@ const component = computed(() => {
       </div>
     </div>
   </component>
-  <component :is="component" v-else :href="href ? normalizeLink(href) : undefined" class="internal-link">
+  <component :is="component" v-else :href="href" class="internal-link">
     {{ title }}
   </component>
 </template>
