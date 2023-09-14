@@ -34,7 +34,7 @@ export function getReadingTime(content: string,
   const cnWord = getCnWordCount(content)
 
   const readingTime = cnWord / cnWordPerMinute + enWord / enwordPerMinute
-  const readTime = readingTime < 1 ? '1' : parseInt(`${readingTime}`, 10)
+  const readTime = readingTime < 1 ? '1' : Number.parseInt(`${readingTime}`, 10)
 
   return {
     readTime,

@@ -14,22 +14,16 @@ jobs:
     runs-on: ubuntu-latest
 
     steps:
-      - uses: actions/checkout@v3
+      - name: Checkout Repo
+        uses: actions/checkout@v3
 
-      - name: Install pnpm
-        uses: pnpm/action-setup@v2
-
-      - name: Set node
-        uses: actions/setup-node@v3
+      - name: Install Bun
+        uses: oven-sh/setup-bun@v1
         with:
-          node-version: 18.x
-          cache: pnpm
-
-      - name: Setup
-        run: npm i -g @antfu/ni
+          bun-version: latest
 
       - name: Install
-        run: nci
+        run: bun install
 
       - name: Lint
-        run: nr lint
+        run: bun run lint

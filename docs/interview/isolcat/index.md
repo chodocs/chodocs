@@ -952,7 +952,7 @@ console.log(flatten(arr2)) // [1, 2, 3, 4, 5, 6, 7, 8, 9]
 
 ```js
 function flatten(arr) {
-  return arr.flat(Infinity)
+  return arr.flat(Number.POSITIVE_INFINITY)
 }
 
 // 示例

@@ -1,5 +1,3 @@
-import { useData, withBase } from 'vitepress'
-
 export function renderMarkdown(markdownText = '') {
   const htmlText = markdownText
     .replace(/^### (.*$)/gim, '<h3>$1</h3>')
@@ -25,25 +23,4 @@ export const PATHNAME_PROTOCOL_RE = /^pathname:\/\//
 
 export function isExternal(path: string): boolean {
   return EXTERNAL_URL_RE.test(path)
-}
-
-export function normalizeLink(url: string): string {
-  if (isExternal(url))
-    return url.replace(PATHNAME_PROTOCOL_RE, '')
-
-  const { site } = useData()
-  const { pathname, search, hash } = new URL(url, 'http://example.com')
-
-  const normalizedPath
-    = (pathname.endsWith('/') || pathname.endsWith('.html'))
-      ? url
-      : url.replace(
-        /(?:(^\.+)\/)?.*$/,
-        `$1${pathname.replace(
-          /(\.md)?$/,
-          site.value.cleanUrls ? '' : '.html',
-        )}${search}${hash}`,
-      )
-
-  return withBase(normalizedPath)
 }

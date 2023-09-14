@@ -1,3 +1,5 @@
+import process from 'node:process'
+
 declare const dataLayer: any[]
 declare const gtag: (...args: any[]) => void
 declare global {
