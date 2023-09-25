@@ -40,7 +40,7 @@ const hrefSource = computed(() => {
     return 'react'
   else if (/stackoverflow/.test(href))
     return 'stackoverflow'
-  else if (/bun.sh/.test(href))
+  else if (/bun/.test(href))
     return 'bun'
   else return 'web'
 })
