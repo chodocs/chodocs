@@ -53,7 +53,7 @@
     "feed": "^4.2.2",
     "fs-extra": "^11.1.1",
     "gray-matter": "^4.0.3",
-    "lint-staged": "^14.0.0",
+    "lint-staged": "^15.0.0",
     "md5": "^2.3.0",
     "medium-zoom": "^1.0.8",
     "moment": "^2.29.4",
