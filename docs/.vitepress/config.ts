@@ -75,7 +75,11 @@ export default withPwa(defineConfig({
         ],
       },
     ],
-    algolia,
+    // algolia搜索
+    search: {
+      provider: 'algolia',
+      options: algolia,
+    },
     sidebar,
     socialLinks,
   },
