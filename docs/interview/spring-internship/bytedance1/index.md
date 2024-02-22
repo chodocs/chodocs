@@ -19,7 +19,7 @@
 5、了解浏览器调试工具；
 6、有强烈的求知欲和进取心，具有扎实的编程功底，良好的编程习惯。
 
-### 加分项：
+### 加分项
 
 1、有过数据可视化相关经验；
 2、了解 JavaScript 依赖管理；
@@ -111,8 +111,8 @@
 
 ```javascript
 .container .inner div{
-	width: 100px;
-	height: 100px;
+ width: 100px;
+ height: 100px;
 }
 ```
 
@@ -257,7 +257,7 @@ var a = 1;
 
 <CloudinaryImg publicId='interview/bytedance-7_dtm4s6' alt='bytedance-7'/>
 
-上述代码中，变量 `a` 用 `var ` 命令声明，会发生变量提升，即脚本开始运行时，变量 `a` 已经存在了，但是没有值，所以会输出 `undefined` 。
+上述代码中，变量 `a` 用 `var` 命令声明，会发生变量提升，即脚本开始运行时，变量 `a` 已经存在了，但是没有值，所以会输出 `undefined` 。
 
 ##### 第三步
 
@@ -359,9 +359,75 @@ document.body.addEventListener(
 document.body.click();
 ```
 
-答案是 `2 1 4 3`
+给出的答案是 `2 1 4 3`
 
-> 谢谢评论区小伙伴提醒，现已修改。
+> 以下为新增讨论
+
+---
+
+这个答案其实是不正确的。(以下为不正确的原因，来自遥远的 2024 年补充~)
+
+这个题目，其实考察了浏览器原理和微任务。实际上，如果是直接用鼠标点击 `body`，也就是点击屏幕，控制台会出现这样的结果：
+
+```txt
+2 1 4 3
+```
+
+但是如果在控制台手动的输入：
+
+```javascript
+document.body.click();
+```
+
+它却会显示这个结果：
+
+```txt
+2 4 1 3
+```
+
+所以，答案是后者，即 `2 4 1 3`。造成不一样的原因，其实是手动点击，和手动调用 `click()` 底层执行的原理是不一样的。
+
+当我们使用 `click()` 来触发回调的时候，他将依次的执行如下代码：
+
+```js
+const target = document.body
+target.dispatchEvent(new Event('click'))
+```
+
+值得一提的是，`eventTarget.dispatchEvent()` 是一个 **同步** 的调用，也就是说，它不会造成任何阻塞和异步操作，和普通的 `js` 代码没有区别：它将简单的调用上面两个监听函数并返回，所以代码又变成了这样：
+
+```js
+function cb1() {
+  Promise.resolve().then(() => console.log(1))
+  console.log(2)
+}
+
+function cb2() {
+  Promise.resolve().then(() => console.log(3))
+  console.log(4)
+}
+
+cb1()
+cb2()
+```
+
+这个输出结果就一目了然了，微任务放后面：`2 4 1 3`。
+
+但是在手动的使用鼠标点击屏幕的过程 **并不是** 这样的。
+
+在手动点击屏幕后，浏览器会监听到这个动作，之后它会 **依次将** 触发的那些回调函数压入栈中（也就是新添 js 代码），交给 js 模块执行。这个 **依次** 的动作，就是关键的地方。之前的 `click()`执行，仅仅为栈压了一行 `click`，然后交给 js 模块执行，整个过程同步，衔接起来，没有异议。
+
+而依次的动作，意味着这样一件事：浏览器把第一个回调压进去，这个回调就被立即执行完了——这种情况下，js 代码完全被执行完毕，栈为空，所以根据事件循环，js 引擎就又会去微任务队列中找事干，也就是打印 `2` 后，去打印 `1`。随着微任务队列也执行完，`1` 被打印，第二个回调才被浏览器压入栈中，又有了 js 代码可以执行，所以才紧接着打印出最后的 `4 3`。
+
+参考：
+
+[Is dispatchEvent a sync or an async function](https://stackoverflow.com/questions/15277800/is-dispatchevent-a-sync-or-an-async-function/22924862#22924862)
+
+[Callback function executing in the call stack even when it's not empty](https://stackoverflow.com/questions/70317322/callback-function-executing-in-the-call-stack-even-when-its-not-empty)
+
+---
+
+<br>
 
 后面搜了相关资料，原来是设计模式中的**发布-订阅模式**，之前就看了面经，知道字节喜欢考这个设计模式，原来真的又考到了，不过题型不一样罢了。
 
