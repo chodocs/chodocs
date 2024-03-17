@@ -3,7 +3,7 @@
   "type": "module",
   "version": "0.2.3",
   "private": true,
-  "packageManager": "pnpm@8.14.3",
+  "packageManager": "pnpm@8.15.5",
   "description": "一站式前端内容网站，包括学习路线、知识体系（用专栏形式更新）。",
   "author": "Choi Yang<https://github.com/Chocolate1999>",
   "license": "MIT",
