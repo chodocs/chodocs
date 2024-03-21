@@ -22,7 +22,7 @@ devDependencies:
     version: 2.3.5
   '@vite-pwa/vitepress':
     specifier: ^0.2.3
-    version: 0.2.3(vite-plugin-pwa@0.16.7)
+    version: 0.2.3(vite-plugin-pwa@0.19.5)
   bumpp:
     specifier: ^9.4.0
     version: 9.4.0
@@ -102,8 +102,8 @@ devDependencies:
     specifier: ^4.5.2
     version: 4.5.2
   vite-plugin-pwa:
-    specifier: ^0.16.7
-    version: 0.16.7(vite@4.5.2)(workbox-build@7.0.0)(workbox-window@7.0.0)
+    specifier: ^0.19.0
+    version: 0.19.5(vite@4.5.2)(workbox-build@7.0.0)(workbox-window@7.0.0)
   vitepress:
     specifier: ^1.0.0-rc.45
     version: 1.0.0-rc.45(@algolia/client-search@4.20.0)(postcss@8.4.38)(search-insights@2.11.0)(typescript@5.4.3)
@@ -2631,7 +2631,7 @@ packages:
       debug: 4.3.4
       globby: 11.1.0
       is-glob: 4.0.3
-      semver: 7.5.4
+      semver: 7.6.0
       tsutils: 3.21.0(typescript@5.4.3)
       typescript: 5.4.3
     transitivePeerDependencies:
@@ -2652,7 +2652,7 @@ packages:
       debug: 4.3.4
       globby: 11.1.0
       is-glob: 4.0.3
-      semver: 7.5.4
+      semver: 7.6.0
       ts-api-utils: 1.0.3(typescript@5.4.3)
       typescript: 5.4.3
     transitivePeerDependencies:
@@ -2673,7 +2673,7 @@ packages:
       '@typescript-eslint/typescript-estree': 5.59.5(typescript@5.4.3)
       eslint: 8.50.0
       eslint-scope: 5.1.1
-      semver: 7.5.4
+      semver: 7.6.0
     transitivePeerDependencies:
       - supports-color
       - typescript
@@ -2928,12 +2928,12 @@ packages:
       - rollup
     dev: true
 
-  /@vite-pwa/vitepress@0.2.3(vite-plugin-pwa@0.16.7):
+  /@vite-pwa/vitepress@0.2.3(vite-plugin-pwa@0.19.5):
     resolution: {integrity: sha512-6k9151CmILbSJQ88hLEMLL+MOQZDURKg2c4Wo5UcaEaOWU0jv7S+mo8nqyg86sM6ry8Jlnp6Zfv6AE0FqnfEyQ==}
     peerDependencies:
       vite-plugin-pwa: '>=0.16.5 <1'
     dependencies:
-      vite-plugin-pwa: 0.16.7(vite@4.5.2)(workbox-build@7.0.0)(workbox-window@7.0.0)
+      vite-plugin-pwa: 0.19.5(vite@4.5.2)(workbox-build@7.0.0)(workbox-window@7.0.0)
     dev: true
 
   /@vitejs/plugin-vue@5.0.4(vite@5.1.5)(vue@3.4.21):
@@ -3415,7 +3415,7 @@ packages:
   /builtins@5.0.1:
     resolution: {integrity: sha512-qwVpFEHNfhYJIzNRBvd2C1kyo6jz3ZSMPyyuR47OPdiKWlbYnZNyDWuyR175qDnAJLiCo5fBBqPb3RiXgWlkOQ==}
     dependencies:
-      semver: 7.5.4
+      semver: 7.6.0
     dev: true
 
   /bumpp@9.4.0:
@@ -4178,7 +4178,7 @@ packages:
       eslint: 8.50.0
       esquery: 1.5.0
       is-builtin-module: 3.2.1
-      semver: 7.5.4
+      semver: 7.6.0
       spdx-expression-parse: 3.0.1
     transitivePeerDependencies:
       - supports-color
@@ -6980,13 +6980,17 @@ packages:
       spdx-expression-parse: 3.0.1
     dev: true
 
-  /vite-plugin-pwa@0.16.7(vite@4.5.2)(workbox-build@7.0.0)(workbox-window@7.0.0):
-    resolution: {integrity: sha512-4WMA5unuKlHs+koNoykeuCfTcqEGbiTRr8sVYUQMhc6tWxZpSRnv9Ojk4LKmqVhoPGHfBVCdGaMo8t9Qidkc1Q==}
+  /vite-plugin-pwa@0.19.5(vite@4.5.2)(workbox-build@7.0.0)(workbox-window@7.0.0):
+    resolution: {integrity: sha512-3xJEc2Gmq6SBf730UAV1N2/MqOm+MiyvaLToSTglg+pH9b9qm666yPVxrBBlcOhGoJJWjJpu+Z9tROKek2CODg==}
     engines: {node: '>=16.0.0'}
     peerDependencies:
-      vite: ^3.1.0 || ^4.0.0 || ^5.0.0-0
+      '@vite-pwa/assets-generator': ^0.2.4
+      vite: ^3.1.0 || ^4.0.0 || ^5.0.0
       workbox-build: ^7.0.0
       workbox-window: ^7.0.0
+    peerDependenciesMeta:
+      '@vite-pwa/assets-generator':
+        optional: true
     dependencies:
       debug: 4.3.4
       fast-glob: 3.3.2
@@ -7152,7 +7156,7 @@ packages:
       espree: 9.6.1
       esquery: 1.5.0
       lodash: 4.17.21
-      semver: 7.5.4
+      semver: 7.6.0
     transitivePeerDependencies:
       - supports-color
     dev: true
