@@ -4,7 +4,7 @@
   "version": "0.2.3",
   "private": true,
   "packageManager": "pnpm@8.15.5",
-  "description": "一站式前端内容网站，包括学习路线、知识体系（用专栏形式更新）。",
+  "description": "前端内容网站，包括学习路线、知识体系",
   "author": "Choi Yang<https://github.com/Chocolate1999>",
   "license": "MIT",
   "repository": {
@@ -22,9 +22,7 @@
     "Chocolate",
     "前端基础",
     "前端学习路线",
-    "前端思维导图",
-    "知识星球",
-    "小狮子前端"
+    "前端思维导图"
   ],
   "scripts": {
     "dev": "vitepress dev docs --port 8080 --max-old-space-size=50000",
