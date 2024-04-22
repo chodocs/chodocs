@@ -19,6 +19,9 @@ hero:
     - theme: alt
       text: 面试大全
       link: /interview/
+    - theme: alt
+      text: GitHub
+      link: https://github.com/chodocs/chodocs
 features:
   - icon: 📋
     title: 面试专栏
