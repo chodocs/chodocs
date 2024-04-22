@@ -2,13 +2,13 @@
 layout: home
 
 title: ChoDocs
-titleTemplate: 一站式前端内容网站，包括学习路线、知识体系
+titleTemplate: 逆水行舟，不进则退
 
 hero:
   name: ChoDocs
-  text: "Front-end learning document collection"
+  text: "Front-end learning"
   tagline: |
-    一站式前端内容网站，包括学习路线、知识体系
+    🔥 学如逆水行舟，不进则退！
   image:
     src: /it.svg
     alt: ChoDocs
@@ -17,11 +17,11 @@ hero:
       text: 开始阅读
       link: /guide
     - theme: alt
-      text: 学习圈子
-      link: /zsxq
-    - theme: alt
       text: 面试大全
       link: /interview/
+    - theme: alt
+      text: GitHub
+      link: https://github.com/chodocs/chodocs
 features:
   - icon: 📋
     title: 面试专栏
@@ -90,7 +90,6 @@ const members = [
        icon: { svg: icons.bilibili } ,link: "https://space.bilibili.com/351534170",
       },
       { icon: 'youtube', link: 'https://www.youtube.com/@chocolate1999'},
-      { icon: 'twitter', link: 'https://twitter.com/ycyChocolate' },
     ]
   },
   {

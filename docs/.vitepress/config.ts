@@ -43,7 +43,13 @@ export default withPwa(defineConfig({
       copyright: `<a target="_blank" href="${github}/blob/main/LICENSE">MIT License</a> | 版权所有 © 2022-${new Date().getFullYear()} <a target="_blank" href="${github}">Chocolate and ChoDocs contributors</a>`,
     },
     nav: [
-      { text: '💭 学习圈子', link: '/zsxq' },
+      {
+        text: '🏆 往年回顾',
+        items: [
+          { text: '🔥 24 年每周学习', link: '/weekly/2024' },
+          { text: '⭐ 23 年每周学习', link: '/weekly/202303' },
+        ],
+      },
       {
         text: '🔥 专栏',
         items: [
