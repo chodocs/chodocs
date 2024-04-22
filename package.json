@@ -44,7 +44,7 @@
     "busuanzi.pure.js": "^1.0.3",
     "cloudinary-build-url": "^0.2.4",
     "dayjs": "^1.11.10",
-    "eslint": "8.50.0",
+    "eslint": "8.57.0",
     "eslint-plugin-import": "^2.29.1",
     "esno": "^4.7.0",
     "fast-glob": "^3.3.2",
