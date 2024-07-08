@@ -41,7 +41,6 @@
     "@types/md5": "^2.3.5",
     "@vite-pwa/vitepress": "^0.2.3",
     "bumpp": "^9.4.1",
-    "busuanzi.pure.js": "^1.0.3",
     "cloudinary-build-url": "^0.2.4",
     "dayjs": "^1.11.11",
     "eslint": "8.50.0",

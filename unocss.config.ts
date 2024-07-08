@@ -24,6 +24,7 @@ export default defineConfig({
   theme: {
     colors: {
       primary: '#3eaf7c',
+      brand: '#06f',
     },
     fontFamily: {
       mono: 'var(--vt-font-family-mono)',
