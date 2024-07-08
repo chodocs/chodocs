@@ -2,7 +2,6 @@ import { inBrowser, useRoute } from 'vitepress'
 import type { EnhanceAppContext, Theme } from 'vitepress'
 import DefaultTheme from 'vitepress/theme'
 import { nextTick, onMounted, watch } from 'vue'
-import busuanzi from 'busuanzi.pure.js'
 import mediumZoom from 'medium-zoom'
 import { registerAnalytics, siteIds, trackPageview } from './plugins/baidutongji'
 import googleAnalytics from './plugins/googleAnalytics'
@@ -32,7 +31,6 @@ const theme: Theme = {
 
       router.onAfterRouteChanged = (to) => {
         trackPageview(siteIds, to)
-        busuanzi.fetch()
       }
     }
   },

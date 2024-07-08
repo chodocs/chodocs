@@ -24,33 +24,29 @@ const timeFormNow = getFromNow(isoDatetime.value)
 <template>
   <div>
     <section
-      class="border-b-1 border-[var(--vp-c-divider)] w-full border-b-solid mt-[24px] pb-[12px] flex gap-[12px] mb-[12px] flex-wrap max-w-[85%]"
+      class="border-b-1 border-[var(--vp-c-divider)] w-full border-b-solid mt-6 pb-3 flex gap-2 mb-3 flex-wrap max-w-[85%] text-sm"
     >
-      <div class="flex gap-[4px] items-center">
+      <div class="flex gap-1 items-center">
         <octicon:feed-person-16 />
         作者:<span>
           {{ author }}
         </span>
       </div>
-      <div v-if="publishedTime" class="flex gap-[4px] items-center">
+      <div v-if="publishedTime" class="flex gap-1 items-center">
         <eos-icons:modified-date />
         发表于:<span>{{ publishedTime }}</span>
       </div>
-      <div class="flex gap-[4px] items-center">
+      <div class="flex gap-1 items-center">
         <radix-icons:update />
         更新于:<span>{{ timeFormNow }}</span>
       </div>
-      <div class="flex gap-[4px] items-center">
+      <div class="flex gap-1 items-center">
         <bi:file-earmark-word-fill />
         字数统计:<span>{{ words }} 字</span>
       </div>
-      <div class="flex gap-[4px] items-center">
+      <div class="flex gap-1 items-center">
         <ooui:clock />
         阅读时长:<span>{{ readTime }} 分钟</span>
-      </div>
-      <div class="flex gap-[4px] items-center">
-        <ph:eye-fill />
-        阅读量:<span id="busuanzi_container_page_pv"><span id="busuanzi_value_page_pv" /></span>
       </div>
     </section>
   </div>

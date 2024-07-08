@@ -29,9 +29,6 @@ importers:
       bumpp:
         specifier: ^9.4.1
         version: 9.4.1
-      busuanzi.pure.js:
-        specifier: ^1.0.3
-        version: 1.0.3
       cloudinary-build-url:
         specifier: ^0.2.4
         version: 0.2.4
@@ -1985,9 +1982,6 @@ packages:
   busboy@1.6.0:
     resolution: {integrity: sha512-8SFQbg/0hQ9xy3UNTB0YEnsNBbWfhf7RtnzpL7TkBiTBRfrQ9Fxcnz7VJsleJpyp6rVLvXiuORqjlHi5q+PYuA==}
     engines: {node: '>=10.16.0'}
-
-  busuanzi.pure.js@1.0.3:
-    resolution: {integrity: sha512-tPULdyx+8NNb9geZYDpktKmHAYx9f2LEOBaHyWCaM7iPEMIa/43KgYAUluuU7YG9UFSOFpj4dO7Nj2Vlu3V9Rg==}
 
   c12@1.10.0:
     resolution: {integrity: sha512-0SsG7UDhoRWcuSvKWHaXmu5uNjDCDN3nkQLRL4Q42IlFy+ze58FcCoI3uPwINXinkz7ZinbhEgyzYFw9u9ZV8g==}
@@ -6186,8 +6180,6 @@ snapshots:
   busboy@1.6.0:
     dependencies:
       streamsearch: 1.1.0
-
-  busuanzi.pure.js@1.0.3: {}
 
   c12@1.10.0:
     dependencies:

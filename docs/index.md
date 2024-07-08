@@ -107,8 +107,6 @@ const members = [
 ]
 </script>
 
-<DataPanel/>
-
 <VPTeamPage>
   <VPTeamPageTitle>
     <template #title>
