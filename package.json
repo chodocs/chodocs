@@ -34,7 +34,7 @@
     "update": "esno scripts/update.ts"
   },
   "devDependencies": {
-    "@antfu/eslint-config": "^0.42.1",
+    "@antfu/eslint-config": "^0.43.0",
     "@antfu/ni": "^0.21.12",
     "@iconify/json": "^2.2.225",
     "@types/fs-extra": "^11.0.4",
