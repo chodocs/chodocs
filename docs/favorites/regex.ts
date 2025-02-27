@@ -19,6 +19,12 @@ const regex: navItem[] = [
     link: 'https://regexr.com/',
     desc: 'Online tool to learn, build, & test Regular Expressions (RegEx / RegExp)',
   },
+  {
+    id: 4,
+    text: 'Regex Vis',
+    link: 'https://regex-vis.com/',
+    desc: 'Regex visualizer & editor',
+  },
 ]
 
 export default regex
