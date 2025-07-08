@@ -10,6 +10,7 @@ import './styles/global.css'
 import './styles/demo.css'
 import './styles/utils.css'
 import './styles/vars.css'
+import './styles/medium-zoom.css'
 import 'uno.css'
 
 if (inBrowser)
