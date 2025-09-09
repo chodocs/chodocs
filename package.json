@@ -62,7 +62,7 @@
     "sitemap-ts": "^1.7.3",
     "typescript": "^5.5.3",
     "unocss": "^0.57.7",
-    "unplugin-icons": "^0.17.4",
+    "unplugin-icons": "^0.22.0",
     "unplugin-vue-components": "^0.25.2",
     "vite": "^4.5.3",
     "vite-plugin-pwa": "^0.16.7",
