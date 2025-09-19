@@ -43,7 +43,7 @@
     "bumpp": "^9.4.1",
     "cloudinary-build-url": "^0.2.4",
     "dayjs": "^1.11.11",
-    "eslint": "8.50.0",
+    "eslint": "9.36.0",
     "eslint-plugin-import": "^2.29.1",
     "esno": "^4.7.0",
     "fast-glob": "^3.3.2",
