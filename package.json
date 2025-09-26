@@ -24,6 +24,9 @@
     "前端学习路线",
     "前端思维导图"
   ],
+  "engines": {
+    "node": ">=20.0.0"
+  },
   "scripts": {
     "dev": "vitepress dev docs --port 8080 --max-old-space-size=50000",
     "build": "vitepress build docs",

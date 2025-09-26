@@ -1,0 +1,22 @@
+{
+  "semi": false,
+  "singleQuote": true,
+  "tabWidth": 2,
+  "trailingComma": "es5",
+  "printWidth": 100,
+  "endOfLine": "lf",
+  "overrides": [
+    {
+      "files": "*.yml",
+      "options": {
+        "singleQuote": true
+      }
+    },
+    {
+      "files": "*.yaml",
+      "options": {
+        "singleQuote": true
+      }
+    }
+  ]
+}
