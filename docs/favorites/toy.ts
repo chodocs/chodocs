@@ -25,6 +25,12 @@ const toy: navItem[] = [
     link: 'https://zhutix.com/',
     desc: 'Featured Material - System Theme Beautification',
   },
+  {
+    id: 5,
+    text: 'Faviator',
+    link: 'https://faviator.xyz/playground',
+    desc: 'Quickly create a simple icon',
+  },
 ]
 
 export default toy

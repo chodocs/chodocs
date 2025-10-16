@@ -49,6 +49,18 @@ const css: navItem[] = [
     link: 'https://www.campaignmonitor.com/css/',
     desc: 'A complete breakdown of the CSS support for the most popular email clients',
   },
+  {
+    id: 9,
+    text: 'Paletton',
+    link: 'https://paletton.com/',
+    desc: 'Color palette selection, providing detailed color scheme preview',
+  },
+  {
+    id: 10,
+    text: 'uigradients',
+    link: 'https://uigradients.com/',
+    desc: 'A website that provides gradient color effects, focusing on sharing beautiful gradient colors',
+  },
 ]
 
 export default css
