@@ -30,11 +30,11 @@ const hrefSource = computed(() => {
     return 'zsxq'
   else if (/vercel/.test(href))
     return 'vercel'
-  else if (/next[-]?js/.test(href))
+  else if (/next-?js/.test(href))
     return 'nextjs'
   else if (/typescript/.test(href))
     return 'typescript'
-  else if (/react[-]?query/.test(href))
+  else if (/react-?query/.test(href))
     return 'react-query'
   else if (/react/.test(href))
     return 'react'

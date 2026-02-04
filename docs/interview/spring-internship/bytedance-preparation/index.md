@@ -63,13 +63,13 @@ history 模式下，前端的 url 必须和实际向后端发起请求的 url �
 
 ```javascript
 window.onload = function () {
-  //当hash发生变化的时候， 会产生一个事件 onhashchange
+  // 当hash发生变化的时候， 会产生一个事件 onhashchange
   window.onhashchange = function () {
-    console.log("你的hash改变了");
-    //location对象是 javascript内置的(自带的)
-    console.log(location);
-  };
-};
+    console.log('你的hash改变了')
+    // location对象是 javascript内置的(自带的)
+    console.log(location)
+  }
+}
 ```
 
 上例，我们已经通过 hash( 就是锚文本 ) 变化， 触发了 onhashchange 事件， 就可以把 hash 变化与内容切换对应起来，就实现了单页路由的应用！
@@ -220,9 +220,9 @@ localStorage 本地存储（h5的新特性 draggable canvas svg）
 ### 定义一个对象，里面包含用户名、电话，然后将其存入 localStorage 的代码
 
 ```javascript
-var json = { username: "张三", phone: 17650246248 };
-for (var key in json) {
-  localStorage.setItem(key, json[key]);
+const json = { username: '张三', phone: 17650246248 }
+for (const key in json) {
+  localStorage.setItem(key, json[key])
 }
 ```
 
@@ -391,7 +391,7 @@ UDP 没有拥塞控制，因此网络出现拥塞不会使源主机的发送速�
 如下定义(原文中的例子)是无法通过编译的：
 
 ```javascript
-let foo = { b: foo };
+const foo = { b: foo }
 ```
 
 错误信息：
@@ -453,21 +453,21 @@ EventEmitter 的实现。要求：两个方法 on(eventname,callback),trigger(ev
 
 ```javascript
 function EventEmitter() {
-  this.eventList = {};
+  this.eventList = {}
 }
 EventEmitter.prototype.on = function (eventname, callback) {
   if (!this.eventList[eventname]) {
-    this.eventList[eventname] = [callback];
+    this.eventList[eventname] = [callback]
   }
-  this.eventList[eventname].push(callback);
-};
+  this.eventList[eventname].push(callback)
+}
 EventEmitter.prototype.trigger = function (eventname, params) {
   if (this.eventList[eventname]) {
     for (let i = 0; i < this.eventList[eventname].length; i++) {
-      this.eventList[eventname][i](params);
+      this.eventList[eventname][i](params)
     }
   }
-};
+}
 ```
 
 ## Vue

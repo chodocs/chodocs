@@ -75,7 +75,6 @@ module.exports = {
 
 > Index sitemap generation can be turned off by setting generateIndexSitemap: false in next-sitemap config file. (This is useful for small/hobby sites which does not require an index sitemap) (Example: no-index-sitemaps)
 
-
 ## 如何拓展同域名下不同项目的 sitemap
 
 这个需求不知道是否你也会有，我来给大家举个例子，比如 [coding.net](https://coding.net/) 官网，也是使用 Next.js 开发的，但官网内也有挺多子页面，比如洞见博客，以及帮助文档之类的，这些其实并不都是由 Next.js 创建的，但是呢作为官网首页，根路径下的 `sitemap` 内容也需要将子项目中索引包含进去，提交一个地址来收录即可。

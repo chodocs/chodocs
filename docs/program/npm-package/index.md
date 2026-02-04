@@ -5,7 +5,6 @@ date: 2022-11-26
 
 # 使用 dumi 发布个人的 npm 包
 
-
 <VideoLink bvId="BV1RK41197eA">【编程】基于 dumi 2.0 发布属于个人的 npm 包 | 造轮子必备技能 | 手把手 publish | 提供文档开箱即用 B 站视频传送门</VideoLink>
 
 ## 前期准备
@@ -68,9 +67,7 @@ npm 包的版本通常遵循 [semver 语义化版本](https://semver.org/lang/zh
 
 [此处参考：从零开始发布自己的 NPM 包](https://juejin.cn/post/7052307032971411463)
 
-
 当然，我们最好是使用命令来规范我们的版本，举例：
-
 
 > 以下主要介绍常用的几个命令
 
@@ -80,9 +77,7 @@ npm 包的版本通常遵循 [semver 语义化版本](https://semver.org/lang/zh
 
 至于 prexxx 开头的，以及 release 相关可以查询下述文档拓展学习。
 
-
 [文档指引：npm version](https://www.npmjs.cn/cli/version/)
-
 
 ## 补充相关命令
 

@@ -36,11 +36,11 @@ date: 2023-04-18
 
 ```ts
 import { resolve } from 'node:path'
-import { defineConfig } from 'vite'
 import UnoCSS from 'unocss/vite'
-import Icons from 'unplugin-icons/vite'
 import IconsResolver from 'unplugin-icons/resolver'
+import Icons from 'unplugin-icons/vite'
 import Components from 'unplugin-vue-components/vite'
+import { defineConfig } from 'vite'
 import { MarkdownTransform } from './.vitepress/plugins/markdownTransform'
 
 export default defineConfig(async () => {
@@ -127,7 +127,7 @@ export function MarkdownTransform(): Plugin {
       code = replacer(code, footer, 'FOOTER', 'tail')
       const { readTime, words } = getReadingTime(code)
       code = code.replace(
-        /(#\s.+?\n)/,
+        /(#\s.+\n)/,
         `$1\n\n<PageInfo readTime="${readTime}" words="${words}"/>\n`
       )
 
@@ -188,7 +188,8 @@ import Components from 'unplugin-vue-components/vite'
 ```html
 <div class="flex gap-[4px] items-center">
   <ph:eye-fill />
-  阅读量:<span id="busuanzi_container_page_pv">
+  阅读量:
+  <span id="busuanzi_container_page_pv">
     <span id="busuanzi_value_page_pv" />
   </span>
 </div>
@@ -258,9 +259,9 @@ pwa 使用的是 `vite-plugin-pwa`，具体引入方式可见这里:
 [plugins/pwa.ts](https://github.com/chodocs/chodocs/blob/main/docs/.vitepress/theme/plugins/pwa.ts)
 
 ```ts
+import type { VitePWAOptions } from 'vite-plugin-pwa'
 import fg from 'fast-glob'
 import { resolve } from 'pathe'
-import type { VitePWAOptions } from 'vite-plugin-pwa'
 import {
   description,
   githubSourceContentRegex,
@@ -385,10 +386,11 @@ export const pwa: Partial<VitePWAOptions> = {
 以下是示例代码：
 
 ```ts
-import path from 'node:path'
+import type { SiteConfig } from 'vitepress'
 import { writeFileSync } from 'node:fs'
+import path from 'node:path'
 import { Feed } from 'feed'
-import { type SiteConfig, createContentLoader } from 'vitepress'
+import { createContentLoader } from 'vitepress'
 import { site as baseUrl, description, name } from '../meta'
 
 function reName(name: string) {

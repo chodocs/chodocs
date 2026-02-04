@@ -64,7 +64,7 @@ console.log(hash.has(1)) // true
  * @return {number[]}
  */
 
-const intersect = function (nums1, nums2) {
+function intersect(nums1, nums2) {
   const hash = {}
   const result = []
 
@@ -154,7 +154,7 @@ class Solution:
  * @param {number[]} nums
  * @return {number}
  */
-const findRepeatNumber = function (nums) {
+function findRepeatNumber(nums) {
   const hash = new Map()
   for (const num of nums) {
     if (hash.get(num))
@@ -226,7 +226,7 @@ class Solution:
  * @param {number[]} nums
  * @return {number}
  */
-const majorityElement = function (nums) {
+function majorityElement(nums) {
   const hash = new Map()
   let max = 0
   let result = 0
@@ -323,7 +323,7 @@ class Solution:
  * @param {number[]} arr
  * @return {number}
  */
-const findLucky = function (arr) {
+function findLucky(arr) {
   const hash = new Map()
   for (const num of arr) {
     let count = hash.get(num) || 0
@@ -334,7 +334,6 @@ const findLucky = function (arr) {
   for (const [key, value] of hash) {
     if (key === value)
       result = Math.max(result, key)
-
   }
   return result
 }

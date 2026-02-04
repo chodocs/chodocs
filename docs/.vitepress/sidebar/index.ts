@@ -1,5 +1,5 @@
-export { default as sidebarInterview } from './interview'
 export { default as sidebarAlgorithm } from './algorithm'
+export { default as exeryWeek } from './exeryweek'
+export { default as sidebarInterview } from './interview'
 export { default as sidebarPartterns } from './partterns'
 export { default as sidebarProgram } from './program'
-export { default as exeryWeek } from './exeryweek'

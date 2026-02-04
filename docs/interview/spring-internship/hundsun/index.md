@@ -40,25 +40,25 @@
   [1, 1],
 ].reduce(
   (acc, cur) => {
-    return acc.concat(cur);
+    return acc.concat(cur)
   },
   [0, 1]
-);
+)
 ```
 
 <details><summary><b>参考答案</b></summary>
 
 ```javascript
-var res = [
+const res = [
   [1, 0],
   [1, 1],
 ].reduce(
   (acc, cur) => {
-    return acc.concat(cur);
+    return acc.concat(cur)
   },
   [0, 1]
-);
-console.log(res);
+)
+console.log(res)
 ```
 
 ![](https://img-blog.csdnimg.cn/20200621221613192.png)
@@ -179,11 +179,11 @@ console.log(counter.#number);
 
 ```javascript
 function foo(name) {
-  this.name = name;
+  this.name = name
 }
-let c = new foo("chocolate");
-console.log(c.__proto__);
-console.log(foo.__proto__);
+const c = new foo('chocolate')
+console.log(c.__proto__)
+console.log(foo.__proto__)
 ```
 
 <details><summary><b>参考答案</b></summary>

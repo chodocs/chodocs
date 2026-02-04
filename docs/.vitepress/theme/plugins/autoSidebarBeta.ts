@@ -1,7 +1,7 @@
 import { join, resolve } from 'node:path'
-import matter from 'gray-matter'
 import fg from 'fast-glob'
 import fs from 'fs-extra'
+import matter from 'gray-matter'
 
 export interface Options {
   base: string

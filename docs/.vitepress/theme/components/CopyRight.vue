@@ -1,6 +1,6 @@
 <script setup lang="ts">
-import { ref } from 'vue'
-import { useData } from 'vitepress'
+import { inBrowser, useData } from 'vitepress'
+import { computed, ref } from 'vue'
 
 const defaultAuthor = 'Choi Yang'
 const { frontmatter } = useData()
@@ -14,7 +14,7 @@ function reName(name: string) {
   return name === 'Choi Yang' ? 'Chocolate1999' : name
 }
 
-const pageHref = location.href
+const pageHref = computed(() => inBrowser ? location.href : '')
 
 function getGithubLink(name: string) {
   return `https://github.com/${reName(name)}`

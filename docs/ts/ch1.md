@@ -13,8 +13,8 @@
 > 在没有开启 `strictNullChecks` 检查的情况下，会被视作其他类型的子类型。
 
 ```typescript
-const ans1: string = null; // 仅在关闭 strictNullChecks 时成立，下同
-const ans2: string = undefined;
+const ans1: string = null // 仅在关闭 strictNullChecks 时成立，下同
+const ans2: string = undefined
 ```
 
 ## void 类型
@@ -26,7 +26,7 @@ function foo(): void { }
 
 // 有 return 但是没有返回值，用 undefined
 function bar(): undefined {
-    return;
+
 }
 ```
 
@@ -37,21 +37,23 @@ never 是整个类型系统层级中最底层的类型，即 `Bottom Type`。
 
 ```typescript
 // never 类型使用
-declare const strOrNumOrBool: string | number | boolean;
+declare const strOrNumOrBool: string | number | boolean
 
-if (typeof strOrNumOrBool === "string") {
-  console.log("str!");
-} else if (typeof strOrNumOrBool === "number") {
-  console.log("num!");
-} else if (typeof strOrNumOrBool === "boolean") {
-  console.log("bool!");
-} else {
+if (typeof strOrNumOrBool === 'string') {
+  console.log('str!')
+}
+else if (typeof strOrNumOrBool === 'number') {
+  console.log('num!')
+}
+else if (typeof strOrNumOrBool === 'boolean') {
+  console.log('bool!')
+}
+else {
   // 未处理的新类型，都会走到 never 进行报错
-  const _exhaustiveCheck: never = strOrNumOrBool;
-  throw new Error(`Unknown input type: ${_exhaustiveCheck}`);
+  const _exhaustiveCheck: never = strOrNumOrBool
+  throw new Error(`Unknown input type: ${_exhaustiveCheck}`)
 }
 ```
-
 
 ## any 与 unknown
 
@@ -61,12 +63,12 @@ unknown 类型**可以赋值为**任意其它类型，但它**只能赋值给** 
 
 ```typescript
 // any unknown
-let anyVar: any = null;
-anyVar.foo.bar.baz();
+const anyVar: any = null
+anyVar.foo.bar.baz()
 
-let unknownVar: unknown;
+let unknownVar: unknown
 unknownVar.foo(); // 对象的类型为 "unknown"。ts(2571)
-(unknownVar as { foo: () => {} }).foo(); // 当 unknown 类型，进行属性访问，需要类型断言
+(unknownVar as { foo: () => {} }).foo() // 当 unknown 类型，进行属性访问，需要类型断言
 ```
 
 unknown 使用会比较麻烦，需要一堆的类型断言。
@@ -76,15 +78,15 @@ unknown 使用会比较麻烦，需要一堆的类型断言。
 
 ```typescript
 // unique symbol
-const uniqueSymbolFoo: unique symbol = Symbol("Chocolate")
+const uniqueSymbolFoo: unique symbol = Symbol('Chocolate')
 
 // 不能将类型“typeof uniqueSymbolFoo”分配给类型“typeof uniqueSymbolBar”。ts(2322)
-const uniqueSymbolBar: unique symbol = uniqueSymbolFoo 
+const uniqueSymbolBar: unique symbol = uniqueSymbolFoo
 ```
 
 ```typescript
 // 复用 unique symbol 类型
-declare const uniqueSymbolA: unique symbol;
+declare const uniqueSymbolA: unique symbol
 
 const uniqueSymbolB: typeof uniqueSymbolA = uniqueSymbolA
 ```
@@ -94,23 +96,23 @@ const uniqueSymbolB: typeof uniqueSymbolA = uniqueSymbolA
 ```typescript
 // 枚举
 enum IEnum {
-    Home_Page_Url = 'https://yangchaoyi.vip/',
-    Blog_Page_Url = 'https://blog.yangchaoyi.vip/',
-    Num1 = 1999,
-    Num2
+  Home_Page_Url = 'https://yangchaoyi.vip/',
+  Blog_Page_Url = 'https://blog.yangchaoyi.vip/',
+  Num1 = 1999,
+  Num2
 }
 
-const num = IEnum.Num2;
-console.log(num); // 2000
+const num = IEnum.Num2
+console.log(num) // 2000
 console.log(IEnum[1999]) // Num1
 
 // 常量枚举
 const enum IEnum2 {
-    Val1 = 99,
-    Val2
+  Val1 = 99,
+  Val2
 }
-const val1 = IEnum2.Val1;
-console.log(val1); // 99
+const val1 = IEnum2.Val1
+console.log(val1) // 99
 ```
 
 ## 函数
@@ -119,20 +121,19 @@ console.log(val1); // 99
 type Func = (name: string) => number
 
 const foo: Func = (name) => {
-    return name.length
+  return name.length
 }
 ```
-
 
 ## 可选与只读
 
 ```typescript
 // 可选与只读属性
 interface IProps {
-  readonly name: string;
-  age: number;
-  male?: boolean;
-  func?: Function;
+  readonly name: string
+  age: number
+  male?: boolean
+  func?: Function
 }
 
 const obj: IProps = {
@@ -140,9 +141,9 @@ const obj: IProps = {
   age: 18,
   male: true,
   // 无需实现 func 也是合法的
-};
+}
 
-obj.name = 'HearLing'; // 无法分配到 "name" ，因为它是只读属性。ts(2540)
+obj.name = 'HearLing' // 无法分配到 "name" ，因为它是只读属性。ts(2540)
 ```
 
 ## 非空断言
@@ -151,15 +152,15 @@ obj.name = 'HearLing'; // 无法分配到 "name" ，因为它是只读属性。t
 // 非空断言
 declare const foo: {
   func?: () => ({
-    prop?: number | null;
+    prop?: number | null
   })
-};
+}
 
 foo.func!().prop!.toFixed();
 // 等价于
 ((foo.func as () => ({
-  prop?: number;
-}))().prop as number).toFixed();
+  prop?: number
+}))().prop as number).toFixed()
 ```
 
 ## object、Object 以及 { }
@@ -176,9 +177,9 @@ foo.func!().prop!.toFixed();
 
 ```typescript
 // 字面量类型
-const str: "Chocolate" = "Chocolate";
-const num: 1999 = 1999;
-const bool: true = true;
+const str: 'Chocolate' = 'Chocolate'
+const num: 1999 = 1999
+const bool: true = true
 ```
 
 > 字面量类型要求的是值级别的字面量一致，因此比原始值类型更精确。
@@ -189,12 +190,11 @@ const bool: true = true;
 ```typescript
 // 字面量与联合类型
 interface Iprops {
-    bool: true | false;
-    num: 1 | 2 | 3;
-    str: "RNG" | "EDG" | "TES" | "JDG"
+  bool: true | false
+  num: 1 | 2 | 3
+  str: 'RNG' | 'EDG' | 'TES' | 'JDG'
 }
 ```
-
 
 let 与 const 使用区别：
 
@@ -202,8 +202,8 @@ let 与 const 使用区别：
 - const 声明的原始类型变量将不再可变，因此类型会收窄到最精确的字面量类型（但对象类型变量仍可变）
 ```typescript
 // let 与 const
-let userName = 'Chocolate'; // let userName: string
-const userAge = 20; // const userAge: 20
+const userName = 'Chocolate' // let userName: string
+const userAge = 20 // const userAge: 20
 ```
 
 ## 联合类型
@@ -211,7 +211,7 @@ const userAge = 20; // const userAge: 20
 ```typescript
 // 联合类型
 interface Iprops {
-    props: true | string | 1999 | {} | (() => {}) | (1 | 2 | 3)
+  props: true | string | 1999 | {} | (() => {}) | (1 | 2 | 3)
 }
 ```
 
@@ -220,21 +220,21 @@ interface Iprops {
 ```typescript
 // 多个对象类型的联合，实现手动的互斥属性
 interface IUser {
-    user:
+  user:
     | {
-        vip: true;
-        expires: string;
+      vip: true
+      expires: string
     }
     | {
-        vip: false;
-        promotion: string;
-    };
+      vip: false
+      promotion: string
+    }
 }
 
-declare var userInfo: IUser;
+declare let userInfo: IUser
 
 if (userInfo.user.vip) {
-    console.log(userInfo.user.expires);
+  console.log(userInfo.user.expires)
 }
 ```
 
@@ -242,29 +242,29 @@ if (userInfo.user.vip) {
 
 ```typescript
 // 索引类型
-type AllStringTypes = {
-  [key: string]: string;
+interface AllStringTypes {
+  [key: string]: string
 }
 
 const foo: AllStringTypes = {
-  "aaa": "123",
-  1999: "Chocolate",
-  [Symbol("sss")]: 'symbol',
+  aaa: '123',
+  1999: 'Chocolate',
+  [Symbol('sss')]: 'symbol',
 }
 
 interface Foo {
-  propA: number;
-  propB: boolean;
-  propC: string;
+  propA: number
+  propB: boolean
+  propC: string
 }
 
 // 索引类型查询
-type Keys = keyof AllStringTypes; // string | number
+type Keys = keyof AllStringTypes // string | number
 
 // 索引类型访问
-type PropAType = Foo['propA']; // number
-type PropBType = Foo['propB']; // boolean
-type PropTypeUnion = Foo[keyof Foo]; // string | number | boolean
+type PropAType = Foo['propA'] // number
+type PropBType = Foo['propB'] // boolean
+type PropTypeUnion = Foo[keyof Foo] // string | number | boolean
 ```
 
 ## type 与 interface
@@ -280,127 +280,126 @@ type 将一个函数签名、一组联合类型、一个工具类型等等抽离
 
 ```typescript
 // 类型查询操作符 typeof
-const name = "Chocolate";
+const name = 'Chocolate'
 
-const obj = { name: "Chocolate" };
+const obj = { name: 'Chocolate' }
 
-const nullVar = null;
-const undefinedVar = undefined;
+const nullVar = null
+const undefinedVar = undefined
 
-const func = (input: string) => {
-    return input.length > 10;
+function func(input: string) {
+  return input.length > 10
 }
 
-type Str = typeof str; // "Chocolate"
-type Obj = typeof obj; // { name: string; }
-type Null = typeof nullVar; // null
-type Undefined = typeof undefined; // undefined
-type Func = typeof func; // (input: string) => boolean
+type Str = typeof str // "Chocolate"
+type Obj = typeof obj // { name: string; }
+type Null = typeof nullVar // null
+type Undefined = typeof undefined // undefined
+type Func = typeof func // (input: string) => boolean
 ```
 
 ## 类型守卫
 
 ```typescript
 // 类型守卫
-export type Falsy = false | "" | 0 | null | undefined;
+export type Falsy = false | '' | 0 | null | undefined
 
-export const isFalsy = (val: unknown): val is Falsy => !val;
+export const isFalsy = (val: unknown): val is Falsy => !val
 
 // 不包括不常用的 symbol 和 bigint
-export type Primitive = string | number | boolean | undefined;
+export type Primitive = string | number | boolean | undefined
 
-export const isPrimitive = (val: unknown): val is Primitive => ['string', 'number', 'boolean' , 'undefined'].includes(typeof val);
+export const isPrimitive = (val: unknown): val is Primitive => ['string', 'number', 'boolean', 'undefined'].includes(typeof val)
 ```
 
 ## 类型断言守卫
 
 ```typescript
 // 类型断言守卫
-const name: any = 'Chocolate';
+const name: any = 'Chocolate'
 
 function assertIsNumber(val: any): asserts val is number {
-    if (typeof val !== 'number') {
-        throw new Error('not a number!');
-    }
+  if (typeof val !== 'number') {
+    throw new TypeError('not a number!')
+  }
 }
 
-assertIsNumber(name);
+assertIsNumber(name)
 // number 类型！
-name.toFixed();
+name.toFixed()
 ```
 
 ## infer 关键字
 
 ```typescript
 // infer 关键字
-type Swap<T extends any[]> = T extends [infer A, infer B] ? [B, A] : T;
+type Swap<T extends any[]> = T extends [infer A, infer B] ? [B, A] : T
 
-type SwapResult1 = Swap<[1, 2]>; // 符合元组结构，首尾元素替换 [2, 1]
-type SwapResult2 = Swap<[1, 2, 3]>; // 不符合结构，没有发生替换，仍是 [1, 2, 3]
+type SwapResult1 = Swap<[1, 2]> // 符合元组结构，首尾元素替换 [2, 1]
+type SwapResult2 = Swap<[1, 2, 3]> // 不符合结构，没有发生替换，仍是 [1, 2, 3]
 
 // 提取首尾两个
 type ExtractStartAndEnd<T extends any[]> = T extends [
-    infer Start,
-    ...any[],
-    infer End
+  infer Start,
+  ...any[],
+  infer End
 ]
-    ? [Start, End]
-    : T;
+  ? [Start, End]
+  : T
 
 // 调换首尾两个
 type SwapStartAndEnd<T extends any[]> = T extends [
-    infer Start,
-    ...infer Left,
-    infer End
+  infer Start,
+  ...infer Left,
+  infer End
 ]
-    ? [End, ...Left, Start]
-    : T;
+  ? [End, ...Left, Start]
+  : T
 
 // 调换开头两个
 type SwapFirstTwo<T extends any[]> = T extends [
-    infer Start1,
-    infer Start2,
-    ...infer Left
+  infer Start1,
+  infer Start2,
+  ...infer Left
 ]
-    ? [Start2, Start1, ...Left]
-    : T;
+  ? [Start2, Start1, ...Left]
+  : T
 // 提取对象的属性类型
 type PropType<T, K extends keyof T> = T extends { [Key in K]: infer R }
-    ? R
-    : never;
+  ? R
+  : never
 
-type PropTypeResult1 = PropType<{ name: string }, 'name'>; // string
-type PropTypeResult2 = PropType<{ name: string; age: number }, 'name' | 'age'>; // string | number
+type PropTypeResult1 = PropType<{ name: string }, 'name'> // string
+type PropTypeResult2 = PropType<{ name: string, age: number }, 'name' | 'age'> // string | number
 
 // 反转键名与键值
 type ReverseKeyValue<T extends Record<string, unknown>> = T extends Record<infer K, infer V> ? Record<V & string, K> : never
 
-type ReverseKeyValueResult1 = ReverseKeyValue<{ "key": "value" }>; // { "value": "key" }
+type ReverseKeyValueResult1 = ReverseKeyValue<{ key: 'value' }> // { "value": "key" }
 ```
-
 
 ## 上下文类型
 
 ```typescript
 // 上下文类型
-type CustomHandler = (name: string, age: number) => boolean;
+type CustomHandler = (name: string, age: number) => boolean
 
-const handler: CustomHandler = (arg1, arg2) => true;
+const handler: CustomHandler = (arg1, arg2) => true
 // 基于位置的类型推导
 declare const struct: {
-    handler: CustomHandler;
+  handler: CustomHandler
 }
 
-struct.handler = (name, age) => { }; //  不能将类型“void”分配给类型“boolean”。
+struct.handler = (name, age) => { } //  不能将类型“void”分配给类型“boolean”。
 ```
 
 ## void 使用
 
 ```typescript
 // 通过 void 执行立即执行函数
-void function iife() {
-  console.log("log!");
-}();
+void (function iife() {
+  console.log('log!')
+}())
 
 // 等价于↓
 void ((function iife() { })())
@@ -410,7 +409,7 @@ void ((function iife() { })())
 
 ```typescript
 // 具名元组
-const arr: [name: string, age?: number, male?: boolean] = ['Chocolate', 18, true];
+const arr: [name: string, age?: number, male?: boolean] = ['Chocolate', 18, true]
 
-type TupleLength = typeof arr.length; // 1 | 2 | 3
+type TupleLength = typeof arr.length // 1 | 2 | 3
 ```

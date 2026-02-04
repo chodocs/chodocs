@@ -138,8 +138,8 @@ export default function withHover(Element) {
 
 ```jsx [DogImages.js]
 import React from 'react'
-import withLoader from './withLoader'
 import withHover from './withHover'
+import withLoader from './withLoader'
 
 function DogImages(props) {
   return (
@@ -202,8 +202,8 @@ export default function useHover() {
 
 ```jsx [DogImages.js]
 import React from 'react'
-import withLoader from './withLoader'
 import useHover from './useHover'
+import withLoader from './withLoader'
 
 function DogImages(props) {
   const [hoverRef, hovering] = useHover()

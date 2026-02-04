@@ -1,7 +1,7 @@
 import { join, resolve } from 'node:path'
 import fs from 'fs-extra'
+import { $fetch } from 'ofetch'
 import Git from 'simple-git'
-import { $fetch } from 'ohmyfetch'
 
 export const git = Git()
 
