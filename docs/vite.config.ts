@@ -1,10 +1,10 @@
+import type { UserConfig } from 'vite'
 import { createRequire } from 'node:module'
 import { resolve } from 'node:path'
 import UnoCSS from 'unocss/vite'
 import IconsResolver from 'unplugin-icons/resolver'
 import Icons from 'unplugin-icons/vite'
 import Components from 'unplugin-vue-components/vite'
-import type { UserConfig } from 'vite'
 import { defineConfig } from 'vite'
 import { MarkdownTransform } from './.vitepress/plugins/markdownTransform'
 

@@ -6,6 +6,7 @@ class Counter {
     if (instance)
       throw new Error('You can only create one instance!')
 
+    // eslint-disable-next-line ts/no-this-alias
     instance = this
   }
 

@@ -5,7 +5,6 @@ export default antfu({
   type: 'app',
   vue: true,
   typescript: true,
-  markdown: true,
   stylistic: {
     indent: 2,
     quotes: 'single',
@@ -30,8 +29,8 @@ export default antfu({
     'import/no-named-as-default-member': 'off',
   },
 }, {
-  // Markdown and script files
-  files: ['**/*.md', '**/*.md/*.*', 'demo.vue', 'demo.client.vue', 'scripts/*.ts', '*.test.ts', 'utils.ts'],
+  // Script files
+  files: ['demo.vue', 'demo.client.vue', 'scripts/*.ts', '*.test.ts', 'utils.ts'],
   rules: {
     'no-alert': 'off',
     'no-console': 'off',
