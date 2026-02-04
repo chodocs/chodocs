@@ -1,12 +1,12 @@
-import { defineConfig } from 'vitepress'
 import { withPwa } from '@vite-pwa/vitepress'
 import { generateSitemap as sitemap } from 'sitemap-ts'
+import { defineConfig } from 'vitepress'
+import algolia from './algolia'
+import socialLinks from './link'
 import { description, docsVersion, github, keywords, name, site } from './meta'
 import { genFeed } from './plugins/genFeed'
 import { pwa } from './plugins/pwa'
 import sidebar from './sidebar'
-import socialLinks from './link'
-import algolia from './algolia'
 
 export default withPwa(defineConfig({
   pwa,

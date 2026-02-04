@@ -40,10 +40,12 @@ const List = ({ data }) => <ListItem data={data} />
 const ListItem = ({ data }) => <span>{data.listItem}</span>
 
 function Content({ data }) {
-  return <div className="my_content">
-    <Header data={data} />
-    <Block data={data} />
-  </div>
+  return (
+    <div className="my_content">
+      <Header data={data} />
+      <Block data={data} />
+    </div>
+  )
 }
 const Header = ({ data }) => <div>{data.title}</div>
 const Block = ({ data }) => <Text data={data} />
@@ -111,10 +113,12 @@ function List() {
   return <ListItem />
 }
 function Content() {
-  return <div>
-    <Header />
-    <Block />
-  </div>
+  return (
+    <div>
+      <Header />
+      <Block />
+    </div>
+  )
 }
 
 function ListItem() {
@@ -360,7 +364,6 @@ export default function App() {
 > 一个比较简单的计数器 demo，点击 `Increment` 按钮，count 就会 +1，点击 `Reset` 按钮，计数将被充值。
 
 <iframe src='https://stackblitz.com/edit/provider-pattern-cons-demo?ctl=1&embed=1&file=src/App.js&view=editor'></iframe>
-
 
 在这个例子当中，当我们点击 `Increment` 按钮时，会发现 `Reset` 组件也会触发一次渲染，因为它也消费使用了 `useCountContext`，也就是使用了 Provider 提供的数据。
 

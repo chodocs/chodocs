@@ -4,18 +4,18 @@
 
 ```typescript
 // 泛型坑位
-type Factory<T> = T | number | string;
-type FactoryWithBool = Factory<boolean>;
+type Factory<T> = T | number | string
+type FactoryWithBool = Factory<boolean>
 
-const addBool: FactoryWithBool = true;
+const addBool: FactoryWithBool = true
 ```
 
 ```typescript
 // 许多内置对象预留泛型坑位
 function p() {
-    return new Promise<boolean>((resolve, reject) => {
-        resolve(true);
-    });
+  return new Promise<boolean>((resolve, reject) => {
+    resolve(true)
+  })
 }
 ```
 
@@ -23,9 +23,9 @@ function p() {
 
 ```typescript
 // 泛型默认值
-type Factory<T = boolean> = T | number | string;
+type Factory<T = boolean> = T | number | string
 
-const foo: Factory = false;
+const foo: Factory = false
 ```
 
 ## 泛型约束
@@ -33,23 +33,23 @@ const foo: Factory = false;
 ```typescript
 // 泛型约束
 type ResStatus<ResCode extends number = 10000> = ResCode extends 10000 | 10001 | 10002
-    ? 'success'
-    : 'failure';
+  ? 'success'
+  : 'failure'
 
-type Res = ResStatus; // "success"
+type Res = ResStatus // "success"
 ```
 
 ## 多泛型关联
 
 ```typescript
-type Conditional<Type, Condition, TruthyResult, FalsyResult> =
-    Type extends Condition ? TruthyResult : FalsyResult;
+type Conditional<Type, Condition, TruthyResult, FalsyResult>
+  = Type extends Condition ? TruthyResult : FalsyResult
 
 //  "passed!"
-type Result1 = Conditional<'Chocolate', string, 'passed!', 'rejected!'>;
+type Result1 = Conditional<'Chocolate', string, 'passed!', 'rejected!'>
 
 // "rejected!"
-type Result2 = Conditional<'Chocolate', boolean, 'passed!', 'rejected!'>;
+type Result2 = Conditional<'Chocolate', boolean, 'passed!', 'rejected!'>
 ```
 
 ## 对象中的泛型
@@ -57,36 +57,36 @@ type Result2 = Conditional<'Chocolate', boolean, 'passed!', 'rejected!'>;
 ```typescript
 // 对象中的泛型
 interface IRes<TData = unknown> {
-    code: number;
-    error?: string;
-    data: TData;
+  code: number
+  error?: string
+  data: TData
 }
 
 interface IUserProfileRes {
-    name: string;
-    homepage: string;
-    avatar: string;
+  name: string
+  homepage: string
+  avatar: string
 }
 
 function fetchUserProfile(): Promise<IRes<IUserProfileRes>> {
-    // fetch...
+  // fetch...
 }
 
-type StatusSucceed = boolean;
+type StatusSucceed = boolean
 function handleOperation(): Promise<IRes<StatusSucceed>> {
-    // handle...
+  // handle...
 }
 
 // 泛型嵌套使用场景 - 分页结构
 interface IPaginationRes<TItem = unknown> {
-    data: TItem[];
-    page: number;
-    totalCount: number;
-    hasNextPage: boolean;
+  data: TItem[]
+  page: number
+  totalCount: number
+  hasNextPage: boolean
 }
 
-function fetchUserProfileList(): Promise<IRes<IPaginationRes<IUserProfileRes>>> { 
-    // fetch
+function fetchUserProfileList(): Promise<IRes<IPaginationRes<IUserProfileRes>>> {
+  // fetch
 }
 ```
 
@@ -95,7 +95,7 @@ function fetchUserProfileList(): Promise<IRes<IPaginationRes<IUserProfileRes>>> 
 ```typescript
 // 函数中的泛型
 function swap<T extends number, U extends number>([start, end]: [T, U]): [U, T] {
-    return [end, start];
+  return [end, start]
 }
 ```
 
@@ -103,14 +103,14 @@ function swap<T extends number, U extends number>([start, end]: [T, U]): [U, T] 
 
 ```typescript
 function handle<T>(payload: T): Promise<[T]> {
-    return new Promise<[T]>((res, rej) => {
-        res([payload]);
-    });
+  return new Promise<[T]>((res, rej) => {
+    res([payload])
+  })
 }
 ```
 
 箭头函数的泛型
 
 ```typescript
-const handleArrow = <T extends any>(input: T): T => { return input; };
+function handleArrow<T extends any>(input: T): T { return input }
 ```

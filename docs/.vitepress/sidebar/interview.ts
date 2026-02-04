@@ -44,8 +44,7 @@ export default function sidebarInterview() {
     {
       text: '2023 面试合集',
       collapsed: false,
-      items: [{ text: 'isolcat 三月实习', link: '/interview/isolcat/' },
-        { text: 'HearLing 六月社招', link: '/interview/2023/hearling' }],
+      items: [{ text: 'isolcat 三月实习', link: '/interview/isolcat/' }, { text: 'HearLing 六月社招', link: '/interview/2023/hearling' }],
     },
     {
       text: 'React',

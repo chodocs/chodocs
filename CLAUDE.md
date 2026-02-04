@@ -35,8 +35,8 @@ pnpm lint:fix       # Auto-fix ESLint issues (alias: nr lint --fix)
 
 ### Release & Updates
 ```bash
-pnpm release        # Version bump, update contributors, commit & tag
-pnpm update         # Update contributors list from GitHub API
+pnpm release        # Interactive version bump with bumpp (auto-updates contributors, commits & tags)
+pnpm update         # Manually update contributors list from GitHub API
 ```
 
 ### Testing Single Files
@@ -74,12 +74,16 @@ docs/                           # Content root directory
 ├── public/                     # Static assets
 └── [other content folders]/
 scripts/                        # Build/release scripts
-├── release.ts                  # Release workflow (bumpp + git operations)
 ├── update.ts                   # Update contributors
 └── utils.ts                    # Shared utilities (Git, fetch, file operations)
 ```
 
 ## Architecture Notes
+
+### Release Workflow
+- Uses `bumpp` directly (configured in package.json)
+- Automatically updates contributors and commits changes
+- Creates git tag and pushes to remote
 
 ### VitePress Configuration
 - Main config at `docs/.vitepress/config.ts` uses `withPwa()` wrapper
@@ -175,6 +179,7 @@ Follow **Conventional Commits** format:
 3. Keep under 72 characters
 4. Use imperative mood ("add" not "added")
 5. Chinese or English both acceptable for description
+6. **DO NOT add Co-Authored-By trailers** (no AI attribution)
 
 **Examples:**
 ```
@@ -186,7 +191,7 @@ docs(contributing): update contribution guidelines
 chore(deps): upgrade vitepress to v1.6.4
 ```
 
-**IMPORTANT: When creating commits, provide the commit message at the end of the response, but DO NOT auto-commit. Let the user review and commit manually.**
+**IMPORTANT: When creating commits, provide the commit message at the end of the response, but DO NOT auto-commit. Let the user review and commit manually. Never include Co-Authored-By or AI attribution in commit messages.**
 
 ### Environment Variables
 - `UMAMI_WEBSITE_ID`: Analytics website ID (optional)
@@ -194,4 +199,4 @@ chore(deps): upgrade vitepress to v1.6.4
 
 ## Node Requirements
 - Node.js >= 20.0.0 required
-- pnpm 9.15.9 specified via packageManager field
+- pnpm 10.28.2 specified via packageManager field

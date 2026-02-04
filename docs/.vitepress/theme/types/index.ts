@@ -1,4 +1,4 @@
 export interface PageInfo {
-  readTime: number | string;
-  words: number | string;
+  readTime: number | string
+  words: number | string
 }

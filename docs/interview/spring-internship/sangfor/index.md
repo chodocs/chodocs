@@ -25,12 +25,12 @@
 下述代码会输出什么？
 
 ```javascript
-let arr = ["a", "b"];
-for (let key in arr) {
-  console.log(key);
+const arr = ['a', 'b']
+for (const key in arr) {
+  console.log(key)
 }
-for (let key of arr) {
-  console.log(key);
+for (const key of arr) {
+  console.log(key)
 }
 ```
 
@@ -70,10 +70,10 @@ for (let key of arr) {
 
 ```javascript
 (function () {
-  for (var i = 0; i < 5; i++) {
-    setTimeout(console.log, i, i);
+  for (let i = 0; i < 5; i++) {
+    setTimeout(console.log, i, i)
   }
-})();
+})()
 ```
 
 <details><summary><b>参考答案</b></summary>
@@ -86,10 +86,10 @@ for (let key of arr) {
 
 ```javascript
 (function () {
-  for (var i = 0; i < 5; i++) {
-    setTimeout(console.log, i, i, 100);
+  for (let i = 0; i < 5; i++) {
+    setTimeout(console.log, i, i, 100)
   }
-})();
+})()
 ```
 
 <a href="https://www.cnblogs.com/xjnotxj/p/7452698.html">推荐阅读：for 循环 + setTimeout 结合的烂大街的面试题</a>
@@ -102,16 +102,16 @@ for (let key of arr) {
 
 ```javascript
 function load() {
-  return Promise.resolve("chocolate")
+  return Promise.resolve('chocolate')
     .then((res) => {
-      throw res;
+      throw res
     })
-    .catch((res) => "error");
+    .catch(res => 'error')
 }
 async function fn() {
-  console.log(await load());
+  console.log(await load())
 }
-fn();
+fn()
 ```
 
 <details><summary><b>参考答案</b></summary>
@@ -129,8 +129,8 @@ fn();
 <details><summary><b>参考答案</b></summary>
 
 ```javascript
-console.log(+"1.20");
-console.log(Number("1.20"));
+console.log(+'1.20')
+console.log(Number('1.20'))
 ```
 
 <CloudinaryImg publicId='interview/sangfor-5_j4e811' alt='sangfor'/>
@@ -167,25 +167,25 @@ console.log(Number("1.20"));
 
 ```javascript
 Promise.all = function (promises) {
-  let arr = new Array(promises.length);
-  let cnt = 0;
+  const arr = Array.from({ length: promises.length })
+  let cnt = 0
   return new Promise((resolve, reject) => {
     promises.forEach((val, index) => {
       Promise.resolve(val).then(
         (val) => {
-          cnt++;
-          arr[index] = val;
+          cnt++
+          arr[index] = val
           if (cnt === promises.length) {
-            resolve(promises);
+            resolve(promises)
           }
         },
         (err) => {
-          reject(err);
+          reject(err)
         }
-      );
-    });
-  });
-};
+      )
+    })
+  })
+}
 ```
 
 </details>
@@ -330,25 +330,25 @@ Promise.all = function (promises) {
 
 ```javascript
 Promise.all = function (promises) {
-  let arr = new Array(promises.length);
-  let cnt = 0;
+  const arr = Array.from({ length: promises.length })
+  let cnt = 0
   return new Promise((resolve, reject) => {
     promises.forEach((val, index) => {
       Promise.resolve(val).then(
         (val) => {
-          cnt++;
-          arr[index] = val;
+          cnt++
+          arr[index] = val
           if (cnt === promises.length) {
-            resolve(promises);
+            resolve(promises)
           }
         },
         (err) => {
-          reject(err);
+          reject(err)
         }
-      );
-    });
-  });
-};
+      )
+    })
+  })
+}
 ```
 
 </details>
@@ -479,12 +479,12 @@ Promise.all = function (promises) {
 下述代码会输出什么？
 
 ```javascript
-let arr = ["a", "b"];
-for (let key in arr) {
-  console.log(key);
+const arr = ['a', 'b']
+for (const key in arr) {
+  console.log(key)
 }
-for (let key of arr) {
-  console.log(key);
+for (const key of arr) {
+  console.log(key)
 }
 ```
 

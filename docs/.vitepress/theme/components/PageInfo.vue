@@ -1,6 +1,6 @@
 <script setup lang="ts">
-import { computed, ref } from 'vue'
 import { useData } from 'vitepress'
+import { computed, ref } from 'vue'
 import { getDate, getFromNow } from '../utils'
 
 defineProps<{

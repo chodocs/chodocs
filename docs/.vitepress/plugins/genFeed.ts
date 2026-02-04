@@ -1,7 +1,8 @@
-import path from 'node:path'
+import type { SiteConfig } from 'vitepress'
 import { writeFileSync } from 'node:fs'
+import path from 'node:path'
 import { Feed } from 'feed'
-import { type SiteConfig, createContentLoader } from 'vitepress'
+import { createContentLoader } from 'vitepress'
 import { site as baseUrl, description, name } from '../meta'
 
 function reName(name: string) {

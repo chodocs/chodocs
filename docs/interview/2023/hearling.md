@@ -1,5 +1,5 @@
 ---
-author: "HearLing"
+author: 'HearLing'
 date: 2023-06-04
 ---
 
@@ -71,18 +71,18 @@ date: 2023-06-04
 
 ```javascript
 function reduce(array, reducer, initialValue) {
-  let accumulator = initialValue;
-  let currentIndex = 0;
+  let accumulator = initialValue
+  let currentIndex = 0
   if (initialValue === undefined) {
-    accumulator = array[0];
-    currentIndex = 1;
+    accumulator = array[0]
+    currentIndex = 1
   }
 
   for (let i = currentIndex; i < array.length; i++) {
-    accumulator = reducer(accumulator, array[i]);
+    accumulator = reducer(accumulator, array[i])
   }
 
-  return accumulator;
+  return accumulator
 }
 ```
 
@@ -102,9 +102,9 @@ reduce 方法的工作原理是:
 举个例子，计算数组的总和:
 
 ```javascript
-const sum = (a, b) => a + b;
-const total = reduce([1, 2, 3], sum); // 6
-const totalWithInitial = reduce([1, 2, 3], sum, 10); // 16
+const sum = (a, b) => a + b
+const total = reduce([1, 2, 3], sum) // 6
+const totalWithInitial = reduce([1, 2, 3], sum, 10) // 16
 ```
 
 ### 2、节流防抖
@@ -113,13 +113,13 @@ const totalWithInitial = reduce([1, 2, 3], sum, 10); // 16
 
 ```javascript
 function debounce(fn, delay) {
-  let timer = null;
+  let timer = null
   return (...args) => {
-    clearTimeout(timer);
+    clearTimeout(timer)
     timer = setTimout(() => {
-      fn.apply(this, args);
-    }, delay);
-  };
+      fn.apply(this, args)
+    }, delay)
+  }
 }
 ```
 
@@ -127,15 +127,15 @@ function debounce(fn, delay) {
 
 ```javascript
 function throttle(fn, delay) {
-  let flag = true;
+  let flag = true
   return (...args) => {
-    if (!flag) return;
-    flag = false;
+    if (!flag) return
+    flag = false
     setTimeout(() => {
-      fn.apply(this, args);
-      flag = true;
-    }, dalay);
-  };
+      fn.apply(this, args)
+      flag = true
+    }, dalay)
+  }
 }
 ```
 
@@ -143,157 +143,157 @@ function throttle(fn, delay) {
 
 ```javascript
 function Promise(executor) {
-  let self = this;
-  self.status = "pending";
-  self.value = undefined;
-  self.reason = undefined;
-  self.onResolvedCallbacks = [];
-  self.onRejectedCallbacks = [];
+  const self = this
+  self.status = 'pending'
+  self.value = undefined
+  self.reason = undefined
+  self.onResolvedCallbacks = []
+  self.onRejectedCallbacks = []
 
   function resolve(value) {
-    if (self.status === "pending") {
-      self.status = "resolved";
-      self.value = value;
-      self.onResolvedCallbacks.forEach((fn) => fn());
+    if (self.status === 'pending') {
+      self.status = 'resolved'
+      self.value = value
+      self.onResolvedCallbacks.forEach((fn) => fn())
     }
   }
 
   function reject(reason) {
-    if (self.status === "pending") {
-      self.status = "rejected";
-      self.reason = reason;
-      self.onRejectedCallbacks.forEach((fn) => fn());
+    if (self.status === 'pending') {
+      self.status = 'rejected'
+      self.reason = reason
+      self.onRejectedCallbacks.forEach((fn) => fn())
     }
   }
 
   try {
-    executor(resolve, reject);
+    executor(resolve, reject)
   } catch (e) {
-    reject(e);
+    reject(e)
   }
 }
 
 Promise.prototype.then = function (onFulfilled, onRejected) {
-  let self = this;
-  let promise2;
-  if (self.status === "resolved") {
-    promise2 = new Promise(function (resolve, reject) {
+  const self = this
+  let promise2
+  if (self.status === 'resolved') {
+    promise2 = new Promise((resolve, reject) => {
       try {
-        let x = onFulfilled(self.value);
-        resolvePromise(promise2, x, resolve, reject);
+        const x = onFulfilled(self.value)
+        resolvePromise(promise2, x, resolve, reject)
       } catch (e) {
-        reject(e);
+        reject(e)
       }
-    });
+    })
   }
 
-  if (self.status === "rejected") {
-    promise2 = new Promise(function (resolve, reject) {
+  if (self.status === 'rejected') {
+    promise2 = new Promise((resolve, reject) => {
       try {
-        let x = onRejected(self.reason);
-        resolvePromise(promise2, x, resolve, reject);
+        const x = onRejected(self.reason)
+        resolvePromise(promise2, x, resolve, reject)
       } catch (e) {
-        reject(e);
+        reject(e)
       }
-    });
+    })
   }
 
-  if (self.status === "pending") {
-    promise2 = new Promise(function (resolve, reject) {
-      self.onResolvedCallbacks.push(function () {
+  if (self.status === 'pending') {
+    promise2 = new Promise((resolve, reject) => {
+      self.onResolvedCallbacks.push(() => {
         try {
-          let x = onFulfilled(self.value);
-          resolvePromise(promise2, x, resolve, reject);
+          const x = onFulfilled(self.value)
+          resolvePromise(promise2, x, resolve, reject)
         } catch (e) {
-          reject(e);
+          reject(e)
         }
-      });
+      })
 
-      self.onRejectedCallbacks.push(function () {
+      self.onRejectedCallbacks.push(() => {
         try {
-          let x = onRejected(self.reason);
-          resolvePromise(promise2, x, resolve, reject);
+          const x = onRejected(self.reason)
+          resolvePromise(promise2, x, resolve, reject)
         } catch (e) {
-          reject(e);
+          reject(e)
         }
-      });
-    });
+      })
+    })
   }
 
-  return promise2;
-};
+  return promise2
+}
 
 function resolvePromise(promise2, x, resolve, reject) {
   if (promise2 === x) {
-    return reject(new TypeError("Chaining cycle detected for promise"));
+    return reject(new TypeError('Chaining cycle detected for promise'))
   }
 
-  let called;
-  if (x !== null && (typeof x === "object" || typeof x === "function")) {
+  let called
+  if (x !== null && (typeof x === 'object' || typeof x === 'function')) {
     try {
-      let then = x.then;
-      if (typeof then === "function") {
+      const then = x.then
+      if (typeof then === 'function') {
         then.call(
           x,
           (y) => {
-            if (called) return;
-            called = true;
-            resolvePromise(promise2, y, resolve, reject);
+            if (called) return
+            called = true
+            resolvePromise(promise2, y, resolve, reject)
           },
           (r) => {
-            if (called) return;
-            called = true;
-            reject(r);
+            if (called) return
+            called = true
+            reject(r)
           }
-        );
+        )
       } else {
-        resolve(x);
+        resolve(x)
       }
     } catch (e) {
-      if (called) return;
-      called = true;
-      reject(e);
+      if (called) return
+      called = true
+      reject(e)
     }
   } else {
-    resolve(x);
+    resolve(x)
   }
 }
 
-module.exports = Promise;
+module.exports = Promise
 ```
 
 ### 4、promiseAll、promiseRace
 
 ```javascript
 async function promiseAll(promises) {
-  let results = [];
-  let count = 0;
+  const results = []
+  let count = 0
 
   for (let i = 0; i < promises.length; i++) {
     try {
-      results[i] = await promises[i];
-      count++;
+      results[i] = await promises[i]
+      count++
     } catch (err) {
-      return Promise.reject(err);
+      return Promise.reject(err)
     }
   }
 
   if (count === promises.length) {
-    return Promise.resolve(results);
+    return Promise.resolve(results)
   }
 }
 ```
 
 ```javascript
 async function promiseRace(promises) {
-  let result;
+  let result
 
   for (let i = 0; i < promises.length; i++) {
     try {
-      result = await promises[i];
-      return Promise.resolve(result);
+      result = await promises[i]
+      return Promise.resolve(result)
     } catch (err) {
-      return Promise.reject(err);
+      return Promise.reject(err)
     }
   }
 }
@@ -304,94 +304,94 @@ async function promiseRace(promises) {
 完整版参考链接：`https://github.com/x-extends/xe-utils/blob/master/func/clone.js`
 
 ```javascript
-var objectToString = require("./staticObjectToString");
+const arrayEach = require('./arrayEach')
 
-var objectEach = require("./objectEach");
-var arrayEach = require("./arrayEach");
+const objectEach = require('./objectEach')
+const objectToString = require('./staticObjectToString')
 
 function getCativeCtor(val, args) {
-  var Ctor = val.__proto__.constructor;
-  return args ? new Ctor(args) : new Ctor();
+  const Ctor = val.__proto__.constructor
+  return args ? new Ctor(args) : new Ctor()
 }
 
 function handleValueClone(item, isDeep) {
-  return isDeep ? copyValue(item, isDeep) : item;
+  return isDeep ? copyValue(item, isDeep) : item
 }
 
 function copyValue(val, isDeep) {
   if (val) {
     switch (objectToString.call(val)) {
-      case "[object Object]": {
-        var restObj = Object.create(Object.getPrototypeOf(value));
-        objectEach(val, function (item, key) {
-          restObj[key] = handleValueClone(item, isDeep);
-        });
-        return restObj;
+      case '[object Object]': {
+        const restObj = Object.create(Object.getPrototypeOf(value))
+        objectEach(val, (item, key) => {
+          restObj[key] = handleValueClone(item, isDeep)
+        })
+        return restObj
       }
-      case "[object Date]":
-      case "[object RegExp]": {
-        return getCativeCtor(val, val.valueOf());
+      case '[object Date]':
+      case '[object RegExp]': {
+        return getCativeCtor(val, val.valueOf())
       }
-      case "[object Array]":
-      case "[object Arguments]": {
-        var restArr = [];
-        arrayEach(val, function (item) {
-          restArr.push(handleValueClone(item, isDeep));
-        });
-        return restArr;
+      case '[object Array]':
+      case '[object Arguments]': {
+        const restArr = []
+        arrayEach(val, (item) => {
+          restArr.push(handleValueClone(item, isDeep))
+        })
+        return restArr
       }
-      case "[object Set]": {
-        var restSet = getCativeCtor(val);
-        restSet.forEach(function (item) {
-          restSet.add(handleValueClone(item, isDeep));
-        });
-        return restSet;
+      case '[object Set]': {
+        const restSet = getCativeCtor(val)
+        restSet.forEach((item) => {
+          restSet.add(handleValueClone(item, isDeep))
+        })
+        return restSet
       }
-      case "[object Map]": {
-        var restMap = getCativeCtor(val);
-        restMap.forEach(function (item, key) {
-          restMap.set(key, handleValueClone(item, isDeep));
-        });
-        return restMap;
+      case '[object Map]': {
+        const restMap = getCativeCtor(val)
+        restMap.forEach((item, key) => {
+          restMap.set(key, handleValueClone(item, isDeep))
+        })
+        return restMap
       }
     }
   }
-  return val;
+  return val
 }
 
 /**
  * 浅拷贝/深拷贝
  *
- * @param {Object} obj 对象/数组
- * @param {Boolean} deep 是否深拷贝
- * @return {Object}
+ * @param {object} obj 对象/数组
+ * @param {boolean} deep 是否深拷贝
+ * @return {object}
  */
 function clone(obj, deep) {
   if (obj) {
-    return copyValue(obj, deep);
+    return copyValue(obj, deep)
   }
-  return obj;
+  return obj
 }
 
-module.exports = clone;
+module.exports = clone
 ```
 
 简易版，递归：
 
 ```javascript
 function deepClone(target, weakMap = new WeakMap()) {
-  if (typeof target !== "object" || target == null) {
-    if (target instanceof Function) return target.bind(this, ...arguments);
-    return target;
+  if (typeof target !== 'object' || target == null) {
+    if (typeof target === 'function') return target.bind(this, ...arguments)
+    return target
   }
-  if (target instanceof Date) return new Date(target);
-  if (target instanceof RegExp) return new RegExp(target);
-  let res = new target.constructor();
-  if (weakMap.get(target)) return weakMap.get(target);
-  weakMap.set(res, target);
-  for (let key in target) {
-    res[key] = deepClone(target[key], weakMap);
+  if (target instanceof Date) return new Date(target)
+  if (target instanceof RegExp) return new RegExp(target)
+  const res = new target.constructor()
+  if (weakMap.get(target)) return weakMap.get(target)
+  weakMap.set(res, target)
+  for (const key in target) {
+    res[key] = deepClone(target[key], weakMap)
   }
-  return res;
+  return res
 }
 ```

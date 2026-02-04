@@ -42,21 +42,21 @@ npm install @trpc/server @trpc/client
 `server/db.ts`
 
 ```typescript
-type User = { id: string; name: string; email: string; password: string };
+interface User { id: string, name: string, email: string, password: string }
 
 // Imaginary database
-const users: User[] = [];
+const users: User[] = []
 export const db = {
   user: {
     findMany: async () => users,
-    findById: async (id: string) => users.find((user) => user.id === id),
-    create: async (data: { name: string; email: string; password: string }) => {
-      const user = { id: String(users.length + 1), ...data };
-      users.push(user);
-      return user;
+    findById: async (id: string) => users.find(user => user.id === id),
+    create: async (data: { name: string, email: string, password: string }) => {
+      const user = { id: String(users.length + 1), ...data }
+      users.push(user)
+      return user
     },
   },
-};
+}
 ```
 
 在模拟的 `db` 对象中有一些数据的操作方法，如 `findById` 和 `create`，这些方法会在后面的代码中用到，也如字面意思一样，`findById` 用于根据 `id` 查找用户，`create` 用于创建用户。
@@ -64,20 +64,20 @@ export const db = {
 接下来创建 `server/trpc.ts` 文件，如下代码所示：
 
 ```typescript
-import { initTRPC } from "@trpc/server";
+import { initTRPC } from '@trpc/server'
 
 /**
  * Initialization of tRPC backend
  * Should be done only once per backend!
  */
-const t = initTRPC.create();
+const t = initTRPC.create()
 
 /**
  * Export reusable router and procedure helpers
  * that can be used throughout the router
  */
-export const router = t.router;
-export const publicProcedure = t.procedure;
+export const router = t.router
+export const publicProcedure = t.procedure
 ```
 
 在 `server/trpc.ts` 文件中，我们初始化了 tRPC 后端，然后导出了 `router` 和 `publicProcedure` 两个变量，这两个变量会在后面的代码中用到。
@@ -85,43 +85,43 @@ export const publicProcedure = t.procedure;
 接着，有了前面铺垫，就是编写后端逻辑了，我们在 `server/index.ts` 文件中编写后端逻辑，如下代码所示：
 
 ```typescript 31
-import { db } from "./db";
-import { publicProcedure, router } from "./trpc";
-import { createHTTPServer } from "@trpc/server/adapters/standalone";
-import z from "zod";
+import { createHTTPServer } from '@trpc/server/adapters/standalone'
+import z from 'zod'
+import { db } from './db'
+import { publicProcedure, router } from './trpc'
 
 const appRouter = router({
   userList: publicProcedure.query(async () => {
     // Retrieve users from a datasource, this is an imaginary database
-    const users = await db.user.findMany();
-    return users;
+    const users = await db.user.findMany()
+    return users
   }),
   userById: publicProcedure
     .input(z.object({ id: z.string() }))
     .query(async ({ input }) => {
-      const { id } = input;
-      const user = await db.user.findById(id);
-      return user;
+      const { id } = input
+      const user = await db.user.findById(id)
+      return user
     }),
   userCreate: publicProcedure
     .input(
       z.object({ name: z.string(), email: z.string(), password: z.string() })
     )
     .mutation(async ({ input }) => {
-      const user = await db.user.create(input);
-      return user;
+      const user = await db.user.create(input)
+      return user
     }),
-});
+})
 
 // Export type router type signature,
 // NOT the router itself.
-export type AppRouter = typeof appRouter;
+export type AppRouter = typeof appRouter
 
 const server = createHTTPServer({
   router: appRouter,
-});
+})
 
-server.listen(3000);
+server.listen(3000)
 ```
 
 这里我们导入了 `db`、`publicProcedure` 和 `router`，然后创建了 `appRouter`，`appRouter` 是一个对象，它包含了 `userList`、`userById` 和 `userCreate` 三个属性，这三个属性分别对应了 `publicProcedure.query`、`publicProcedure.query` 和 `publicProcedure.mutation`，这三个属性的值都是一个函数，这个函数的返回值就是我们需要的数据。
@@ -137,8 +137,8 @@ server.listen(3000);
 由于前端只用负责调用 api，所以代码其实也很简单，如 `client/index.ts` 所示：
 
 ```typescript
-import { createTRPCProxyClient, httpBatchLink } from "@trpc/client";
-import type { AppRouter } from "../server";
+import type { AppRouter } from '../server'
+import { createTRPCProxyClient, httpBatchLink } from '@trpc/client'
 //     👆 **type-only** import
 
 // Pass AppRouter as generic here. 👇 This lets the `trpc` object know
@@ -146,25 +146,25 @@ import type { AppRouter } from "../server";
 const trpc = createTRPCProxyClient<AppRouter>({
   links: [
     httpBatchLink({
-      url: "http://localhost:3000",
+      url: 'http://localhost:3000',
     }),
   ],
-});
+})
 
 async function main() {
   const createdUser = await trpc.userCreate.mutate({
-    name: "一百个Chocolate",
-    email: "chocolate@qq.com",
-    password: "Chocolate",
-  });
-  console.log("createdUser: ", createdUser);
-  const userCreated = await trpc.userById.query({ id: "1" });
-  console.log("userCreated: ", userCreated);
-  const users = await trpc.userList.query();
-  console.log("Users:", users);
+    name: '一百个Chocolate',
+    email: 'chocolate@qq.com',
+    password: 'Chocolate',
+  })
+  console.log('createdUser: ', createdUser)
+  const userCreated = await trpc.userById.query({ id: '1' })
+  console.log('userCreated: ', userCreated)
+  const users = await trpc.userList.query()
+  console.log('Users:', users)
 }
 
-main();
+main()
 ```
 
 这里我们导入了 `createTRPCProxyClient` 和 `httpBatchLink`，然后创建了 `trpc` 对象，`trpc` 对象就是我们用来调用后端 api 的对象，它的属性和方法就是后端 `appRouter` 对象中的 `userList`、`userById` 和 `userCreate` 三个属性，这三个属性的类型都是 `Procedure`，所以我们可以直接通过 `.` 来调用这三个属性。

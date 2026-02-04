@@ -1,6 +1,6 @@
 <script setup lang="ts">
-import { ref } from 'vue'
 import { useData } from 'vitepress'
+import { ref } from 'vue'
 
 const defaultAuthor = 'Chocolate1999'
 const { frontmatter } = useData()

@@ -27,13 +27,13 @@ author: "HearLing"
 ```typescript
 // 普通枚举
 enum Witcher {
-  Ciri = "Queen",
-  Geralt = "Geralt of Rivia",
+  Ciri = 'Queen',
+  Geralt = 'Geralt of Rivia',
 }
 function getGeraltMessage(arg: { [key: string]: string }): string {
-  return arg.Geralt;
+  return arg.Geralt
 }
-getGeraltMessage(Witcher); // Geralt of Rivia
+getGeraltMessage(Witcher) // Geralt of Rivia
 ```
 
 const 枚举：
@@ -41,10 +41,10 @@ const 枚举：
 ```typescript
 // const枚举
 const enum Witcher {
-  Ciri = "Queen",
-  Geralt = "Geralt of Rivia",
+  Ciri = 'Queen',
+  Geralt = 'Geralt of Rivia',
 }
-const witchers: Witcher[] = [Witcher.Ciri, Witcher.Geralt];
+const witchers: Witcher[] = [Witcher.Ciri, Witcher.Geralt]
 // 编译后
 // const witchers = ['Queen', 'Geralt of Rivia']
 ```
@@ -79,18 +79,18 @@ const witchers: Witcher[] = [Witcher.Ciri, Witcher.Geralt];
 /* 可以 */
 // 函数声明
 interface Say {
-  (name: string): viod;
+  (name: string): viod
 }
-const say: Say = (name: string): viod => {};
+const say: Say = (name: string): viod => {}
 // Array 声明
 interface NumberArray {
-  [index: number]: number;
+  [index: number]: number
 }
-const fibonacci: NumberArray = [1, 1, 2, 3, 5];
+const fibonacci: NumberArray = [1, 1, 2, 3, 5]
 // Class 声明
 interface PersonalIntl {
-  name: string;
-  sayHi(name: string): string;
+  name: string
+  sayHi: (name: string) => string
 }
 ```
 
@@ -122,31 +122,31 @@ interface PersonalIntl {
 
 ```typescript
 interface X {
-  name: string;
-  age: number;
+  name: string
+  age: number
 }
 interface Y {
-  name: string;
-  age: number;
-  hobbies: string[];
+  name: string
+  age: number
+  hobbies: string[]
 }
-let x: X = { name: "xiaoming", age: 16 };
-const y: Y = { name: "xiaohong", age: 18, hobbies: ["eat"] };
-x = y;
+let x: X = { name: 'xiaoming', age: 16 }
+const y: Y = { name: 'xiaohong', age: 18, hobbies: ['eat'] }
+x = y
 ```
 
 **逆变**:printY = printX 函数 X 类型可以赋值给函数 Y 类型
 
 ```typescript
-let printY: (y: Y) => void;
+let printY: (y: Y) => void
 printY = (y) => {
-  console.log(y.hobbies);
-};
-const printX: (x: X) => void;
+  console.log(y.hobbies)
+}
+const printX: (x: X) => void
 printX = (x) => {
-  console.log(x.name);
-};
-printY = printX;
+  console.log(x.name)
+}
+printY = printX
 ```
 
 ## 对 TypeScript 类中成员的 public、private、protected、readonly 修饰符的理解？
@@ -171,13 +171,13 @@ printY = printX;
 
 ```typescript
 function createArray<T>(length: number, value: T): Array<T> {
-  const result: T[] = [];
-  for (let i = 0; i < length; i++) result[i] = value;
+  const result: T[] = []
+  for (let i = 0; i < length; i++) result[i] = value
 
-  return result;
+  return result
 }
 
-createArray<string>(3, "x"); // ['x', 'x', 'x']
+createArray<string>(3, 'x') // ['x', 'x', 'x']
 ```
 
 上例中，我们在函数名后添加了 `<T>`，其中 T 用来指代任意输入的类型，在后面的输入 value: T 和输出 `Array<T>` 中即可使用了。

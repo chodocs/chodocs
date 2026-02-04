@@ -489,7 +489,13 @@ const StyledText = withStyles(Text)
 
 ```js
 // Render Props模式例子
-<DataProvider render={data => <h1>Hello {data.target}</h1>} />
+<DataProvider render={data => (
+  <h1>
+    Hello
+    {data.target}
+  </h1>
+)}
+/>
 ```
 
 </details>
@@ -506,14 +512,14 @@ const StyledText = withStyles(Text)
 // 非受控组件例子
 class NameForm extends React.Component {
   constructor(props) {
-    super(props);
-    this.handleSubmit = this.handleSubmit.bind(this);
-    this.input = React.createRef();
+    super(props)
+    this.handleSubmit = this.handleSubmit.bind(this)
+    this.input = React.createRef()
   }
 
   handleSubmit(event) {
-    alert('A name was submitted: ' + this.input.current.value);
-    event.preventDefault();
+    alert(`A name was submitted: ${this.input.current.value}`)
+    event.preventDefault()
   }
 
   render() {
@@ -525,7 +531,7 @@ class NameForm extends React.Component {
         </label>
         <input type="submit" value="Submit" />
       </form>
-    );
+    )
   }
 }
 ```

@@ -39,7 +39,7 @@ export function MarkdownTransform(): Plugin {
       code = replacer(code, footer, 'FOOTER', 'tail')
       const { readTime, words } = getReadingTime(code)
       code = code
-        .replace(/(#\s.+?\n)/, `$1\n\n<PageInfo readTime="${readTime}" words="${words}"/>\n`)
+        .replace(/(#\s.+\n)/, `$1\n\n<PageInfo readTime="${readTime}" words="${words}"/>\n`)
 
       return code
     },

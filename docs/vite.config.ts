@@ -1,11 +1,11 @@
-import { resolve } from 'node:path'
 import { createRequire } from 'node:module'
-import { defineConfig } from 'vite'
-import type { UserConfig } from 'vite'
+import { resolve } from 'node:path'
 import UnoCSS from 'unocss/vite'
-import Icons from 'unplugin-icons/vite'
 import IconsResolver from 'unplugin-icons/resolver'
+import Icons from 'unplugin-icons/vite'
 import Components from 'unplugin-vue-components/vite'
+import type { UserConfig } from 'vite'
+import { defineConfig } from 'vite'
 import { MarkdownTransform } from './.vitepress/plugins/markdownTransform'
 
 const require = createRequire(import.meta.url)
@@ -17,9 +17,7 @@ export default defineConfig(async () => {
         overlay: false,
       },
       fs: {
-        allow: [
-          resolve(__dirname, '..'),
-        ],
+        allow: [resolve(__dirname, '..')],
       },
     },
     plugins: [
@@ -35,7 +33,6 @@ export default defineConfig(async () => {
           }),
         ],
         dts: './.vitepress/components.d.ts',
-        transformer: 'vue3',
       }),
       Icons({
         compiler: 'vue3',
@@ -46,9 +43,7 @@ export default defineConfig(async () => {
     ],
     css: {
       postcss: {
-        plugins: [
-          require('postcss-nested'),
-        ],
+        plugins: [require('postcss-nested')],
       },
     },
   }

@@ -1,6 +1,6 @@
+import type { VitePWAOptions } from 'vite-plugin-pwa'
 import fg from 'fast-glob'
 import { resolve } from 'pathe'
-import type { VitePWAOptions } from 'vite-plugin-pwa'
 import {
   description,
   githubSourceContentRegex,

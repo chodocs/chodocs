@@ -57,7 +57,6 @@ const personProxy = new Proxy(person, {
       console.log('Hmm.. this property doesn\'t seem to exist')
     else
       console.log(`The value of ${prop} is ${obj[prop]}`)
-
   },
   set: (obj, prop, value) => {
     if (prop === 'age' && typeof value !== 'number') {

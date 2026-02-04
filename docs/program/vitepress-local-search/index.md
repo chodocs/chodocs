@@ -33,21 +33,21 @@ npm i vitepress-plugin-search markdown-it flexsearch -D
 ![image-20230205233032922](https://zerdocs.oss-cn-shanghai.aliyuncs.com/202302052330956.png)
 
 ```typescript
-//vite.config.ts
-import { SearchPlugin } from "vitepress-plugin-search";
-import { defineConfig } from "vite";
-import flexSearchIndexOptions from "flexsearch";
-//default options
-var options = {
+import flexSearchIndexOptions from 'flexsearch'
+import { defineConfig } from 'vite'
+// vite.config.ts
+import { SearchPlugin } from 'vitepress-plugin-search'
+// default options
+const options = {
   ...flexSearchIndexOptions,
-  previewLength: 100, //搜索结果预览长度
-  buttonLabel: "搜索",
-  placeholder: "情输入关键词",
-};
+  previewLength: 100, // 搜索结果预览长度
+  buttonLabel: '搜索',
+  placeholder: '情输入关键词',
+}
 
 export default defineConfig({
   plugins: [SearchPlugin(options)],
-});
+})
 ```
 
 ### 样式覆盖

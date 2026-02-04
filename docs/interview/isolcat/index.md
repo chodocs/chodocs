@@ -483,14 +483,14 @@ TypeScript 中的泛型（generics）是一种用于在编译时期处理类型�
 
 ```typescript
 function reverse<T>(list: T[]): T[] {
-  return list.reverse();
+  return list.reverse()
 }
 
-let numbers = [1, 2, 3, 4];
-let reversedNumbers = reverse(numbers);
+const numbers = [1, 2, 3, 4]
+const reversedNumbers = reverse(numbers)
 
-let letters = ["a", "b", "c"];
-let reversedLetters = reverse(letters);
+const letters = ['a', 'b', 'c']
+const reversedLetters = reverse(letters)
 ```
 
 在上面的代码中，我们定义了一个名为 `reverse` 的函数，它使用了一个类型参数 `T`。我们可以将 `reverse` 函数应用于任何具有 `reverse` 方法的数组类型。在调用 `reverse` 函数时，我们将一个类型为 `T[]` 的数组作为参数传递，并返回一个类型为 `T[]` 的数组。
@@ -916,7 +916,6 @@ function flatten(arr) {
       result = result.concat(flatten(item))
     else
       result.push(item)
-
   })
   return result
 }
@@ -938,7 +937,6 @@ function flatten(arr) {
       stack.push(...item)
     else
       result.unshift(item)
-
   }
   return result
 }

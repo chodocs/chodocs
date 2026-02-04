@@ -239,7 +239,7 @@
 ##### 第一步
 
 ```javascript
-console.log(a);
+console.log(a)
 ```
 
 此时会报错，因为 a 未定义。
@@ -249,8 +249,8 @@ console.log(a);
 ##### 第二步
 
 ```javascript
-console.log(a);
-var a = 1;
+console.log(a)
+var a = 1
 ```
 
 会输出 `undefined`。
@@ -311,9 +311,9 @@ a();
 
 ```javascript
 setTimeout(() => {
-  console.log(1);
-}, 0);
-console.log(2);
+  console.log(1)
+}, 0)
+console.log(2)
 // 输出结果：2 1
 ```
 
@@ -321,13 +321,13 @@ console.log(2);
 
 ```javascript
 setTimeout(() => {
-  console.log(1);
-}, 0);
-console.log(2);
+  console.log(1)
+}, 0)
+console.log(2)
 new Promise((resolve) => {
-  console.log(3);
-  resolve(4);
-}).then((val) => console.log(val));
+  console.log(3)
+  resolve(4)
+}).then(val => console.log(val))
 // 输出结果：2 3 4 1
 ```
 
@@ -335,28 +335,28 @@ new Promise((resolve) => {
 
 ```javascript
 document.body.addEventListener(
-  "click",
+  'click',
   () => {
-    Promise.resolve().then(() => console.log(1));
-    console.log(2);
+    Promise.resolve().then(() => console.log(1))
+    console.log(2)
   },
   false
-);
+)
 
 document.body.addEventListener(
-  "click",
+  'click',
   () => {
-    Promise.resolve().then(() => console.log(3));
-    console.log(4);
+    Promise.resolve().then(() => console.log(3))
+    console.log(4)
   },
   false
-);
+)
 ```
 
 之前那几题答完后，这道题，我毫不犹豫的直接说了 2 4 1 3 ，然后面试官给了我下面这代码提示，啪，直接被拍醒...
 
 ```javascript
-document.body.click();
+document.body.click()
 ```
 
 给出的答案是 `2 1 4 3`
@@ -376,7 +376,7 @@ document.body.click();
 但是如果在控制台手动的输入：
 
 ```javascript
-document.body.click();
+document.body.click()
 ```
 
 它却会显示这个结果：
