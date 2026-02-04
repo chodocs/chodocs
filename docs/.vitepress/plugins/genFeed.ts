@@ -41,7 +41,6 @@ export async function genFeed(config: SiteConfig) {
 
   for (const { url, frontmatter, html } of posts) {
     let postTitle = '无题'
-    // eslint-disable-next-line regexp/no-super-linear-backtracking
     postTitle = html?.match(/<h1 id=(.*)>(.*?)<a .*?>/)?.[2] || postTitle
     feed.addItem({
       title: frontmatter?.title || postTitle,

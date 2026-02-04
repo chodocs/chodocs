@@ -129,7 +129,8 @@ function debounce(fn, delay) {
 function throttle(fn, delay) {
   let flag = true
   return (...args) => {
-    if (!flag) return
+    if (!flag)
+      return
     flag = false
     setTimeout(() => {
       fn.apply(this, args)
@@ -154,7 +155,7 @@ function Promise(executor) {
     if (self.status === 'pending') {
       self.status = 'resolved'
       self.value = value
-      self.onResolvedCallbacks.forEach((fn) => fn())
+      self.onResolvedCallbacks.forEach(fn => fn())
     }
   }
 
@@ -162,13 +163,14 @@ function Promise(executor) {
     if (self.status === 'pending') {
       self.status = 'rejected'
       self.reason = reason
-      self.onRejectedCallbacks.forEach((fn) => fn())
+      self.onRejectedCallbacks.forEach(fn => fn())
     }
   }
 
   try {
     executor(resolve, reject)
-  } catch (e) {
+  }
+  catch (e) {
     reject(e)
   }
 }
@@ -181,7 +183,8 @@ Promise.prototype.then = function (onFulfilled, onRejected) {
       try {
         const x = onFulfilled(self.value)
         resolvePromise(promise2, x, resolve, reject)
-      } catch (e) {
+      }
+      catch (e) {
         reject(e)
       }
     })
@@ -192,7 +195,8 @@ Promise.prototype.then = function (onFulfilled, onRejected) {
       try {
         const x = onRejected(self.reason)
         resolvePromise(promise2, x, resolve, reject)
-      } catch (e) {
+      }
+      catch (e) {
         reject(e)
       }
     })
@@ -204,7 +208,8 @@ Promise.prototype.then = function (onFulfilled, onRejected) {
         try {
           const x = onFulfilled(self.value)
           resolvePromise(promise2, x, resolve, reject)
-        } catch (e) {
+        }
+        catch (e) {
           reject(e)
         }
       })
@@ -213,7 +218,8 @@ Promise.prototype.then = function (onFulfilled, onRejected) {
         try {
           const x = onRejected(self.reason)
           resolvePromise(promise2, x, resolve, reject)
-        } catch (e) {
+        }
+        catch (e) {
           reject(e)
         }
       })
@@ -236,25 +242,31 @@ function resolvePromise(promise2, x, resolve, reject) {
         then.call(
           x,
           (y) => {
-            if (called) return
+            if (called)
+              return
             called = true
             resolvePromise(promise2, y, resolve, reject)
           },
           (r) => {
-            if (called) return
+            if (called)
+              return
             called = true
             reject(r)
           }
         )
-      } else {
+      }
+      else {
         resolve(x)
       }
-    } catch (e) {
-      if (called) return
+    }
+    catch (e) {
+      if (called)
+        return
       called = true
       reject(e)
     }
-  } else {
+  }
+  else {
     resolve(x)
   }
 }
@@ -273,7 +285,8 @@ async function promiseAll(promises) {
     try {
       results[i] = await promises[i]
       count++
-    } catch (err) {
+    }
+    catch (err) {
       return Promise.reject(err)
     }
   }
@@ -292,7 +305,8 @@ async function promiseRace(promises) {
     try {
       result = await promises[i]
       return Promise.resolve(result)
-    } catch (err) {
+    }
+    catch (err) {
       return Promise.reject(err)
     }
   }
@@ -381,13 +395,17 @@ module.exports = clone
 ```javascript
 function deepClone(target, weakMap = new WeakMap()) {
   if (typeof target !== 'object' || target == null) {
-    if (typeof target === 'function') return target.bind(this, ...arguments)
+    if (typeof target === 'function')
+      return target.bind(this, ...arguments)
     return target
   }
-  if (target instanceof Date) return new Date(target)
-  if (target instanceof RegExp) return new RegExp(target)
+  if (target instanceof Date)
+    return new Date(target)
+  if (target instanceof RegExp)
+    return new RegExp(target)
   const res = new target.constructor()
-  if (weakMap.get(target)) return weakMap.get(target)
+  if (weakMap.get(target))
+    return weakMap.get(target)
   weakMap.set(res, target)
   for (const key in target) {
     res[key] = deepClone(target[key], weakMap)
