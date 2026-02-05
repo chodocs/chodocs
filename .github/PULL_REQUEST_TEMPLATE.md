@@ -1,11 +1,11 @@
-**Changes**
+### Changes
 
 <!-- Brief description of what this PR does -->
 
-**Related Issue**
+### Related Issue
 
 <!-- If applicable: Fixes #123 or Closes #456 -->
 
-**Screenshots/Demo**
+### Screenshots/Demo
 
 <!-- For UI changes, add screenshots or GIFs -->
