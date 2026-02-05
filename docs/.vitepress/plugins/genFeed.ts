@@ -5,14 +5,84 @@ import { Feed } from 'feed'
 import { createContentLoader } from 'vitepress'
 import { site as baseUrl, description, name } from '../meta'
 
-function reName(name: string) {
-  if (!name)
-    name = 'Choi Yang'
-  return name === 'Choi Yang' ? 'Chocolate1999' : name
+function removeZeroWidthSpace(str: string): string {
+  return str
+    .replaceAll('\u200B', '')
+    .replaceAll('&ZeroWidthSpace;', '')
+    .replaceAll('&#8203;', '')
+    .replaceAll('&#x200B;', '')
 }
 
-function getGithubLink(name: string) {
-  return `https://github.com/${reName(name)}`
+function cleanHtml(html: string | undefined, baseUrl: string): string {
+  if (!html)
+    return ''
+
+  let cleanedHtml = html
+
+  cleanedHtml = removeZeroWidthSpace(cleanedHtml)
+  cleanedHtml = cleanedHtml.replace(/<a class="header-anchor"[^>]*>.*?<\/a>/g, '')
+  cleanedHtml = cleanedHtml.replace(/<h1[^>]*>.*?<\/h1>/i, '')
+
+  // Convert relative image paths to absolute URLs
+  cleanedHtml = cleanedHtml.replace(
+    /<img([^>]*?)src="\/([^"]+)"/g,
+    `<img$1src="${baseUrl}/$2"`,
+  )
+
+  cleanedHtml = cleanedHtml.replace(
+    /<img([^>]*?)src="\.\.\/([^"]+)"/g,
+    (_, attrs, src) => `<img${attrs}src="${baseUrl}/${src}"`,
+  )
+
+  cleanedHtml = cleanedHtml.replace(
+    /<img([^>]*?)src="\.\/([^"]+)"/g,
+    (_, attrs, src) => `<img${attrs}src="${baseUrl}/${src}"`,
+  )
+
+  return cleanedHtml.trim()
+}
+
+function extractDescription(
+  frontmatter: any,
+  excerpt: string | undefined,
+  html: string | undefined,
+): string {
+  if (frontmatter?.description)
+    return removeZeroWidthSpace(frontmatter.description)
+
+  if (excerpt) {
+    const cleanExcerpt = excerpt
+      .replace(/<[^>]+>/g, '')
+      .replace(/\s+/g, ' ')
+    return removeZeroWidthSpace(cleanExcerpt).trim()
+  }
+
+  if (html) {
+    const text = html
+      .replace(/<[^>]+>/g, '')
+      .replace(/\s+/g, ' ')
+      .trim()
+    return removeZeroWidthSpace(text).substring(0, 200)
+  }
+
+  return ''
+}
+
+function extractTitle(frontmatter: any, html: string | undefined): string {
+  if (frontmatter?.title)
+    return removeZeroWidthSpace(frontmatter.title)
+
+  if (html) {
+    const h1Match = html.match(/<h1[^>]*>(.*?)<\/h1>/i)
+    if (h1Match) {
+      const title = h1Match[1]
+        .replace(/<[^>]+>/g, '')
+        .trim()
+      return removeZeroWidthSpace(title)
+    }
+  }
+
+  return 'Untitled'
 }
 
 export async function genFeed(config: SiteConfig) {
@@ -22,10 +92,19 @@ export async function genFeed(config: SiteConfig) {
     id: baseUrl,
     link: baseUrl,
     language: 'zh-CN',
-    image: 'https://chodocs.cn/chodocs-logo.svg',
+    image: `${baseUrl}/chodocs-logo.svg`,
     favicon: `${baseUrl}/favicon.ico`,
-    copyright:
-      'Copyright (c) 2022-present, Chocolate and ChoDocs contributors',
+    copyright: 'Copyright (c) 2022-present, Chocolate and ChoDocs contributors',
+    feedLinks: {
+      rss2: `${baseUrl}/feed.xml`,
+      atom: `${baseUrl}/feed.atom`,
+      json: `${baseUrl}/feed.json`,
+    },
+    author: {
+      name: 'Choi Yang',
+      email: 'ycychocolate@163.com',
+      link: 'https://github.com/Chocolate1999',
+    },
   })
 
   const posts = await createContentLoader('**/*.md', {
@@ -33,33 +112,79 @@ export async function genFeed(config: SiteConfig) {
     render: true,
   }).load()
 
-  posts.sort(
-    (a, b) =>
-      +new Date(b.frontmatter?.date as string)
-      - +new Date(a.frontmatter?.date as string),
-  )
+  const sortedPosts = posts
+    .filter((post) => {
+      const { frontmatter, url } = post
 
-  for (const { url, frontmatter, html } of posts) {
-    let postTitle = '无题'
-    postTitle = html?.match(/<h1 id=(.*)>(.*?)<a .*?>/)?.[2] || postTitle
+      if (!frontmatter?.date)
+        return false
+
+      const excludePatterns = [
+        '/index',
+        '/contributing',
+        '/2022',
+        '/favorites',
+      ]
+
+      if (excludePatterns.some(pattern => url.includes(pattern)))
+        return false
+
+      if (frontmatter.publish === false)
+        return false
+
+      return true
+    })
+    .sort((a, b) => {
+      const dateA = +new Date(a.frontmatter.date)
+      const dateB = +new Date(b.frontmatter.date)
+      return dateB - dateA
+    })
+    .slice(0, 50)
+
+  for (const { url, frontmatter, html, excerpt } of sortedPosts) {
+    const title = extractTitle(frontmatter, html)
+    const description = extractDescription(frontmatter, excerpt, html)
+    const content = cleanHtml(html, baseUrl)
+
+    const authorName = frontmatter?.author || 'Choi Yang'
+    const authorLink = authorName === 'Choi Yang'
+      ? 'https://github.com/Chocolate1999'
+      : undefined
+
+    const categories = frontmatter?.tags
+      ? (Array.isArray(frontmatter.tags) ? frontmatter.tags : [frontmatter.tags])
+          .map((tag: string) => ({ name: tag }))
+      : []
+
+    let imageUrl: string | undefined
+    if (frontmatter?.cover) {
+      imageUrl = frontmatter.cover.startsWith('http')
+        ? frontmatter.cover
+        : `${baseUrl}${frontmatter.cover.startsWith('/') ? '' : '/'}${frontmatter.cover}`
+    }
+
     feed.addItem({
-      title: frontmatter?.title || postTitle,
-      id: `${baseUrl}${url.slice(1)}`,
-      link: `${baseUrl}${url.slice(1)}`,
-      guid: `${baseUrl}${url.slice(1)}`,
-      description: html,
-      content: html,
+      title,
+      id: `${baseUrl}${url}`,
+      link: `${baseUrl}${url}`,
+      description,
+      content,
       author: [
         {
-          name: frontmatter?.author || 'Choi Yang',
-          link: frontmatter?.author
-            ? getGithubLink(frontmatter?.author)
-            : undefined,
+          name: authorName,
+          link: authorLink,
         },
       ],
-      date: frontmatter?.date || new Date('2021-07-01'),
+      date: new Date(frontmatter.date),
+      category: categories,
+      image: imageUrl,
     })
   }
 
   writeFileSync(path.join(config.outDir, 'feed.xml'), feed.rss2())
+  writeFileSync(path.join(config.outDir, 'feed.atom'), feed.atom1())
+  writeFileSync(path.join(config.outDir, 'feed.json'), feed.json1())
+
+  // eslint-disable-next-line no-console
+  console.log(`✓ RSS feed generated: ${sortedPosts.length} posts`)
 }
