@@ -1,17 +1,11 @@
-## 改动内容
+**Changes**
 
-<!-- 简要描述本次 PR 的改动 -->
+<!-- Brief description of what this PR does -->
 
-## 相关 Issue
+**Related Issue**
 
-<!-- 如果有的话，填写 Fixes #123 或 Closes #456 -->
+<!-- If applicable: Fixes #123 or Closes #456 -->
 
-## 截图/演示
+**Screenshots/Demo**
 
-<!-- 如果是 UI 改动，请提供截图或 GIF -->
-
----
-
-<!-- 提交前请确保：-->
-<!-- - 代码通过 lint 检查 -->
-<!-- - 已在本地测试过改动 -->
+<!-- For UI changes, add screenshots or GIFs -->
