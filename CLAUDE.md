@@ -138,6 +138,35 @@ Icons from Iconify are auto-imported without prefix using unplugin-icons.
 - Import restrictions: `..` and `../..` paths disallowed (except in specific overrides)
 - Pre-commit hook runs `lint-staged` to auto-fix staged files
 
+## Code Style Guidelines
+
+### Comments and Code Language
+- **All code and comments MUST be in English**
+- **Minimize comments** - write self-explanatory code
+- **Only add critical comments** where logic is complex or non-obvious
+- Avoid redundant comments that restate what the code does
+- Good comment: `// Convert relative paths to absolute URLs for RSS feed compatibility`
+- Bad comment: `// Loop through posts` (obvious from code)
+
+### Examples
+```typescript
+// Good: Minimal, critical comments only
+function removeZeroWidthSpace(str: string): string {
+  return str
+    .replaceAll('\u200B', '')
+    .replaceAll('&#8203;', '') // HTML entity form
+}
+
+// Bad: Over-commented
+function removeZeroWidthSpace(str: string): string {
+  // Replace Unicode zero-width space
+  return str
+    .replaceAll('\u200B', '')
+    // Replace HTML entity zero-width space
+    .replaceAll('&#8203;', '')
+}
+```
+
 ## Important Conventions
 
 ### Content Files
